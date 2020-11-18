@@ -1,0 +1,19 @@
+# Print the current script operation (B_Edit) and perform ROI extraction
+"/opt/Medtool/medtool43/Python27/bin/python" "/opt/Medtool/medtool43/bin/info.py" -txt "B_Edit"
+"/opt/Medtool/medtool43/Python27/bin/python" "/opt/Medtool/medtool43/bin/mic.pyc" -in "B_Edit/01_MHDFile/Scan.mhd"  -out "B_Edit/02_RawROI/ROINumber_Scan_ROI.mhd"  -form "B"  -cut "XPos; YPos; ZPos; XRange; YRange; ZRange"
+"/opt/Medtool/medtool43/Python27/bin/python" "/opt/Medtool/medtool43/bin/mic.pyc" -in "B_Edit/02_RawROI/ROINumber_Scan_ROI.mhd"  -out "B_Edit/03_CleanROI/ROINumber_Scan_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/opt/Medtool/medtool43/Python27/bin/python" "/opt/Medtool/medtool43/bin/mic.pyc" -in "B_Edit/03_CleanROI/ROINumber_Scan_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/ROINumber_Scan_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/opt/Medtool/medtool43/Python27/bin/python" "/opt/Medtool/medtool43/bin/mia.pyc" -in "B_Edit/04_ResizedROI/ROINumber_Scan_Resized.mhd"  -out "D_PostProcess/03_Fabric/ROINumber_Scan.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+
+
+# Print the current script operation (C_FEA), and perform the Abaqus simulations
+"/opt/Medtool/medtool43/Python27/bin/python" "/opt/Medtool/medtool43/bin/info.py" -txt "C_FEA"
+"/opt/Medtool/medtool43/Python27/bin/python" "/opt/Medtool/medtool43/bin/mic.pyc" -in "B_Edit/03_CleanROI/ROINumber_Scan_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/opt/Medtool/medtool43/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
+"/opt/Medtool/medtool43/Python27/bin/python" "/opt/Medtool/medtool43/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abq6141"  -job "ROINumber_Scan"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+
+
+# Print the current script operation (D_PostProcess) and extract the necessary data for analysis
+"/opt/Medtool/medtool43/Python27/bin/python" "/opt/Medtool/medtool43/bin/info.py" -txt "D_PostProcess"
+abq6141 python "/opt/Medtool/medtool43/bin/abqFuReader.py" -odb "C_FEA/03_JobResults/ROINumber_Scan.odb"  -rpt "D_PostProcess/01_FURead/ROINumber_Scan.dat"  -exe "abq6141;python"
+"/opt/Medtool/medtool43/Python27/bin/python" "/opt/Medtool/medtool43/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/ROINumber_Scan.dat"  -out "D_PostProcess/02_FUAnalyzed/ROINumber_Scan.dat"  -type "spatial"

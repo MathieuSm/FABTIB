@@ -107,10 +107,10 @@ def ROISelection(Stack, VoxelsRange, VoxelMargin, ROINumber, TrabBone, CortBone)
 
 
 # 02 Load Paths
-CurrentDirectory = os.getcwd()
-DataFolder = os.path.join(CurrentDirectory,'02_Data')
+WorkingDirectory = os.getcwd()
+DataFolder = os.path.join(WorkingDirectory,'02_Data')
 
-DataSubFolders = [File for File in os.listdir(DataFolder) if not File.endswith('.csv')]
+DataSubFolders = [File for File in os.listdir(DataFolder) if os.path.isdir(os.path.join(DataFolder,File))]
 DataSubFolders.sort()
 
 ScanLists = [File for File in os.listdir(DataFolder) if File.endswith('.csv')]
@@ -122,6 +122,7 @@ Plots = False   # Plot the different ROI location
 
 ScansPath = os.path.join(DataFolder,DataSubFolders[DataGroup])
 Scans = [File for File in os.listdir(ScansPath) if File.endswith('.mhd')]
+Scans.sort()
 
 ScanList = pd.read_csv(os.path.join(DataFolder,ScanLists[DataGroup]))
 
@@ -150,7 +151,7 @@ for ROINumber in range(6):
     Z1, Y1, X1 = ROISelection(StackNumber3, VoxelsRange, VoxelMargin, ROINumber, TrabBone, CortBone)
 
     Parameters = {'$Scan': Scan[:-4],
-                  '$ROINumber': ROINumber,
+                  '$ROINumber': ROINumber+1,
                   '$XPos': X1,
                   '$YPos': Y1,
                   '$ZPos': Z1+2*StackHeight,
