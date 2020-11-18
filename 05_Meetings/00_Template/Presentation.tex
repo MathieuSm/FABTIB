@@ -1,0 +1,1259 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (01/07/19)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------
+%	PACKAGES AND THEMES		-----------------------------------
+%----------------------------------------------------------------
+
+\documentclass[xcolor=table]{beamer}
+
+\mode<presentation> {
+
+\usetheme{Frankfurt}
+\usecolortheme{dove}
+
+}
+
+\usepackage{graphicx}
+\usepackage{booktabs} 
+\usepackage{subfig}
+\usepackage{pgf}
+\usepackage{multirow}
+\usepackage{appendixnumberbeamer}
+\usepackage{bookmark}
+\usepackage{siunitx}
+\usepackage{animate}
+\usepackage{xcolor}
+
+
+%----------------------------------------------------------------
+%	GENERAL OPTIONS 	-----------------------------------------
+%----------------------------------------------------------------
+
+% Set template options
+\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+\setbeamertemplate{frametitle}{\vspace*{1em}\insertframetitle}
+\setbeamertemplate{enumerate items}[default]
+\setbeamercolor{section in head/foot}{fg=white, bg=black}
+
+% Headline
+\makeatletter
+\setbeamertemplate{headline}
+{%
+  \pgfuseshading{beamer@barshade}%
+    \vskip-5ex%
+  \begin{beamercolorbox}[ignorebg,ht=2.25ex,dp=3.75ex]{section in head/foot}
+  \insertsectionnavigationhorizontal{\paperwidth}{\hskip0pt plus1fill}{\hskip0pt plus1fill}
+  \end{beamercolorbox}%
+  \ifbeamer@sb@subsection%
+    \begin{beamercolorbox}[ignorebg,ht=2.125ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+      \usebeamerfont{subsection in head/foot}\insertsubsectionhead
+    \end{beamercolorbox}%
+  \fi%
+}%
+\makeatother
+
+% Footline
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,left]{section in head/foot}%
+    \usebeamerfont{author in head/foot}\hspace{10pt}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{section in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{section in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{}\hspace*{2em}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+% Add logo
+\logo{\pgfputat{\pgfxy(0,7)}{\includegraphics[width=0.1\paperwidth]{Pictures/00_Unibe_Logo}}}
+
+% Table settings
+\renewcommand{\arraystretch}{2}
+\captionsetup{labelformat=empty,labelsep=none}
+\definecolor{Gray}{gray}{0.9}
+
+\newcommand{\makepartone}{
+	\part{Fabric-Elasticity Relationships in Osteogenesis Imperfecta}\frame{\partpage}
+	
+	\section{Introduction}
+	\begin{frame}
+		\frametitle{Introduction}
+		\begin{columns}[t]
+			\column{.4\textwidth}
+			Osteogenesis imperfecta (OI)
+			\begin{itemize}
+				\item
+				Most common inherited bone fragility
+				\item
+				Collagen type I defect
+				\item
+				Type II > Type III > Type IV > Type I
+			\end{itemize}
+			\column{.6\textwidth}
+			\vfill
+			\centering
+			\includegraphics[width=1\linewidth]
+			{Pictures/02_OITypes}\\
+			OI types
+			\vfill
+		\end{columns}
+	\end{frame}
+	
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	
+	\section{Material \& Methods}
+	
+	\begin{frame}
+		\frametitle{Project Steps}
+			120 healthy and 50 OI HR-pQCT scans (61 \si{\micro}m resolution)
+			\begin{enumerate}
+				\item
+				Selection area definition
+				\item
+				Regions of interest (ROI) selection and analysis
+				\item
+				Coefficient of variation (CV) computation
+				\item
+				Fit Zysset-Curnier orthotropic model\\
+				$\rightarrow$ log($\lambda_{0}$), log($\lambda_{0}$'), log($\mu_{0}$), $k$ and $l$
+				\item
+				Filtering
+				\begin{itemize}
+					\item
+					CV threshold
+					\item
+					Bone volume over total volume ratio (BV/TV) windowing
+				\end{itemize}
+				\item
+				Comparison to \cite{p1}
+			\end{enumerate}
+	\end{frame}
+
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{Reference Paper}
+		\cite{p1}
+		\begin{itemize}
+			\item
+			Anatomical location: Proximal femur
+			\item
+			Scan type: \si{\micro}CT scan
+			\item
+			Scan resolution: 18 \si{\micro}m
+			\item
+			Filtering
+			\begin{itemize}
+				\item
+				Sample sorted by decreasing CV
+				\item
+				Exclusion of ROI until best results reached
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%----------------------------------------------------------	
+	
+	\begin{frame}
+		\frametitle{Scan Sections}
+		\begin{columns}
+			\column{.5\textwidth}
+			Healthy group:
+			\begin{itemize}
+				\item
+				Scanning protocol from reproducibility study
+				\item
+				3 stacks of 168 voxels
+			\end{itemize}\vspace{1em}
+			
+			OI group:
+			\begin{itemize}
+				\item
+				Standard clinical section
+				\item
+				1 stack of 168 voxels at 22.5 mm proximal to subchondral endplate of ankle joint
+			\end{itemize}
+			
+			\column{.2\textwidth}
+			\centering		
+			\includegraphics[width=1\linewidth,trim=200 22 200 0]
+			{Pictures/03_ControlClinicalSection}\\
+			Healthy
+			
+			\column{.2\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth,trim=200 0 200 22]
+			{Pictures/03_OIClinicalSection}\\
+			OI
+			
+		\end{columns}
+	\end{frame}
+
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{Scan Sections}
+		\begin{columns}
+			\column{.5\textwidth}
+			6 ROI selected per scan\vspace{1em}
+			
+			Healthy group:
+			\begin{itemize}
+				\item
+				N° 1, 2, 3 in stack 1
+				\item
+				N° 4, 5, 6 in stack 2
+			\end{itemize}\vspace{1em}
+			
+			OI group:
+			\begin{itemize}
+				\item
+				N° 1, 2, 3 in distal half
+				\item
+				N° 4, 5, 6 in proximal half
+			\end{itemize}
+			
+			\column{.2\textwidth}
+			\centering		
+			\includegraphics[width=1\linewidth,trim=200 22 200 0]
+			{Pictures/04_ControlROISelectionArea}\\
+			Healthy
+			
+			\column{.2\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth,trim=200 0 200 22]
+			{Pictures/04_OIROISelectionArea}\\
+			OI
+			
+		\end{columns}
+	\end{frame}
+	
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+
+
+	\begin{frame}
+		\frametitle{ROI Analysis}
+		\begin{columns}[t]
+			\column{.3\textwidth}
+			\centering
+			Region of interest (ROI)
+			\begin{itemize}
+				\item
+				Cube of ~5.3 mm side
+			\end{itemize}
+			\vspace{1em}
+			\includegraphics[height=0.8\linewidth]
+			{Pictures/05_TypicalROI}\\
+			Typical ROI
+			
+			\column{.3\textwidth}
+			\centering
+			Fabric information
+			\vspace{1em}
+			\begin{itemize}
+				\item
+				Mean intercept line (MIL) method
+			\end{itemize}
+			\includegraphics[height=0.8\linewidth]
+			{Pictures/05_TypicalFabric}\\
+			Typical fabric
+			
+			\column{.3\textwidth}
+			Elasticity tensor
+			\vspace{1em}
+			\begin{itemize}
+				\item
+				Orthotropy assumption
+			\end{itemize}
+			\vspace{1em}
+			\centering
+			\includegraphics[height=0.8\linewidth]
+			{Pictures/05_TypicalStiffness}\\
+			Typical stiffness
+		\end{columns}	
+	\end{frame}
+	
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	
+	\section{Results \& Discussion}
+	
+	\begin{frame}
+		\frametitle{BV/TV and CV}
+		\begin{columns}[t]
+			\column{.45\textwidth}
+			Healthy group:
+			\begin{itemize}
+				\item
+				CV stays  \textasciitilde constant
+				\item
+				Most sample excluded by windowing
+			\end{itemize}\vspace{1em}
+			\centering
+			\includegraphics[height=0.75\linewidth]
+			{Pictures/06_ControlBVTVCV}\\\vspace{-0.5em}
+			Healthy group
+			\column{.45\textwidth}
+			OI group:
+			\begin{itemize}
+				\item
+				CV increases with decreasing BV/TV
+				\item
+				Most sample excluded by CV threshold
+			\end{itemize}
+			\centering
+			\includegraphics[height=0.75\linewidth]
+			{Pictures/06_OIBVTVCV}\\\vspace{-0.5em}
+			OI group
+		\end{columns} 
+	\end{frame}
+
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+
+	\begin{frame}
+		\frametitle{Fit Results}
+		\begin{columns}[c] 
+			\column{.1\textwidth}
+			\hspace{5mm}
+			\rotatebox{90}{\hspace{3mm} Stiffness\hspace{13mm} Compliance}
+			\column{0.8\textwidth}
+			\begin{figure}
+				\hspace{-15mm}
+				\captionsetup[subfigure]{labelformat=empty}
+				\subfloat[]{
+					\includegraphics[width=0.4\linewidth]
+					{Pictures/07_ControlCompleteCompliance}}
+				\qquad
+				\subfloat[]{
+					\includegraphics[width=0.4\linewidth]
+					{Pictures/07_OICompleteCompliance}}
+				\qquad\\
+				\hspace{-15mm}
+				\subfloat[Control group]{
+					\includegraphics[width=0.4\linewidth,trim=0 0 0 1000]
+					{Pictures/07_ControlCompleteStiffness}}
+				\qquad
+				\subfloat[OI group]{
+					\includegraphics[width=0.4\linewidth,trim=0 0 0 1000]
+					{Pictures/07_OICompleteStiffness}}
+			\end{figure}
+		\end{columns}
+	\end{frame}
+
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+
+	\begin{frame}
+		\frametitle{Filtered Fit Results}
+		\begin{columns}[c] 
+			\column{.1\textwidth}
+			\hspace{5mm}
+			\rotatebox{90}{\hspace{3mm} Stiffness\hspace{13mm} Compliance}
+			\column{0.8\textwidth}
+			\begin{figure}
+				\hspace{-15mm}
+				\captionsetup[subfigure]{labelformat=empty}
+				\subfloat[]{
+					\includegraphics[width=0.4\linewidth]
+					{Pictures/08_ControlFilteredCompliance}}
+				\qquad
+				\subfloat[]{
+					\includegraphics[width=0.4\linewidth]
+					{Pictures/08_OIFilteredCompliance}}
+				\qquad\\
+				\hspace{-15mm}
+				\subfloat[Control group]{
+					\includegraphics[width=0.4\linewidth,trim=0 0 0 1000]
+					{Pictures/08_ControlFilteredStiffness}}
+				\qquad
+				\subfloat[OI group]{
+					\includegraphics[width=0.4\linewidth,trim=0 0 0 1000]
+					{Pictures/08_OIFilteredStiffness}}
+			\end{figure}
+		\end{columns}
+	\end{frame}
+	
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	
+	
+	\begin{frame}
+		\frametitle{Fit Parameters}
+		\begin{table}[h!]
+			\centering
+			\caption{Summary of the fit results}\label{}
+			\resizebox{0.65\linewidth}{!}{
+				\begin{tabular}{ccccccccc}
+					\toprule
+					& & N samples & $\lambda_{0}$ & $\lambda_{0}$' & $\mu_{0}$ & $k$ & $l$ & $R^{2}_{adj}$ \\
+					\midrule
+					\multirow{2}{*}{\cite{p1}} & Complete & 167 & 3382 & 2746 & 2855 & 1.55 & 0.84 & 0.984 \\
+					& Filtered & 126 & 3306 & 2736 & 2837 & 1.55 & 0.82 & 0.985 \\[1em]
+					
+					\multirow{2}{*}{Control group 3 DOF} & Complete & 717 & 2467 & 1651 & 2108 & 1.55 & 0.84 & 0.912 \\
+					& Filtered & 677 & 2444 & 1634 & 2091 & 1.55 & 0.82 & 0.915 \\[1em]
+					
+					\multirow{2}{*}{OI group 3 DOF} & Complete & 286 & 2553 & 1471 & 2052 & 1.55 & 0.84 & 0.752 \\
+					& Filtered & 145 & 2529& 1548 & 2055 & 1.55 & 0.82 & 0.930 \\[1em]
+					
+					\multirow{2}{*}{Control group 5 DOF} & Complete & 717 & 5542 & 3710 & 4736 & 2.21 & 0.79 & 0.957 \\
+					& Filtered & 677 & 5476 & 3662 & 4685 & 2.20 & 0.80 & 0.954 \\[1em]
+					
+					\multirow{2}{*}{OI group 5 DOF} & Complete & 286 & 3092 & 1781 & 2485 & 1.65 & 1.08 & 0.757 \\
+					& Filtered & 145 & 3339 & 2044 & 2714 & 1.74 & 1.01 & 0.940 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+	\end{frame}
+
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+
+	\begin{frame}[noframenumbering]
+		\frametitle{Fit Parameters}
+		\begin{table}[h!]
+			\centering
+			\caption{Summary of the fit results}\label{}
+			\resizebox{0.65\linewidth}{!}{
+				\begin{tabular}{ccccccccc}
+					\toprule
+					& & N samples & $\lambda_{0}$ & $\lambda_{0}$' & $\mu_{0}$ & $k$ & $l$ & $R^{2}_{adj}$ \\
+					\midrule\rowcolor{Gray}
+					& Complete & 167 & {\color{red}3382} & {\color{red}2746} & {\color{red}2855} & 1.55 & 0.84 & 0.984 \\\rowcolor{Gray}
+					\multirow{-2}{*}{\cite{p1}} & Filtered & 126 & {\color{blue}3306} & {\color{blue}2736} & {\color{blue}2837} & 1.55 & 0.82 & 0.985 \\[1em]
+					
+					\rowcolor{Gray}& Complete & 717 & {\color{red}2467} & {\color{red}1651} & {\color{red}2108} & 1.55 & 0.84 & 0.912 \\\rowcolor{Gray}
+					\multirow{-2}{*}{Control group 3 DOF} & Filtered & 677 & {\color{blue}2444} & {\color{blue}1634} & {\color{blue}2091} & 1.55 & 0.82 & 0.915 \\[1em]
+					
+					\multirow{2}{*}{OI group 3 DOF} & Complete & 286 & 2553 & 1471 & 2052 & 1.55 & 0.84 & 0.752 \\
+					& Filtered & 145 & 2529& 1548 & 2055 & 1.55 & 0.82 & 0.930 \\[1em]
+					
+					\multirow{2}{*}{Control group 5 DOF} & Complete & 717 & 5542 & 3710 & 4736 & 2.21 & 0.79 & 0.957 \\
+					& Filtered & 677 & 5476 & 3662 & 4685 & 2.20 & 0.80 & 0.954 \\[1em]
+					
+					\multirow{2}{*}{OI group 5 DOF} & Complete & 286 & 3092 & 1781 & 2485 & 1.65 & 1.08 & 0.757 \\
+					& Filtered & 145 & 3339 & 2044 & 2714 & 1.74 & 1.01 & 0.940 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+	\end{frame}
+
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	
+	\begin{frame}[noframenumbering]
+		\frametitle{Fit Parameters}
+		\begin{table}[h!]
+			\centering
+			\caption{Summary of the fit results}\label{}
+			\resizebox{0.65\linewidth}{!}{
+				\begin{tabular}{ccccccccc}
+					\toprule
+					& & N samples & $\lambda_{0}$ & $\lambda_{0}$' & $\mu_{0}$ & $k$ & $l$ & $R^{2}_{adj}$ \\
+					\midrule
+					& Complete & 167 & 3382 & 2746 & 2855 & 1.55 & 0.84 & 0.984 \\
+					\multirow{-2}{*}{\cite{p1}} & Filtered & 126 & 3306 & 2736 & 2837 & 1.55 & 0.82 & 0.985 \\[1em]
+					
+					\rowcolor{Gray}& Complete & 717 & {\color{red}2467} & {\color{red}1651} & {\color{red}2108} & 1.55 & 0.84 & 0.912 \\\rowcolor{Gray}
+					\multirow{-2}{*}{Control group 3 DOF} & Filtered & 677 & {\color{blue}2444} & {\color{blue}1634} & {\color{blue}2091} & 1.55 & 0.82 & 0.915 \\[1em]
+					
+					\rowcolor{Gray}& Complete & 286 & {\color{red}2553} & {\color{red}1471} & {\color{red}2052} & 1.55 & 0.84 & 0.752 \\\rowcolor{Gray}
+					\multirow{-2}{*}{OI group 3 DOF} & Filtered & 145 & {\color{blue}2529} & {\color{blue}1548} & {\color{blue}2055} & 1.55 & 0.82 & 0.930 \\[1em]
+					
+					\multirow{2}{*}{Control group 5 DOF} & Complete & 717 & 5542 & 3710 & 4736 & 2.21 & 0.79 & 0.957 \\
+					& Filtered & 677 & 5476 & 3662 & 4685 & 2.20 & 0.80 & 0.954 \\[1em]
+					
+					\multirow{2}{*}{OI group 5 DOF} & Complete & 286 & 3092 & 1781 & 2485 & 1.65 & 1.08 & 0.757 \\
+					& Filtered & 145 & 3339 & 2044 & 2714 & 1.74 & 1.01 & 0.940 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+	\end{frame}
+
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	
+	\begin{frame}[noframenumbering]
+		\frametitle{Fit Parameters}
+		\begin{table}[h!]
+			\centering
+			\caption{Summary of the fit results}\label{}
+			\resizebox{0.65\linewidth}{!}{
+				\begin{tabular}{ccccccccc}
+					\toprule
+					& & N samples & $\lambda_{0}$ & $\lambda_{0}$' & $\mu_{0}$ & $k$ & $l$ & $R^{2}_{adj}$ \\
+					\midrule\rowcolor{Gray}
+					& Complete & 167 & 3382 & 2746 & 2855 & 1.55 & 0.84 & {\color{red}0.984} \\\rowcolor{Gray}
+					\multirow{-2}{*}{\cite{p1}} & Filtered & 126 & 3306 & 2736 & 2837 & 1.55 & 0.82 & {\color{blue}0.985} \\[1em]
+					
+					& Complete & 717 & 2467 & 1651 & 2108 & 1.55 & 0.84 & 0.912 \\
+					\multirow{-2}{*}{Control group 3 DOF} & Filtered & 677 & 2444 & 1634 & 2091 & 1.55 & 0.82 & 0.915 \\[1em]
+					
+					& Complete & 286 & 2553 & 1471 & 2052 & 1.55 & 0.84 & 0.752 \\
+					\multirow{-2}{*}{OI group 3 DOF} & Filtered & 145 & 2529& 1548 & 2055 & 1.55 & 0.82 & 0.930 \\[1em]
+					
+					\rowcolor{Gray}& Complete & 717 & 5542 & 3710 & 4736 & 2.21 & 0.79 & {\color{red}0.957} \\\rowcolor{Gray}
+					\multirow{-2}{*}{Control group 5 DOF} & Filtered & 677 & 5476 & 3662 & 4685 & 2.20 & 0.80 & {\color{blue}0.954} \\[1em]
+					
+					& Complete & 286 & 3092 & 1781 & 2485 & 1.65 & 1.08 & 0.757 \\
+					\multirow{-2}{*}{OI group 5 DOF} & Filtered & 145 & 3339 & 2044 & 2714 & 1.74 & 1.01 & 0.940 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+	\end{frame}
+
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	
+	\begin{frame}[noframenumbering]
+		\frametitle{Fit Parameters}
+		\begin{table}[h!]
+			\centering
+			\caption{Summary of the fit results}\label{}
+			\resizebox{0.65\linewidth}{!}{
+				\begin{tabular}{ccccccccc}
+					\toprule
+					& & N samples & $\lambda_{0}$ & $\lambda_{0}$' & $\mu_{0}$ & $k$ & $l$ & $R^{2}_{adj}$ \\
+					\midrule
+					& Complete & 167 & 3382 & 2746 & 2855 & 1.55 & 0.84 & 0.984 \\
+					\multirow{-2}{*}{\cite{p1}} & Filtered & 126 & 3306 & 2736 & 2837 & 1.55 & 0.82 & 0.985 \\[1em]
+					
+					& Complete & 717 & 2467 & 1651 & 2108 & 1.55 & 0.84 & 0.912 \\
+					\multirow{-2}{*}{Control group 3 DOF} & Filtered & 677 & 2444 & 1634 & 2091 & 1.55 & 0.82 & 0.915 \\[1em]
+					
+					& Complete & 286 & 2553 & 1471 & 2052 & 1.55 & 0.84 & 0.752 \\
+					\multirow{-2}{*}{OI group 3 DOF} & Filtered & 145 & 2529& 1548 & 2055 & 1.55 & 0.82 & 0.930 \\[1em]
+					
+					\rowcolor{Gray}& Complete & 717 & 5542 & 3710 & 4736 & 2.21 & 0.79 & {\color{red}0.957} \\\rowcolor{Gray}
+					\multirow{-2}{*}{Control group 5 DOF} & Filtered & 677 & 5476 & 3662 & 4685 & 2.20 & 0.80 & {\color{blue}0.954} \\[1em]
+					
+					\rowcolor{Gray}& Complete & 286 & 3092 & 1781 & 2485 & 1.65 & 1.08 & {\color{red}0.757} \\\rowcolor{Gray}
+					\multirow{-2}{*}{OI group 5 DOF} & Filtered & 145 & 3339 & 2044 & 2714 & 1.74 & 1.01 & {\color{blue}0.940} \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+	\end{frame}
+
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+
+	\section{Conclusions}
+	\begin{frame}
+		\frametitle{Conclusions}
+		Higher heterogeneity in OI samples
+			\begin{itemize}
+				\item
+				Bone brittleness
+				\item
+				Different anatomical locations
+			\end{itemize}\vspace{0.5em}
+		Zysset-Curnier orthotropic model
+			\begin{itemize}
+				\item
+				Excellent for healthy samples
+				\item
+				OI samples need filtering
+				\item
+				Anisotropic model for unfiltered OI
+			\end{itemize}\vspace{0.5em}
+		Comparison with \cite{p1}
+			\begin{itemize}
+				\item
+				Different anatomical locations
+				\item
+				Different scan resolution
+			\end{itemize}
+	\end{frame}
+
+}
+
+
+
+
+
+
+\newcommand{\makeparttwo}{
+	\part{Experimental Investigation of Compressive Failure Behavior} \frame{\partpage}
+	
+	\section{Introduction}
+	\begin{frame}
+		\frametitle{Introduction}
+		Osteoporosis
+		\begin{columns}[t]
+			\column{.45\textwidth}
+			\begin{itemize}
+				\item
+				Reduced bone mass
+				\item
+				Increased fracture risks
+			\end{itemize}
+			\vspace{1.5em}
+			\centering
+			\includegraphics[width=0.8\linewidth]
+			{Pictures/09_Healthy}\\
+			Healthy
+			\vfill
+			\column{.45\textwidth}
+			\begin{itemize}
+				\item
+				Complications
+			\end{itemize}
+			\vspace{2.8em}
+			\centering
+			\includegraphics[width=0.8\linewidth]
+			{Pictures/09_Osteoporotic}\\
+			Osteoporotic
+			\vfill
+		\end{columns} 
+	\end{frame}
+	
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	
+	\section{Material \& Methods}
+	\begin{frame}
+		\frametitle{Project Steps}
+		\begin{columns}[t]
+			\column{.45\textwidth}
+			25 Tibiae
+			\begin{enumerate}
+				\item
+				QCT scan
+				\item
+				HR-pQCT scan\\and standard hFE simulation
+				\item
+				Sample extraction\\and preparation
+				\item
+				\si{\micro}CT scan
+				\item
+				Mechanical test
+				\item
+				\si{\micro}CT scan
+			\end{enumerate}
+			\column{.45\textwidth}
+			\vfill
+			\centering
+			\includegraphics[height=1\linewidth]
+			{Pictures/10_CutsLocations}\\
+			Cuts locations
+			\vfill
+		\end{columns}
+	\end{frame}
+	
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{Mechanical Tests}
+		\vspace{1.2em}
+		\begin{columns}[b]
+			\column{.45\textwidth}
+			\vfill
+			\centering
+			\includegraphics[height=1\linewidth]
+			{Pictures/11_MachineSetup}\\
+			\vfill
+			Setup
+			\column{.45\textwidth}
+			\vfill
+			\centering
+			\includegraphics[height=0.85\linewidth,trim=200 0 0 0]
+			{Pictures/11_ExperimentProtocol}\\
+			\vfill
+			Protocol
+		\end{columns}
+	\end{frame}
+
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{Mechanical Tests}
+		\begin{columns}[b]
+			\column{.45\textwidth}
+			\vfill
+			\centering
+			\animategraphics[controls,height=1\linewidth,trim=100 50 100 0]{10}{Test/SampleTest-}{0}{36}\\
+			\vfill
+			Setup
+			\column{.45\textwidth}
+			\vfill
+			\centering
+			\includegraphics[height=0.85\linewidth,trim=200 0 0 0]
+			{Pictures/11_ExperimentProtocol}\\
+			\vfill
+			Protocol
+		\end{columns}
+	\end{frame}
+
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+
+	\begin{frame}
+		\frametitle{Results Analysis}
+		Experimental data and hFE
+		\begin{itemize}
+			\item
+			Stiffness
+			\item
+			Ultimate load
+		\end{itemize}\vspace{0.5em}
+		Experimental data and intact \si{\micro}CT data
+		\begin{itemize}
+			\item
+			Bone mineral density (BMD) and intensive properties
+			\item
+			Bone mineral content (BMC) and extensive properties
+		\end{itemize}\vspace{0.5em}
+		Image qualitative analysis
+		\begin{itemize}
+			\item
+			Intact and post-failure \si{\micro}CT scan
+			\item
+			hFE prediction and post-failure \si{\micro}CT scan
+			\item
+			Registration of pre-/post-failure \si{\micro}CT scan (Elastix)\\
+			$\rightarrow$ Displacement jacobian
+		\end{itemize}
+	\end{frame}
+	
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+
+	\section{Results}
+	\begin{frame}
+		\frametitle{hFE and Experiment}
+		\begin{columns}[b]
+			\column{.45\textwidth}
+			\vfill
+			\centering
+			\includegraphics[height=0.8\linewidth]
+			{Pictures/12_StiffnessExpVshFE}\\
+			\vfill
+			Stiffness
+			\column{.45\textwidth}
+			\vfill
+			\centering
+			\includegraphics[height=0.8\linewidth]
+			{Pictures/12_UltimateLoadExpVshFE}\\
+			\vfill
+			Ultimate load
+		\end{columns}
+	\end{frame}
+
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{BMD and Intensive Properties}
+		\begin{columns}[b]
+			\column{.45\textwidth}
+			\vfill
+			\centering
+			\includegraphics[height=0.8\linewidth]
+			{Pictures/13_BMDVsApparentModulus}\\
+			\vfill
+			BMD with apparent modulus
+			\column{.45\textwidth}
+			\vfill
+			\centering
+			\includegraphics[height=0.8\linewidth]
+			{Pictures/13_BMDVsApparentStrength}\\
+			\vfill
+			BMD with apparent strength
+		\end{columns}
+	\end{frame}
+
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{BMC and Extensive Properties}
+		\begin{columns}[b]
+			\column{.45\textwidth}
+			\vfill
+			\centering
+			\includegraphics[height=0.8\linewidth]
+			{Pictures/14_BMCVsStiffness}\\
+			\vfill
+			BMC with stiffness
+			\column{.45\textwidth}
+			\vfill
+			\centering
+			\includegraphics[height=0.8\linewidth]
+			{Pictures/14_BMCVsUltimateLoad}\\
+			\vfill
+			BMC with ultimate load
+		\end{columns}
+	\end{frame}
+
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	
+	\begin{frame}[noframenumbering]
+		\frametitle{BMC and Extensive Properties}
+		\begin{columns}[b]
+			\column{.45\textwidth}
+			\vfill
+			\centering
+			\includegraphics[height=0.8\linewidth]
+			{Pictures/14_BMCVsStiffness2}\\
+			\vfill
+			BMC with stiffness
+			\column{.45\textwidth}
+			\vfill
+			\centering
+			\includegraphics[height=0.8\linewidth]
+			{Pictures/14_BMCVsUltimateLoad2}\\
+			\vfill
+			BMC with ultimate load
+		\end{columns}
+	\end{frame}
+	
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{Filtered Correlations Results}
+		\begin{table}[h!]
+			\centering
+			\caption{Correlations results before/after filtering}
+			\resizebox{1\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Independent variable & Dependent variable & Complete data set fit $R^{2}$ & Filtered data set fit $R^{2}$ \\
+					\midrule
+					& Apparent modulus & 0.914 & 0.933 \\[1em]
+					
+					\multirow{-2}{*}{BMD} & Apparent strength &  0.790 & 0.805 \\[1em]
+					
+					& Stiffness & 0.920 & 0.973 \\[1em]
+					\multirow{-2}{*}{BMC} & Ultimate load & 0.882 & 0.937 \\[0.5em]
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+	\end{frame}
+
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+
+	\begin{frame}
+		\frametitle{Pre-/Post Failure \si{\micro}CT Scans - Categories}
+		\begin{columns}[t]
+			\column{.45\textwidth}
+			3 main categories
+			\begin{enumerate}
+				\item
+				Cortical rupture on distal side
+				\begin{itemize}
+					\item
+					Collapse of the cortical bone
+					\item
+					Line of trabecular collapse
+					\item
+					Rotation
+				\end{itemize}
+			\end{enumerate}
+			\column{.45\textwidth}
+			\vfill
+			\centering
+			\animategraphics[loop,controls,height=0.8\linewidth]{30}{Category1/Category1-}{0}{60}
+			\vfill
+			\end{columns}
+	\end{frame}
+
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{Pre-/Post Failure \si{\micro}CT Scans - Categories}
+		\begin{columns}[t]
+			\column{.45\textwidth}
+			3 main categories
+			\begin{enumerate}
+				\item
+				Cortical rupture on distal side
+				\item
+				Cortical rupture on proximal side
+				\begin{itemize}
+					\item
+					Cortical bone not necessarily collapsed
+					\item
+					Line of trabecular collapse
+					\item
+					Rotation
+				\end{itemize}
+			\end{enumerate}
+			\column{.45\textwidth}
+			\vfill
+			\centering
+			\animategraphics[loop,controls,height=0.8\linewidth]{30}{Category2/Category2-}{0}{60}
+			\vfill
+		\end{columns}
+	\end{frame}
+	
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{Pre-/Post Failure \si{\micro}CT Scans - Categories}
+		\vspace{0.2em}
+		\begin{columns}[t]
+			\column{.45\textwidth}
+			3 main categories
+			\begin{enumerate}
+				\item
+				Cortical rupture on distal side
+				\item
+				Cortical rupture on proximal side
+				\item
+				Transverse collapse over the whole sample
+				\begin{itemize}
+					\item
+					Cortical bone not necessarily collapsed
+					\item
+					Line of trabecular collapse
+				\end{itemize}
+			\end{enumerate}
+			\column{.45\textwidth}
+			\vfill
+			\centering
+			\animategraphics[loop,controls,height=0.8\linewidth]{30}{Category3/Category3-}{0}{60}
+			\vfill
+		\end{columns}
+	\end{frame}
+
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{Pre-/Post Test \si{\micro}CT Scans - Special Cases}
+		\begin{columns}[t]
+			\column{.45\textwidth}
+			Special failure behaviors example
+			\begin{itemize}
+				\item
+				Proximal cortical rupture (as category 2)
+				\item
+				Distal tearing
+			\end{itemize}
+			\column{.45\textwidth}
+			\vfill
+			\centering
+			\animategraphics[loop,controls,height=0.8\linewidth]{30}{Special1/Special1-}{0}{60}
+			\vfill
+		\end{columns}
+	\end{frame}
+
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{hFE Prediction and Post Failure \si{\micro}CT Scan}
+
+		Transverse cracks better caught
+
+		\begin{center}
+			\begin{figure}
+				\captionsetup[subfigure]{labelformat=empty}
+				\subfloat[hFE Prediction]{
+					\includegraphics[width=0.4\linewidth]
+					{Pictures/15_446_hFE}}
+				\qquad
+				\subfloat[Post-failure \si{ \micro}CT scan]{
+					\includegraphics[width=0.4\linewidth,trim=0 0 0 0]
+					{Pictures/15_446_Damaged}}
+			\end{figure}
+		\end{center}
+	\end{frame}
+	
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{Registration and Post Failure \si{\micro}CT Scan}
+
+		Strain line pattern caught in some cases
+		
+		\begin{center}
+			\begin{figure}
+				\captionsetup[subfigure]{labelformat=empty}
+				\subfloat[Registration result]{
+					\includegraphics[width=0.4\linewidth]
+					{Pictures/16_443_Registration}}
+				\qquad
+				\subfloat[Post-failure \si{ \micro}CT scan]{
+					\includegraphics[width=0.4\linewidth,trim=0 0 0 0]
+					{Pictures/16_443_Damaged}}
+			\end{figure}
+		\end{center}
+	\end{frame}
+
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	%------------------------------------------------------------
+	
+	\section{Discussion \& Conclusions}
+	\begin{frame}
+		\frametitle{Discussion \& Conclusions I}
+		Experimental data and hFE
+		\begin{itemize}
+			\item
+			Excellent correlations (>0.92)
+			\item
+			Properties underestimation by hFE\\$\rightarrow$ Fitted for radius
+		\end{itemize}\vspace{0.5em}
+		Experimental data and image data\\
+		$\rightarrow$ Results comparative to literature \cite{p2}
+		\begin{itemize}
+			\item
+			Good (>0.8) correlations between BMD and intensive properties
+			\item
+			Excellent (>0.93) correlations between BMC and extensive properties
+			\item
+			Compressive failure behavior
+			\\$\rightarrow$ Outlier(s) analysis
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Discussion \& Conclusions II}
+		Image qualitative analysis
+		\begin{itemize}
+			\item
+			Categories are subjective
+			\item
+			General tendency:\\
+			$\rightarrow$  Cortical bone deformation\\
+			$\rightarrow$  Transverse densification line
+			\item
+			hFE simulation\\
+			$\rightarrow$ Transverse strain lines prediction
+			\item
+			Difficulty to compare due to deformed plane\\
+			$\rightarrow$ Registration software
+			\item
+			Elastix suited for analysis
+		\end{itemize}
+	\end{frame}
+
+}
+
+%----------------------------------------------------------------
+%	TITLE PAGE 	-------------------------------------------------
+%----------------------------------------------------------------
+
+\title[Msc Thesis Presentation]{
+\uppercase{Msc Thesis Presentation} \\ 
+\normalsize Computational and Experimental Investigation of the Mechanical Properties of the Human Distal Tibia
+} 
+
+\author{Mathieu Simon}
+\institute[University of Bern]
+{
+MSc - Biomedical Engineering \\
+University of Bern, Faculty of Medicine \\
+\medskip
+}
+\date{November 12, 2020}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Overview}
+\begin{itemize}
+	\setlength\itemsep{1.5em}
+	\item
+	General Introduction
+	\item
+	Part I : Fabric-Elasticity Relationships in Osteogenesis Imperfecta
+	\item
+	Part II : Experimental Investigation of Compressive Failure Behavior
+	\item
+	Outlook
+\end{itemize}
+\end{frame}
+
+
+%----------------------------------------------------------------
+%	PRESENTATION SLIDES -----------------------------------------
+%----------------------------------------------------------------
+
+
+\section{General Introduction}
+\begin{frame}
+	\frametitle{Introduction}
+	\begin{columns}[t]
+		\column{.65\textwidth}
+		Bone
+		\begin{itemize}
+			\item
+			Extracellular Matrix (ECM)
+			\begin{itemize}
+				\item
+				Organic phase $\rightarrow$ collagen type I
+				\item
+				Mineral phase $\rightarrow$ hydroxapatite (HA)
+			\end{itemize}
+			\item
+			Tissue structure
+			\begin{itemize}
+				\item
+				Cortical (compact) bone
+				\item
+				Trabecular (cancellous) bone
+			\end{itemize}
+		\end{itemize}\vspace{1em}
+		Tibia
+		\begin{itemize}
+			\item
+			High resolution peripheral quantitative computed tomography (HR-pQCT)
+			\item
+			Paraplegic fractures
+		\end{itemize}
+		\column{.35\textwidth}
+		\vfill
+		\centering
+		\includegraphics[height=1.25\linewidth]
+		{Pictures/01_TibiaAnatomy}\\
+		Tibia Anatomy
+		\vfill
+	\end{columns} 
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\makepartone
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\makeparttwo
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\bookmarksetup{startatroot}
+\section{Outlook} 
+\begin{frame}
+	\frametitle{Outlook}
+	Part I : Fabric-Elasticity Relationships in Osteogenesis Imperfecta\\
+	Improve OI understanding:
+	\begin{itemize}
+		\item
+		Same anatomical locations
+		\item
+		Perform fit only windowing BV/TV
+		\item
+		Distinctions among OI types
+	\end{itemize}\vspace{0.5em}
+	Part II : Experimental Investigation of Compressive Failure
+	\begin{itemize}
+		\item
+		Improve registration\\
+		$\rightarrow$ Add deviatoric part
+		\item
+		Analyze correlations\\
+		$\rightarrow$ Statistics
+		\item
+		Apply analyses of Part I on Part II\\
+		$\rightarrow$ Erase doubt about scan resolution
+	\end{itemize}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\section{} 
+\begin{frame}
+	\frametitle{Thank You !}
+	\centering
+	\includegraphics[width=1\linewidth]
+	{GroupPicture}	
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+
+\appendix
+
+\section{References}
+\begin{frame}
+	\frametitle{References}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			\bibitem[Panyasantisuk et al., 2015]{p1} Panyasantisuk, J., Pahr, D. H., Gross, T., and Zysset, P. K. (2015).
+			\newblock Comparison of Mixed and Kinematic Uniform Boundary Conditions in Homogenized Elasticity of Femoral Trabecular Bone Using Microfinite Element Analyses
+			\vspace{5mm}
+			\bibitem[Varga et al., 2010]{p2} Varga, P., Pahr, D. H., Baumbach, S., and Zysset, P. K. (2010)
+			\newblock HR-pQCT based FE analysis of the most distal radius section provides an improved prediction
+			of Colles’ fracture load in vitro
+		\end{thebibliography}
+	}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+\end{document} 

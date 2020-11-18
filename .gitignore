@@ -7,3 +7,4 @@
 
 # Ignore pictures because high definition is too large
 *.png
+*.svg
