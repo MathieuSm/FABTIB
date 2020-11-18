@@ -4,3 +4,6 @@
 
 # Ignore presentations and reports pdf
 *.pdf
+
+# Ignore pictures because high definition is too large
+*.png
