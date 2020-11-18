@@ -1,3 +1,6 @@
 # Ignore scan files
 *.mhd
 *.raw
+
+# Ignore presentations and reports pdf
+*.pdf
