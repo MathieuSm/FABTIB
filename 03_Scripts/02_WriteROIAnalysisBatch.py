@@ -5,7 +5,7 @@ import pandas as pd
 WorkingDirectory = os.getcwd()
 DataFolder = os.path.join(WorkingDirectory,'02_Data')
 
-DataSubFolders = [File for File in os.listdir(DataFolder) if not File.endswith('.csv')]
+DataSubFolders = [File for File in os.listdir(DataFolder) if os.path.isdir(os.path.join(DataFolder,File))]
 DataSubFolders.sort()
 
 DataGroup = 0   # 0 = Healthy group, 1 = OI group
