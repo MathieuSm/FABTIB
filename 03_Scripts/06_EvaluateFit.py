@@ -289,7 +289,7 @@ def ComplianceRegression(XData, YData, DataFolder, DataType, FitDOF):
     Axes.set_xlim([1e1, 1e-5])
     Axes.set_ylim([1e1, 1e-5])
     Axes.annotate('Number of sample : %i' % NSamples, (1e-2, 3e0))
-    Axes.annotate('R$^{2}$ : %.3f' % (RValue ** 2), (1e-2, 7e0))
+    Axes.annotate('R$^{2}$ : %.2f' % (RValue ** 2), (1e-2, 7e0))
     Axes.set_xlabel('Observed compliance (MPa$^{-1}$)')
     Axes.set_ylabel('Fitted compliance (MPa$^{-1}$)')
     plt.legend(loc='upper left')
@@ -326,7 +326,7 @@ def StiffnessRegression(XData, YData, DataFolder, DataType, FitDOF):
     Axes.set_xlim([1e-2, 1e4])
     Axes.set_ylim([1e-2, 1e4])
     Axes.annotate('Number of sample : %i' % NSamples, (1e1, 4e-2))
-    Axes.annotate('R$^{2}$ : %.3f' % (RValue ** 2), (1e1, 1.5e-2))
+    Axes.annotate('R$^{2}$ : %.2f' % (RValue ** 2), (1e1, 1.5e-2))
     Axes.set_xlabel('Observed stiffness (MPa)')
     Axes.set_ylabel('Fitted stiffness (MPa)')
     plt.legend(loc='upper left')
@@ -370,7 +370,7 @@ FitResults = pd.read_csv(os.path.join(DataFolder,'02_FitResults.csv'))
 DataTypes = ['Complete', 'Windowed', 'Filtered']
 DataType = DataTypes[0]
 FitDOFs = [3, 5]
-FitDOF = FitDOFs[0]
+FitDOF = FitDOFs[1]
 plt.rc('font', size=12)
 
 
@@ -608,8 +608,8 @@ ComplianceRegressionResults = pd.DataFrame({'Slope':Slope,
                                             'RValue':RValue,
                                             'PValue':PValue,
                                             'Standard Error':StdErr,
-                                            'RSquare':R2,
-                                            'RSquareAdj':R2adj,
+                                            'RSquare':R2.values[0],
+                                            'RSquareAdj':R2adj.values[0],
                                             'Relative Norm Error':RelativeNormError.mean(),
                                             'Rel Norm Error Std':RelativeNormError.std()},index={0})
 ComplianceFile = os.path.join(DataFolder,'04_Compliance_' + DataType + '_' + str(FitDOF) + 'DOFs.csv')
@@ -618,6 +618,12 @@ ComplianceRegressionResults.to_csv(ComplianceFile,index=False)
 XData = pd.concat([Sii123Data[['S11', 'S22', 'S33']],
                    Sij123Data[['S12', 'S13', 'S21', 'S23', 'S31', 'S32']],
                    Sii456Data[['S44', 'S55', 'S66']]], axis=1)
+
+
+# Test = pd.DataFrame()
+# Test[['E_1','E_2','E_3','G_1','G_2','G_3','Nu_1','Nu_2','Nu_3','Rho','Z_1','Z_2','Z_3']] = Data[['E1','E2','E3','Mu23','Mu31','Mu12','Nu23','Nu13','Nu12','BVTV','m1','m2','m3']]
+# Test.to_csv('Test.txt',sep='\t',index=False,header=False)
+
 YData = pd.concat([Sii123Fit[['S11', 'S22', 'S33']],
                    Sij123Fit[['S12', 'S13', 'S21', 'S23', 'S31', 'S32']],
                    Sii456Fit[['S44', 'S55', 'S66']]], axis=1)
@@ -636,8 +642,8 @@ StiffnessRegressionResults = pd.DataFrame({'Slope':Slope,
                                             'RValue':RValue,
                                             'PValue':PValue,
                                             'Standard Error':StdErr,
-                                            'RSquare':R2,
-                                            'RSquareAdj':R2adj,
+                                            'RSquare':R2.values[0],
+                                            'RSquareAdj':R2adj.values[0],
                                             'Relative Norm Error':RelativeNormError.mean(),
                                             'Rel Norm Error Std':RelativeNormError.std()},index={0})
 StiffnessFile = os.path.join(DataFolder,'05_Stiffness_' + DataType + '_' + str(FitDOF) + 'DOFs.csv')

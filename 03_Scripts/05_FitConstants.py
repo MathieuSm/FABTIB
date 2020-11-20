@@ -345,8 +345,8 @@ DataSubFolders.sort()
 DataGroup = 0   # 0 = Healthy group, 1 = OI group
 
 DataFolder = os.path.join(WorkingDirectory,'04_Results',DataSubFolders[DataGroup],'03_LinearRegression')
-Data = pd.read_csv(os.path.join(DataFolder,'Data.csv'))
-Filter = pd.read_csv(os.path.join(DataFolder,'Filter.csv'))
+Data = pd.read_csv(os.path.join(DataFolder,'00_Data.csv'))
+Filter = pd.read_csv(os.path.join(DataFolder,'01_Filter.csv'))
 
 
 
@@ -362,8 +362,8 @@ ExcludedData = Data[BFMaxFilter|BFMinFilter]
 
 
 CVFilter = Data['Variation Coefficient'] <= Threshold
-BFMaxFilter = Data['BVTV'] < MaxBVTV
-BFMinFilter = Data['BVTV'] > MinBVTV
+BFMaxFilter = Data['BVTV'] <= MaxBVTV
+BFMinFilter = Data['BVTV'] >= MinBVTV
 
 WindowedData = Data[BFMaxFilter&BFMinFilter]
 FilteredData = Data[CVFilter&BFMaxFilter&BFMinFilter]
@@ -373,9 +373,9 @@ ThresholdFilter = WindowedData['Variation Coefficient'] > Threshold
 ThresholdData = WindowedData[ThresholdFilter]
 
 ## If necessary filter negative Poisson's ratio
-Data = Data[Data['Nu12']>0]
-Data = Data[Data['Nu13']>0]
-Data = Data[Data['Nu23']>0]
+# Data = Data[Data['Nu12']>0]
+# Data = Data[Data['Nu13']>0]
+# Data = Data[Data['Nu23']>0]
 
 ## Plot BVTV vs CV
 Figure, Axes = plt.subplots(1, 1, figsize=(5.5, 4.5),dpi=100)
@@ -391,7 +391,7 @@ Axes.set_ylim([0,1])
 Axes.set_xlabel('BV/TV (-)')
 Axes.set_ylabel('Coefficient of Variation (-)')
 plt.legend(loc='upper right')
-plt.savefig(os.path.join(DataFolder,'04_BVTV_CV_' + DataSubFolders[DataGroup][3:-14] + '.png'))
+plt.savefig(os.path.join(DataFolder,'03_BVTV_CV_' + DataSubFolders[DataGroup][3:-14] + '.png'))
 plt.show()
 plt.close(Figure)
 
