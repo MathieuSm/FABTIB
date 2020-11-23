@@ -101,7 +101,7 @@ MSc - Biomedical Engineering \\
 University of Bern, Faculty of Medicine \\
 \medskip
 }
-\date{November 23, 2020}
+\date{November 24, 2020}
 
 \begin{document}
 
@@ -109,7 +109,7 @@ University of Bern, Faculty of Medicine \\
 \titlepage
 \end{frame}
 
-	\begin{frame}
+\begin{frame}
 	\frametitle{Groups Distributions}
 	\begin{columns}[c] 
 		\column{.1\textwidth}
@@ -135,6 +135,74 @@ University of Bern, Faculty of Medicine \\
 			\subfloat[Male]{
 				\includegraphics[width=0.4\linewidth,trim=0 0 0 100]
 				{Pictures/01_OIM}}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{1 Scan Fit}
+	\begin{columns}[c] 
+		\column{.1\textwidth}
+		\hspace{5mm}
+		\rotatebox{90}{\hspace{0mm} Filtered \hspace{13mm} Complete}
+		\column{0.8\textwidth}
+		\begin{figure}
+			\hspace{-15mm}
+			\captionsetup[subfigure]{labelformat=empty}
+			\subfloat[]{
+				\includegraphics[width=0.4\linewidth]
+				{Pictures/02_Compliance_Complete_5DOFs}}
+			\qquad
+			\subfloat[]{
+				\includegraphics[width=0.4\linewidth]
+				{Pictures/02_Stiffness_Complete_5DOFs}}
+			\qquad\\
+			\hspace{-15mm}
+			\subfloat[Compliance]{
+				\includegraphics[width=0.4\linewidth,trim=0 0 0 50]
+				{Pictures/02_Compliance_Filtered_5DOFs}}
+			\qquad
+			\subfloat[Stiffness]{
+				\includegraphics[width=0.4\linewidth,trim=0 0 0 50]
+				{Pictures/02_Stiffness_Filtered_5DOFs}}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Fit results}
+	\begin{columns}[c] 
+		\column{.1\textwidth}
+		\hspace{5mm}
+		\rotatebox{90}{\hspace{0mm} Filtered \hspace{13mm} Complete}
+		\column{0.8\textwidth}
+		\begin{figure}
+			\hspace{-15mm}
+			\captionsetup[subfigure]{labelformat=empty}
+			\subfloat[]{
+				\includegraphics[width=0.4\linewidth]
+				{Pictures/03_Distal_Complete_5DOFs}}
+			\qquad
+			\subfloat[]{
+				\includegraphics[width=0.43\linewidth]
+				{Pictures/03_Proximal_Complete_5DOFs}}
+			\qquad\\
+			\hspace{-15mm}
+			\subfloat[Stacks 1 \& 2]{
+				\includegraphics[width=0.4\linewidth,trim=0 0 0 500]
+				{Pictures/03_Distal_Filtered_5DOFs}}
+			\qquad
+			\subfloat[Stack 3]{
+				\includegraphics[width=0.43\linewidth,trim=0 0 0 500]
+				{Pictures/03_Proximal_Filtered_5DOFs}}
 		\end{figure}
 	\end{columns}
 \end{frame}

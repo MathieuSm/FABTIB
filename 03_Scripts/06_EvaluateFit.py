@@ -271,7 +271,7 @@ def ComplianceRegression(XData, YData, DataFolder, DataType, FitDOF):
     XArray = np.array([XData.min(), XData.max()])
     YArray = XArray * Slope
 
-    Figure, Axes = plt.subplots(1, 1, figsize=(5.5, 4.5),dpi=1000)
+    Figure, Axes = plt.subplots(1, 1, figsize=(5.5, 4.5),dpi=100)
     Axes.plot([1e1, 1e-5], [1e1, 1e-5], linestyle='--', linewidth=2, color=(0, 0, 0), label='Diagonal')
     Axes.plot(Eii123Data[['E11', 'E22', 'E33']],
               Eii123Fit[['E11', 'E22', 'E33']],
@@ -295,7 +295,7 @@ def ComplianceRegression(XData, YData, DataFolder, DataType, FitDOF):
     plt.legend(loc='upper left')
     plt.xscale('log')
     plt.yscale('log')
-    plt.savefig(ComplianceFile)
+    plt.savefig(ComplianceFile,dpi=1000)
     plt.show()
     plt.close(Figure)
 
@@ -308,7 +308,7 @@ def StiffnessRegression(XData, YData, DataFolder, DataType, FitDOF):
     XArray = np.array([XData.min(), XData.max()])
     YArray = XArray * Slope + Intercept
 
-    Figure, Axes = plt.subplots(1, 1, figsize=(5.5, 4.5),dpi=1000)
+    Figure, Axes = plt.subplots(1, 1, figsize=(5.5, 4.5),dpi=100)
     Axes.plot([1e-2, 1e4], [1e-2, 1e4], linestyle='--', linewidth=2, color=(0, 0, 0), label='Diagonal')
     Axes.plot(Sii123Data[['S11', 'S22', 'S33']],
               Sii123Fit[['S11', 'S22', 'S33']],
@@ -332,7 +332,7 @@ def StiffnessRegression(XData, YData, DataFolder, DataType, FitDOF):
     plt.legend(loc='upper left')
     plt.yscale('log')
     plt.xscale('log')
-    plt.savefig(StiffnessFile)
+    plt.savefig(StiffnessFile,dpi=1000)
     plt.show()
     plt.close(Figure)
 
@@ -383,7 +383,7 @@ Sij123Data = pd.DataFrame()
 Sii456Data = pd.DataFrame()
 
 ## If necessary filter data (variation coefficient)
-if DataType == DataType[1] or DataType == DataType[2]:
+if DataType == DataTypes[1] or DataType == DataTypes[2]:
 
     Threshold, MinBVTV, MaxBVTV = Filter.values[0]
 
@@ -394,9 +394,9 @@ if DataType == DataType[1] or DataType == DataType[2]:
     WindowedData = Data[BFMaxFilter&BFMinFilter]
     FilteredData = Data[CVFilter&BFMaxFilter&BFMinFilter]
 
-    if DataType == DataType[0]:
+    if DataType == DataTypes[1]:
         Data = WindowedData
-    elif DataType == DataType[1]:
+    elif DataType == DataTypes[2]:
         Data = FilteredData
 
 
@@ -618,12 +618,6 @@ ComplianceRegressionResults.to_csv(ComplianceFile,index=False)
 XData = pd.concat([Sii123Data[['S11', 'S22', 'S33']],
                    Sij123Data[['S12', 'S13', 'S21', 'S23', 'S31', 'S32']],
                    Sii456Data[['S44', 'S55', 'S66']]], axis=1)
-
-
-# Test = pd.DataFrame()
-# Test[['E_1','E_2','E_3','G_1','G_2','G_3','Nu_1','Nu_2','Nu_3','Rho','Z_1','Z_2','Z_3']] = Data[['E1','E2','E3','Mu23','Mu31','Mu12','Nu23','Nu13','Nu12','BVTV','m1','m2','m3']]
-# Test.to_csv('Test.txt',sep='\t',index=False,header=False)
-
 YData = pd.concat([Sii123Fit[['S11', 'S22', 'S33']],
                    Sij123Fit[['S12', 'S13', 'S21', 'S23', 'S31', 'S32']],
                    Sii456Fit[['S44', 'S55', 'S66']]], axis=1)

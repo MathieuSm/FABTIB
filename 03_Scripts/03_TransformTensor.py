@@ -660,14 +660,14 @@ ConstantsFiles.sort()
 # 02 Transform tensor into fabric coordinate system and compute engineering constants
 TransformedConstants = pd.DataFrame()
 
-for Sample in range(len(ConstantsFiles)):
+for Sample in ConstantsFiles:
 
-    ROINumber = FabricFiles[Sample][0]
-    Scan = FabricFiles[Sample][2:-4]
+    ROINumber = Sample[0]
+    Scan = Sample[2:-4]
 
-    FabricData = GetFabricInfos(os.path.join(DataFolder,FabricFiles[Sample]))
+    FabricData = GetFabricInfos(os.path.join(DataFolder,Sample[:-4] + '.fab'))
     EigenValues, EigenVectors = SortFabric(FabricData)
-    ComplianceMatrix = GetComplianceMatrix(os.path.join(DataFolder,ConstantsFiles[Sample]))
+    ComplianceMatrix = GetComplianceMatrix(os.path.join(DataFolder,Sample))
 
     ## Symmetrize the matrix
     ComplianceMatrix = (ComplianceMatrix+ComplianceMatrix.T)/2
