@@ -24,18 +24,25 @@ for DataGroup in ScanLists:
 
     for Gender in Sex:
 
-        print(DataGroup[3:-18] + ' ' + Gender)
+        if Gender in ['F','M','Female','Male']:
 
-        SubList = ScanList[ScanList['Sex']==Gender]
+            print(DataGroup[3:-18] + ' ' + Gender)
 
-        plt.rc('font', size=12)
-        Figure, Axes = plt.subplots(1, 1, figsize=(5.5, 4.5),dpi=100)
-        SubList.hist('Age',grid=False,color=(1,1,1),edgecolor=(0,0,0),ax=Axes,label=DataGroup[3:-18])
-        Axes.set_xlabel('Age')
-        Axes.set_ylabel('Number')
-        Axes.set_xlim([15, 95])
-        Axes.set_ylim([0, 40])
-        Axes.annotate('N = ' + str(len(SubList)),(80,30))
-        Axes.set_title('')
-        plt.show()
-        plt.close(Figure)
+            SubList = ScanList[ScanList['Sex']==Gender]
+
+            plt.rc('font', size=12)
+            Figure, Axes = plt.subplots(1, 1, figsize=(5.5, 4.5),dpi=100)
+            SubList.hist('Age',grid=False,color=(1,1,1),edgecolor=(0,0,0),ax=Axes)
+            Axes.plot([SubList['Age'].mean(),SubList['Age'].mean()],[0,40],
+                      linestyle='--',color=(1,0,0),label='Mean : ' + str(int(SubList['Age'].mean().round())))
+            Axes.plot([SubList['Age'].median(),SubList['Age'].median()],[0,40],
+                      linestyle='--',color=(0,0,1),label='Median : ' + str(int(SubList['Age'].median().round())))
+            Axes.set_xlabel('Age')
+            Axes.set_ylabel('Number')
+            Axes.set_xlim([15, 95])
+            Axes.set_ylim([0, 40])
+            Axes.annotate('N = ' + str(len(SubList)),(80,30))
+            Axes.set_title('')
+            plt.legend(loc='upper right')
+            plt.show()
+            plt.close(Figure)

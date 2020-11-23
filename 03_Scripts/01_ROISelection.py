@@ -124,7 +124,7 @@ ScansPath = os.path.join(DataFolder,DataSubFolders[DataGroup])
 Scans = [File for File in os.listdir(ScansPath) if File.endswith('.mhd')]
 Scans.sort()
 
-ScanList = pd.read_csv(os.path.join(DataFolder,ScanLists[DataGroup]))
+ScanList = pd.read_csv(os.path.join(DataFolder,ScanLists[DataGroup]),sep=';')
 
 ParametersDataFrame = pd.DataFrame()
 

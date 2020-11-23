@@ -22824,7 +22824,7 @@ rm C_FEA/03_JobResults/*.com
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/opt/Medtool/medtool43/Python27/bin/python" "/opt/Medtool/medtool43/bin/info.py" -txt "B_Edit"
-"/opt/Medtool/medtool43/Python27/bin/python" "/opt/Medtool/medtool43/bin/mic.pyc" -in "B_Edit/01_MHDFile/C0002156_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/5_C0002156_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "276; 154; 392; 87; 87; 87"
+"/opt/Medtool/medtool43/Python27/bin/python" "/opt/Medtool/medtool43/bin/mic.pyc" -in "B_Edit/01_MHDFile/C0002156_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/5_C0002156_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "466; 346; 385; 87; 87; 87"
 "/opt/Medtool/medtool43/Python27/bin/python" "/opt/Medtool/medtool43/bin/mic.pyc" -in "B_Edit/02_RawROI/5_C0002156_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/5_C0002156_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
 "/opt/Medtool/medtool43/Python27/bin/python" "/opt/Medtool/medtool43/bin/mic.pyc" -in "B_Edit/03_CleanROI/5_C0002156_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/5_C0002156_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
 "/opt/Medtool/medtool43/Python27/bin/python" "/opt/Medtool/medtool43/bin/mia.pyc" -in "B_Edit/04_ResizedROI/5_C0002156_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/5_C0002156_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
