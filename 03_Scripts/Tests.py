@@ -1,7 +1,15 @@
 import pandas as pd
 
-MissingData = pd.read_csv(DataFolder+'/MissingROIAnalysis.csv',header=None)
-MissingData.columns = ['$ROINumber','$Scan']
+Files = pd.DataFrame()
+for i in ConstantsFiles:
+    Files = Files.append({'Scan':i[:-4]},ignore_index=True)
+
+
+MissingData = pd.DataFrame()
+for i in FabricFiles:
+    if i[:-4] not in Files.values:
+        MissingData = MissingData.append({'$ROINumber':i[0],'$Scan':i[2:-4]},ignore_index=True)
+
 
 MOrdered = MissingData.sort_values(by=['$Scan','$ROINumber'])
 MOrdered = MOrdered.reset_index()
@@ -18,7 +26,7 @@ for i in MOrdered.index:
     ROINumber = MOrdered.loc[i]['$ROINumber']
     Scan = MOrdered.loc[i]['$Scan']
 
-    Filter1 = MOrdered2['$ROINumber'] == ROINumber
+    Filter1 = MOrdered2['$ROINumber'] == int(ROINumber)
     Filter2 = MOrdered2['$Scan'] == Scan
 
     XPos = MOrdered2[Filter1 & Filter2]['$XPos'].values[0]

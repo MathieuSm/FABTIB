@@ -378,20 +378,21 @@ ThresholdData = WindowedData[ThresholdFilter]
 # Data = Data[Data['Nu23']>0]
 
 ## Plot BVTV vs CV
+plt.rc('font', size=12)
 Figure, Axes = plt.subplots(1, 1, figsize=(5.5, 4.5),dpi=100)
 Axes.plot(Data['BVTV'],Data['Variation Coefficient'],linestyle='none',marker='o',color=(0,0,0),fillstyle='none',label='Data')
-Axes.plot([MinBVTV,MinBVTV],[0,1],color=(0,0,1),linestyle='--',label='BV/TV window')
-Axes.plot([MaxBVTV,MaxBVTV],[0,1],color=(0,0,1),linestyle='--')
+Axes.plot([MinBVTV,MinBVTV],[0,2],color=(0,0,1),linestyle='--',label='BV/TV window')
+Axes.plot([MaxBVTV,MaxBVTV],[0,2],color=(0,0,1),linestyle='--')
 Axes.plot(ExcludedData['BVTV'],ExcludedData['Variation Coefficient'],linestyle='none',marker='x',color=(0,0,1),label='BV/TV Windowing')
 Axes.plot([0,0.7],[Threshold,Threshold],color=(1,0,0),linestyle='--',label='Threshold')
 Axes.plot([0,0.7],[Threshold,Threshold],color=(1,0,0),linestyle='--')
 Axes.plot(ThresholdData['BVTV'],ThresholdData['Variation Coefficient'],linestyle='none',marker='x',color=(1,0,0),label='CV Thresholding')
 Axes.set_xlim([0,0.7])
-Axes.set_ylim([0,1])
+Axes.set_ylim([0,1.85])
 Axes.set_xlabel('BV/TV (-)')
 Axes.set_ylabel('Coefficient of Variation (-)')
 plt.legend(loc='upper right',framealpha=1)
-plt.savefig(os.path.join(DataFolder,'03_BVTV_CV_' + DataSubFolders[DataGroup][3:-14] + '.png'))
+plt.savefig(os.path.join(DataFolder,'03_BVTV_CV_' + DataSubFolders[DataGroup][3:-14] + '.png'),dpi=1000)
 plt.show()
 plt.close(Figure)
 

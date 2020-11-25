@@ -368,7 +368,7 @@ FitResults = pd.read_csv(os.path.join(DataFolder,'02_FitResults.csv'))
 
 
 DataTypes = ['Complete', 'Windowed', 'Filtered']
-DataType = DataTypes[0]
+DataType = DataTypes[2]
 FitDOFs = [3, 5]
 FitDOF = FitDOFs[1]
 plt.rc('font', size=12)

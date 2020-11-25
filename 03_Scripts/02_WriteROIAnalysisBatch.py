@@ -19,7 +19,7 @@ MedtoolParametersData = pd.read_csv(MedtoolParametersFile, sep=';')
 del MedtoolParametersData['Unnamed: 8']
 
 # Create the .bash script
-BatchFile = open(os.path.join(WorkingDirectory, '03_Scripts', '02_ROIAnalysisBatch.bash'),'w')
+BatchFile = open(os.path.join(WorkingDirectory, '03_Scripts', '02_ROIAnalysisBatch0.bash'),'w')
 
 # Set variables for files to remove
 LocalPath = 'C_FEA/03_JobResults/'
