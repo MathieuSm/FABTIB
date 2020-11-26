@@ -59,7 +59,7 @@ ScanFolder = os.path.join(WorkingDirectory,'02_Data')
 DataSubFolders = [File for File in os.listdir(ScanFolder) if os.path.isdir(os.path.join(ScanFolder,File))]
 DataSubFolders.sort()
 
-DataGroup = 0   # 0 = Healthy group, 1 = OI group
+DataGroup = 1   # 0 = Healthy group, 1 = OI group
 
 DataFolder = os.path.join(WorkingDirectory,'04_Results',DataSubFolders[DataGroup],'02_TransformedTensors')
 ROIFolder = os.path.join(WorkingDirectory,'04_Results',DataSubFolders[DataGroup],'00_ROI')
@@ -101,12 +101,12 @@ MaxBVTV = Data['BVTV'].max()
 ## Compare to actual filter parameter
 Filter = pd.read_csv(os.path.join(FitFolder,'01_Filter.csv'))
 
-if DataGroup == 0:
-    if MinBVTV > Filter['Min BVTV'].values[0]:
-        MinBVTV = Filter['Min BVTV'].values[0]
-elif DataGroup == 1:
-    if MaxBVTV < Filter['Max BVTV'].values[0]:
-        MaxBVTV = Filter['Max BVTV'].values[0]
+if MinBVTV < Filter['Min BVTV'].values[0]:
+    MinBVTV = Filter['Min BVTV'].values[0]
+if MaxBVTV > Filter['Max BVTV'].values[0]:
+    MaxBVTV = Filter['Max BVTV'].values[0]
+
+if DataGroup == 1:
     Threshold = Filter['Threshold'].values[0]
 
 FilterData = pd.DataFrame({'Threshold':Threshold,'Min BVTV':MinBVTV,'Max BVTV':MaxBVTV},index=[0])

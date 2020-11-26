@@ -117,14 +117,14 @@ ScanLists = [File for File in os.listdir(DataFolder) if File.endswith('.csv')]
 ScanLists.sort()
 
 # 03 Load Data
-DataGroup = 0   # 0 = Healthy group, 1 = OI group
+DataGroup = 1   # 0 = Healthy group, 1 = OI group
 Plots = False   # Plot the different ROI location
 
 ScansPath = os.path.join(DataFolder,DataSubFolders[DataGroup])
 Scans = [File for File in os.listdir(ScansPath) if File.endswith('.mhd')]
 Scans.sort()
 
-ScanList = pd.read_csv(os.path.join(DataFolder,ScanLists[DataGroup]),sep=';')
+ScanList = pd.read_csv(os.path.join(DataFolder,ScanLists[DataGroup]),sep=',')
 
 ParametersDataFrame = pd.DataFrame()
 
@@ -135,6 +135,7 @@ for Scan in Scans:
     CT_Scan, Origin, Spacing, Size = Load_Itk(ScanFile)
 
     StackHeight = int(Size[0]/3)
+    StackHeight = int(Size[0])
     CubeSide = 5.3    # Side length of cubic ROI (mm)
     VoxelsRange = np.round(CubeSide / Spacing).astype('int')
 

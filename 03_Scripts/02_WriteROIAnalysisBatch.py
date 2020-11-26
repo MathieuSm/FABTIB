@@ -8,7 +8,7 @@ DataFolder = os.path.join(WorkingDirectory,'02_Data')
 DataSubFolders = [File for File in os.listdir(DataFolder) if os.path.isdir(os.path.join(DataFolder,File))]
 DataSubFolders.sort()
 
-DataGroup = 0   # 0 = Healthy group, 1 = OI group
+DataGroup = 1   # 0 = Healthy group, 1 = OI group
 
 PipelineFile  = open(os.path.join(WorkingDirectory, '03_Scripts', '02_ROIAnalysisPipeline.txt'), 'r')
 PipelineText  = PipelineFile.read()
@@ -19,7 +19,7 @@ MedtoolParametersData = pd.read_csv(MedtoolParametersFile, sep=';')
 del MedtoolParametersData['Unnamed: 8']
 
 # Create the .bash script
-BatchFile = open(os.path.join(WorkingDirectory, '03_Scripts', '02_ROIAnalysisBatch0.bash'),'w')
+BatchFile = open(os.path.join(WorkingDirectory, '03_Scripts', '02_ROIAnalysisBatch.bash'),'w')
 
 # Set variables for files to remove
 LocalPath = 'C_FEA/03_JobResults/'
