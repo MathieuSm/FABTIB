@@ -35,7 +35,7 @@ for DataGroup in ScanLists:
     Axes.set_ylabel('Number')
     Axes.set_xlim([15, 95])
     Axes.set_ylim([0, 75])
-    Axes.annotate('N = ' + str(len(ScanList)),(80,30))
+    Axes.annotate('N = ' + str(len(ScanList)),(80,55))
     Axes.set_title('')
     plt.legend(loc='upper right')
     plt.show()
@@ -95,5 +95,6 @@ for Group in [HealthyGroup, OIGroup]:
     plt.show()
     plt.close(Figure)
 
-HealthyGroup.to_csv(os.path.join(DataFolder,'01_HealthySubgroup.csv'),index=False)
-OIGroup.to_csv(os.path.join(DataFolder,'02_OISubgroup.csv'),index=False)
+
+# SubHealthy.to_csv(os.path.join(WorkingDirectory,'04_Results/03_HealthyTibiaXCT2SubGroup/02_SubGroup.csv'),index=False)
+# SubOI.to_csv(os.path.join(WorkingDirectory,'04_Results/04_OITibiaXCT2SubGroup/02_SubGroup.csv'),index=False)

@@ -59,7 +59,7 @@ ScanFolder = os.path.join(WorkingDirectory,'02_Data')
 DataSubFolders = [File for File in os.listdir(ScanFolder) if os.path.isdir(os.path.join(ScanFolder,File))]
 DataSubFolders.sort()
 
-DataGroup = 1   # 0 = Healthy group, 1 = OI group
+DataGroup = 0   # 0 = Healthy group, 1 = OI group
 
 DataFolder = os.path.join(WorkingDirectory,'04_Results',DataSubFolders[DataGroup],'02_TransformedTensors')
 ROIFolder = os.path.join(WorkingDirectory,'04_Results',DataSubFolders[DataGroup],'00_ROI')
