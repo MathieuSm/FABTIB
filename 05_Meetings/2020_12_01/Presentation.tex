@@ -1,0 +1,461 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (01/07/19)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------
+%	PACKAGES AND THEMES		-----------------------------------
+%----------------------------------------------------------------
+
+\documentclass[xcolor=table]{beamer}
+
+\mode<presentation> {
+
+\usetheme{Frankfurt}
+\usecolortheme{dove}
+
+}
+
+\usepackage{graphicx}
+\usepackage{booktabs} 
+\usepackage{subfig}
+\usepackage{pgf}
+\usepackage{multirow}
+\usepackage{appendixnumberbeamer}
+\usepackage{bookmark}
+\usepackage{siunitx}
+\usepackage{animate}
+\usepackage{xcolor}
+
+
+%----------------------------------------------------------------
+%	GENERAL OPTIONS 	-----------------------------------------
+%----------------------------------------------------------------
+
+% Set template options
+\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+\setbeamertemplate{frametitle}{\vspace*{1em}\insertframetitle}
+\setbeamertemplate{enumerate items}[default]
+\setbeamercolor{section in head/foot}{fg=white, bg=black}
+
+% Headline
+\makeatletter
+\setbeamertemplate{headline}
+{%
+  \pgfuseshading{beamer@barshade}%
+    \vskip-5ex%
+  \begin{beamercolorbox}[ignorebg,ht=2.25ex,dp=3.75ex]{section in head/foot}
+  \insertsectionnavigationhorizontal{\paperwidth}{\hskip0pt plus1fill}{\hskip0pt plus1fill}
+  \end{beamercolorbox}%
+  \ifbeamer@sb@subsection%
+    \begin{beamercolorbox}[ignorebg,ht=2.125ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+      \usebeamerfont{subsection in head/foot}\insertsubsectionhead
+    \end{beamercolorbox}%
+  \fi%
+}%
+\makeatother
+
+% Footline
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,left]{section in head/foot}%
+    \usebeamerfont{author in head/foot}\hspace{10pt}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{section in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{section in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{}\hspace*{2em}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+% Add logo
+\logo{\pgfputat{\pgfxy(0,7)}{\includegraphics[width=0.1\paperwidth]{Pictures/00_Unibe_Logo}}}
+
+% Table settings
+\renewcommand{\arraystretch}{2}
+\captionsetup{labelformat=empty,labelsep=none}
+\definecolor{Gray}{gray}{0.9}
+
+%----------------------------------------------------------------
+%	TITLE PAGE 	-------------------------------------------------
+%----------------------------------------------------------------
+
+\title[Regular Meeting]{
+\uppercase{Regular Meeting}
+} 
+
+\author{Mathieu Simon}
+\institute[University of Bern]
+{
+MSc - Biomedical Engineering \\
+University of Bern, Faculty of Medicine \\
+\medskip
+}
+\date{December 1, 2020}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+	\frametitle{Scan Sections}
+	\begin{columns}[c] 
+		\column{.45\textwidth}
+		\centering		
+		\includegraphics[height=1\linewidth,trim=200 22 200 0]
+		{Pictures/01_ControlClinicalSection}\\
+		Healthy
+		
+		\column{.45\textwidth}
+		\centering
+		\includegraphics[height=1\linewidth,trim=200 0 200 22]
+		{Pictures/01_OIClinicalSection}\\
+		OI
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Variation Coefficient}
+		\begin{figure}
+			\captionsetup[subfigure]{labelformat=empty}
+			\subfloat[Stack 1 \& 2]{
+				\includegraphics[width=0.25\linewidth, trim=575 0 575 0]
+				{Pictures/02_BVTV_CV_Stack12}}
+			\qquad
+			\subfloat[Stack 3]{
+				\includegraphics[width=0.25\linewidth, trim=50 -10 50 0]
+				{Pictures/02_BVTV_CV_Healthy}}
+			\qquad
+			\subfloat[OI]{
+				\includegraphics[width=0.25\linewidth, trim=50 -10 50 0]
+				{Pictures/02_BVTV_CV_OI}}
+		\end{figure}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Fit results}
+	\begin{columns}[c] 
+		\column{.1\textwidth}
+		\hspace{5mm}
+		\rotatebox{90}{\hspace{0mm} Filtered \hspace{13mm} Complete}
+		\column{0.8\textwidth}
+		\begin{figure}
+			\hspace{-15mm}
+			\captionsetup[subfigure]{labelformat=empty}
+			\subfloat[]{
+				\includegraphics[width=0.4\linewidth]
+				{Pictures/03_Stiffness_Complete_Healthy}}
+			\qquad
+			\subfloat[]{
+				\includegraphics[width=0.4\linewidth]
+				{Pictures/03_Stiffness_Complete_OI}}
+			\qquad\\
+			\hspace{-15mm}
+			\subfloat[Heathy]{
+				\includegraphics[width=0.4\linewidth,trim=0 0 0 50]
+				{Pictures/03_Stiffness_Filtered_Healthy}}
+			\qquad
+			\subfloat[OI]{
+				\includegraphics[width=0.4\linewidth,trim=0 0 0 50]
+				{Pictures/03_Stiffness_Filtered_OI}}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Fit Parameters 3 DOFs}
+	\begin{table}[h!]
+		\centering
+		\caption{Summary of the fit results}\label{}
+		\resizebox{0.75\linewidth}{!}{
+			\begin{tabular}{ccccccccc}
+				\toprule
+				& & N samples & $\lambda_{0}$ & $\lambda_{0}$' & $\mu_{0}$ & $k$ & $l$ & $R^{2}_{adj}$ \\
+				\midrule
+				\multirow{2}{*}{\cite{p1}} & Complete & 167 & 3382 & 2746 & 2855 & 1.55 & 0.84 & 0.984 \\
+				& Filtered & 126 & 3306 & 2736 & 2837 & 1.55 & 0.82 & 0.985 \\[1em]
+				
+				\multirow{2}{*}{Stacks 1\&2 Healthy} & Complete & 717 & 2467 & 1651 & 2108 & 1.55 & 0.84 & 0.912 \\
+				& Filtered & 677 & 2444 & 1634 & 2091 & 1.55 & 0.82 & 0.915 \\[1em]
+				
+				\multirow{2}{*}{Stacks 3 Healthy} & Complete & 720 & 2589 & 1632 & 2083 & 1.55 & 0.84 & 0.884 \\
+				& Filtered & 678 & 2670 & 1705 & 2147 & 1.55 & 0.82 & 0.916 \\[1em]
+				
+				\multirow{2}{*}{OI group} & Complete & 292 & 2602 & 1470 & 2053 & 1.55 & 0.84 & 0.759 \\
+				& Filtered & 190 & 2620 & 1524 & 2053 & 1.55 & 0.82 & 0.893 \\
+				
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Fit Parameters 5 DOFs}
+	\begin{table}[h!]
+		\centering
+		\caption{Summary of the fit results}\label{}
+		\resizebox{0.75\linewidth}{!}{
+			\begin{tabular}{ccccccccc}
+				\toprule
+				& & N samples & $\lambda_{0}$ & $\lambda_{0}$' & $\mu_{0}$ & $k$ & $l$ & $R^{2}_{adj}$ \\
+				\midrule
+				\multirow{2}{*}{\cite{p1}} & Complete & 167 & 3382 & 2746 & 2855 & 1.55 & 0.84 & 0.984 \\
+				& Filtered & 126 & 3306 & 2736 & 2837 & 1.55 & 0.82 & 0.985 \\[1em]
+				
+				\multirow{2}{*}{Stacks 1\&2 Healthy} & Complete & 717 & 5542 & 3710 & 4736 & 2.21 & 0.79 & 0.957 \\
+				& Filtered & 677 & 5476 & 3662 & 4685 & 2.20 & 0.80 & 0.954 \\[1em]
+				
+				\multirow{2}{*}{Stacks 3 Healthy} & Complete & 720 & 6666 & 4201 & 5362 & 2.14 & 0.90 & 0.931 \\
+				& Filtered & 678 & 5706 & 3643 & 4587 & 2.04 & 0.89 & 0.947 \\[1em]
+				
+				\multirow{2}{*}{OI group} & Complete & 292 & 3116 & 1760 & 2459 & 1.64 & 1.09 & 0.764 \\
+				& Filtered & 190 & 2088 & 1215 & 1636 & 1.38 & 1.05 & 0.911 \\
+				
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Groups Distribution}
+	\begin{columns}[c] 
+		\column{.1\textwidth}
+		\hspace{5mm}
+		\rotatebox{90}{\hspace{0mm} Sampling \hspace{13mm} Original}
+		\column{0.8\textwidth}
+		\begin{figure}
+			\hspace{-15mm}
+			\captionsetup[subfigure]{labelformat=empty}
+			\subfloat[]{
+				\includegraphics[width=0.4\linewidth]
+				{Pictures/04_Original_Distribution_Healthy}}
+			\qquad
+			\subfloat[]{
+				\includegraphics[width=0.4\linewidth]
+				{Pictures/04_Original_Distribution_OI}}
+			\qquad\\
+			\hspace{-15mm}
+			\subfloat[Heathy]{
+				\includegraphics[width=0.4\linewidth,trim=0 0 0 50]
+				{Pictures/04_Sampling_Distribution_Healthy}}
+			\qquad
+			\subfloat[OI]{
+				\includegraphics[width=0.4\linewidth,trim=0 0 0 50]
+				{Pictures/04_Sampling_Distribution_OI}}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Variation Coefficient}
+	\begin{columns}[c] 
+		\column{.1\textwidth}
+		\hspace{5mm}
+		\rotatebox{90}{\hspace{0mm} Sampling \hspace{13mm} Original}
+		\column{0.8\textwidth}
+		\begin{figure}
+			\hspace{-15mm}
+			\captionsetup[subfigure]{labelformat=empty}
+			\subfloat[]{
+				\includegraphics[width=0.4\linewidth]
+				{Pictures/05_BVTV_CV_Healthy}}
+			\qquad
+			\subfloat[]{
+				\includegraphics[width=0.4\linewidth]
+				{Pictures/05_BVTV_CV_OI}}
+			\qquad\\
+			\hspace{-15mm}
+			\subfloat[Heathy]{
+				\includegraphics[width=0.4\linewidth,trim=0 0 0 50]
+				{Pictures/05_BVTV_CV_HealthySub}}
+			\qquad
+			\subfloat[OI]{
+				\includegraphics[width=0.4\linewidth,trim=0 0 0 50]
+				{Pictures/05_BVTV_CV_OISub}}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Variation Coefficient}
+	\begin{columns}[c] 
+		\column{.1\textwidth}
+		\hspace{5mm}
+		\rotatebox{90}{\hspace{0mm} Sampling \hspace{13mm} Original}
+		\column{0.8\textwidth}
+		\begin{figure}
+			\hspace{-15mm}
+			\captionsetup[subfigure]{labelformat=empty}
+			\subfloat[]{
+				\includegraphics[width=0.4\linewidth]
+				{Pictures/06_Stiffness_Complete_Healthy}}
+			\qquad
+			\subfloat[]{
+				\includegraphics[width=0.4\linewidth]
+				{Pictures/06_Stiffness_Complete_OI}}
+			\qquad\\
+			\hspace{-15mm}
+			\subfloat[Heathy]{
+				\includegraphics[width=0.4\linewidth,trim=0 0 0 50]
+				{Pictures/06_Stiffness_Filtered_Healthy}}
+			\qquad
+			\subfloat[OI]{
+				\includegraphics[width=0.4\linewidth,trim=0 0 0 50]
+				{Pictures/06_Stiffness_Filtered_OI}}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Fit Parameters 3 DOFs}
+	\begin{table}[h!]
+		\centering
+		\caption{Summary of the fit results}\label{}
+		\resizebox{0.75\linewidth}{!}{
+			\begin{tabular}{ccccccccc}
+				\toprule
+				& & N samples & $\lambda_{0}$ & $\lambda_{0}$' & $\mu_{0}$ & $k$ & $l$ & $R^{2}_{adj}$ \\
+				\midrule
+				
+				\multirow{2}{*}{Original Healthy} & Complete & 720 & 2589 & 1632 & 2083 & 1.55 & 0.84 & 0.884 \\
+				& Filtered & 678 & 2670 & 1705 & 2147 & 1.55 & 0.82 & 0.916 \\[1em]
+				
+				\multirow{2}{*}{Sampling Healthy} & Complete & 192 & 2459 & 1520 & 2003 & 1.55 & 0.84 & 0.901 \\
+				& Filtered & 182 & 2487 & 1557 & 2033 & 1.55 & 0.82 & 0.897 \\[1em]
+				
+				\multirow{2}{*}{Original OI group} & Complete & 292 & 2602 & 1470 & 2053 & 1.55 & 0.84 & 0.759 \\
+				& Filtered & 190 & 2620 & 1524 & 2053 & 1.55 & 0.82 & 0.893 \\[1em]
+				
+				\multirow{2}{*}{Sampling OI group} & Complete & 190 & 2614 & 1478 & 2028 & 1.55 & 0.84 & 0.796 \\
+				& Filtered & 136 & 2678 & 1571 & 2090 & 1.55 & 0.82 & 0.782 \\
+				
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Fit Parameters 5 DOFs}
+	\begin{table}[h!]
+		\centering
+		\caption{Summary of the fit results}\label{}
+		\resizebox{0.75\linewidth}{!}{
+			\begin{tabular}{ccccccccc}
+				\toprule
+				& & N samples & $\lambda_{0}$ & $\lambda_{0}$' & $\mu_{0}$ & $k$ & $l$ & $R^{2}_{adj}$ \\
+				\midrule
+				
+				\multirow{2}{*}{Original Healthy} & Complete & 720 & 6666 & 4201 & 5362 & 2.14 & 0.90 & 0.931 \\
+				& Filtered & 678 & 5706 & 3643 & 4587 & 2.04 & 0.89 & 0.947 \\[1em]
+				
+				\multirow{2}{*}{Sampling Healthy} & Complete & 192 & 6491 & 4013 & 5287 & 2.14 & 0.89 & 0.947 \\
+				& Filtered & 182 & 6877 & 4305 & 5622 & 2.18 & 0.88 & 0.945 \\[1em]
+				
+				\multirow{2}{*}{Original OI group} & Complete & 292 & 3116 & 1760 & 2459 & 1.64 & 1.09 & 0.764 \\
+				& Filtered & 190 & 2088 & 1215 & 1636 & 1.38 & 1.05 & 0.911 \\[1em]
+				
+				\multirow{2}{*}{Sampling OI group} & Complete & 190 & 3561 & 2013 & 2763 & 1.72 & 1.11 & 0.805 \\
+				& Filtered & 136 & 2026 & 1189 & 1581 & 1.35 & 1.06 & 0.796 \\
+				
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{OI Types}
+	\begin{figure}
+		\captionsetup[subfigure]{labelformat=empty}
+		\subfloat[$\lambda_{ii}$]{
+			\includegraphics[width=0.25\linewidth, trim=50 0 50 0]
+			{Pictures/07_OITypes_Fit_Sii123}}
+		\qquad
+		\subfloat[$\lambda_{ij}$]{
+			\includegraphics[width=0.25\linewidth, trim=50 0 50 0]
+			{Pictures/07_OITypes_Fit_Sij123}}
+		\qquad
+		\subfloat[$\mu_{ii}$]{
+			\includegraphics[width=0.25\linewidth, trim=50 0 50 0]
+			{Pictures/07_OITypes_Fit_Sii456}}
+	\end{figure}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\appendix
+
+\section{References}
+\begin{frame}
+	\frametitle{References}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			\bibitem[Panyasantisuk et al., 2015]{p1} Panyasantisuk, J., Pahr, D. H., Gross, T., and Zysset, P. K. (2015).
+			\newblock Comparison of Mixed and Kinematic Uniform Boundary Conditions in Homogenized Elasticity of Femoral Trabecular Bone Using Microfinite Element Analyses
+			\vspace{5mm}
+			\bibitem[Varga et al., 2010]{p2} Varga, P., Pahr, D. H., Baumbach, S., and Zysset, P. K. (2010)
+			\newblock HR-pQCT based FE analysis of the most distal radius section provides an improved prediction
+			of Colles’ fracture load in vitro
+		\end{thebibliography}
+	}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\end{document} 

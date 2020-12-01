@@ -359,7 +359,7 @@ ScanFolder = os.path.join(WorkingDirectory,'02_Data')
 DataSubFolders = [File for File in os.listdir(ScanFolder) if os.path.isdir(os.path.join(ScanFolder,File))]
 DataSubFolders.sort()
 
-DataGroup = 0   # 0 = Healthy group, 1 = OI group
+DataGroup = 1   # 0 = Healthy group, 1 = OI group
 
 DataFolder = os.path.join(WorkingDirectory,'04_Results',DataSubFolders[DataGroup],'03_LinearRegression')
 Data = pd.read_csv(os.path.join(DataFolder,'00_Data.csv'))

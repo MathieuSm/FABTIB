@@ -483,7 +483,7 @@ MainFolder = os.path.join(WorkingDirectory,'04_Results')
 SubFolders = [File for File in os.listdir(MainFolder) if os.path.isdir(os.path.join(MainFolder,File))]
 SubFolders.sort()
 
-DataGroup = 1   # 0 = Healthy sub group, 1 = OI sub group
+DataGroup = 0   # 0 = Healthy sub group, 1 = OI sub group
 
 DataFolder = os.path.join(MainFolder,SubFolders[DataGroup],'03_LinearRegression')
 GroupFolder = os.path.join(MainFolder,SubFolders[DataGroup+2])
@@ -651,7 +651,7 @@ LatexFile.close()
 
 # 05 Evaluate fit
 DataTypes = ['Complete', 'Windowed', 'Filtered']
-DataType = DataTypes[2]
+DataType = DataTypes[0]
 FitDOFs = [3, 5]
 FitDOF = FitDOFs[0]
 plt.rc('font', size=12)
