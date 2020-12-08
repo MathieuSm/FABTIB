@@ -1,0 +1,375 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+---
+ 
+```{r, include = F}
+library(MatchIt)
+library(dplyr)
+library(ggplot2)
+library(gridExtra)
+library(plyr)
+library(cobalt)
+library(broom)
+library(kableExtra)
+library(optmatch)
+library(rlist)
+library(lubridate)
+```
+
+```{r}
+Sys.setlocale("LC_ALL", "C")
+```
+
+
+```{r}
+wd = "/Users/mymac/Documents/research/CFI_Matching/"
+setwd(wd)
+```
+
+
+
+```{r}
+df = read.csv(paste0(wd,"/Propensity_score_matchingAllinOne_v2.csv"))
+dim(df)
+```
+
+```{r}
+df$LAD =rep(0, dim(df)[1])
+df$LCX =rep(0, dim(df)[1])
+df$RCA =rep(0, dim(df)[1])
+for (i in 1:dim(df)[1]){
+  if (df$Vessel[i] == 0){
+    df$LAD[i] = 1
+  }
+  if (df$Vessel[i] == 1){
+    df$LCX[i] = 1
+  }
+  if (df$Vessel[i] == 2){
+    df$RCA[i] = 1
+  }
+}
+df$LAD
+df$LCX
+df$RCA
+```
+
+
+
+```{r}
+drops <- c("X","X.1", "X.2", "Sex", "Hypertension", "Vessel")
+df = df[ , !(names(df) %in% drops)]
+colnames(df)
+```
+
+
+```{r}
+for (i in 1:dim(df)[1]){
+  if (df$Group[i] == 0){
+    df$Group[i] = 1
+  }
+  else {
+    df$Group[i] = 0
+  }
+  
+}
+```
+
+
+
+```{r, include = F}
+df_cov = c(
+  "CFI",
+  "QCA",
+  "Presence.of.AP",
+  "LAD",
+  "LCX",
+  "RCA",
+  "Age"
+           )
+length(df_cov)
+```
+
+
+```{r}
+df$Group = as.numeric(df$Group)
+```
+
+```{r}
+# df$Vessel <- as.factor(df$Vessel)
+# df$Vessel
+```
+
+
+```{r, include = F}
+sapply(df, class)
+```
+
+
+
+```{r}
+sapply(df, summary)
+```
+
+```{r, include = F}
+print("-----------------")
+for (i in 1:length(df_cov)){
+  print(df_cov[i])
+  print(table(is.na(df[, df_cov[i]])))
+  # for (j in 1:dim(df)[1]){
+  #   if(is.na(df[j, df_cov[i]])){
+  #     print(df[j, "center"])
+  #   }
+  #     else{
+  #       next
+  #     }
+  # }
+print("-----------------")
+  }
+```
+
+
+```{r, include = F}
+dim(df)
+na_removed_from_df = function(covar) {
+  na_var = numeric()
+  for (i in 1:length(covar)){
+    if ((df[, covar[i]]) %>% anyNA(recursive = FALSE) ==T){
+      mess1 = paste0("NA were present in :", covar[i])
+      print(mess1)
+      na_var = c(na_var, which(is.na(df[,covar[i]]) == T))
+    }
+    else{
+      next
+    }
+  }
+  if(length(na_var) == 0){
+    print("there was no NA found")
+    df_new = df
+  }
+  else{
+    mes = paste0("entries removed: ")
+    mes2 = paste0(na_var, collapse = " ")
+    mes_fin = paste0(mes, mes2)
+    print(mes_fin)
+    df_new = df[-na_var,]
+  }
+  return(df_new)
+}
+df_no_na = na_removed_from_df(df_cov)
+dim(df_no_na)
+```
+
+
+
+```{r, include = F}
+ttest = t.test(df_no_na$Age ~ df_no_na$Group)
+# ttest = t.test(df$age_at_LAAC ~ df$device)
+ttest
+ttest$estimate[1]
+ttest$estimate[2]
+```
+
+```{r}
+# ttest_table_no_match = sapply(df_cov, function(v){
+#   ttest = t.test(df_no_na[, v] ~ df_no_na$device_num)
+#   p_value = round(ttest$p.value, digit =3)
+#   estimate_asd_pfo = round(ttest$estimate[1], digit = 3)
+#   estimate_punct = round(ttest$estimate[2], digit = 3)
+#   ttest_table = c(p_value, estimate_asd_pfo, estimate_punct)
+#   names(ttest_table) = c("p value", "estimate_asd_pfo", "estimate_punct")
+#   return(ttest_table)
+#   })
+# ttest_table_no_match = t(as.data.frame(ttest_table_no_match))
+# ttest_table_no_match = ttest_table_no_match[, c(2,3,1)]
+# ttest_table_no_match
+```
+
+```{r, include = F}
+# tab1 = kable(ttest_table_no_match, "latex", booktabs = T, col.names = c("estimate", "st. error", "p-value")) %>% 
+# add_header_above(c("Unpaired t-test on variables on\namplatzer vs lambre - not matched" = 4)) %>%
+# kable_styling(latex_options = c("striped", "hold_position"))
+# kable_as_image(tab1, "/Users/mymac/Documents/research/Lambre_vs_Amplatzer/figures_and_tables/0_ttest_not_matched", file_format = "png")
+```
+
+```{r, include = F}
+ps_df_not_matched = glm(f.build("Group", df_cov),
+                      family = binomial(), data = df_no_na)
+summa_ps_df_not_matched = summary(ps_df_not_matched)
+df_not_matched_logit_coef = summa_ps_df_not_matched$coefficients
+df_not_matched_logit_coef = round(df_not_matched_logit_coef, digit = 4)
+df_not_matched_logit_coef = subset(df_not_matched_logit_coef, select = -c(3))
+df_not_matched_logit_coef
+```
+
+```{r, include = F}
+tab2 = kable(df_not_matched_logit_coef, "latex", booktabs = T, col.names = c("estimate", "st. error", "p-value")) %>% 
+add_header_above(c("Logistic regression of variables on\namplatzer vs lambre - not matched" = 4)) %>%
+# column_spec(1, width = "3cm") %>%
+kable_styling(latex_options = c("striped", "hold_position"))
+# kable_as_image(tab2, "/Users/mymac/Documents/research/Lambre_vs_Amplatzer/figures_and_tables/0_log_reg_not_matched", file_format = "png")
+```
+
+```{r, include = F}
+prs_df = data.frame(pr_score = predict(ps_df_not_matched, type = "response"),
+                    device = ps_df_not_matched$model$Group)
+```
+
+```{r, include = F}
+labs = paste("actual procedure:", c("lambre", "amplatzer"))
+prs_df %>%
+  mutate(device = ifelse(device == 1, labs[1], labs[2])) %>%
+  ggplot(aes(x = pr_score)) +
+  geom_histogram(color = "white") +
+  facet_wrap( ~ device) +
+  xlab("Probability of Puncture") +
+  theme_bw()
+```
+
+```{r}
+df_mod_selec = data.frame(matrix(ncol = 4, nrow = 0))
+col_names = c("model", "mean diff", "ratio", "caliper")
+colnames(df_mod_selec) = col_names
+df_mod_selec
+```
+```{r}
+colnames(df_no_na)
+```
+
+
+```{r}
+df_cov
+```
+
+
+```{r, echo = F}
+
+#df_mod_selec = data.frame(matrix(ncol = 4, nrow = 0))
+#col_names = c("model", "mean diff", "ratio", "caliper")
+#colnames(df_mod_selec) = col_names
+#df_mod_selec
+
+col_names = c("model", "mean diff", "ratio", "caliper", "n_control_matched", "n_patients")
+df_mod_selec = data.frame(matrix(ncol = length(col_names), nrow = 0))
+colnames(df_mod_selec) = col_names
+iter = 500
+threshold = 0.60
+ratio_list = c(1, 2, 3)
+caliper_list = c(0.8, 0.6, 0.4, 0.2)
+#ratio_list = c(2)
+#caliper_list = c(0.4)
+for (j in 1:length(ratio_list)){
+  ratio_val = ratio_list[j]
+  print(paste0("ratio: ", ratio_val))
+  for (i in 1:length(caliper_list)){
+      caliper_val = caliper_list[i]
+      print(paste0("caliper: ", caliper_val))
+    
+    select_mod = data.frame(matrix(ncol = length(df_cov) + 2, nrow = iter))
+    colnames(select_mod) = c(df_cov, "mean", "seed")
+    dim(select_mod)
+    for (i in 1:iter){
+      set.seed(i)
+      mod_match_logit = matchit(f.build("Group", df_cov), method = "nearest", distance = "logit", data = df_no_na, caliper = caliper_val, ratio = ratio_val)
+      tabl = bal.tab(mod_match_logit)
+      df_tbl_match_logit = data.frame(tabl$Balance$Diff.Adj)
+      rownames(df_tbl_match_logit) = rownames(tabl$Balance)
+      df_tbl_match_logit = rbind(df_tbl_match_logit, "Mean" = mean(abs(tabl$Balance$Diff.Adj)))
+      df_tbl_match_logit = rbind(df_tbl_match_logit, "seed" = i)
+      for (j in 2:dim(df_tbl_match_logit)[1]){
+          select_mod[i,j-1] = df_tbl_match_logit[j,1]
+      }
+    }
+    # create a new df without variable "mean" and "seed" for the function all()
+    select_mod_red = select_mod[, -which(names(select_mod) %in% c("mean", "seed"))]
+    
+    # select model with all standardized difference < threshold
+    select_index = c()
+    for (i in 1:dim(select_mod_red)[1]){
+      if(all(select_mod_red[i,] < threshold) == T){
+        select_index = c(select_index, i)
+      }
+      else{
+        next
+      }
+    }
+
+    select_mod_ind = select_mod[select_index, ]
+
+    
+    golden_seed = select_mod_ind$seed[which(select_mod_ind$mean == min(select_mod_ind$mean))]
+    set.seed(golden_seed)
+    mod_match_logit = matchit(f.build("Group", df_cov), method = "nearest", distance = "logit", data = df_no_na, caliper = caliper_val, ratio = ratio_val, replace = FALSE)
+    tabl = bal.tab(mod_match_logit)
+    
+    mean_diff = mean(abs(tabl$Balance$Diff.Adj))
+
+    model_str = paste0("ratio: ", ratio_val, " - caliper ", caliper_val, ":1")
+
+     df_mod_added = data.frame(model_str, mean_diff, ratio_val, caliper_val,  tabl$Observations$Treated[2], tabl$Observations$Control[2])
+    #df_mod_added = data.frame(model_str, mean_diff, ratio_val, caliper_val)
+    df_mod_selec = rbind(df_mod_selec, df_mod_added)
+    df_mod_selec
+    
+    #df_observation = data.frame(rownames(tabl$Balance), tabl$Balance[,4])
+    #colnames(df_balance) = c("variable", "Standardized difference")
+    write.csv(tabl$Observations, paste0(wd, "Observations/observations_ratio_", ratio_val, "_caliper_", caliper_val,  ".csv"))
+    
+    df_balance = data.frame(rownames(tabl$Balance), tabl$Balance[,4])
+    colnames(df_balance) = c("variable", "Standardized difference")
+    write.csv(df_balance, paste0(wd, "balance/balance_ratio_", ratio_val, "_caliper_", caliper_val,  ".csv"), row.names = FALSE)
+    
+    love1 = love.plot(bal.tab(mod_match_logit), threshold = .1)
+    ggsave(love1, file = paste0("love_ratio_", ratio_val, "_caliper_", caliper_val, ".png"), path = paste0(wd, "/figures_and_tables"))
+    
+    df_m_logit = match.data(mod_match_logit)
+    for (i in 1:dim(df_m_logit)[1]){
+      if (df_m_logit$Group[i] == 0){
+        df_m_logit$Group[i] = 1
+      }
+      else {
+        df_m_logit$Group[i] = 0
+      }
+    }
+    
+    
+    ps_df_match_logit = glm(f.build("Group", df_cov), family = binomial(), data = df_m_logit)
+    summa_ps_df_match_logit = summary(ps_df_match_logit)
+    df_m_logit_coef = summa_ps_df_match_logit$coefficients
+    df_m_logit_coef = round(df_m_logit_coef, digit = 4)
+    df_m_logit_coef = subset(df_m_logit_coef, select = -c(3))
+    df_m_logit_coef
+    write.csv(df_m_logit_coef, paste0(wd, "lr_baseline_characteristcs_post_matching/logistic_regression_ratio_", ratio_val, "_caliper_", caliper_val, ".csv"))
+    
+    
+    df_m_logit$Vessel =rep(0, dim(df_m_logit)[1])
+    for (i in 1:dim(df_m_logit)[1]){
+      if (df_m_logit$LAD[i] == 1){
+        df_m_logit$Vessel[i] = 0
+      }
+      if (df_m_logit$LCX[i] == 1){
+        df_m_logit$Vessel[i] = 1
+      }
+      if (df_m_logit$RCA[i] == 1){
+        df_m_logit$Vessel[i] = 2
+      }
+    }
+    df_m_logit$LAD <- NULL
+    df_m_logit$LCX <- NULL
+    df_m_logit$RCA <- NULL
+    #df_m_logit$distance <- NULL
+    df_m_logit$weights <- NULL
+    
+    
+    write.csv(df_m_logit, paste0(wd, "matched_data/matched_data_ratio_", ratio_val, "_caliper_", caliper_val, ".csv"))
+  }
+}
+colnames(df_mod_selec) = col_names
+write.csv(df_mod_selec, paste0(wd, "/df_mod_selec.csv"))
+```
+
+
+
+

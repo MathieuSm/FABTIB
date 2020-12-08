@@ -1,0 +1,328 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (01/07/19)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------
+%	PACKAGES AND THEMES		-----------------------------------
+%----------------------------------------------------------------
+
+\documentclass[xcolor=table]{beamer}
+
+\mode<presentation> {
+
+\usetheme{Frankfurt}
+\usecolortheme{dove}
+
+}
+
+\usepackage{graphicx}
+\usepackage{booktabs} 
+\usepackage{subfig}
+\usepackage{pgf}
+\usepackage{multirow}
+\usepackage{appendixnumberbeamer}
+\usepackage{bookmark}
+\usepackage{siunitx}
+\usepackage{animate}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{soul}
+
+
+%----------------------------------------------------------------
+%	GENERAL OPTIONS 	-----------------------------------------
+%----------------------------------------------------------------
+
+% Set template options
+\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+\setbeamertemplate{frametitle}{\vspace*{1em}\insertframetitle}
+\setbeamertemplate{enumerate items}[default]
+\setbeamercolor{section in head/foot}{fg=white, bg=black}
+
+% Headline
+\makeatletter
+\setbeamertemplate{headline}
+{%
+  \pgfuseshading{beamer@barshade}%
+    \vskip-5ex%
+  \begin{beamercolorbox}[ignorebg,ht=2.25ex,dp=3.75ex]{section in head/foot}
+  \insertsectionnavigationhorizontal{\paperwidth}{\hskip0pt plus1fill}{\hskip0pt plus1fill}
+  \end{beamercolorbox}%
+  \ifbeamer@sb@subsection%
+    \begin{beamercolorbox}[ignorebg,ht=2.125ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+      \usebeamerfont{subsection in head/foot}\insertsubsectionhead
+    \end{beamercolorbox}%
+  \fi%
+}%
+\makeatother
+
+% Footline
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,left]{section in head/foot}%
+    \usebeamerfont{author in head/foot}\hspace{10pt}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{section in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{section in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{}\hspace*{2em}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+% Add logo
+\logo{\pgfputat{\pgfxy(0,7)}{\includegraphics[width=0.1\paperwidth]{Pictures/00_Unibe_Logo}}}
+
+% Table settings
+\renewcommand{\arraystretch}{2}
+\captionsetup{labelformat=empty,labelsep=none}
+\definecolor{Gray}{gray}{0.9}
+
+% Define highlitghing command
+\makeatletter
+\let\HL\hl
+\renewcommand\hl{%
+	\let\set@color\beamerorig@set@color
+	\let\reset@color\beamerorig@reset@color
+	\HL}
+\makeatother
+
+%----------------------------------------------------------------
+%	TITLE PAGE 	-------------------------------------------------
+%----------------------------------------------------------------
+
+\title[Regular Meeting]{
+\uppercase{Regular Meeting}
+} 
+
+\author{Mathieu Simon}
+\institute[University of Bern]
+{
+MSc - Biomedical Engineering \\
+University of Bern, Faculty of Medicine \\
+\medskip
+}
+\date{December 8, 2020}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Project Overview}
+		\centering		
+		\includegraphics[width=0.8\linewidth]
+		{Pictures/01_Plan}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}[noframenumbering]
+	\frametitle{Project Overview}
+	\centering		
+	\includegraphics[width=0.8\linewidth]
+	{Pictures/01_Plan1}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Group Matching}
+	Matching process: \cite{p1}
+	\begin{itemize}[label=$\bullet$]
+		\item Distance: Mahalanobis\\
+			  $ D_{ij} = (X_i - X_j)' \Sigma{^-1}(X_i - X_j) $
+		\item Method: Optimal nearest neighbor
+		\item Assessment: Standardized bias, QQ plot
+		\item Outcome analysis: Identical for both group
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Matching Algorithm}
+	\vspace{0.2em}
+	\begin{columns}[t]
+		\column{.45\textwidth}
+		Optimal matching process:
+		\begin{enumerate}[label=(\roman*)]
+			\item Compute distances between each pair of control and test individual
+			\item Sort results for each test individual
+			\item If same control for multiple test individuals take next
+		\end{enumerate}
+		\column{.45\textwidth}
+		\vfill
+		\centering
+		\animategraphics[controls,width=1\linewidth]{30}{Pictures/Matching/Matches-}{0}{197}
+		\vfill
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Matching Assessment: Standardized Bias}
+	Standardized Bias: $Std Bias = \frac{\bar{x_t}-\bar{x_c}}{\sigma _t}$
+	\begin{columns}[c]
+		\column{.45\textwidth}
+		\vfill
+		\centering		
+		\includegraphics[width=1\linewidth]{Pictures/02_StandardizedBias}\\
+		Age and gender matching
+		\vfill
+		\column{.45\textwidth}
+		\vfill
+		\centering		
+		\includegraphics[width=1\linewidth]{Pictures/02_StandardizedBias2}\\
+		Age matching
+		\vfill
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Matching Assessment: QQ plot}
+	\begin{columns}[c]
+		\column{.45\textwidth}
+		\centering
+		\vfill		
+		\includegraphics[width=1\linewidth]{Pictures/03_QQPlot}
+		Age and gender matching
+		\vfill
+		\column{.45\textwidth}
+		\centering
+		\vfill
+		\includegraphics[width=1\linewidth]{Pictures/03_QQPlot2}
+		Age matching
+		\vfill
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Histograms}
+	\vspace{-5mm}
+	\begin{columns}[c] 
+		\column{.1\textwidth}
+		\hspace{5mm}
+		\rotatebox{90}{\hspace{-2mm} Matched\hspace{17mm} Original}
+		\column{0.8\textwidth}
+		\begin{figure}
+			\hspace{-15mm}
+			\captionsetup[subfigure]{labelformat=empty}
+			\subfloat[]{
+				\includegraphics[width=0.4\linewidth,trim=30 0 30 0]
+				{Pictures/04_Original_Control_Hist}}
+			\qquad
+			\subfloat[]{
+				\includegraphics[width=0.4\linewidth,trim=30 0 30 0]
+				{Pictures/04_Original_OI_Hist}}
+			\qquad\\
+			\hspace{-15mm}
+			\subfloat[Heathy]{
+				\includegraphics[width=0.4\linewidth,trim=30 0 30 80]
+				{Pictures/04_Matched_Control_Hist}}
+			\qquad
+			\subfloat[OI]{
+				\includegraphics[width=0.4\linewidth,trim=30 0 30 80]
+				{Pictures/04_Matched_OI_Hist}}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Project Overview}
+	\centering		
+	\includegraphics[width=0.8\linewidth]
+	{Pictures/05_Plan2}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Literature Review}
+	Paper 1: \cite{p2}
+	\begin{itemize}[label=$\bullet$]
+		\item Samples:
+		\begin{itemize}[label=$-$]
+			\item 39 healthy control and 39 OI
+			\item Age- and gender-matched
+			\item DXA: lumbar spine, hip, femoral neck
+			\item HR-pQCT: Standard tibia and radius section
+		\end{itemize}
+		\item Parameter analyzed
+		\begin{itemize}[label=$-$]
+				\item Anthropological: Age, weight, height, menopausal state, ...
+				\item Morphological: aBMD, vBMD, bone area, trab/cort. thickness, trab. network distribution
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\appendix
+
+\section{References}
+\begin{frame}
+	\frametitle{References}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			\bibitem[Stuart 2010]{p1} Stuart, Elisabth A. (2010).
+			\newblock Matching methods for causal inference: A review and a look forward
+			\newblock \textit{Statistical science : a review journal of the Institute of Mathematical Statistics, 25}(1), 1-21
+			\vspace{1mm}
+			\bibitem[Folkestad 2012]{p2} Folkestad, L., Hald, J. D., Hansen, S., Gram, J., Langdahl, B., Abrahamsen, B., Brixen, K. (2012).
+			\newblock Bone geometry, density, and microarchitecture in the distal radius and tibia in adults with osteogenesis imperfecta type i assessed by high-resolution pQCT
+			\newblock \textit{Journal of Bone and Mineral Research, 27}(1), 1405-1412
+			\vspace{1mm}
+			\bibitem[Panyasantisuk et al., 2015]{p3} Panyasantisuk, J., Pahr, D. H., Gross, T., and Zysset, P. K. (2015).
+			\newblock Comparison of Mixed and Kinematic Uniform Boundary Conditions in Homogenized Elasticity of Femoral Trabecular Bone Using Microfinite Element Analyses
+		\end{thebibliography}
+	}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\end{document} 
