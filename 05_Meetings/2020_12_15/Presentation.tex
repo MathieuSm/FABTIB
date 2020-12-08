@@ -1,0 +1,583 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (01/07/19)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------
+%	PACKAGES AND THEMES		-----------------------------------
+%----------------------------------------------------------------
+
+\documentclass[xcolor=table]{beamer}
+
+\mode<presentation> {
+
+\usetheme{Frankfurt}
+\usecolortheme{dove}
+
+}
+
+\usepackage{graphicx}
+\usepackage{booktabs} 
+\usepackage{subfig}
+\usepackage{pgf}
+\usepackage{multirow}
+\usepackage{appendixnumberbeamer}
+\usepackage{bookmark}
+\usepackage{siunitx}
+\usepackage{animate}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{soul}
+
+
+%----------------------------------------------------------------
+%	GENERAL OPTIONS 	-----------------------------------------
+%----------------------------------------------------------------
+
+% Set template options
+\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+\setbeamertemplate{frametitle}{\vspace*{1em}\insertframetitle}
+\setbeamertemplate{enumerate items}[default]
+\setbeamercolor{section in head/foot}{fg=white, bg=black}
+
+% Headline
+\makeatletter
+\setbeamertemplate{headline}
+{%
+  \pgfuseshading{beamer@barshade}%
+    \vskip-5ex%
+  \begin{beamercolorbox}[ignorebg,ht=2.25ex,dp=3.75ex]{section in head/foot}
+  \insertsectionnavigationhorizontal{\paperwidth}{\hskip0pt plus1fill}{\hskip0pt plus1fill}
+  \end{beamercolorbox}%
+  \ifbeamer@sb@subsection%
+    \begin{beamercolorbox}[ignorebg,ht=2.125ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+      \usebeamerfont{subsection in head/foot}\insertsubsectionhead
+    \end{beamercolorbox}%
+  \fi%
+}%
+\makeatother
+
+% Footline
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,left]{section in head/foot}%
+    \usebeamerfont{author in head/foot}\hspace{10pt}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{section in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{section in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{}\hspace*{2em}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+% Add logo
+\logo{\pgfputat{\pgfxy(0,7)}{\includegraphics[width=0.1\paperwidth]{Pictures/00_Unibe_Logo}}}
+
+% Table settings
+\renewcommand{\arraystretch}{2}
+\captionsetup{labelformat=empty,labelsep=none}
+\definecolor{Gray}{gray}{0.9}
+
+% Define highlitghing command
+\makeatletter
+\let\HL\hl
+\renewcommand\hl{%
+	\let\set@color\beamerorig@set@color
+	\let\reset@color\beamerorig@reset@color
+	\HL}
+\makeatother
+
+%----------------------------------------------------------------
+%	TITLE PAGE 	-------------------------------------------------
+%----------------------------------------------------------------
+
+\title[Regular Meeting]{
+\uppercase{Regular Meeting}
+} 
+
+\author{Mathieu Simon}
+\institute[University of Bern]
+{
+MSc - Biomedical Engineering \\
+University of Bern, Faculty of Medicine \\
+\medskip
+}
+\date{December 15, 2020}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Project Overview}
+		\centering		
+		\includegraphics[width=0.8\linewidth]
+		{Pictures/01_Plan}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}[noframenumbering]
+	\frametitle{Project Overview}
+	\centering		
+	\includegraphics[width=0.8\linewidth]
+	{Pictures/01_Plan1}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Group Matching}
+	Matching process: \cite{p1}
+	\begin{itemize}[label=$\bullet$]
+		\item Distance: Mahalanobis\\
+			  $ D_{ij} = (X_i - X_j)' \Sigma{^-1}(X_i - X_j) $
+		\item Method: Optimal nearest neighbor
+		\item Assessment: Standardized bias, QQ plot
+		\item Outcome analysis: Identical for both group
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Matching Algorithm}
+	\vspace{0.2em}
+	\begin{columns}[t]
+		\column{.45\textwidth}
+		Optimal matching process:
+		\begin{enumerate}[label=(\roman*)]
+			\item Compute distances between each pair of control and test individual
+			\item Sort results for each test individual
+			\item If same control for multiple test individuals take next
+		\end{enumerate}
+		\column{.45\textwidth}
+		\vfill
+		\centering
+		\animategraphics[controls,width=1\linewidth]{30}{Pictures/Matching/Matches-}{0}{197}
+		\vfill
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Matching Assessment: Standardized Bias}
+	Standardized Bias: $Std Bias = \frac{\bar{x_t}-\bar{x_c}}{\sigma _t}$
+	\begin{columns}[c]
+		\column{.45\textwidth}
+		\vfill
+		\centering		
+		\includegraphics[width=1\linewidth]{Pictures/02_StandardizedBias}\\
+		Age and gender matching
+		\vfill
+		\column{.45\textwidth}
+		\vfill
+		\centering		
+		\includegraphics[width=1\linewidth]{Pictures/02_StandardizedBias2}\\
+		Age matching
+		\vfill
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Matching Assessment: QQ plot}
+	\begin{columns}[c]
+		\column{.45\textwidth}
+		\centering
+		\vfill		
+		\includegraphics[width=1\linewidth]{Pictures/03_QQPlot}
+		Age and gender matching
+		\vfill
+		\column{.45\textwidth}
+		\centering
+		\vfill
+		\includegraphics[width=1\linewidth]{Pictures/03_QQPlot2}
+		Age matching
+		\vfill
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Histograms}
+	\vspace{-5mm}
+	\begin{columns}[c] 
+		\column{.1\textwidth}
+		\hspace{5mm}
+		\rotatebox{90}{\hspace{-2mm} Matched\hspace{17mm} Original}
+		\column{0.8\textwidth}
+		\begin{figure}
+			\hspace{-15mm}
+			\captionsetup[subfigure]{labelformat=empty}
+			\subfloat[]{
+				\includegraphics[width=0.4\linewidth,trim=30 0 30 0]
+				{Pictures/04_Original_Control_Hist}}
+			\qquad
+			\subfloat[]{
+				\includegraphics[width=0.4\linewidth,trim=30 0 30 0]
+				{Pictures/04_Original_OI_Hist}}
+			\qquad\\
+			\hspace{-15mm}
+			\subfloat[Heathy]{
+				\includegraphics[width=0.4\linewidth,trim=30 0 30 80]
+				{Pictures/04_Matched_Control_Hist}}
+			\qquad
+			\subfloat[OI]{
+				\includegraphics[width=0.4\linewidth,trim=30 0 30 80]
+				{Pictures/04_Matched_OI_Hist}}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Project Overview}
+	\centering		
+	\includegraphics[width=0.8\linewidth]
+	{Pictures/05_Plan2}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Variation Coefficient and BV/TV}
+	\begin{columns}[c]
+		\column{.45\textwidth}
+		\begin{itemize}[label=$\bullet$]
+			\item Coefficient of variation (CV):\\\vspace{3mm}
+			$CV = \frac{mean(BV/TV_{Subcubes})}{\sigma(BV/TV_{Subcubes})}$\vspace{3mm}
+			\item Spearman's correlation coefficient ($\rho$):\\\vspace{3mm}
+			$\rho = \frac{cov(R_X,R_Y)}{\sigma(R_X) \sigma(R_Y)}$\\\vspace{3mm}
+			with $R_i$, ranked variables
+		\end{itemize}
+		\column{.45\textwidth}
+		\centering
+		\vfill
+		\includegraphics[width=1\linewidth]{Pictures/06_BVTV_CV}
+		BV/TV in relation to CV
+		\vfill
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Variation Coefficient and BV/TV}
+	Computations performed according to \cite{p2}
+	\begin{table}[h!]
+	\centering
+	\caption{Spearman's correlation coefficients}\label{}
+		\begin{tabular}{cccc}
+			\toprule
+			Data set & N samples & $\rho$ & 95\% CI \\
+			\midrule
+			Grouped & 538 & -0.63 & [-0.57, -0.68] \\
+			Control & 270 & -0.63 & [-0.55, -0.70] \\
+			Test & 268 & -0.75 & [-0.69, -0.80] \\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Stiffness Linear Regression: Exponents}
+	\begin{columns}[c]
+		\column{.35\textwidth}
+		\begin{itemize}[label=$\bullet$]
+			\item Data set:\\
+			Control + Test (Grouped)
+			\item Windowing:\\
+			$[0.04,\infty)$
+			\item Threshold:\\
+			$[0,0.45]$
+		\end{itemize}
+		\column{.55\textwidth}
+		\centering
+		\vfill
+		\includegraphics[width=1\linewidth]{Pictures/07_Stiffness_Grouped_5DOFs}
+		Fit results
+		\vfill
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Stiffness Linear Regression: Components}
+	\begin{figure}
+		\captionsetup[subfigure]{labelformat=empty}
+		\subfloat[$\lambda_{ii}$]{
+			\includegraphics[width=0.25\linewidth,trim=50 0 50 0]
+			{Pictures/09_Sii_Plot}}
+		\qquad
+		\subfloat[$\lambda_{ij}$]{
+			\includegraphics[width=0.25\linewidth,trim=50 0 50 0]
+			{Pictures/09_Sij_Plot}}
+		\qquad
+		\subfloat[$\mu_{ii}$]{
+			\includegraphics[width=0.25\linewidth,trim=50 0 50 0]
+			{Pictures/09_Muii_Plot}}
+	\end{figure}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Stiffness Linear Regression: 5 DOFs}
+	\begin{columns}[c]
+		\column{.45\textwidth}
+		\centering
+		\vfill		
+		\includegraphics[width=1\linewidth]{Pictures/08_Stiffness_Control_5DOFs}
+		Control group
+		\vfill
+		\column{.45\textwidth}
+		\centering
+		\vfill
+		\includegraphics[width=1\linewidth]{Pictures/08_Stiffness_Test_5DOFs}
+		Test group
+		\vfill
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Stiffness Linear Regression: Outliers}
+	\begin{columns}[c]
+		\column{.45\textwidth}
+		\centering
+		\vfill		
+		\includegraphics[width=1\linewidth]{Pictures/08_Stiffness_Control_5DOFs_Outlier}
+		Control group
+		\vfill
+		\column{.45\textwidth}
+		\centering
+		\vfill
+		\includegraphics[width=1\linewidth]{Pictures/08_Stiffness_Test_5DOFs_Outlier}
+		Test group
+		\vfill
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Stiffness Linear Regression: Outlier}
+	\begin{figure}
+		\captionsetup[subfigure]{labelformat=empty}
+		\subfloat[BV/TV in relation to CV]{
+			\includegraphics[width=0.25\linewidth,trim=50 0 50 0]
+			{Pictures/10_BVTV_CV}}
+		\qquad
+		\subfloat[BV/TV in relation to DA]{
+			\includegraphics[width=0.25\linewidth,trim=50 0 50 0]
+			{Pictures/10_BVTV_DA}}
+		\qquad
+		\subfloat[CV in relation to DA]{
+			\includegraphics[width=0.25\linewidth,trim=50 0 50 0]
+			{Pictures/10_CV_DA}}
+	\end{figure}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Stiffness Linear Regression: Exponents}
+	\begin{columns}[c]
+		\column{.35\textwidth}
+		\begin{itemize}[label=$\bullet$]
+			\item Data set:\\
+			Control + Test (Grouped)
+			\item Windowing:\\
+			$[0.066,\infty)$ \\ $\rightarrow$ 4 more samples excluded
+			\item Threshold:\\
+			$[0,0.45]$
+		\end{itemize}
+		\column{.55\textwidth}
+		\centering
+		\vfill
+		\includegraphics[width=1\linewidth]{Pictures/11_Stiffness_Grouped_5DOFs}
+		Fit results
+		\vfill
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Stiffness Linear Regression: Parameters}
+	\begin{table}[h!]
+		\centering
+		\caption{Summary of the fit results}\label{}
+		\resizebox{0.75\linewidth}{!}{
+			\begin{tabular}{ccccccccc}
+				\toprule
+				Data type &  NSamples & DOFs & $\lambda_{0}$ &  $\lambda_{0}'$ & $\mu_{0}$ & $k$ & $l$ & $R^{2}_{adj}$ \\
+				\midrule
+				Grouped & 438 & 5 & 4440 & 2705 & 3545 & 1.90 & 0.95 & 0.94 \\
+				Control & 246 & 3 & 4538 & 2855 & 3664 & 1.90 & 0.95 & 0.94 \\
+				Test & 192 & 3 & 4316 & 2525 & 3398 & 1.90 &  0.95 & 0.94 \\
+				Control & 246 & 5 & 6007 & 3778 & 4849 & 2.08 &  0.89 & 0.95 \\
+				Test & 192 & 5 & 3330 & 1948 & 2621 & 1.72 & 1.05 & 0.94 \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Morphological Parameters}
+	\begin{table}[h!]
+		\centering
+		\caption{Summary of the morphological parameters}\label{}
+		\resizebox{0.75\linewidth}{!}{
+			\begin{tabular}{lccc}
+				\toprule
+				Group &  BV/TV & Degree of Anisotropy & Coefficient of Variation \\
+				\midrule
+				Control & 0.21 $\pm$ 0.08 & 2.00 $\pm$ 0.20 & 0.23 $\pm$ 0.14 \\
+				Test & 0.21 $\pm$ 0.10 & 1.91 $\pm$ 0.23 & 0.40 $\pm$ 0.28 \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Project Overview}
+	\centering		
+	\includegraphics[width=0.8\linewidth]
+	{Pictures/12_Plan3}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Paper 1: \cite{p3}}
+	\begin{itemize}[label=$\bullet$]
+		\item Samples:
+		\begin{itemize}[label=$-$]
+			\item 39 healthy control and 39 OI
+			\item Age- and gender-matched
+			\item DXA: lumbar spine, hip, femoral neck
+			\item HR-pQCT: Standard tibia and radius section
+		\end{itemize}
+		\item Parameter analyzed
+		\begin{itemize}[label=$-$]
+				\item Anthropological: Age, weight, height, menopausal state, ...
+				\item Morphological: aBMD, vBMD, bone area, trab/cort. thickness, trab. network distribution
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\appendix
+
+\section{References}
+\begin{frame}
+	\frametitle{Statistics}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			\bibitem[Stuart 2010]{p1} Stuart, Elisabth A. (2010).
+			\newblock Matching methods for causal inference: A review and a look forward
+			\newblock \textit{Statistical science : a review journal of the Institute of Mathematical Statistics, 25}(1), 1-21
+			\vspace{1mm}
+			\bibitem[Bishara 2017]{p2} Bishara, Anthony J., Hittner, James B. (2017).
+			\newblock Confidence intervals for correlations when data are not normal
+			\newblock \textit{Behavior Research Methods, 49}(1), 294-309
+		\end{thebibliography}
+	}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Other References}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			\bibitem[Folkestad 2012]{p3} Folkestad, L., Hald, J. D., Hansen, S., Gram, J., Langdahl, B., Abrahamsen, B., Brixen, K. (2012).
+			\newblock Bone geometry, density, and microarchitecture in the distal radius and tibia in adults with osteogenesis imperfecta type i assessed by high-resolution pQCT
+			\newblock \textit{Journal of Bone and Mineral Research, 27}(1), 1405-1412
+			\vspace{1mm}
+			\bibitem[Panyasantisuk et al., 2015]{p4} Panyasantisuk, J., Pahr, D. H., Gross, T., and Zysset, P. K. (2015).
+			\newblock Comparison of Mixed and Kinematic Uniform Boundary Conditions in Homogenized Elasticity of Femoral Trabecular Bone Using Microfinite Element Analyses
+		\end{thebibliography}
+	}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\end{document} 
