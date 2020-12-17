@@ -497,109 +497,18 @@ University of Bern, Faculty of Medicine \\
 %----------------------------------------------------------------
 
 \begin{frame}
-	\frametitle{Statistical Test Selection}
-	\centering		
-	\includegraphics[width=0.8\linewidth]
-	{Pictures/13_TestSelection1}\\
-	Modified from \cite{p3}
-\end{frame}
-
-%----------------------------------------------------------------
-%----------------------------------------------------------------
-%----------------------------------------------------------------
-
-\begin{frame}
-	\frametitle{Normality Assumption Check}
-	\begin{figure}
-		\captionsetup[subfigure]{labelformat=empty}
-		\subfloat[Histogram]{
-			\includegraphics[width=0.25\linewidth,trim=50 0 50 0]
-			{Pictures/14_Histogram}}
-		\qquad
-		\subfloat[Emipirical CDF]{
-			\includegraphics[width=0.25\linewidth,trim=50 0 50 0]
-			{Pictures/14_ECDF}}
-		\qquad
-		\subfloat[QQ Plot]{
-			\includegraphics[width=0.25\linewidth,trim=50 0 50 0]
-			{Pictures/14_QQPlot}}
-	\end{figure}
-\end{frame}
-
-%------------------------------------------------------------
-%------------------------------------------------------------
-%------------------------------------------------------------
-
-\begin{frame}
-	\frametitle{Statistical Test Selection Results}
-	\begin{table}[h!]
-		\centering
-		\caption{Summary of the statistical test selection}\label{}
-		\resizebox{0.75\linewidth}{!}{
-			\begin{tabular}{lcccc}
-				\toprule
-				Variable & Group & Normality & Variance & Statistical test \\
-				\midrule
-				\multirow{2}{*}{BV/TV} & Control & \ding{55} & 0.100 & \multirow{2}{*}{Mann-Whitney} \\
-				& Test & \ding{55} & 0.115 & \\
-				\multirow{2}{*}{CV} & Control & \ding{51} & 0.100 & \multirow{2}{*}{Mann-Whitney} \\
-				& Test & \ding{55} & 0.115 & \\
-				\multirow{2}{*}{DA} & Control & \ding{51} & 0.100 & \multirow{2}{*}{Mann-Whitney} \\
-				& Test & \ding{55} & 0.115 & \\
-				\bottomrule
-		\end{tabular}}
-	\end{table}
-\end{frame}
-
-%------------------------------------------------------------
-%------------------------------------------------------------
-%------------------------------------------------------------
-
-\begin{frame}
-	\frametitle{Morphological Parameters}
-	\begin{table}[h!]
-		\centering
-		\caption{Summary of the morphological parameters}\label{}
-		\resizebox{0.75\linewidth}{!}{
-			\begin{tabular}{lccc}
-				\toprule
-				Group &  BV/TV & Degree of Anisotropy & Coefficient of Variation \\
-				\midrule
-				Control & 0.21 $\pm$ 0.08 & 2.00 $\pm$ 0.20 & 0.23 $\pm$ 0.14 \\
-				Test & 0.21 $\pm$ 0.10 & 1.91 $\pm$ 0.23 & 0.40 $\pm$ 0.28 \\
-				\bottomrule
-		\end{tabular}}
-	\end{table}
-\end{frame}
-
-%----------------------------------------------------------------
-%----------------------------------------------------------------
-%----------------------------------------------------------------
-
-\begin{frame}
-	\frametitle{Project Overview}
-	\centering		
-	\includegraphics[width=0.8\linewidth]
-	{Pictures/99_Plan4}
-\end{frame}
-
-%----------------------------------------------------------------
-%----------------------------------------------------------------
-%----------------------------------------------------------------
-
-\begin{frame}
 	\frametitle{Paper 1: \cite{p4}}
 	\begin{itemize}[label=$\bullet$]
 		\item Samples:
 		\begin{itemize}[label=$-$]
-			\item 39 healthy control and 39 OI
+			\item 39 healthy control and 39 OI type I
 			\item Age- and gender-matched
 			\item HR-pQCT: Standard tibia and radius section
 		\end{itemize}
 		\item Parameter analyzed
 		\begin{itemize}[label=$-$]
-				\item Anthropological: Age, ...
-				\item Morphological: vBMD (Total, cortical, and trabecular), trab. BV/TV, trab. number and distribution, trab. thickness and spacing
+			\item Anthropological: Age, ...
+			\item Morphological: vBMD (Total, cortical, and trabecular), trab. BV/TV, trab. number and distribution, trab. thickness and spacing...
 		\end{itemize}
 		\item Statistics
 		\begin{itemize}[label=$-$]
@@ -621,11 +530,11 @@ University of Bern, Faculty of Medicine \\
 		\resizebox{0.75\linewidth}{!}{
 			\begin{tabular}{lcccc}
 				\toprule
-				 & Age & vBMD\textsubscript{Tot} & vBMD\textsubscript{Cort} & vBMD\textsubscript{Trab} \\
+				& Age & vBMD\textsubscript{Tot} & vBMD\textsubscript{Cort} & vBMD\textsubscript{Trab} \\
 				\midrule
 				Healthy group & 54 (21-77)  & 278 $\pm$ 63 & 864 (784-892) & 164 $\pm$ 38 \\
 				OI type I group & 53 (21-77) & 215 $\pm$ 62  & 869 (794-897) & 101 $\pm$ 35 \\
-				P values & 0.07 & \hl{<0.001} & 0.24 & \hl{<0.001}\\
+				$p$ values & 0.07 & \hl{<0.001} & 0.24 & \hl{<0.001}\\
 				Test & Wilcoxon & $t$ test & Wilcoxon & $t$ test \\
 				\bottomrule
 		\end{tabular}}
@@ -644,11 +553,11 @@ University of Bern, Faculty of Medicine \\
 		\resizebox{0.95\linewidth}{!}{
 			\begin{tabular}{lccccc}
 				\toprule
-				 & Bone Area\textsubscript{Tot} & Bone Area\textsubscript{Cort} & Bone Area\textsubscript{Trab} & Cort. th. & Cort. porosity \\
+				& Bone Area\textsubscript{Tot} & Bone Area\textsubscript{Cort} & Bone Area\textsubscript{Trab} & Cort. th. & Cort. porosity \\
 				\midrule
 				Healthy group & 785 $\pm$ 175 & 118.3 $\pm$ 36.3 & 660 $\pm$ 174 & 1.17 (0.91-1.31) & 6.0 (4.0-7.9) \\
 				OI type I group & 749 $\pm$ 198 & 97.0 $\pm$ 22.4  & 642 $\pm$ 192 & 0.93 (0.87-1.10) & 5.8 (3.5-8.6) \\
-				P values & 0.23 & \hl{<0.001} & 0.59 & \hl{<0.05} & 0.75\\
+				$p$ values & 0.23 & \hl{<0.001} & 0.59 & \hl{<0.05} & 0.75\\
 				Test & $t$ test & $t$ test & $t$ test & Wilcoxon & $t$ test \\
 				\bottomrule
 		\end{tabular}}
@@ -671,8 +580,178 @@ University of Bern, Faculty of Medicine \\
 				\midrule
 				Healthy group & 0.14 $\pm$ 0.03 & 1.94 (1.74-2.13)  & 0.07 (0.06-0.08) & 0.44 (0.39-0.51) & 0.20 (0.16-0.25) & 4423 (3403-5927) \\
 				OI type I group & 0.08 $\pm$ 0.03 & 1.30 (0.75-1.53)  & 0.07 (0.06-0.08) & 0.68 (0.57-1.19) & 0.40 (0.31-1.11) & 3499 (2640-4294) \\
-				P values & \hl{<0.001} & \hl{<0.001} & 0.54 & \hl{<0.001} & \hl{<0.001} & \hl{<0.001}\\
+				$p$ values & \hl{<0.001} & \hl{<0.001} & 0.54 & \hl{<0.001} & \hl{<0.001} & \hl{<0.001}\\
 				Test & $t$ test & Wilcoxon & Wilcoxon & Wilcoxon & $t$ test & Wilcoxon \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Paper 2: \cite{p5}}
+	\begin{itemize}[label=$\bullet$]
+		\item Samples:
+		\begin{itemize}[label=$-$]
+			\item 30 healthy control and 30 OI\\
+			18 OI type I and 12 OI type III and IV
+			\item Age-matched
+			\item HR-pQCT: Standard tibia and radius section
+		\end{itemize}
+		\item Parameter analyzed
+		\begin{itemize}[label=$-$]
+			\item Anthropological: Age, ...
+			\item Morphological: vBMD (Total, cortical, and trabecular), trab. BV/TV, trab. number and distribution, trab. thickness...
+		\end{itemize}
+		\item Statistics
+		\begin{itemize}[label=$-$]
+			\item Shapiro-Wilk (normality)
+			\item Mann-Whitney U
+			\item Kruskal-Wallis
+			\item Variance analysis
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{\cite{p5}: Results I}
+	\begin{table}[h!]
+		\centering
+		\caption{Summary of the results of \cite{p5}}\label{}
+		\resizebox{0.95\linewidth}{!}{
+			\begin{tabular}{lccccc}
+				\toprule
+				& Age & vBMD\textsubscript{Tot} & vBMD\textsubscript{Cort} & vBMD\textsubscript{Trab} & Meta/Inn \\
+				\midrule
+				Healthy group 		& 44 (38-52)  	& 305 (270-347)	& 875 (832-903) & 169 (155-201) & 1.88 (1.65-2.18) \\
+				OI type I group 	& 42 (35-56) 	& 217 (184-243) & 849 (805-911) & 117 (105-136) & 2.30 (2.11-3.10) \\
+				OI type III and IV 	& 48 (35-58) 	& 236 (161-262) & 862 (772-929) & 97 (67-110) 	& 3.15 (2.79-6.15) \\
+				$p$ values OI-I vs C & - 			& \hl{<0.0001} 	& n.s. 			& \hl{<0.0001} 	& <0.05 \\
+				$p$ values OI-III,IV vs C & - 			& \hl{<0.001} 	& n.s. 			& \hl{<0.0001} 	& \hl{<0.001} \\
+				$p$ values OI-I vs C & - 			& n.s. 	& n.s. 			& n.s. 	& <0.05 \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{\cite{p5}: Results II}
+	\begin{table}[h!]
+		\centering
+		\caption{Summary of the results of \cite{p5}}\label{}
+		\resizebox{0.95\linewidth}{!}{
+			\begin{tabular}{lcccccc}
+				\toprule
+				& BV/TV & Trab. number & Trab. thickness & Inhomogeneity (Tb.1/N.SD) & Cort. thickness & Cort. porosity \\
+				\midrule
+				Healthy group 		& 0.141 (0.130-.0170)  	& 1.76 (1.59-2.08)	& 0.081 (0.074-0.087) 	& 0.221 (0.170-0.242) 	& 1.130 (0.990-1.410) & 0.055 (0.042-0.066) \\
+				OI type I group 	& 0.098 (0.088-0.114) 	& 1.33 (1.07-1.55) 	& 0.074 (0.064-0.090) 	& 0.382 (0.311-0.504) 	& 0.885 (0.610-0.952) & 0.061 (0.048-0.072) \\
+				OI type III and IV 	& 0.081 (0.056-0.092) 	& 0.89 (0.81-1.08) 	& 0.078 (0.068-0.092) 	& 0.698 (0.511-0.890) 	& 0.980 (0.76-1.140) & 0.068 (0.045-0.099)\\
+				$p$ values OI-I vs C 	 	& \hl{<0.0001} 	& \hl{<0.0001} 		& n.s. 					& \hl{<0.0001} 			& \hl{<0.001} & n.s. \\
+				$p$ values OI-III,IV vs C 	& \hl{<0.0001} 	& \hl{<0.001} 		& n.s. 					& \hl{<0.001}			& n.s. & n.s. \\
+				$p$ values OI-I vs C 		& n.s. 			& n.s. 				& n.s. 					& n.s. 					& n.s. & n.s. \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Project Overview}
+	\centering		
+	\includegraphics[width=0.8\linewidth]
+	{Pictures/13_Plan4}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Statistical Test Selection}
+	\centering		
+	\includegraphics[width=0.8\linewidth]
+	{Pictures/14_TestSelection1}\\
+	Modified from \cite{p3}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Normality Assumption Check}
+	\begin{figure}
+		\captionsetup[subfigure]{labelformat=empty}
+		\subfloat[Histogram]{
+			\includegraphics[width=0.25\linewidth,trim=50 0 50 0]
+			{Pictures/15_Histogram}}
+		\qquad
+		\subfloat[Emipirical CDF]{
+			\includegraphics[width=0.25\linewidth,trim=50 0 50 0]
+			{Pictures/15_ECDF}}
+		\qquad
+		\subfloat[QQ Plot]{
+			\includegraphics[width=0.25\linewidth,trim=50 0 50 0]
+			{Pictures/15_QQPlot}}
+	\end{figure}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Statistical Test Selection Results}
+	\begin{table}[h!]
+		\centering
+		\caption{Summary of the statistical test selection}\label{}
+		\resizebox{0.75\linewidth}{!}{
+			\begin{tabular}{lcccc}
+				\toprule
+				Variable & Group & Normality & Variance & Statistical test \\
+				\midrule
+				\multirow{2}{*}{BV/TV} & Control & \ding{55} & 0.100 & \multirow{2}{*}{Mann-Whitney} \\
+				& Test & \ding{51} & 0.115 & \\
+				\multirow{2}{*}{CV} & Control &  &  & \multirow{2}{*}{} \\
+				& Test &  &  & \\
+				\multirow{2}{*}{DA} & Control &  &  & \multirow{2}{*}{} \\
+				& Test &  &  & \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Morphological Parameters}
+	\begin{table}[h!]
+		\centering
+		\caption{Summary of the morphological parameters}\label{}
+		\resizebox{0.75\linewidth}{!}{
+			\begin{tabular}{lccc}
+				\toprule
+				Group &  BV/TV & Degree of Anisotropy & Coefficient of Variation \\
+				\midrule
+				Control & 0.21 $\pm$ 0.08 & 2.00 $\pm$ 0.20 & 0.23 $\pm$ 0.14 \\
+				Test & 0.21 $\pm$ 0.10 & 1.91 $\pm$ 0.23 & 0.40 $\pm$ 0.28 \\
 				\bottomrule
 		\end{tabular}}
 	\end{table}
@@ -714,12 +793,12 @@ University of Bern, Faculty of Medicine \\
 	\footnotesize{
 		\begin{thebibliography}{99}
 			\setbeamertemplate{bibliography item}[triangle]
-			\bibitem[Folkestad 2012]{p4} Folkestad, L., Hald, J. D., Hansen, S., Gram, J., Langdahl, B., Abrahamsen, B., Brixen, K. (2012).
+			\bibitem[Folkestad et al., 2012]{p4} Folkestad, L., Hald, J. D., Hansen, S., Gram, J., Langdahl, B., Abrahamsen, B., Brixen, K. (2012).
 			\newblock Bone geometry, density, and microarchitecture in the distal radius and tibia in adults with osteogenesis imperfecta type i assessed by high-resolution pQCT
 			\newblock \textit{Journal of Bone and Mineral Research, 27}(1), 1405-1412
 			\vspace{1mm}
-			\bibitem[Panyasantisuk et al., 2015]{p5} Panyasantisuk, J., Pahr, D. H., Gross, T., and Zysset, P. K. (2015).
-			\newblock Comparison of Mixed and Kinematic Uniform Boundary Conditions in Homogenized Elasticity of Femoral Trabecular Bone Using Microfinite Element Analyses
+			\bibitem[Kocijan et al., 2015]{p5} Kocijan, R. and Muschitz, C. and Haschka, J. and Hans, D. and Nia, A. and Geroldinger, A. and Ardelt, M. and Wakolbinger, R. and Resch, H. (2015).
+			\newblock Bone structure assessed by HR-pQCT, TBS and DXL in adult patients with different types of osteogenesis imperfecta
 		\end{thebibliography}
 	}
 \end{frame}
