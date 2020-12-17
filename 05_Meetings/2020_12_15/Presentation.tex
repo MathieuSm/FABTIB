@@ -30,6 +30,7 @@
 \usepackage{xcolor}
 \usepackage{enumitem}
 \usepackage{soul}
+\usepackage{pifont}
 
 
 %----------------------------------------------------------------
@@ -480,6 +481,76 @@ University of Bern, Faculty of Medicine \\
 	\end{table}
 \end{frame}
 
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Project Overview}
+	\centering		
+	\includegraphics[width=0.8\linewidth]
+	{Pictures/12_Plan3}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Statistical Test Selection}
+	\centering		
+	\includegraphics[width=0.8\linewidth]
+	{Pictures/13_TestSelection1}\\
+	Modified from \cite{p3}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Normality Assumption Check}
+	\begin{figure}
+		\captionsetup[subfigure]{labelformat=empty}
+		\subfloat[Histogram]{
+			\includegraphics[width=0.25\linewidth,trim=50 0 50 0]
+			{Pictures/14_Histogram}}
+		\qquad
+		\subfloat[Emipirical CDF]{
+			\includegraphics[width=0.25\linewidth,trim=50 0 50 0]
+			{Pictures/14_ECDF}}
+		\qquad
+		\subfloat[QQ Plot]{
+			\includegraphics[width=0.25\linewidth,trim=50 0 50 0]
+			{Pictures/14_QQPlot}}
+	\end{figure}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Statistical Test Selection Results}
+	\begin{table}[h!]
+		\centering
+		\caption{Summary of the statistical test selection}\label{}
+		\resizebox{0.75\linewidth}{!}{
+			\begin{tabular}{lcccc}
+				\toprule
+				Variable & Group & Normality & Variance & Statistical test \\
+				\midrule
+				\multirow{2}{*}{BV/TV} & Control & \ding{55} & 0.100 & \multirow{2}{*}{Mann-Whitney} \\
+				& Test & \ding{55} & 0.115 & \\
+				\multirow{2}{*}{CV} & Control & \ding{51} & 0.100 & \multirow{2}{*}{Mann-Whitney} \\
+				& Test & \ding{55} & 0.115 & \\
+				\multirow{2}{*}{DA} & Control & \ding{51} & 0.100 & \multirow{2}{*}{Mann-Whitney} \\
+				& Test & \ding{55} & 0.115 & \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+\end{frame}
+
 %------------------------------------------------------------
 %------------------------------------------------------------
 %------------------------------------------------------------
@@ -509,7 +580,7 @@ University of Bern, Faculty of Medicine \\
 	\frametitle{Project Overview}
 	\centering		
 	\includegraphics[width=0.8\linewidth]
-	{Pictures/12_Plan3}
+	{Pictures/99_Plan4}
 \end{frame}
 
 %----------------------------------------------------------------
@@ -517,21 +588,94 @@ University of Bern, Faculty of Medicine \\
 %----------------------------------------------------------------
 
 \begin{frame}
-	\frametitle{Paper 1: \cite{p3}}
+	\frametitle{Paper 1: \cite{p4}}
 	\begin{itemize}[label=$\bullet$]
 		\item Samples:
 		\begin{itemize}[label=$-$]
 			\item 39 healthy control and 39 OI
 			\item Age- and gender-matched
-			\item DXA: lumbar spine, hip, femoral neck
 			\item HR-pQCT: Standard tibia and radius section
 		\end{itemize}
 		\item Parameter analyzed
 		\begin{itemize}[label=$-$]
-				\item Anthropological: Age, weight, height, menopausal state, ...
-				\item Morphological: aBMD, vBMD, bone area, trab/cort. thickness, trab. network distribution
+				\item Anthropological: Age, ...
+				\item Morphological: vBMD (Total, cortical, and trabecular), trab. BV/TV, trab. number and distribution, trab. thickness and spacing
+		\end{itemize}
+		\item Statistics
+		\begin{itemize}[label=$-$]
+			\item Wilcoxon matched-pair signed-rank test
+			\item $t$ test for normally distributed variables
 		\end{itemize}
 	\end{itemize}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{\cite{p4}: Results I}
+	\begin{table}[h!]
+		\centering
+		\caption{Summary of the results of \cite{p4}}\label{}
+		\resizebox{0.75\linewidth}{!}{
+			\begin{tabular}{lcccc}
+				\toprule
+				 & Age & vBMD\textsubscript{Tot} & vBMD\textsubscript{Cort} & vBMD\textsubscript{Trab} \\
+				\midrule
+				Healthy group & 54 (21-77)  & 278 $\pm$ 63 & 864 (784-892) & 164 $\pm$ 38 \\
+				OI type I group & 53 (21-77) & 215 $\pm$ 62  & 869 (794-897) & 101 $\pm$ 35 \\
+				P values & 0.07 & \hl{<0.001} & 0.24 & \hl{<0.001}\\
+				Test & Wilcoxon & $t$ test & Wilcoxon & $t$ test \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{\cite{p4}: Results II}
+	\begin{table}[h!]
+		\centering
+		\caption{Summary of the results of \cite{p4}}\label{}
+		\resizebox{0.95\linewidth}{!}{
+			\begin{tabular}{lccccc}
+				\toprule
+				 & Bone Area\textsubscript{Tot} & Bone Area\textsubscript{Cort} & Bone Area\textsubscript{Trab} & Cort. th. & Cort. porosity \\
+				\midrule
+				Healthy group & 785 $\pm$ 175 & 118.3 $\pm$ 36.3 & 660 $\pm$ 174 & 1.17 (0.91-1.31) & 6.0 (4.0-7.9) \\
+				OI type I group & 749 $\pm$ 198 & 97.0 $\pm$ 22.4  & 642 $\pm$ 192 & 0.93 (0.87-1.10) & 5.8 (3.5-8.6) \\
+				P values & 0.23 & \hl{<0.001} & 0.59 & \hl{<0.05} & 0.75\\
+				Test & $t$ test & $t$ test & $t$ test & Wilcoxon & $t$ test \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{\cite{p4}: Results III}
+	\begin{table}[h!]
+		\centering
+		\caption{Summary of the results of \cite{p4}}\label{}
+		\resizebox{1.05\linewidth}{!}{
+			\begin{tabular}{lcccccc}
+				\toprule
+				& BV/TV\textsubscript{trab.} & Trab. number & Trab. thickness & Trab. spacing & SD.1/tb.N & Polar moment \\
+				\midrule
+				Healthy group & 0.14 $\pm$ 0.03 & 1.94 (1.74-2.13)  & 0.07 (0.06-0.08) & 0.44 (0.39-0.51) & 0.20 (0.16-0.25) & 4423 (3403-5927) \\
+				OI type I group & 0.08 $\pm$ 0.03 & 1.30 (0.75-1.53)  & 0.07 (0.06-0.08) & 0.68 (0.57-1.19) & 0.40 (0.31-1.11) & 3499 (2640-4294) \\
+				P values & \hl{<0.001} & \hl{<0.001} & 0.54 & \hl{<0.001} & \hl{<0.001} & \hl{<0.001}\\
+				Test & $t$ test & Wilcoxon & Wilcoxon & Wilcoxon & $t$ test & Wilcoxon \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
 \end{frame}
 
 %----------------------------------------------------------------
@@ -553,6 +697,10 @@ University of Bern, Faculty of Medicine \\
 			\bibitem[Bishara 2017]{p2} Bishara, Anthony J., Hittner, James B. (2017).
 			\newblock Confidence intervals for correlations when data are not normal
 			\newblock \textit{Behavior Research Methods, 49}(1), 294-309
+			\vspace{1mm}
+			\bibitem[Wandel 2019]{p3} Wandel, J. (2019).
+			\newblock Hypothesis tests for two samples: comparing the means
+			\newblock \textit{Introduction to medical statistics}
 		\end{thebibliography}
 	}
 \end{frame}
@@ -566,11 +714,11 @@ University of Bern, Faculty of Medicine \\
 	\footnotesize{
 		\begin{thebibliography}{99}
 			\setbeamertemplate{bibliography item}[triangle]
-			\bibitem[Folkestad 2012]{p3} Folkestad, L., Hald, J. D., Hansen, S., Gram, J., Langdahl, B., Abrahamsen, B., Brixen, K. (2012).
+			\bibitem[Folkestad 2012]{p4} Folkestad, L., Hald, J. D., Hansen, S., Gram, J., Langdahl, B., Abrahamsen, B., Brixen, K. (2012).
 			\newblock Bone geometry, density, and microarchitecture in the distal radius and tibia in adults with osteogenesis imperfecta type i assessed by high-resolution pQCT
 			\newblock \textit{Journal of Bone and Mineral Research, 27}(1), 1405-1412
 			\vspace{1mm}
-			\bibitem[Panyasantisuk et al., 2015]{p4} Panyasantisuk, J., Pahr, D. H., Gross, T., and Zysset, P. K. (2015).
+			\bibitem[Panyasantisuk et al., 2015]{p5} Panyasantisuk, J., Pahr, D. H., Gross, T., and Zysset, P. K. (2015).
 			\newblock Comparison of Mixed and Kinematic Uniform Boundary Conditions in Homogenized Elasticity of Femoral Trabecular Bone Using Microfinite Element Analyses
 		\end{thebibliography}
 	}
