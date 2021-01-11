@@ -35,13 +35,40 @@ def TwoSamples_tTest(x,y, SignificanceLevel=0.05):
         p = 2 * t.cdf(T, DOFs)
 
     # Compute confidence interval CI
-    T_Interval = np.array(t.interval(1-SignificanceLevel/2,DOFs))
+    T_Interval = np.array(t.interval(1-SignificanceLevel,DOFs))
+    RejectionRange = np.array([[-np.inf,T_Interval[0]],[T_Interval[1],np.inf]])
 
     # Compute CI for difference in means
     MeansInterval =  (x_bar-y_bar) + T_Interval * S_pool * np.sqrt(1/n + 1/m)
 
-    return T, p, T_Interval, MeansInterval
-def PermutationTest(x,y,NRepetition=len(x)*len(y),SignificanceLevel=0.05):
+    return T, p, RejectionRange, MeansInterval
+def MannWhitneyUTest(x,y):
+
+    Nx = len(x)
+    Ny = len(y)
+
+    XData = pd.DataFrame({'Values': x, 'Group': 'Control'}, index=range(len(x)))
+    YData = pd.DataFrame({'Values': y, 'Group': 'Test'}, index=range(len(y)))
+
+    Pool = XData.append(YData, ignore_index=True)
+    Pool['Ranks'] = Pool['Values'].rank(method='average')
+
+    R1 = Pool[Pool['Group']=='Control']['Ranks'].sum()
+    U1 = R1 - (Nx * (Nx+1)) / 2
+    U2 = Nx * Ny - U1
+
+    U = max(U1, U2)
+
+    UMean = Nx * Ny / 2
+    UStd  = np.sqrt((Nx * Ny * (Nx + Ny + 1)) / 12)
+
+    # Transform into the z space
+    from scipy.stats.distributions import norm
+    z = (U - UMean) / UStd
+    p = 2 * (1 - norm.cdf(abs(z)))
+
+    return U, p
+def PermutationTest(x,y,NRepetition=45**2,SignificanceLevel=0.05):
 
     # Analyze data
     x_bar = np.mean(x)
@@ -191,7 +218,7 @@ Groups = Data.Group.unique()
 Variables = ['BVTV', 'DA', 'Variation Coefficient']
 Labels = ['BV/TV (-)', 'Degree of anisotropy (-)', 'Coefficient of variation (-)']
 
-Variable = Variables[1]
+Variable = Variables[2]
 Label = Labels[Variables.index(Variable)]
 
 GroupData = Data[Data.Group == Groups[0]]
@@ -199,9 +226,32 @@ x = GroupData.groupby('Scan')[Variable].median().values
 GroupData = Data[Data.Group == Groups[1]]
 y = GroupData.groupby('Scan')[Variable].median().values
 
-if Variable == Variables[1] or Variable == Variables[2]:
-    T, pValue, T_Interval, MeansInterval = TwoSamples_tTest(x,y)
+if Variable == Variables[0] or Variable == Variables[1]:
+    T, pValue, RejectionRange, MeansInterval = TwoSamples_tTest(x,y)
 
-if Variable == Variables[0]:
-    from scipy.stats import brunnermunzel
-    brunnermunzel(x,y)
+    print('Variable: ' + Variable)
+    print('Group: ' + Groups[0])
+    print('Mean: ' + str(np.round(x.mean(), 3)))
+    print('Std: ' + str(np.round(x.std(ddof=1), 3)))
+    print('Group: ' + Groups[1])
+    print('Mean: ' + str(np.round(y.mean(), 3)))
+    print('Std: ' + str(np.round(y.std(ddof=1), 3)))
+    print('\nTest statistic results')
+    print('p value: ' + str(np.round(pValue, 9)))
+    print('95% CI means differences : [' + str(MeansInterval[0].round(3)) + ',' + str(MeansInterval[1].round(3)) + ']')
+
+if Variable == Variables[2]:
+
+    xlog, ylog = np.log(x), np.log(y)
+    U, pValue = MannWhitneyUTest(xlog,ylog)
+
+    print('Variable: ' + Variable)
+    print('Group: ' + Groups[0])
+    print('Median: ' + str(np.median(x).round(3)))
+    print('IQR: [' + str(np.quantile(x,0.25).round(3)) + ',' + str(np.quantile(x,0.75).round(3)) + ']')
+    print('Group: ' + Groups[1])
+    print('Median: ' + str(np.median(y).round(3)))
+    print('IQR: [' + str(np.quantile(y, 0.25).round(3)) + ',' + str(np.quantile(y, 0.75).round(3)) + ']')
+    print('\nTest statistic results')
+    print('p value: ' + str(np.round(pValue, 9)))
+

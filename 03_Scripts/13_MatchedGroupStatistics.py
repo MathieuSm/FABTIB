@@ -119,7 +119,7 @@ def QQPlot(DataValues, Alpha_CI, DataLabel='Data'):
     plt.xlabel('Theoretical quantiles (-)')
     plt.ylabel('Empirical quantiles (-)')
     plt.ylim([Y_Min, Y_Max])
-    plt.legend(loc='upper center', ncol=3, bbox_to_anchor=(0.5, 1.15))
+    plt.legend(loc='upper center', ncol=3, bbox_to_anchor=(0.5, 1.15), prop={'size':10})
     plt.show()
     plt.close(Figure)
 
@@ -355,7 +355,7 @@ Axes.plot(SortedValues,KernelEstimator,color=(1,0,0),label='Kernel Density')
 Axes.plot(SortedValues,TheoreticalDistribution,linestyle='--',color=(0,0,0),label='Normal Distribution')
 plt.xlabel(Label)
 plt.ylabel('Density (-)')
-plt.legend(loc='upper center',ncol=3,bbox_to_anchor=(0.5,1.15))
+plt.legend(loc='upper center',ncol=3,bbox_to_anchor=(0.5,1.15), prop={'size':10})
 plt.show()
 plt.close(Figure)
 
@@ -369,7 +369,7 @@ Axes.plot(SortedValues,EmpiricalQuantiles, linestyle='none', marker='o', mew=0.5
 Axes.plot(SortedValues,TheoreticalQuantiles, linestyle='--', color=(1, 0, 0), label='Normal Distribution')
 plt.xlabel(Label)
 plt.ylabel('Quantile (-)')
-plt.legend(loc='upper center',ncol=2,bbox_to_anchor=(0.5,1.15))
+plt.legend(loc='upper center',ncol=2,bbox_to_anchor=(0.5,1.15), prop={'size':10})
 plt.show()
 plt.close(Figure)
 
