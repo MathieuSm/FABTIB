@@ -498,92 +498,12 @@ def SpearmanCorrelation(x,y):
 
 # 01 Load Data
 WorkingDirectory = os.getcwd()
-DataFolder = os.path.join(WorkingDirectory, '02_Data')
-MatchFolder = os.path.join(WorkingDirectory, '04_Results/00_Matching/Matches')
-TensorFolder = os.path.join(WorkingDirectory, '04_Results/')
 ResultFolder = os.path.join(WorkingDirectory, '04_Results/05_MatchedGroups')
-
-## Load groups data
-ScanLists = [File for File in os.listdir(DataFolder) if File.endswith('Scans.csv')]
-ScanLists.sort()
-
-HealthyGroup = pd.read_csv(os.path.join(DataFolder, ScanLists[0]))
-OIGroup = pd.read_csv(os.path.join(DataFolder, ScanLists[1]))
-
-OIGroup = OIGroup.dropna()  # Filter patients without data
-OIGroup = OIGroup.reset_index()
-OIGroup = OIGroup[['Scan_ID_BSL', 'Sex', 'Age', 'OI_Type']]
-OIGroup.columns = ['Sample Number', 'Sex', 'Age', 'OI Type']
-OIGroup['Sex'] = OIGroup['Sex'].replace(['Female', 'Male'], ['F', 'M'])
-OIGroup['OI Type'] = OIGroup['OI Type'].replace(['Type I', 'Type III', 'Type IV'], [1, 3, 4])
-OIGroup['Age'] = OIGroup['Age'].astype('int')
-
-## Load matching results
-Matches = [File for File in os.listdir(MatchFolder) if File.endswith('.txt')]
-Matches.sort()
-Match = Matches[-1]
-MatchingResults = pd.read_csv(os.path.join(MatchFolder, Match), header=None)
-
-## Get matched samples
-OIList = MatchingResults.index.values
-MatchedOI = OIGroup.loc[OIList]
-ControlList = MatchingResults[0].values
-MatchedControl = HealthyGroup.loc[ControlList]
-
-## Get tensor data
-MatchedGroups = [MatchedControl, MatchedOI]
-Groups = ['Control', 'Test']
-
-for Group in Groups:
-
-    if Group == Groups[0]:
-        SubGroup = MatchedGroups[0]
-        TensorData = os.path.join(TensorFolder, '01_HealthyTibiaXCT2Scans/03_LinearRegression/')
-    elif Group == Groups[1]:
-        SubGroup = MatchedGroups[1]
-        TensorData = os.path.join(TensorFolder, '02_OITibiaXCT2Scans/03_LinearRegression/')
-
-    Data = pd.read_csv(os.path.join(TensorData, '00_Data.csv'))
-
-    SubData = pd.DataFrame()
-    for Sample in SubGroup['Sample Number']:
-
-        for Scan in Data['Scan']:
-
-            if Group == Groups[0]:
-                ScanNumber = Scan[4:8]
-                SampleNumber = Sample
-            elif Group == Groups[1]:
-                ScanNumber = Scan[11:15]
-                SampleNumber = Sample[-4:]
-
-            if int(ScanNumber) == int(SampleNumber):
-                SampleData = Data[Data['Scan'] == Scan]
-                SubData = SubData.append(SampleData, ignore_index=True)
-                break
-
-    SubData.to_csv(ResultFolder + '/00_' + Group + '_Data.csv', index=False)
 
 ControlData = pd.read_csv(ResultFolder + '/00_Control_Data.csv')
 TestData = pd.read_csv(ResultFolder + '/00_Test_Data.csv')
 
 ## Merge the two groups
-ControlData['Group'] = 'Control'
-TestData['Group'] = 'Test'
-TestData['OI Type'] = 0
-for SampleNumber in MatchedOI['Sample Number']:
-
-    for Scan in TestData['Scan']:
-
-        if Scan[7:15] == SampleNumber:
-            Filter = MatchedOI['Sample Number'] == SampleNumber
-            OIType = MatchedOI[Filter]['OI Type'].values[0]
-
-            Filter = TestData['Scan'] == Scan
-
-            for Index in TestData[Filter]['OI Type'].index:
-                TestData.loc[Index, 'OI Type'] = OIType
-
 Data = ControlData.append(TestData, ignore_index=True)
 
 ## Compute Spearman correlation coefficient
@@ -591,10 +511,15 @@ TestRho, TestCI = SpearmanCorrelation(TestData['BVTV'],TestData['Variation Coeff
 ControlRho, ControlCI = SpearmanCorrelation(ControlData['BVTV'],ControlData['Variation Coefficient'])
 GroupedRho, GroupedCI = SpearmanCorrelation(Data['BVTV'],Data['Variation Coefficient'])
 
+Threshold = (ControlData.quantile(0.75)['Variation Coefficient']
+             - ControlData.quantile(0.25)['Variation Coefficient']) * 1.5 \
+             + ControlData.quantile(0.75)['Variation Coefficient']
+MinBVTV = 0.1/3*2
+
 ## Plot BVTV vs CV
 TestLabel = 'Test, n:' + str(int(len(TestData))) + r', $\rho$:' + str(np.round(TestRho,2))
 ControlLabel = 'Control, n:' + str(int(len(ControlData))) + r', $\rho$:' + str(np.round(ControlRho,2))
-WLabel = r'Windowing: $[' + str(MinBVTV) + ',\infty)$'
+WLabel = r'Windowing: $[' + str(np.round(MinBVTV,3)) + ',\infty)$'
 TLabel = 'Threshold: $' + str(np.round(Threshold,2)) + '$'
 
 Figure, Axes = plt.subplots(1, 1, figsize=(5.5, 4.5), dpi=100)
@@ -615,14 +540,10 @@ plt.close(Figure)
 
 
 # 02 Filter data
-Threshold = (ControlData.quantile(0.75)['Variation Coefficient']
-             - ControlData.quantile(0.25)['Variation Coefficient']) * 1.5 \
-            + ControlData.quantile(0.75)['Variation Coefficient']
-MinBVTV = 0.1/3*2
-
 CVFilter = Data['Variation Coefficient'] < Threshold
 Windowing = Data['BVTV'] > MinBVTV
 FilteredData = Data[CVFilter & Windowing]
+
 
 
 # 04 Fit results

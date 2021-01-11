@@ -124,121 +124,224 @@ def QQPlot(DataValues, Alpha_CI, DataLabel='Data'):
     plt.close(Figure)
 
     return Variance
+def Covariance(x,y):
 
+    if not len(x)==len(y):
+        print('Covariables vectors not of equal lengths')
+    else:
+        x_bar, y_bar = x.mean(), y.mean()
+        Cov = np.sum(((x - x_bar)*(y - y_bar))/(len(x) - 1))
+        return Cov
+def ShapiroWilkTest(DataValues):
+
+    print('!! Cross check results with scipy.stats.shapiro() !!')
+
+    # Data analysis
+    N = len(DataValues)
+    X_Bar = np.mean(DataValues)
+    S_X = np.std(DataValues,ddof=1)
+
+    if N < 3:
+        print('Sample vector must have at least 3 valid observations.')
+        return
+
+    elif N == 3:
+        w = np.array([np.sqrt(0.5),0,-np.sqrt(0.5)])
+
+    else:
+
+        if N > 5000:
+        print('Shapiro-Wilk statistic might be inaccurate due to large sample size ( > 5000).')
+
+        # Sort data to get the rank
+        Data_Sorted = np.zeros(N)
+        Data_Sorted += DataValues
+        Data_Sorted.sort()
+
+        # Expected values
+        m = NormalQuantile((np.arange(1,N+1) - 3/8) / (N + 0.25),0,1)
+
+        # Compute coefficients according to: https://math.stackexchange.com/questions/625359/how-are-the-values-in-the-shapiro-wilk-weight-table-calculated
+        C_N = m[-1]/np.sqrt(np.sum(m**2))
+        C_N1 = m[-2]/np.sqrt(np.sum(m**2))
+
+        # Polynomial vectors
+        p1 = np.array([-2.706056,4.434685,-2.071190,-0.147981,0.221157,C_N])
+        p2 = np.array([-3.582633,5.682633,-1.752461,-0.293762,0.042981,C_N1])
+
+        # Compute weights
+        u = 1/np.sqrt(N)
+        w = np.zeros(N)
+
+        for k in range(len(p1)):
+            w[-1] += p1[k] * u ** (5 - k)
+        w[0] = -w[-1]
+
+        if N >= 6:
+
+            for k in range(len(p1)):
+                w[-2] += p2[k] * u ** (5 - k)
+            w[1] = -w[-2]
+
+            Phi = (np.sum(m ** 2) - 2*m[-1]**2 - 2*m[-2]**2)/(1 - 2*w[-1]**2 - 2*w[-2]**2)
+
+            ct = 2
+        else:
+            Phi = (np.sum(m ** 2) - 2 * m[-1] ** 2) / (1 - 2 * w[-1] ** 2)
+            ct = 1
+
+        for k in range(ct,N-ct):
+            w[k] = m[k] / np.sqrt(Phi)
+
+    W = np.sum(w*Data_Sorted)**2 / np.sum((Data_Sorted-X_Bar)**2)
+
+    # Compute p value
+
+    res = 0
+    pw = 0
+    pi6 = 6 / np.pi
+
+    G = np.array([-0.2273e1, 0.459e0])
+    c3 = np.array([0.5440e0, -0.39978e0, 0.25054e-1, -0.6714e-3])
+    c4 = np.array([0.13822e1, -0.77857e0, 0.62767e-1, -0.20322e-2])
+
+    c5 = np.array([-0.15861e1, -0.31082e0, -0.83751e-1, 0.38915e-2])
+    c6 = np.array([-0.4803e0, -0.82676e-1, 0.30302e-2])
+
+    stqr = np.sqrt(0.75)
+
+    y = np.log(1 - W)
+    xx = np.log(N)
+    m = 0
+    s = 1
+
+    if N == 3:
+
+        pw = pi6 * (np.arcsin(np.sqrt(W)) - stqr)
+
+        if pw < 0:
+            pw = 0
+
+    elif N <= 11:
+        gma = (G[1] * N) + (G[0] * 1)
+
+        if y > gma:
+            pw = 1e-19
+        else:
+            y = -np.log(gma - y);
+            m = c3[3] * N ** 3 + c3[2] * N ** 2 + c3[1] * N + c3[0]
+            s = np.exp(c4[3] * N ^ 3 + c4[2] * N ** 2 + c4[1] * N + c4[0])
+            pw = 1 - NormalCDF(np.array([(y - m) / s]),0,1)
+
+    else:
+        m = c5[3] * xx ** 3 + c5[2] * xx ** 2 + c5[1] * xx + c5[0]
+        s = np.exp(c6[2] * xx ** 2 + c6[1] * xx + c6[0])
+        pw = 1 - NormalCDF(np.array([(y - m) / s]),0,1)
+
+    res = pw
+
+    return W, res
+def BartlettTest(x,y):
+
+    # Analyze data
+    k = 2
+    Ni = np.array([len(x),len(y)])
+    s_i = np.array([np.std(x,ddof=1),np.std(y,ddof=1)])
+
+    N = Ni.sum()
+    S_pool = 0
+    for i in range(k):
+        S_pool += (Ni[i] - 1) * s_i[i] ** 2
+    S_pool = S_pool / (N-k)
+
+    # Perform test statistics
+    Numerator1 = (N-k) * np.log(S_pool)
+
+    Numerator2 = 0
+    for i in range(k):
+        Numerator2 += (Ni[i] - 1) * np.log(s_i[i]**2)
+
+    Denominator = 0
+    for i in range(k):
+        Denominator += 1/(Ni[i]-1)
+    Denominator = (Denominator - 1/(N-k)) / (3*(k-1)) + 1
+
+    X2 = (Numerator1 - Numerator2) / Denominator
+
+    # Compute p value
+    from scipy.stats.distributions import chi2
+    pValue = 1-chi2.cdf(X2,k-1)
+
+    return  X2, pValue
+def BrownForsytheTest(x, y):
+
+    from scipy.stats.distributions import f
+
+    # Data analysis
+    K = 2
+    Ni = np.array([len(x),len(y)])
+    N = Ni.sum()
+
+    # Transform data
+    Zi = np.abs(np.array([x-np.median(x),y-np.median(y)]))
+    Z_Bar = np.concatenate([Zi[0],Zi[1]]).mean()
+    Zj = np.array([Zi[0].mean(),Zi[1].mean()])
+
+    # Compute test result
+    Nominator, Denominator = 0, 0
+    for i in range(K):
+        Nominator += Ni[i] * (Zj[i]-Z_Bar) ** 2
+
+        for j in range(Ni[i]):
+            Denominator += (Zi[i][j]-Zj[i]) ** 2
+
+    W =  (N-K)/(K-1) * Nominator/Denominator
+
+    # Compute p value
+    p = 1 - f.cdf(W,K-1,N-K)
+
+    return W, p
 
 
 # 01 Load Data
 WorkingDirectory = os.getcwd()
-DataFolder = os.path.join(WorkingDirectory, '02_Data')
-MatchFolder = os.path.join(WorkingDirectory, '04_Results/00_Matching/Matches')
-TensorFolder = os.path.join(WorkingDirectory, '04_Results/')
 ResultFolder = os.path.join(WorkingDirectory, '04_Results/05_MatchedGroups')
-
-## Load groups data
-ScanLists = [File for File in os.listdir(DataFolder) if File.endswith('Scans.csv')]
-ScanLists.sort()
-
-HealthyGroup = pd.read_csv(os.path.join(DataFolder, ScanLists[0]))
-OIGroup = pd.read_csv(os.path.join(DataFolder, ScanLists[1]))
-
-OIGroup = OIGroup.dropna()  # Filter patients without data
-OIGroup = OIGroup.reset_index()
-OIGroup = OIGroup[['Scan_ID_BSL', 'Sex', 'Age', 'OI_Type']]
-OIGroup.columns = ['Sample Number', 'Sex', 'Age', 'OI Type']
-OIGroup['Sex'] = OIGroup['Sex'].replace(['Female', 'Male'], ['F', 'M'])
-OIGroup['OI Type'] = OIGroup['OI Type'].replace(['Type I', 'Type III', 'Type IV'], [1, 3, 4])
-OIGroup['Age'] = OIGroup['Age'].astype('int')
-
-## Load matching results
-Matches = [File for File in os.listdir(MatchFolder) if File.endswith('.txt')]
-Matches.sort()
-Match = Matches[-1]
-MatchingResults = pd.read_csv(os.path.join(MatchFolder, Match), header=None)
-
-## Get matched samples
-OIList = MatchingResults.index.values
-MatchedOI = OIGroup.loc[OIList]
-ControlList = MatchingResults[0].values
-MatchedControl = HealthyGroup.loc[ControlList]
-
-## Get tensor data
-MatchedGroups = [MatchedControl, MatchedOI]
-Groups = ['Control', 'Test']
-
-for Group in Groups:
-
-    if Group == Groups[0]:
-        SubGroup = MatchedGroups[0]
-        TensorData = os.path.join(TensorFolder, '01_HealthyTibiaXCT2Scans/03_LinearRegression/')
-    elif Group == Groups[1]:
-        SubGroup = MatchedGroups[1]
-        TensorData = os.path.join(TensorFolder, '02_OITibiaXCT2Scans/03_LinearRegression/')
-
-    Data = pd.read_csv(os.path.join(TensorData, '00_Data.csv'))
-
-    SubData = pd.DataFrame()
-    for Sample in SubGroup['Sample Number']:
-
-        for Scan in Data['Scan']:
-
-            if Group == Groups[0]:
-                ScanNumber = Scan[4:8]
-                SampleNumber = Sample
-            elif Group == Groups[1]:
-                ScanNumber = Scan[11:15]
-                SampleNumber = Sample[-4:]
-
-            if int(ScanNumber) == int(SampleNumber):
-                SampleData = Data[Data['Scan'] == Scan]
-                SubData = SubData.append(SampleData, ignore_index=True)
-                break
-
-    SubData.to_csv(ResultFolder + '/00_' + Group + '_Data.csv', index=False)
 
 ControlData = pd.read_csv(ResultFolder + '/00_Control_Data.csv')
 TestData = pd.read_csv(ResultFolder + '/00_Test_Data.csv')
 
 ## Merge the two groups
-ControlData['Group'] = 'Control'
-TestData['Group'] = 'Test'
-TestData['OI Type'] = 0
-for SampleNumber in MatchedOI['Sample Number']:
-
-    for Scan in TestData['Scan']:
-
-        if Scan[7:15] == SampleNumber:
-            Filter = MatchedOI['Sample Number'] == SampleNumber
-            OIType = MatchedOI[Filter]['OI Type'].values[0]
-
-            Filter = TestData['Scan'] == Scan
-
-            for Index in TestData[Filter]['OI Type'].index:
-                TestData.loc[Index, 'OI Type'] = OIType
-
 Data = ControlData.append(TestData, ignore_index=True)
 
+Groups = Data.Group.unique()
 Variables = ['BVTV', 'DA', 'Variation Coefficient']
 Labels = ['BV/TV (-)', 'Degree of anisotropy (-)', 'Coefficient of variation (-)']
 
-Variable = Variables[0]
+Variable = Variables[2]
 Group = Groups[0]
 
-GroupData = Data[Data.Group == Group][Variable]
 Label = Labels[Variables.index(Variable)]
 
+GroupData = Data[Data.Group == Group]
+X = GroupData.groupby('Scan')[Variable].median()
 
-N = len(GroupData)
-S_X = GroupData.std()
-X_Bar = GroupData.mean()
-M = GroupData.median()
-X_Min = GroupData.min()
-X_Max = GroupData.max()
-SortedValues = GroupData.sort_values().values
+
+N = len(X)
+S_X = X.std(ddof=1)
+X_Bar = X.mean()
+M = X.median()
+X_Min = X.min()
+X_Max = X.max()
+SortedValues = X.sort_values().values
+
+# for CV log transformation to reach normality
+if Variable == Variables[2]:
+    SortedValues = np.log(SortedValues)
 
 # Kernel density estimation (Gaussian kernel)
 KernelEstimator = np.zeros(N)
 NormalIQR = np.sum(np.abs(NormalQuantile(np.array([0.25,0.75]), 0, 1)))
-DataIQR = np.abs(GroupData.quantile(0.75)) - np.abs(GroupData.quantile(0.25))
+DataIQR = np.abs(X.quantile(0.75)) - np.abs(X.quantile(0.25))
 KernelHalfWidth = 0.9*N**(-1/5) * min(S_X,DataIQR/NormalIQR)
 for Value in SortedValues:
     KernelEstimator += NormalProbabilityDistribution(SortedValues-Value,0,KernelHalfWidth*2)
@@ -247,7 +350,7 @@ KernelEstimator = KernelEstimator/N
 ## Histogram and density distribution
 TheoreticalDistribution = NormalProbabilityDistribution(SortedValues,X_Bar,S_X)
 Figure, Axes = plt.subplots(1, 1, figsize=(5.5, 4.5), dpi=100)
-Axes.hist(GroupData,density=True,bins=20,edgecolor=(0,0,1),color=(1,1,1),label='Histogram')
+Axes.hist(X,density=True,bins=20,edgecolor=(0,0,1),color=(1,1,1),label='Histogram')
 Axes.plot(SortedValues,KernelEstimator,color=(1,0,0),label='Kernel Density')
 Axes.plot(SortedValues,TheoreticalDistribution,linestyle='--',color=(0,0,0),label='Normal Distribution')
 plt.xlabel(Label)
@@ -258,10 +361,11 @@ plt.close(Figure)
 
 ## ECDF and Theoretical CDF
 EmpiricalQuantiles = np.arange(0.5, N + 0.5) / N
-TheoreticalQuantiles = NormalCDF(SortedValues,X_Bar,S_X)
+Z = (SortedValues - X_Bar) / S_X
+TheoreticalQuantiles = NormalCDF(Z)
 
 Figure, Axes = plt.subplots(1, 1, figsize=(5.5, 4.5), dpi=100)
-Axes.plot(SortedValues,EmpiricalQuantiles, linestyle='none', marker='o', fillstyle='none', color=(0, 0, 0), label='Data Distribution')
+Axes.plot(SortedValues,EmpiricalQuantiles, linestyle='none', marker='o', mew=0.5, fillstyle='none', color=(0, 0, 0), label='Data Distribution')
 Axes.plot(SortedValues,TheoreticalQuantiles, linestyle='--', color=(1, 0, 0), label='Normal Distribution')
 plt.xlabel(Label)
 plt.ylabel('Quantile (-)')
@@ -271,6 +375,41 @@ plt.close(Figure)
 
 ## QQ plot
 Variance = QQPlot(SortedValues,0.95,Label)
+
+## Shapiro-Wilk test for normality
+W_test, p_test = ShapiroWilkTest(SortedValues)
+print('Test statistics: %.3f'%W_test)
+print('p value        : %.3f'%p_test)
+
+
+from scipy.stats import shapiro
+W, p = shapiro(SortedValues)
+
+print('Self-build test / scipy test values')
+print(W_test/W)
+print(p_test/p)
+
+## Brown-Forsythe test for equal variance (Levene test using median) or Bartlett if normal distribution
+GroupData = Data[Data.Group == Groups[0]]
+x = GroupData.groupby('Scan')[Variable].median().values
+GroupData = Data[Data.Group == Groups[1]]
+y = GroupData.groupby('Scan')[Variable].median().values
+
+# for CV log transformation to reach normality
+if Variable == Variables[2]:
+    x,y = np.log(x), np.log(y)
+
+W, p = BrownForsytheTest(x, y)
+W, p = BartlettTest(x,y)
+
+
+
+
+
+
+
+
+
 
 
 
