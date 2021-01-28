@@ -70,7 +70,7 @@ def NormalQuantile(p,u=0,s=1):
     z_p = u + s * np.sqrt(2) * InverseErrorFunction(2*p-1)
 
     return z_p
-def QQPlot(DataValues, Alpha_CI, DataLabel='Data'):
+def QQPlot(DataValues, Alpha_CI=0.95, DataLabel='Data'):
 
     ### Based on: https://www.tjmahr.com/quantile-quantile-plots-from-scratch/
     ### Itself based on Fox book: Fox, J. (2015)
@@ -112,7 +112,7 @@ def QQPlot(DataValues, Alpha_CI, DataLabel='Data'):
     Y_Min = Data_Sorted.min() - BorderSpace
     Y_Max = Data_Sorted.max() + BorderSpace
     Figure, Axes = plt.subplots(1, 1, figsize=(5.5, 4.5), dpi=100)
-    Axes.plot(TheoreticalQuantiles, Data_Sorted, linestyle='none', marker='o', mew=0.5, fillstyle='none', color=(0, 0, 0), label=Label)
+    Axes.plot(TheoreticalQuantiles, Data_Sorted, linestyle='none', marker='o', mew=0.5, fillstyle='none', color=(0, 0, 0), label=DataLabel)
     Axes.plot(Data_Space, Variance_Line, linestyle='--', color=(1, 0, 0), label='Variance :' + str(format(np.round(Variance, 2),'.2f')))
     Axes.plot(Data_Space, Variance_Line + Z_CI_Quantile * Data_SE, linestyle='--', color=(0, 0, 1), label=str(int(100*Alpha_CI)) + '% CI')
     Axes.plot(Data_Space, Variance_Line - Z_CI_Quantile * Data_SE, linestyle='--', color=(0, 0, 1))

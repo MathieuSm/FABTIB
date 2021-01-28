@@ -1,0 +1,606 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (01/07/19)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------
+%	PACKAGES AND THEMES		-----------------------------------
+%----------------------------------------------------------------
+
+\documentclass[xcolor=table]{beamer}
+
+\mode<presentation> {
+
+\usetheme{Frankfurt}
+\usecolortheme{dove}
+
+}
+
+\usepackage{graphicx}
+\usepackage{booktabs} 
+\usepackage{subfig}
+\usepackage{pgf}
+\usepackage{multirow}
+\usepackage{appendixnumberbeamer}
+\usepackage{bookmark}
+\usepackage{siunitx}
+\usepackage{animate}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{soul}
+\usepackage{pifont}
+
+
+%----------------------------------------------------------------
+%	GENERAL OPTIONS 	-----------------------------------------
+%----------------------------------------------------------------
+
+% Set template options
+\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+\setbeamertemplate{frametitle}{\vspace*{1em}\insertframetitle}
+\setbeamertemplate{enumerate items}[default]
+\setbeamercolor{section in head/foot}{fg=white, bg=black}
+
+% Headline
+\makeatletter
+\setbeamertemplate{headline}
+{%
+  \pgfuseshading{beamer@barshade}%
+    \vskip-5ex%
+  \begin{beamercolorbox}[ignorebg,ht=2.25ex,dp=3.75ex]{section in head/foot}
+  \insertsectionnavigationhorizontal{\paperwidth}{\hskip0pt plus1fill}{\hskip0pt plus1fill}
+  \end{beamercolorbox}%
+  \ifbeamer@sb@subsection%
+    \begin{beamercolorbox}[ignorebg,ht=2.125ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+      \usebeamerfont{subsection in head/foot}\insertsubsectionhead
+    \end{beamercolorbox}%
+  \fi%
+}%
+\makeatother
+
+% Footline
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,left]{section in head/foot}%
+    \usebeamerfont{author in head/foot}\hspace{10pt}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{section in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{section in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{}\hspace*{2em}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+% Add logo
+\logo{\pgfputat{\pgfxy(0,7)}{\includegraphics[width=0.1\paperwidth]{Pictures/00_Unibe_Logo}}}
+
+% Table settings
+\renewcommand{\arraystretch}{2}
+\captionsetup{labelformat=empty,labelsep=none}
+\definecolor{Gray}{gray}{0.9}
+
+% Define highlitghing command
+\makeatletter
+\let\HL\hl
+\renewcommand\hl{%
+	\let\set@color\beamerorig@set@color
+	\let\reset@color\beamerorig@reset@color
+	\HL}
+\makeatother
+
+%----------------------------------------------------------------
+%	TITLE PAGE 	-------------------------------------------------
+%----------------------------------------------------------------
+
+\title[Regular Meeting]{
+\uppercase{Regular Meeting}
+} 
+
+\author{Mathieu Simon}
+\institute[University of Bern]
+{
+MSc - Biomedical Engineering \\
+University of Bern, Faculty of Medicine \\
+\medskip
+}
+\date{January 26, 2021}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Project Overview}
+		\centering		
+		\includegraphics[width=0.8\linewidth]
+		{Pictures/01_Plan}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}[noframenumbering]
+	\frametitle{Project Overview}
+	\centering		
+	\includegraphics[width=0.8\linewidth]
+	{Pictures/01_Plan1}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Variation Coefficient and BV/TV}
+	\begin{columns}[c]
+		\column{.45\textwidth}
+		\begin{itemize}[label=$\bullet$]
+			\item Coefficient of variation (CV):\\\vspace{3mm}
+			$CV = \frac{mean(BV/TV_{Subcubes})}{\sigma(BV/TV_{Subcubes})}$\vspace{3mm}
+			\item Spearman's correlation coefficient ($\rho$):\\\vspace{3mm}
+			$\rho = \frac{cov(R_X,R_Y)}{\sigma(R_X) \sigma(R_Y)}$\\\vspace{3mm}
+			with $R_i$, ranked variables
+		\end{itemize}
+		\column{.45\textwidth}
+		\centering
+		\vfill
+		\includegraphics[width=1\linewidth]{Pictures/02_BVTV_CV}
+		BV/TV in relation to CV
+		\vfill
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Variation Coefficient and BV/TV}
+	Computations performed according to \cite{p2}
+	\begin{table}[h!]
+	\centering
+	\caption{Spearman's correlation coefficients}\label{}
+		\begin{tabular}{cccc}
+			\toprule
+			Data set & N samples & $\rho$ & 95\% CI \\
+			\midrule
+			Grouped & 538 & -0.63 & [-0.57, -0.68] \\
+			Control & 270 & -0.63 & [-0.55, -0.70] \\
+			Test & 268 & -0.75 & [-0.69, -0.80] \\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Linear Regression: Standard Model}
+	\begin{equation}\resizebox{!}{.3\textwidth}{$
+		\begin{pmatrix}
+			\ln(\lambda_{11}) \\
+			\ln(\lambda_{12}) \\
+			\ln(\lambda_{13}) \\
+			\ln(\lambda_{21}) \\
+			\ln(\lambda_{22}) \\
+			\ln(\lambda_{23}) \\
+			\ln(\lambda_{31}) \\
+			\ln(\lambda_{32}) \\
+			\ln(\lambda_{33}) \\
+			\ln(\mu_{23}) \\
+			\ln(\mu_{31}) \\
+			\ln(\mu_{12}) \\
+		\end{pmatrix}$}
+		=
+		\resizebox{!}{.3\textwidth}{$
+		\begin{pmatrix}
+			1 & 0 & 0 & \ln(\rho) & \ln(m_1^2) \\
+			0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_2) \\
+			0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_3) \\
+			0 & 1 & 0 & \ln(\rho) & \ln(m_2 m_1) \\
+			1 & 0 & 0 & \ln(\rho) & \ln(m_2^2) \\
+			0 & 1 & 0 & \ln(\rho) & \ln(m_2 m_3) \\
+			0 & 1 & 0 & \ln(\rho) & \ln(m_3 m_1) \\
+			0 & 1 & 0 & \ln(\rho) & \ln(m_3 m_2) \\
+			1 & 0 & 0 & \ln(\rho) & \ln(m_3^2) \\
+			0 & 0 & 1 & \ln(\rho) & \ln(m_2 m_3) \\
+			0 & 0 & 1 & \ln(\rho) & \ln(m_3 m_1) \\
+			0 & 0 & 1 & \ln(\rho) & \ln(m_1 m_2) \\
+		\end{pmatrix}$}
+		\resizebox{!}{.12\textwidth}{$
+		\begin{pmatrix}
+			\ln(\lambda_0 + 2\mu_0) \\
+			\ln(\lambda_0') \\
+			\ln(\mu_0) \\
+			k \\
+			l \\
+		\end{pmatrix}$}
+		+
+		\resizebox{!}{.3\textwidth}{$
+		\begin{pmatrix}
+			e_1 \\
+			e_2 \\
+			e_3 \\
+			e_4 \\
+			e_5 \\
+			e_6 \\
+			e_7 \\
+			e_8 \\
+			e_9 \\
+			e_{10} \\
+			e_{11} \\
+			e_{12} \\
+		\end{pmatrix}$}
+	\end{equation}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Linear Regression: Standard Model}
+	
+	\begin{equation}
+		Y_i = \beta_1 X_{i1} + \beta_2 X_{i2} + ... + \epsilon_i
+	\end{equation}
+
+	With:
+	
+	\begin{columns}[c]
+		\column{.5\textwidth}
+		\begin{itemize}
+			\item $Y_i$: $ln(\mathbb{S}_{xy})$
+			\item $\beta_1$: $ln(\lambda_{0} + 2\mu_{0})$
+			\item $\beta_2$: $ln(\lambda_{0}')$
+			\item $\beta_3$: $ln(\mu_{0})$
+			\item $\beta_4$: $k$
+			\item $\beta_5$: $l$
+		\end{itemize}
+		\column{.5\textwidth}
+		\begin{itemize}
+			\item $\epsilon_i$: Random error
+			\item $X_1$: Numerical factor 0,1
+			\item $X_2$: Numerical factor 0,1
+			\item $X_3$: Numerical factor 0,1
+			\item $X_4$: $ln(\rho_i)$
+			\item $X_5$: $ln(m_x m_y)$
+		\end{itemize}
+	\end{columns}
+	
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Linear Regression: ANCOVA Model}
+	
+	\begin{equation}
+		Y_{ij} = \beta_1 X_{1ij} + ... + \beta_k X_{kij} + \gamma_1 X_{1ij} S_j + ... + \gamma_l X_{lij} S_j + \epsilon_{ij}
+	\end{equation}
+	
+	With:
+	
+	\begin{columns}[c]
+		\column{.5\textwidth}
+		\begin{itemize}
+			\item $Y_{ij}$: $ln(\mathbb{S}_{xy})_i$ of group j
+			\item $\beta_k$: Mean slope coefficient $k$
+			\item $\gamma_l$: Group slope deviation $k$
+		\end{itemize}
+		\column{.5\textwidth}
+		\begin{itemize}
+			\item $\epsilon_{i}j$: Random error
+			\item $X_{kij}$: Explanatory variable $k$
+			\item $S_{j}$: Group regressor (-1,1)
+		\end{itemize}
+	\end{columns}
+
+	\centering\vspace{1em}
+	$X_{kij} S_j$: Interaction term
+	
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Linear Regression: ANCOVA Model}
+	
+	\begin{equation}\resizebox{!}{.3\textwidth}{$\ln
+		\begin{pmatrix}
+			\mathbb{S}_{11} \\
+			\mathbb{S}_{12} \\
+			\mathbb{S}_{13} \\
+			\mathbb{S}_{21} \\
+			\mathbb{S}_{22} \\
+			\mathbb{S}_{23} \\
+			\mathbb{S}_{31} \\
+			\mathbb{S}_{32} \\
+			\mathbb{S}_{33} \\
+			\mathbb{S}_{44} \\
+			\mathbb{S}_{55} \\
+			\mathbb{S}_{66} \\
+		\end{pmatrix}$}
+	=
+		\resizebox{!}{.3\textwidth}{$
+		\begin{pmatrix}
+			1 & 0 & 0 & \ln(\rho) & \ln(m_1^2)	& S_j & 0 & 0 \\
+			0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_2)& 0 & S_j & 0 \\
+			0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_3)& 0 & S_j & 0 \\
+			0 & 1 & 0 & \ln(\rho) & \ln(m_2 m_1)& 0 & S_j & 0 \\
+			1 & 0 & 0 & \ln(\rho) & \ln(m_2^2)	& S_j & 0 & 0 \\
+			0 & 1 & 0 & \ln(\rho) & \ln(m_2 m_3)& 0 & S_j & 0 \\
+			0 & 1 & 0 & \ln(\rho) & \ln(m_3 m_1)& 0 & S_j & 0 \\
+			0 & 1 & 0 & \ln(\rho) & \ln(m_3 m_2)& 0 & S_j & 0 \\
+			1 & 0 & 0 & \ln(\rho) & \ln(m_3^2) 	& S_j & 0 & 0 \\
+			0 & 0 & 1 & \ln(\rho) & \ln(m_2 m_3)& 0 & 0 & S_j \\
+			0 & 0 & 1 & \ln(\rho) & \ln(m_3 m_1)& 0 & 0 & S_j \\
+			0 & 0 & 1 & \ln(\rho) & \ln(m_1 m_2)& 0 & 0 & S_j \\
+		\end{pmatrix}$}
+	\resizebox{!}{.22\textwidth}{$
+		\begin{pmatrix}
+			\ln(\lambda_0 + 2\mu_0) \\
+			\ln(\lambda_0') \\
+			\ln(\mu_0) \\
+			k \\
+			l \\
+			\gamma_1 \\
+			\gamma_2 \\
+			\gamma_3 \\
+		\end{pmatrix}$}
+	+
+	\resizebox{!}{.3\textwidth}{$
+		\begin{pmatrix}
+			e_1 \\
+			e_2 \\
+			e_3 \\
+			e_4 \\
+			e_5 \\
+			e_6 \\
+			e_7 \\
+			e_8 \\
+			e_9 \\
+			e_{10} \\
+			e_{11} \\
+			e_{12} \\
+		\end{pmatrix}$}
+\end{equation}
+	
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Analysis of Covariance}
+	\begin{columns}[c]
+		\column{.55\textwidth}
+		\begin{table}[h!]
+			\centering
+			\caption{Models}\label{}
+			\resizebox{1.\linewidth}{!}{
+				\begin{tabular}{clc}
+					\toprule
+					Model & Parameters & $R^{2}$ \\
+					\midrule
+					1 & $\lambda_{0}$, $\lambda_{0}'$, $\mu_{0}$, $k$, $l$ & $0.9367$ \\
+					2 & 1 + Group x ($\lambda_{0}$, $\lambda_{0}'$, $\mu_{0}$)  & $0.9389$ \\
+					3 & 1 + log(CV) x ($\lambda_{0}$, $\lambda_{0}'$, $\mu_{0}$)  & $0.9377$ \\
+					4 & 1 + (Group + log(CV)) x ($\lambda_{0}$, $\lambda_{0}'$, $\mu_{0}$)  & $0.9393$ \\
+					5 & 4 + Group x log(CV) & $0.9402$ \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		\vfill
+		\column{.31\textwidth}
+		\begin{table}[h!]
+			\centering
+			\caption{ANCOVA}\label{}
+			\resizebox{1.\linewidth}{!}{
+				\begin{tabular}{lcr}
+					\toprule
+					Models & $R_1^2/R_2^2$ - 1 & p value \\
+					\midrule
+					2 - 1 & 2.3\textperthousand & < 1e-16 \\
+					3 - 1 & 1.1\textperthousand & < 1e-16 \\
+					4 - 2 & 0.4\textperthousand& 1.7e-8  \\
+					4 - 3 & 1.7\textperthousand& < 1e-16 \\
+					5 - 4 & 1.0\textperthousand& < 1e-16 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		\vfill
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Stiffness Linear Regression: Full model}
+	\begin{columns}[c]
+		\column{.575\textwidth}
+		\begin{itemize}[label=$\bullet$]
+			\item Data set:\\
+			Matched + Filtered
+			\item Model interactions:\\
+			\begin{itemize}
+				\item Group x Stiffness constants
+				\item log(CV) x Stiffness constants
+				\item log(CV) x Group
+			\end{itemize}
+		\end{itemize}
+		\column{.45\textwidth}
+		\centering
+		\vfill
+		\includegraphics[width=1\linewidth, trim=50 0 0 0 ]{Pictures/03_Stiffness_FullModel}
+		Fit results
+		\vfill
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Stiffness Linear Regression: Full model}
+	\begin{columns}[c]
+		\column{.45\textwidth}
+		\centering
+		\vfill
+		\includegraphics[width=1\linewidth]{Pictures/03_StiffnessControl}
+		Healthy
+		\vfill
+		\column{.45\textwidth}
+		\centering
+		\vfill
+		\includegraphics[width=1\linewidth]{Pictures/03_StiffnessOI}
+		OI group
+		\vfill
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Effect Display: Group by CV Interation}
+	\centering
+	\vfill
+	\includegraphics[width=1\linewidth]{Pictures/04_GroupCVInteration}\\
+	Group by coefficient of variation interaction
+	\vfill
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Stiffness Linear Regression: Parameters}
+	Model: $\ln(\mathbb{S}_{xy}) \text{ \textasciitilde}$\\$ \textcolor{red}{\ln(\lambda_{0}) + \ln(\lambda_{0}') + \ln(\mu{0}) + k + l} + \text{Group x} (\ln(\lambda_{0}) + \ln(\lambda_{0}') + \ln(\mu{0}))$ 
+	\begin{table}[h!]
+		\centering
+		\resizebox{1.\linewidth}{!}{
+			\begin{tabular}{ccccccccc}
+				\toprule
+				Data type &  NSamples & DOFs & $\lambda_{0}$ &  $\lambda_{0}'$ & $\mu_{0}$ & $k$ & $l$ & $R^{2}$ \\
+				\midrule
+				Grouped & 435 & 8 & 4567 [4368 - 4775] & 2767 [2685 - 2851] & 3637 [3524 - 3753] & 1.918 [1.900 - 1.937] & 0.951 [0.932 - 0.969] & 0.939 \\
+				Control & 246 & 8 & 4672 [4450 - 4906] & 2939 [2524 - 2688] & 3772 [3388 - 3630] & - & - & - \\
+				Test & 189 & 8 & 4463 [4250 - 4686] & 2605 [2848 - 3033] & 3507 [3644 - 3905] & - &  - & - \\
+				\midrule
+				\multicolumn{9}{c}{Individual fit (\textcolor{red}{previously})}\\
+				\midrule
+				Grouped & 435 & 5 & 4437 [4242 - 4641] & 2702 [2621 - 2784] & 3540 [3430 - 3655] & 1.898 [1.879 - 1.916] & 0.949 [0.931 - 0.968] & 0.937 \\
+				Control & 246 & 3 & 4523 [4436 - 4612] & 2845 [2818 - 2873] & 3652 [3602 - 3703] & - & - & 0.843 \\
+				Test & 189 & 3 & 4332 [4247 - 4418] & 2528 [2503 - 2553] & 3404 [3356 - 3451] & - &  - & 0.850 \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\appendix
+
+\section{References}
+\begin{frame}
+	\frametitle{Statistics I}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			\bibitem[Stuart 2010]{p1} Stuart, Elisabth A. (2010).
+			\newblock Matching methods for causal inference: A review and a look forward
+			\newblock \textit{Statistical science : a review journal of the Institute of Mathematical Statistics, 25}(1), 1-21
+			\vspace{1mm}
+			\bibitem[Bishara et al. 2017]{p2} Bishara, Anthony J., Hittner, James B. (2017).
+			\newblock Confidence intervals for correlations when data are not normal
+			\newblock \textit{Behavior Research Methods, 49}(1), 294-309
+			\vspace{1mm}
+			\bibitem[Wandel 2019]{p3} Wandel, J. (2019).
+			\newblock Hypothesis tests for two samples: comparing the means
+			\newblock \textit{Introduction to medical statistics}
+		\end{thebibliography}
+	}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Statistics II}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			\bibitem[Mohd et al. 2011]{p7} Mohd et al. (2011).
+			\newblock Power comparisons of Shapiro-Wilk, Kolmogorov-Smirnov, Lilliefors and Anderson-Darling tests
+			\newblock \textit{Journal of Statistical Modeling and Analytics, 2}(1), 21-33
+			\vspace{1mm}
+			\bibitem[Fox 2016]{p8} Fox, John (2016).
+			\newblock Fox, Applied Regressions Analysis and Linear Models
+			\newblock \textit{Sage publications}(3), 817
+			\vspace{1mm}
+		\end{thebibliography}
+	}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Similar Publications}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			\bibitem[Folkestad et al., 2012]{p4} Folkestad et al. (2012).
+			\newblock Bone geometry, density, and microarchitecture in the distal radius and tibia in adults with osteogenesis imperfecta type i assessed by high-resolution pQCT
+			\newblock \textit{Journal of Bone and Mineral Research, 27}(1), 1405-1412
+			\vspace{1mm}
+			\bibitem[Kocijan et al., 2015]{p5} Kocijan et al. (2015).
+			\newblock Bone structure assessed by HR-pQCT, TBS and DXL in adult patients with different types of osteogenesis imperfecta
+			\newblock \textit{Osteoporosis International, 26}(10), 2431-2440
+			\vspace{1mm}
+			\bibitem[Rolvien et al., 2018]{p6} Rolvien et al. (2018).
+			\newblock Comparison of Bone Microarchitecture Between Adult Osteogenesis Imperfecta and Early-Onset Osteoporosis
+			\newblock \textit{Calcified Tissue International, 103}(5), 512-521
+		\end{thebibliography}
+	}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\end{document} 
