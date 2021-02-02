@@ -7,7 +7,7 @@
 library(carData)
 library(effects)
 library(car)
-Data <- read.table("/home/mathieu/Documents/Post-Msc/04_Results/06_ANCOVA/RData.csv", header=TRUE, sep=",")
+Data <- read.table("/home/mathieu/Documents/Post-Msc/04_Results/06_LinearRegression/RData.csv", header=TRUE, sep=",")
 
 # Check data
 dim(Data)

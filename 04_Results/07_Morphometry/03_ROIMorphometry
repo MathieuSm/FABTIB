@@ -1,0 +1,2 @@
+# Perform ROI morphometry analysis
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/Python27/bin/hma.pyc" -in "B_Edit/05_SEGROI/$ROI$Sample.mhd"  -out "D_PostProcess/04_Morphometry/$ROI$Sample.csv" -bvtv "ON" -tbth "ON" -tbsp "ON" -tbn "ON"  -smi "ON"

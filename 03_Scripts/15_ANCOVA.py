@@ -484,7 +484,7 @@ def PlotRegressionResults(X, B, Data, Y, Alpha=0.95):
 
 # 01 Load Data
 WorkingDirectory = os.getcwd()
-ResultFolder = os.path.join(WorkingDirectory, '04_Results/06_ANCOVA')
+ResultFolder = os.path.join(WorkingDirectory, '04_Results/06_LinearRegression')
 Data = pd.read_csv(ResultFolder + '/Data.csv')
 
 # 02 Build Data for Linear regression

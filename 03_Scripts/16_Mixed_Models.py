@@ -321,7 +321,7 @@ def PlotRegressionResults(Data,Y_Obs, Y_Fit, SE, R2, X, C_x, Alpha=0.95):
 
 # 01 Load Data
 WorkingDirectory = os.getcwd()
-ResultFolder = os.path.join(WorkingDirectory, '04_Results/06_ANCOVA')
+ResultFolder = os.path.join(WorkingDirectory, '04_Results/06_LinearRegression')
 Data = pd.read_csv(ResultFolder + '/RegressionData.csv')
 
 # 02 Set the linear regression parameters (log transformation)
@@ -340,8 +340,7 @@ MinBVTV = 0.1/3*2
 # 04 Filter data
 CVFilter = Data['CV'] < Threshold
 Windowing = Data['BVTV'] > MinBVTV
-FilteredData = Data[Windowing]
-FilteredData = Data
+FilteredData = Data[Windowing&CVFilter]
 
 
 # 05 Build and fit the model

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.11.30)  27 JAN 2021 22:40
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.11.30)  29 JAN 2021 14:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1491,6 +1491,12 @@ File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
  [12
 
 ]
+File: Pictures/04_IndividualFit.png Graphic file (type bmp)
+<Pictures/04_IndividualFit.png>
+File: Pictures/04_StandardModel.png Graphic file (type bmp)
+<Pictures/04_StandardModel.png>
+File: Pictures/04_MixedEffect.png Graphic file (type bmp)
+<Pictures/04_MixedEffect.png>
 File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 <Pictures/00_Unibe_Logo.png>
  [13
@@ -1535,46 +1541,48 @@ File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
  [18
 
 ]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\translate ' on input line 702.
-
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.0pt on input line 723.
-File: beamericonarticle.pdf Graphic file (type pdf)
-<use beamericonarticle.pdf>
-LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.2pt on input line 723.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.5pt on input line 723.
-LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 5.57996pt on input line 723.
-LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 4.94997pt on input line 723.
-LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 6.2pt on input line 723.
-LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 5.5pt on input line 723.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.2pt on input line 723.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.5pt on input line 723.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 6.2pt on input line 723.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 5.5pt on input line 723.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 9.0pt on input line 723.
+File: Pictures/09_GroupMixedEffect.png Graphic file (type bmp)
+<Pictures/09_GroupMixedEffect.png>
+File: Pictures/09_LogCVMixedEffect.png Graphic file (type bmp)
+<Pictures/09_LogCVMixedEffect.png>
 File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 <Pictures/00_Unibe_Logo.png>
-[19
+ [19
 
 ]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\translate ' on input line 730.
+
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 9.0pt on input line 751.
 File: beamericonarticle.pdf Graphic file (type pdf)
 <use beamericonarticle.pdf>
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.2pt on input line 751.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 5.5pt on input line 751.
+LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
+(Font)              scaled to size 5.57996pt on input line 751.
+LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
+(Font)              scaled to size 4.94997pt on input line 751.
+LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
+(Font)              scaled to size 6.2pt on input line 751.
+LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
+(Font)              scaled to size 5.5pt on input line 751.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.2pt on input line 751.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 5.5pt on input line 751.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
+(Font)              scaled to size 6.2pt on input line 751.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
+(Font)              scaled to size 5.5pt on input line 751.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
+(Font)              scaled to size 9.0pt on input line 751.
 File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 <Pictures/00_Unibe_Logo.png>
- [20
+[20
 
 ]
 File: beamericonarticle.pdf Graphic file (type pdf)
@@ -1582,6 +1590,13 @@ File: beamericonarticle.pdf Graphic file (type pdf)
 File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 <Pictures/00_Unibe_Logo.png>
  [21
+
+]
+File: beamericonarticle.pdf Graphic file (type pdf)
+<use beamericonarticle.pdf>
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [22
 
 ]
 \tf@nav=\write5
@@ -1593,23 +1608,23 @@ File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 \tf@snm=\write7
 \openout7 = `Presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 774.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 774.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 802.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 802.
  (./Presentation.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 774.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 774.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 802.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 802.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 29867 strings out of 479819
- 565869 string characters out of 5895845
+ 29924 strings out of 479819
+ 567509 string characters out of 5895845
  829019 words of memory out of 5000000
- 46328 multiletter control sequences out of 15000+600000
+ 46380 multiletter control sequences out of 15000+600000
  625195 words of font info for 110 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  67i,15n,117p,779b,936s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Presentation.pdf (21 pages).
+Output written on Presentation.pdf (22 pages).
