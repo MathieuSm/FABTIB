@@ -1,0 +1,107 @@
+%% 
+%% Copyright 2019-2020 Elsevier Ltd
+%% 
+%% This file is part of the 'CAS Bundle'.
+%% --------------------------------------
+%% 
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%% 
+%% The list of all files belonging to the 'CAS Bundle' is
+%% given in the file `manifest.txt'.
+%% 
+%% Template article for cas-dc documentclass for 
+%% double column output.
+
+%\documentclass[a4paper,fleqn,longmktitle]{cas-dc}
+\documentclass[a4paper,fleqn]{DC_ArtStyle}
+
+%\usepackage[authoryear,longnamesfirst]{natbib}
+%\usepackage[authoryear]{natbib}
+\usepackage[numbers]{natbib}
+\usepackage{lipsum}
+\usepackage{acro}[version=3]
+\input{Abbrev}
+
+\newcommand{\abbreviations}[1]{%
+	\nonumnote{\textit{Abbreviations:\enspace}#1}}
+
+
+\begin{document}
+\let\WriteBookmarks\relax
+\def\floatpagepagefraction{1}
+\def\textpagefraction{.001}
+\shorttitle{Fabric-Elasticity in OI}
+\shortauthors{Simon et~al.}
+
+\title[mode = title]{Fabric-Elasticity Relationships in \Ac{OI}}
+
+% Autors
+\author[1]{Mathieu Simon}
+\ead{mathieu.simon@artorg.unibe.ch}
+
+\author[1]{Philippe Zysset}
+\ead{philippe.zysset@artorg.unibe.ch}
+
+\author[1]{Michael Indermaur}
+\ead{michael.indermaur@artorg.unibe.ch}
+
+% Adresses
+\address[1]{ARTORG Centre for Biomedical Engineering Research, University of Bern, Freiburgstrasse 3, CH-3010 Bern, Switzerland}
+
+% Abbreviations
+\abbreviations{OI, osteogenesis imperfecta;
+			   ROI, region of interest.}
+
+% Footnotes
+
+
+\begin{abstract}
+	a\lipsum[1]
+\end{abstract}
+
+\begin{keywords}
+Bone \sep
+Elasticity \sep
+Fabric \sep
+Osteogenesis Imperfecta
+\end{keywords}
+
+
+\maketitle
+
+\section{Introduction}
+
+\lipsum[2-3]
+
+\section{Methods}
+
+\lipsum[4]\cite{Zysset1995}
+
+\subsection{Linear regression}
+
+\lipsum[5]
+
+\section{Results}
+
+\lipsum[6]
+
+\section{Conclusions}
+
+\lipsum[7]
+
+\appendix
+\section{Linear Model}
+
+\lipsum[8]
+
+% Loading bibliography database
+\bibliographystyle{BibStyle}
+\bibliography{Bibliography}
+
+\end{document}
+

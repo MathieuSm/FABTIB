@@ -33,22 +33,48 @@ def Load_Itk(Filename):
     return CT_Scan, Origin, Spacing, Size
 
 # 02 Set variables
-Path = '/home/mathieu/Documents/MscThesis/02_Data/FabricElasticityRelationship/1_ControlGroupNodaratis/B_Edit/04_ResizedROI/'
-File = '1C0001679_SEG_UNCOMPResized.mhd'
+MatchingPath = '/home/mathieu/Documents/Post-Msc/04_Results/06_LinearRegression/'
+ROIsPath = '/home/mathieu/Documents/Post-Msc/04_Results/'
 
 # 03 Get matched individuals
+MatchedList = pd.read_csv(MatchingPath+'Data.csv')
+MatchedList = MatchedList[['ROI Number', 'Scan', 'Group', 'BVTV']]
 
+# 04 Segment resized ROI
+Index = 0
 
+for Index in MatchedList[MatchedList['Group']=='Test'].index:
 
-CT_Scan, Origin, Spacing, Size = Load_Itk(Path+File)
-np.unique(CT_Scan)
+    ROI = MatchedList['ROI Number'].loc[Index]
+    Scan = MatchedList['Scan'].loc[Index]
+    Group = MatchedList['Group'].loc[Index]
 
-Threshold = 50
-CT_Scan[CT_Scan < Threshold] = 1
-CT_Scan[CT_Scan > Threshold] = 2
+    if Group == 'Control':
+        GroupPath = os.path.join(ROIsPath,'01_HealthyTibiaXCT2Scans')
+    elif Group == 'Test':
+        GroupPath = os.path.join(ROIsPath, '02_OITibiaXCT2Scans')
 
-Image = sitk.GetImageFromArray(CT_Scan)
-sitk.WriteImage(Image,'Image.mhd')
+    ResizedROIsPath = os.path.join(GroupPath,'00_ROI/02_Resized_ROI/')
+    ResizedROI = str(ROI) + '_' + Scan + '_' + 'Resized.mhd'
+
+    CT_Scan, Origin, Spacing, Size = Load_Itk(ResizedROIsPath+ResizedROI)
+
+    Threshold = 50
+    CT_Scan[CT_Scan < Threshold] = 1
+    CT_Scan[CT_Scan > Threshold] = 2
+
+    # Check BVTV
+    BVTV = np.sum(CT_Scan-1) / (Size[0] * Size[1] * Size[2])
+
+    if BVTV.round(4) == MatchedList['BVTV'].loc[Index]:
+
+        Image = sitk.GetImageFromArray(CT_Scan)
+        SEGImagesPath = os.path.join(GroupPath,'00_ROI/03_Binarized_ROI/')
+        ImagePath = SEGImagesPath + str(ROI) + Scan + '_Binarized.mhd'
+        sitk.WriteImage(Image,ImagePath)
+
+    else:
+        print('BV/TV incoherence for ROI: ' + str(ROI) + Scan)
 
 
 

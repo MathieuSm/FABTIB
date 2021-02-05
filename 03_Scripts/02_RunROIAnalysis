@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# CHANGE this directory to your installation location
-MEDTOOLPATH=/opt/Medtool/medtool43/bin
-export MEDTOOLPATH
-
-sh Z_MedTool/02_ROIAnalysisBatch.bash
