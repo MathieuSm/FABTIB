@@ -19,16 +19,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350406_C0000147_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350406_C0000147_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -55,16 +55,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350406_C0000147_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350406_C0000147_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -91,16 +91,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350406_C0000147_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350406_C0000147_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -127,16 +127,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350406_C0000147_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350406_C0000147_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -163,16 +163,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350406_C0000147_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350406_C0000147_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -199,16 +199,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350406_C0000147_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350406_C0000147_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -235,16 +235,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_310101_C0000118_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_310101_C0000118_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -271,16 +271,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_310101_C0000118_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_310101_C0000118_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -307,16 +307,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_310101_C0000118_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_310101_C0000118_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -343,16 +343,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_310101_C0000118_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_310101_C0000118_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -379,16 +379,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_310101_C0000118_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_310101_C0000118_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -415,16 +415,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_310101_C0000118_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_310101_C0000118_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -451,16 +451,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_310201_C0000160_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_310201_C0000160_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -487,16 +487,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_310201_C0000160_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_310201_C0000160_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -523,16 +523,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_310201_C0000160_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_310201_C0000160_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -559,16 +559,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_310201_C0000160_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_310201_C0000160_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -595,16 +595,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_310201_C0000160_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_310201_C0000160_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -631,16 +631,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_310201_C0000160_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_310201_C0000160_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -667,16 +667,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350104_C0000094_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350104_C0000094_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -703,16 +703,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350104_C0000094_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350104_C0000094_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -739,16 +739,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350104_C0000094_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350104_C0000094_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -775,16 +775,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350104_C0000094_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350104_C0000094_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -811,16 +811,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350104_C0000094_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350104_C0000094_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -847,16 +847,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350104_C0000094_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350104_C0000094_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -883,16 +883,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350201_C0000066_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350201_C0000066_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -919,16 +919,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350201_C0000066_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350201_C0000066_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -955,16 +955,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350201_C0000066_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350201_C0000066_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -991,16 +991,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350201_C0000066_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350201_C0000066_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1027,16 +1027,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350201_C0000066_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350201_C0000066_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1063,16 +1063,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350201_C0000066_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350201_C0000066_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1099,16 +1099,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350202_C0000070_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350202_C0000070_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1135,16 +1135,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350202_C0000070_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350202_C0000070_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1171,16 +1171,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350202_C0000070_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350202_C0000070_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1207,16 +1207,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350202_C0000070_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350202_C0000070_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1243,16 +1243,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350202_C0000070_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350202_C0000070_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1279,16 +1279,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350202_C0000070_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350202_C0000070_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1315,16 +1315,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350203_C0000099_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350203_C0000099_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1351,16 +1351,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350203_C0000099_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350203_C0000099_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1387,16 +1387,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350203_C0000099_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350203_C0000099_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1423,16 +1423,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350203_C0000099_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350203_C0000099_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1459,16 +1459,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350203_C0000099_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350203_C0000099_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1495,16 +1495,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350203_C0000099_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350203_C0000099_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1512,35 +1512,35 @@ rm C_FEA/03_JobResults/*.com
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "B_Edit"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350205_C0000112_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/1_350205_C0000112_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "142; 324; 22; 87; 87; 87"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/1_350205_C0000112_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/1_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/1_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/1_350205_C0000112_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/1_350205_C0000112_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/1_350205_C0000112_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350205_C0000112_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
 
 
 # Print the current script operation (C_FEA), and perform the Abaqus simulations
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "C_FEA"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/1_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
 "/root/medtool45_SL77/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "1_350205_C0000112_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
 
 
 # Print the current script operation (D_PostProcess) and extract the necessary data for analysis
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "D_PostProcess"
-abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/1_350205_C0000112_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/1_350205_C0000112_SEG_UNCOMP.dat"  -exe "abaqus;python"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350205_C0000112_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350205_C0000112_SEG_UNCOMP.dat"  -type "spatial"
+abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.dat"  -exe "abaqus;python"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1548,35 +1548,35 @@ rm C_FEA/03_JobResults/*.com
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "B_Edit"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350205_C0000112_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/2_350205_C0000112_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "228; 422; 21; 87; 87; 87"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/2_350205_C0000112_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/2_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/2_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/2_350205_C0000112_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/2_350205_C0000112_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/2_350205_C0000112_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350205_C0000112_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
 
 
 # Print the current script operation (C_FEA), and perform the Abaqus simulations
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "C_FEA"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/2_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
 "/root/medtool45_SL77/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "2_350205_C0000112_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
 
 
 # Print the current script operation (D_PostProcess) and extract the necessary data for analysis
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "D_PostProcess"
-abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/2_350205_C0000112_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/2_350205_C0000112_SEG_UNCOMP.dat"  -exe "abaqus;python"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350205_C0000112_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350205_C0000112_SEG_UNCOMP.dat"  -type "spatial"
+abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.dat"  -exe "abaqus;python"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1584,35 +1584,35 @@ rm C_FEA/03_JobResults/*.com
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "B_Edit"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350205_C0000112_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/3_350205_C0000112_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "117; 367; 32; 87; 87; 87"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/3_350205_C0000112_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/3_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/3_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/3_350205_C0000112_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/3_350205_C0000112_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/3_350205_C0000112_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350205_C0000112_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
 
 
 # Print the current script operation (C_FEA), and perform the Abaqus simulations
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "C_FEA"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/3_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
 "/root/medtool45_SL77/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "3_350205_C0000112_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
 
 
 # Print the current script operation (D_PostProcess) and extract the necessary data for analysis
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "D_PostProcess"
-abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/3_350205_C0000112_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/3_350205_C0000112_SEG_UNCOMP.dat"  -exe "abaqus;python"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350205_C0000112_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350205_C0000112_SEG_UNCOMP.dat"  -type "spatial"
+abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.dat"  -exe "abaqus;python"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1620,35 +1620,35 @@ rm C_FEA/03_JobResults/*.com
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "B_Edit"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350205_C0000112_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/4_350205_C0000112_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "98; 274; 53; 87; 87; 87"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/4_350205_C0000112_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/4_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/4_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/4_350205_C0000112_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/4_350205_C0000112_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/4_350205_C0000112_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350205_C0000112_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
 
 
 # Print the current script operation (C_FEA), and perform the Abaqus simulations
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "C_FEA"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/4_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
 "/root/medtool45_SL77/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "4_350205_C0000112_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
 
 
 # Print the current script operation (D_PostProcess) and extract the necessary data for analysis
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "D_PostProcess"
-abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/4_350205_C0000112_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/4_350205_C0000112_SEG_UNCOMP.dat"  -exe "abaqus;python"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350205_C0000112_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350205_C0000112_SEG_UNCOMP.dat"  -type "spatial"
+abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.dat"  -exe "abaqus;python"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1656,35 +1656,35 @@ rm C_FEA/03_JobResults/*.com
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "B_Edit"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350205_C0000112_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/5_350205_C0000112_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "242; 259; 75; 87; 87; 87"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/5_350205_C0000112_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/5_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/5_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/5_350205_C0000112_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/5_350205_C0000112_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/5_350205_C0000112_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350205_C0000112_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
 
 
 # Print the current script operation (C_FEA), and perform the Abaqus simulations
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "C_FEA"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/5_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
 "/root/medtool45_SL77/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "5_350205_C0000112_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
 
 
 # Print the current script operation (D_PostProcess) and extract the necessary data for analysis
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "D_PostProcess"
-abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/5_350205_C0000112_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/5_350205_C0000112_SEG_UNCOMP.dat"  -exe "abaqus;python"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350205_C0000112_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350205_C0000112_SEG_UNCOMP.dat"  -type "spatial"
+abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.dat"  -exe "abaqus;python"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1692,35 +1692,35 @@ rm C_FEA/03_JobResults/*.com
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "B_Edit"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350205_C0000112_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/6_350205_C0000112_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "413; 237; 78; 87; 87; 87"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/6_350205_C0000112_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/6_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/6_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/6_350205_C0000112_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/6_350205_C0000112_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/6_350205_C0000112_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350205_C0000112_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP; 350205_C0000112_SEG_UNCOMP"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
 
 
 # Print the current script operation (C_FEA), and perform the Abaqus simulations
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "C_FEA"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/6_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
 "/root/medtool45_SL77/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "6_350205_C0000112_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
 
 
 # Print the current script operation (D_PostProcess) and extract the necessary data for analysis
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "D_PostProcess"
-abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/6_350205_C0000112_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/6_350205_C0000112_SEG_UNCOMP.dat"  -exe "abaqus;python"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350205_C0000112_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350205_C0000112_SEG_UNCOMP.dat"  -type "spatial"
+abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.dat"  -exe "abaqus;python"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/350205_C0000112_SEG_UNCOMP_350205_C0000112_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1747,16 +1747,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350206_C0000126_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350206_C0000126_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1783,16 +1783,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350206_C0000126_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350206_C0000126_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1819,16 +1819,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350206_C0000126_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350206_C0000126_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1855,16 +1855,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350206_C0000126_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350206_C0000126_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1891,16 +1891,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350206_C0000126_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350206_C0000126_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1927,16 +1927,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350206_C0000126_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350206_C0000126_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1944,35 +1944,35 @@ rm C_FEA/03_JobResults/*.com
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "B_Edit"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350208_C0000141_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/1_350208_C0000141_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "348; 153; 25; 87; 87; 87"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/1_350208_C0000141_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/1_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/1_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/1_350208_C0000141_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/1_350208_C0000141_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/1_350208_C0000141_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350208_C0000141_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
 
 
 # Print the current script operation (C_FEA), and perform the Abaqus simulations
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "C_FEA"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/1_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
 "/root/medtool45_SL77/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "1_350208_C0000141_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
 
 
 # Print the current script operation (D_PostProcess) and extract the necessary data for analysis
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "D_PostProcess"
-abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/1_350208_C0000141_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/1_350208_C0000141_SEG_UNCOMP.dat"  -exe "abaqus;python"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350208_C0000141_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350208_C0000141_SEG_UNCOMP.dat"  -type "spatial"
+abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.dat"  -exe "abaqus;python"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -1980,35 +1980,35 @@ rm C_FEA/03_JobResults/*.com
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "B_Edit"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350208_C0000141_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/2_350208_C0000141_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "344; 142; 37; 87; 87; 87"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/2_350208_C0000141_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/2_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/2_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/2_350208_C0000141_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/2_350208_C0000141_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/2_350208_C0000141_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350208_C0000141_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
 
 
 # Print the current script operation (C_FEA), and perform the Abaqus simulations
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "C_FEA"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/2_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
 "/root/medtool45_SL77/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "2_350208_C0000141_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
 
 
 # Print the current script operation (D_PostProcess) and extract the necessary data for analysis
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "D_PostProcess"
-abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/2_350208_C0000141_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/2_350208_C0000141_SEG_UNCOMP.dat"  -exe "abaqus;python"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350208_C0000141_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350208_C0000141_SEG_UNCOMP.dat"  -type "spatial"
+abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.dat"  -exe "abaqus;python"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2016,35 +2016,35 @@ rm C_FEA/03_JobResults/*.com
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "B_Edit"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350208_C0000141_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/3_350208_C0000141_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "176; 269; 23; 87; 87; 87"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/3_350208_C0000141_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/3_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/3_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/3_350208_C0000141_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/3_350208_C0000141_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/3_350208_C0000141_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350208_C0000141_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
 
 
 # Print the current script operation (C_FEA), and perform the Abaqus simulations
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "C_FEA"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/3_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
 "/root/medtool45_SL77/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "3_350208_C0000141_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
 
 
 # Print the current script operation (D_PostProcess) and extract the necessary data for analysis
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "D_PostProcess"
-abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/3_350208_C0000141_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/3_350208_C0000141_SEG_UNCOMP.dat"  -exe "abaqus;python"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350208_C0000141_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350208_C0000141_SEG_UNCOMP.dat"  -type "spatial"
+abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.dat"  -exe "abaqus;python"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2052,35 +2052,35 @@ rm C_FEA/03_JobResults/*.com
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "B_Edit"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350208_C0000141_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/4_350208_C0000141_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "88; 167; 65; 87; 87; 87"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/4_350208_C0000141_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/4_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/4_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/4_350208_C0000141_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/4_350208_C0000141_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/4_350208_C0000141_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350208_C0000141_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
 
 
 # Print the current script operation (C_FEA), and perform the Abaqus simulations
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "C_FEA"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/4_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
 "/root/medtool45_SL77/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "4_350208_C0000141_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
 
 
 # Print the current script operation (D_PostProcess) and extract the necessary data for analysis
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "D_PostProcess"
-abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/4_350208_C0000141_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/4_350208_C0000141_SEG_UNCOMP.dat"  -exe "abaqus;python"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350208_C0000141_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350208_C0000141_SEG_UNCOMP.dat"  -type "spatial"
+abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.dat"  -exe "abaqus;python"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2088,35 +2088,35 @@ rm C_FEA/03_JobResults/*.com
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "B_Edit"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350208_C0000141_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/5_350208_C0000141_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "71; 191; 73; 87; 87; 87"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/5_350208_C0000141_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/5_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/5_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/5_350208_C0000141_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/5_350208_C0000141_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/5_350208_C0000141_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350208_C0000141_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
 
 
 # Print the current script operation (C_FEA), and perform the Abaqus simulations
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "C_FEA"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/5_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
 "/root/medtool45_SL77/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "5_350208_C0000141_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
 
 
 # Print the current script operation (D_PostProcess) and extract the necessary data for analysis
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "D_PostProcess"
-abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/5_350208_C0000141_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/5_350208_C0000141_SEG_UNCOMP.dat"  -exe "abaqus;python"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350208_C0000141_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350208_C0000141_SEG_UNCOMP.dat"  -type "spatial"
+abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.dat"  -exe "abaqus;python"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2124,35 +2124,35 @@ rm C_FEA/03_JobResults/*.com
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "B_Edit"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350208_C0000141_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/6_350208_C0000141_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "175; 250; 60; 87; 87; 87"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/6_350208_C0000141_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/6_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/6_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/6_350208_C0000141_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/6_350208_C0000141_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/6_350208_C0000141_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350208_C0000141_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP; 350208_C0000141_SEG_UNCOMP"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
 
 
 # Print the current script operation (C_FEA), and perform the Abaqus simulations
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "C_FEA"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/6_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
 "/root/medtool45_SL77/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "6_350208_C0000141_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
 
 
 # Print the current script operation (D_PostProcess) and extract the necessary data for analysis
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "D_PostProcess"
-abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/6_350208_C0000141_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/6_350208_C0000141_SEG_UNCOMP.dat"  -exe "abaqus;python"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350208_C0000141_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350208_C0000141_SEG_UNCOMP.dat"  -type "spatial"
+abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.dat"  -exe "abaqus;python"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/350208_C0000141_SEG_UNCOMP_350208_C0000141_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2179,16 +2179,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350302_C0000111_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350302_C0000111_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2215,16 +2215,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350302_C0000111_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350302_C0000111_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2251,16 +2251,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350302_C0000111_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350302_C0000111_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2287,16 +2287,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350302_C0000111_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350302_C0000111_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2323,16 +2323,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350302_C0000111_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350302_C0000111_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2359,16 +2359,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350302_C0000111_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350302_C0000111_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2395,16 +2395,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350303_C0000153_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350303_C0000153_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2431,16 +2431,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350303_C0000153_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350303_C0000153_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2467,16 +2467,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350303_C0000153_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350303_C0000153_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2503,16 +2503,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350303_C0000153_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350303_C0000153_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2539,16 +2539,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350303_C0000153_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350303_C0000153_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2575,16 +2575,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350303_C0000153_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350303_C0000153_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2611,16 +2611,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350402_C0000050_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350402_C0000050_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2647,16 +2647,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350402_C0000050_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350402_C0000050_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2683,16 +2683,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350402_C0000050_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350402_C0000050_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2719,16 +2719,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350402_C0000050_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350402_C0000050_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2755,16 +2755,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350402_C0000050_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350402_C0000050_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2791,16 +2791,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350402_C0000050_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350402_C0000050_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2827,16 +2827,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350404_C0000120_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350404_C0000120_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2863,16 +2863,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350404_C0000120_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350404_C0000120_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2899,16 +2899,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350404_C0000120_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350404_C0000120_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2935,16 +2935,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350404_C0000120_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350404_C0000120_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -2971,16 +2971,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350404_C0000120_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350404_C0000120_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3007,16 +3007,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350404_C0000120_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350404_C0000120_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3043,16 +3043,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350405_C0000145_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350405_C0000145_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3079,16 +3079,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350405_C0000145_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350405_C0000145_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3115,16 +3115,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350405_C0000145_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350405_C0000145_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3151,16 +3151,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350405_C0000145_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350405_C0000145_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3187,16 +3187,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350405_C0000145_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350405_C0000145_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3223,16 +3223,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350405_C0000145_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350405_C0000145_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3259,16 +3259,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350608_C0000085_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350608_C0000085_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3295,16 +3295,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350608_C0000085_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350608_C0000085_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3331,16 +3331,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350608_C0000085_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350608_C0000085_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3367,16 +3367,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350608_C0000085_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350608_C0000085_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3403,16 +3403,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350608_C0000085_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350608_C0000085_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3439,16 +3439,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350608_C0000085_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350608_C0000085_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3475,16 +3475,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350701_C0000082_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350701_C0000082_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3511,16 +3511,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350701_C0000082_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350701_C0000082_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3547,16 +3547,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350701_C0000082_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350701_C0000082_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3583,16 +3583,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350701_C0000082_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350701_C0000082_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3619,16 +3619,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350701_C0000082_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350701_C0000082_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3655,16 +3655,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350701_C0000082_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350701_C0000082_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3691,16 +3691,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350701_C0000083_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350701_C0000083_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3727,16 +3727,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350701_C0000083_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350701_C0000083_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3763,16 +3763,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350701_C0000083_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350701_C0000083_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3799,16 +3799,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350701_C0000083_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350701_C0000083_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3835,16 +3835,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350701_C0000083_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350701_C0000083_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3871,16 +3871,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350701_C0000083_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350701_C0000083_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3907,16 +3907,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350702_C0000096_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350702_C0000096_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3943,16 +3943,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350702_C0000096_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350702_C0000096_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -3979,16 +3979,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350702_C0000096_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350702_C0000096_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4015,16 +4015,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350702_C0000096_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350702_C0000096_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4051,16 +4051,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350702_C0000096_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350702_C0000096_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4087,16 +4087,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350702_C0000096_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350702_C0000096_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4123,16 +4123,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350704_C0000129_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350704_C0000129_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4159,16 +4159,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350704_C0000129_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350704_C0000129_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4195,16 +4195,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350704_C0000129_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350704_C0000129_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4231,16 +4231,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350704_C0000129_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350704_C0000129_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4267,16 +4267,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350704_C0000129_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350704_C0000129_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4303,16 +4303,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350704_C0000129_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350704_C0000129_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4339,16 +4339,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350901_C0000049_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350901_C0000049_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4375,16 +4375,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350901_C0000049_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350901_C0000049_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4411,16 +4411,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350901_C0000049_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350901_C0000049_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4447,16 +4447,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350901_C0000049_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350901_C0000049_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4483,16 +4483,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350901_C0000049_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350901_C0000049_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4519,16 +4519,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350901_C0000049_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350901_C0000049_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4555,16 +4555,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350902_C0000057_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350902_C0000057_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4591,16 +4591,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350902_C0000057_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350902_C0000057_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4627,16 +4627,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350902_C0000057_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350902_C0000057_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4663,16 +4663,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350902_C0000057_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350902_C0000057_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4699,16 +4699,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350902_C0000057_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350902_C0000057_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4735,16 +4735,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350902_C0000057_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350902_C0000057_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4771,16 +4771,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350903_C0000061_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350903_C0000061_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4807,16 +4807,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350903_C0000061_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350903_C0000061_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4843,16 +4843,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350903_C0000061_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350903_C0000061_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4879,16 +4879,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350903_C0000061_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350903_C0000061_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4915,16 +4915,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350903_C0000061_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350903_C0000061_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4951,16 +4951,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350903_C0000061_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350903_C0000061_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -4987,16 +4987,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350908_C0000201_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350908_C0000201_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5023,16 +5023,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350908_C0000201_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350908_C0000201_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5059,16 +5059,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350908_C0000201_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350908_C0000201_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5095,16 +5095,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350908_C0000201_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350908_C0000201_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5131,16 +5131,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350908_C0000201_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350908_C0000201_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5167,16 +5167,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350908_C0000201_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350908_C0000201_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5203,16 +5203,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350910_C0000231_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350910_C0000231_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5239,16 +5239,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350910_C0000231_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350910_C0000231_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5275,16 +5275,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350910_C0000231_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350910_C0000231_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5311,16 +5311,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350910_C0000231_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350910_C0000231_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5347,16 +5347,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350910_C0000231_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350910_C0000231_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5383,16 +5383,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350910_C0000231_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350910_C0000231_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5419,16 +5419,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350912_C0000226_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350912_C0000226_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5455,16 +5455,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350912_C0000226_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350912_C0000226_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5491,16 +5491,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350912_C0000226_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350912_C0000226_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5527,16 +5527,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350912_C0000226_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350912_C0000226_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5563,16 +5563,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350912_C0000226_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350912_C0000226_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5599,16 +5599,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350912_C0000226_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350912_C0000226_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5616,35 +5616,35 @@ rm C_FEA/03_JobResults/*.com
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "B_Edit"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350913_C0000239_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/1_350913_C0000239_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "370; 211; 28; 87; 87; 87"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/1_350913_C0000239_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/1_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/1_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/1_350913_C0000239_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/1_350913_C0000239_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/1_350913_C0000239_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350913_C0000239_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
 
 
 # Print the current script operation (C_FEA), and perform the Abaqus simulations
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "C_FEA"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/1_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
 "/root/medtool45_SL77/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "1_350913_C0000239_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
 
 
 # Print the current script operation (D_PostProcess) and extract the necessary data for analysis
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "D_PostProcess"
-abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/1_350913_C0000239_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/1_350913_C0000239_SEG_UNCOMP.dat"  -exe "abaqus;python"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350913_C0000239_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350913_C0000239_SEG_UNCOMP.dat"  -type "spatial"
+abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.dat"  -exe "abaqus;python"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5652,35 +5652,35 @@ rm C_FEA/03_JobResults/*.com
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "B_Edit"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350913_C0000239_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/2_350913_C0000239_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "101; 217; 26; 87; 87; 87"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/2_350913_C0000239_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/2_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/2_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/2_350913_C0000239_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/2_350913_C0000239_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/2_350913_C0000239_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350913_C0000239_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
 
 
 # Print the current script operation (C_FEA), and perform the Abaqus simulations
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "C_FEA"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/2_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
 "/root/medtool45_SL77/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "2_350913_C0000239_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
 
 
 # Print the current script operation (D_PostProcess) and extract the necessary data for analysis
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "D_PostProcess"
-abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/2_350913_C0000239_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/2_350913_C0000239_SEG_UNCOMP.dat"  -exe "abaqus;python"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350913_C0000239_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350913_C0000239_SEG_UNCOMP.dat"  -type "spatial"
+abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.dat"  -exe "abaqus;python"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5688,35 +5688,35 @@ rm C_FEA/03_JobResults/*.com
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "B_Edit"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350913_C0000239_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/3_350913_C0000239_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "254; 325; 37; 87; 87; 87"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/3_350913_C0000239_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/3_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/3_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/3_350913_C0000239_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/3_350913_C0000239_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/3_350913_C0000239_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350913_C0000239_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
 
 
 # Print the current script operation (C_FEA), and perform the Abaqus simulations
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "C_FEA"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/3_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
 "/root/medtool45_SL77/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "3_350913_C0000239_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
 
 
 # Print the current script operation (D_PostProcess) and extract the necessary data for analysis
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "D_PostProcess"
-abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/3_350913_C0000239_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/3_350913_C0000239_SEG_UNCOMP.dat"  -exe "abaqus;python"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350913_C0000239_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350913_C0000239_SEG_UNCOMP.dat"  -type "spatial"
+abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.dat"  -exe "abaqus;python"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5724,35 +5724,35 @@ rm C_FEA/03_JobResults/*.com
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "B_Edit"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350913_C0000239_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/4_350913_C0000239_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "260; 346; 66; 87; 87; 87"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/4_350913_C0000239_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/4_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/4_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/4_350913_C0000239_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/4_350913_C0000239_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/4_350913_C0000239_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350913_C0000239_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
 
 
 # Print the current script operation (C_FEA), and perform the Abaqus simulations
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "C_FEA"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/4_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
 "/root/medtool45_SL77/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "4_350913_C0000239_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
 
 
 # Print the current script operation (D_PostProcess) and extract the necessary data for analysis
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "D_PostProcess"
-abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/4_350913_C0000239_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/4_350913_C0000239_SEG_UNCOMP.dat"  -exe "abaqus;python"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350913_C0000239_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350913_C0000239_SEG_UNCOMP.dat"  -type "spatial"
+abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.dat"  -exe "abaqus;python"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5760,35 +5760,35 @@ rm C_FEA/03_JobResults/*.com
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "B_Edit"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350913_C0000239_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/5_350913_C0000239_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "72; 292; 58; 87; 87; 87"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/5_350913_C0000239_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/5_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/5_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/5_350913_C0000239_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/5_350913_C0000239_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/5_350913_C0000239_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350913_C0000239_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
 
 
 # Print the current script operation (C_FEA), and perform the Abaqus simulations
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "C_FEA"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/5_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
 "/root/medtool45_SL77/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "5_350913_C0000239_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
 
 
 # Print the current script operation (D_PostProcess) and extract the necessary data for analysis
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "D_PostProcess"
-abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/5_350913_C0000239_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/5_350913_C0000239_SEG_UNCOMP.dat"  -exe "abaqus;python"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350913_C0000239_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350913_C0000239_SEG_UNCOMP.dat"  -type "spatial"
+abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.dat"  -exe "abaqus;python"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5796,35 +5796,35 @@ rm C_FEA/03_JobResults/*.com
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "B_Edit"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350913_C0000239_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/6_350913_C0000239_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "293; 188; 55; 87; 87; 87"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/6_350913_C0000239_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/6_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/6_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/6_350913_C0000239_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/6_350913_C0000239_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/6_350913_C0000239_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350913_C0000239_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP; 350913_C0000239_SEG_UNCOMP"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
 
 
 # Print the current script operation (C_FEA), and perform the Abaqus simulations
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "C_FEA"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/6_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
 "/root/medtool45_SL77/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "6_350913_C0000239_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
 
 
 # Print the current script operation (D_PostProcess) and extract the necessary data for analysis
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "D_PostProcess"
-abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/6_350913_C0000239_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/6_350913_C0000239_SEG_UNCOMP.dat"  -exe "abaqus;python"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350913_C0000239_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350913_C0000239_SEG_UNCOMP.dat"  -type "spatial"
+abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.dat"  -exe "abaqus;python"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/350913_C0000239_SEG_UNCOMP_350913_C0000239_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5851,16 +5851,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350914_C0000261_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350914_C0000261_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5887,16 +5887,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350914_C0000261_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350914_C0000261_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5923,16 +5923,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350914_C0000261_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350914_C0000261_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5959,16 +5959,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350914_C0000261_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350914_C0000261_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -5995,16 +5995,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350914_C0000261_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350914_C0000261_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6031,16 +6031,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350914_C0000261_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350914_C0000261_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6067,16 +6067,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350915_C0000250_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350915_C0000250_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6103,16 +6103,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350915_C0000250_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350915_C0000250_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6139,16 +6139,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350915_C0000250_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350915_C0000250_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6175,16 +6175,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350915_C0000250_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350915_C0000250_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6211,16 +6211,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350915_C0000250_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350915_C0000250_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6247,16 +6247,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350915_C0000250_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350915_C0000250_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6283,16 +6283,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_351002_C0000151_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_351002_C0000151_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6319,16 +6319,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_351002_C0000151_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_351002_C0000151_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6355,16 +6355,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_351002_C0000151_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_351002_C0000151_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6391,16 +6391,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_351002_C0000151_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_351002_C0000151_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6427,16 +6427,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_351002_C0000151_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_351002_C0000151_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6463,16 +6463,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_351002_C0000151_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_351002_C0000151_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6499,16 +6499,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_351302_C0000051_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_351302_C0000051_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6535,16 +6535,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_351302_C0000051_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_351302_C0000051_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6571,16 +6571,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_351302_C0000051_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_351302_C0000051_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6607,16 +6607,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_351302_C0000051_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_351302_C0000051_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6643,16 +6643,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_351302_C0000051_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_351302_C0000051_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6679,16 +6679,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_351302_C0000051_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_351302_C0000051_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6715,16 +6715,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_351303_C0000072_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_351303_C0000072_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6751,16 +6751,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_351303_C0000072_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_351303_C0000072_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6787,16 +6787,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_351303_C0000072_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_351303_C0000072_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6823,16 +6823,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_351303_C0000072_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_351303_C0000072_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6859,16 +6859,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_351303_C0000072_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_351303_C0000072_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6895,16 +6895,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_351303_C0000072_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_351303_C0000072_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6931,16 +6931,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_351304_C0000089_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_351304_C0000089_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -6967,16 +6967,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_351304_C0000089_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_351304_C0000089_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7003,16 +7003,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_351304_C0000089_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_351304_C0000089_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7039,16 +7039,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_351304_C0000089_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_351304_C0000089_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7075,16 +7075,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_351304_C0000089_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_351304_C0000089_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7111,16 +7111,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_351304_C0000089_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_351304_C0000089_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7147,16 +7147,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_351304_C0000091_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_351304_C0000091_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7183,16 +7183,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_351304_C0000091_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_351304_C0000091_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7219,16 +7219,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_351304_C0000091_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_351304_C0000091_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7255,16 +7255,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_351304_C0000091_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_351304_C0000091_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7291,16 +7291,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_351304_C0000091_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_351304_C0000091_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7327,16 +7327,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_351304_C0000091_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_351304_C0000091_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7363,16 +7363,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_351305_C0000122_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_351305_C0000122_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7399,16 +7399,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_351305_C0000122_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_351305_C0000122_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7435,16 +7435,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_351305_C0000122_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_351305_C0000122_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7471,16 +7471,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_351305_C0000122_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_351305_C0000122_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7507,16 +7507,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_351305_C0000122_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_351305_C0000122_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7543,16 +7543,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_351305_C0000122_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_351305_C0000122_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7579,16 +7579,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_351308_C0000194_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_351308_C0000194_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7615,16 +7615,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_351308_C0000194_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_351308_C0000194_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7651,16 +7651,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_351308_C0000194_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_351308_C0000194_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7687,16 +7687,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_351308_C0000194_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_351308_C0000194_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7723,16 +7723,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_351308_C0000194_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_351308_C0000194_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7759,16 +7759,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_351308_C0000194_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_351308_C0000194_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7795,16 +7795,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_351301_C0000034_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_351301_C0000034_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7831,16 +7831,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_351301_C0000034_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_351301_C0000034_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7867,16 +7867,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_351301_C0000034_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_351301_C0000034_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7903,16 +7903,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_351301_C0000034_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_351301_C0000034_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7939,16 +7939,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_351301_C0000034_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_351301_C0000034_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -7975,16 +7975,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_351301_C0000034_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_351301_C0000034_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8011,16 +8011,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_351001_C0000037_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_351001_C0000037_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8047,16 +8047,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_351001_C0000037_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_351001_C0000037_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8083,16 +8083,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_351001_C0000037_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_351001_C0000037_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8119,16 +8119,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_351001_C0000037_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_351001_C0000037_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8155,16 +8155,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_351001_C0000037_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_351001_C0000037_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8191,16 +8191,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_351001_C0000037_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_351001_C0000037_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8227,16 +8227,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_999998_C0000220_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_999998_C0000220_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8263,16 +8263,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_999998_C0000220_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_999998_C0000220_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8299,16 +8299,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_999998_C0000220_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_999998_C0000220_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8335,16 +8335,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_999998_C0000220_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_999998_C0000220_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8371,16 +8371,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_999998_C0000220_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_999998_C0000220_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8407,16 +8407,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_999998_C0000220_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_999998_C0000220_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8443,16 +8443,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_351102_C0000226_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_351102_C0000226_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8479,16 +8479,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_351102_C0000226_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_351102_C0000226_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8515,16 +8515,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_351102_C0000226_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_351102_C0000226_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8551,16 +8551,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_351102_C0000226_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_351102_C0000226_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8587,16 +8587,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_351102_C0000226_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_351102_C0000226_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8623,16 +8623,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_351102_C0000226_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_351102_C0000226_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8659,16 +8659,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350107_C0000104_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350107_C0000104_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8695,16 +8695,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350107_C0000104_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350107_C0000104_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8731,16 +8731,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350107_C0000104_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350107_C0000104_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8767,16 +8767,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350107_C0000104_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350107_C0000104_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8803,16 +8803,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350107_C0000104_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350107_C0000104_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8839,16 +8839,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350107_C0000104_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350107_C0000104_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8875,16 +8875,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350108_C0000130_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350108_C0000130_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8911,16 +8911,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350108_C0000130_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350108_C0000130_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8947,16 +8947,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350108_C0000130_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350108_C0000130_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -8983,16 +8983,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350108_C0000130_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350108_C0000130_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9019,16 +9019,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350108_C0000130_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350108_C0000130_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9055,16 +9055,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350108_C0000130_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350108_C0000130_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9091,16 +9091,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350207_C0000137_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350207_C0000137_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9127,16 +9127,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350207_C0000137_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350207_C0000137_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9163,16 +9163,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350207_C0000137_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350207_C0000137_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9199,16 +9199,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350207_C0000137_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350207_C0000137_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9235,16 +9235,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350207_C0000137_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350207_C0000137_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9271,16 +9271,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350207_C0000137_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350207_C0000137_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9307,16 +9307,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350304_C0000179_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350304_C0000179_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9343,16 +9343,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350304_C0000179_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350304_C0000179_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9379,16 +9379,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350304_C0000179_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350304_C0000179_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9415,16 +9415,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350304_C0000179_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350304_C0000179_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9451,16 +9451,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350304_C0000179_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350304_C0000179_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9487,16 +9487,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350304_C0000179_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350304_C0000179_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9523,16 +9523,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350407_C0000158_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350407_C0000158_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9559,16 +9559,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350407_C0000158_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350407_C0000158_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9595,16 +9595,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350407_C0000158_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350407_C0000158_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9631,16 +9631,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350407_C0000158_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350407_C0000158_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9667,16 +9667,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350407_C0000158_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350407_C0000158_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9703,16 +9703,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350407_C0000158_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350407_C0000158_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9739,16 +9739,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350606_C0000070_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350606_C0000070_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9775,16 +9775,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350606_C0000070_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350606_C0000070_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9811,16 +9811,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350606_C0000070_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350606_C0000070_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9847,16 +9847,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350606_C0000070_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350606_C0000070_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9883,16 +9883,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350606_C0000070_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350606_C0000070_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9919,16 +9919,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350606_C0000070_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350606_C0000070_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9955,16 +9955,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350703_C0000118_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350703_C0000118_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9991,16 +9991,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350703_C0000118_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350703_C0000118_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -10027,16 +10027,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350703_C0000118_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350703_C0000118_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -10063,16 +10063,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350703_C0000118_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350703_C0000118_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -10099,16 +10099,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350703_C0000118_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350703_C0000118_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -10135,16 +10135,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350703_C0000118_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350703_C0000118_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -10171,16 +10171,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350705_C0000245_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350705_C0000245_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -10207,16 +10207,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350705_C0000245_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350705_C0000245_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -10243,16 +10243,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350705_C0000245_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350705_C0000245_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -10279,16 +10279,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350705_C0000245_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350705_C0000245_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -10315,16 +10315,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350705_C0000245_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350705_C0000245_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -10351,16 +10351,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350705_C0000245_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350705_C0000245_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -10387,16 +10387,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_351310_C0000159_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_351310_C0000159_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -10423,16 +10423,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_351310_C0000159_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_351310_C0000159_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -10459,16 +10459,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_351310_C0000159_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_351310_C0000159_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -10495,16 +10495,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_351310_C0000159_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_351310_C0000159_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -10531,16 +10531,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_351310_C0000159_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_351310_C0000159_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -10567,16 +10567,16 @@ abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResul
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_351310_C0000159_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_351310_C0000159_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.odb
-rm C_FEA/03_JobResults/*.prt
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.dat
 rm C_FEA/03_JobResults/*.pmg
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
 rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
+rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 

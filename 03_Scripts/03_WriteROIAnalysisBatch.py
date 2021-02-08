@@ -23,8 +23,10 @@ DataGroup = 1   # 0 = Healthy group, 1 = OI group
 DataSubFolders = [File for File in os.listdir(DataFolder) if os.path.isdir(os.path.join(DataFolder,File))]
 DataSubFolders.sort()
 MedtoolParametersFile = os.path.join(MatchingFolder, '00_ROI_Selection' , DataSubFolders[DataGroup][:-14] + 'ROI.csv')
+MedtoolParametersFile = os.path.join(MatchingFolder, '00_ROI_Selection' , '02_OIROI.csv')
 MedtoolParametersData = pd.read_csv(MedtoolParametersFile, sep=';')
 del MedtoolParametersData['Unnamed: 8']
+
 
 PipelineFile  = open(os.path.join(WorkingDirectory, '03_Scripts', '03_ROIAnalysisPipeline.txt'), 'r')
 PipelineText  = PipelineFile.read()
