@@ -124,7 +124,7 @@ for ROI in ROIs:
     if ROI not in Results:
         MissingResults = MissingResults.append({'ROI':ROI},ignore_index=True)
 
-# Select new ROI
+# 04 Select new ROI
 DataGroup = 1   # 0 = Healthy group, 1 = OI group
 Plots = True   # Plot the different ROI location
 
@@ -245,7 +245,23 @@ if Plots:
         plt.show()
         plt.close(Figure)
 
-# Write into data frame
+# 05 Write into data frame
 ColsToInt = ['$XPos', '$YPos', '$ZPos', '$XRange', '$YRange', '$ZRange', '$ROINumber']
 NewROIPos[ColsToInt] = NewROIPos[ColsToInt].astype(int)
-NewROIPos.to_csv(ParametersFolder+'/02_NewOIROI.csv',index=False,sep=';',line_terminator=';\n')
+FileName = '02_NewOIROI.csv'
+NewROIPos.to_csv(ParametersFolder+'/'+FileName,index=False,sep=';',line_terminator=';\n')
+
+
+# Replace in csv file
+MedtoolParametersFile = os.path.join(ParametersFolder, '02_OIROI.csv')
+MedtoolParametersData = pd.read_csv(MedtoolParametersFile, sep=';')
+del MedtoolParametersData['Unnamed: 8']
+
+for NewIndex in NewROIPos.index:
+    NewScan = NewROIPos['$Scan'].loc[NewIndex]
+
+    for Index in MedtoolParametersData.index:
+        Scan = MedtoolParametersData['$Scan'].loc[Index]
+
+        if Scan == NewScan:
+            MedtoolParametersData.loc[Index] = NewROIPos['$Scan'].loc[NewIndex]
