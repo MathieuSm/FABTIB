@@ -1,0 +1,710 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (01/07/19)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------
+%	PACKAGES AND THEMES		-----------------------------------
+%----------------------------------------------------------------
+
+\documentclass[xcolor=table]{beamer}
+
+\mode<presentation> {
+
+\usetheme{Frankfurt}
+\usecolortheme{dove}
+\usefonttheme[onlymath]{serif}
+
+}
+\usepackage{newtxtext,newtxmath}
+\usepackage{graphicx}
+\usepackage{booktabs} 
+\usepackage{subfig}
+\usepackage{pgf}
+\usepackage{multirow}
+\usepackage{appendixnumberbeamer}
+\usepackage{bookmark}
+\usepackage{siunitx}
+\usepackage{animate}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{soul}
+\usepackage{pifont}
+
+
+%----------------------------------------------------------------
+%	GENERAL OPTIONS 	-----------------------------------------
+%----------------------------------------------------------------
+
+% Set template options
+\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+\setbeamertemplate{frametitle}{\vspace*{1em}\insertframetitle}
+\setbeamertemplate{enumerate items}[default]
+\setbeamercolor{section in head/foot}{fg=white, bg=black}
+
+% Headline
+\makeatletter
+\setbeamertemplate{headline}
+{%
+  \pgfuseshading{beamer@barshade}%
+    \vskip-5ex%
+  \begin{beamercolorbox}[ignorebg,ht=2.25ex,dp=3.75ex]{section in head/foot}
+  \insertsectionnavigationhorizontal{\paperwidth}{\hskip0pt plus1fill}{\hskip0pt plus1fill}
+  \end{beamercolorbox}%
+  \ifbeamer@sb@subsection%
+    \begin{beamercolorbox}[ignorebg,ht=2.125ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+      \usebeamerfont{subsection in head/foot}\insertsubsectionhead
+    \end{beamercolorbox}%
+  \fi%
+}%
+\makeatother
+
+% Footline
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,left]{section in head/foot}%
+    \usebeamerfont{author in head/foot}\hspace{10pt}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{section in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{section in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{}\hspace*{2em}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+% Add logo
+\logo{\pgfputat{\pgfxy(0,7)}{\includegraphics[width=0.1\paperwidth]{Pictures/00_Unibe_Logo}}}
+
+% Table settings
+\renewcommand{\arraystretch}{2}
+\captionsetup{labelformat=empty,labelsep=none}
+\definecolor{Gray}{gray}{0.9}
+
+% Define highlitghing command
+\makeatletter
+\let\HL\hl
+\renewcommand\hl{%
+	\let\set@color\beamerorig@set@color
+	\let\reset@color\beamerorig@reset@color
+	\HL}
+\makeatother
+
+%----------------------------------------------------------------
+%	TITLE PAGE 	-------------------------------------------------
+%----------------------------------------------------------------
+
+\title[Regular Meeting]{
+\uppercase{Regular Meeting}
+} 
+
+\author{Mathieu Simon}
+\institute[University of Bern]
+{
+MSc - Biomedical Engineering \\
+University of Bern, Faculty of Medicine \\
+\medskip
+}
+\date{January 26, 2021}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Project Overview}
+		\centering		
+		\includegraphics[width=0.8\linewidth]
+		{Pictures/01_Plan}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Morphological Parameters\\\small{Normality Assumption - BV/TV}}
+	\begin{columns}[c]
+		\column{.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]
+		{Pictures/02_BVTV_Healthy_QQPlot}
+		Healthy QQ plot
+		\vfill
+		Shapiro p value: $0.23$
+		\column{.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]
+		{Pictures/02_BVTV_OI_QQPlot}
+		OI QQ plot
+		\vfill
+		Shapiro p value: $0.47$
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Morphological Parameters\\\small{Normality Assumption - SMI}}
+	\begin{columns}[c]
+		\column{.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]
+		{Pictures/03_SMI_Healthy_QQPlot}
+		Healthy QQ plot
+		\vfill
+		Shapiro p value: $0.24$
+		\column{.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]
+		{Pictures/03_SMI_OI_QQPlot}
+		OI QQ plot
+		\vfill
+		Shapiro p value: $0.17$
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Morphological Parameters\\\small{Normality Assumption - Trabecular Number}}
+	\begin{columns}[c]
+		\column{.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]
+		{Pictures/04_TbN_Healthy_QQPlot}
+		Healthy QQ plot
+		\vfill
+		Shapiro p value: $0.025$
+		\column{.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]
+		{Pictures/04_TbN_OI_QQPlot}
+		OI QQ plot
+		\vfill
+		Shapiro p value: $0.33$
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Morphological Parameters\\\small{Normality Assumption - Trabecular Spacing}}
+	\begin{columns}[c]
+		\column{.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]
+		{Pictures/05_TbSp_Healthy_QQPlot}
+		Healthy QQ plot
+		\vfill
+		Shapiro p value: $<0.01$
+		\column{.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]
+		{Pictures/05_TbSp_OI_QQPlot}
+		OI QQ plot
+		\vfill
+		Shapiro p value: $<0.01$
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Morphological Parameters\\\small{Normality Assumption - Log Trabecular Spacing}}
+	\begin{columns}[c]
+		\column{.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]
+		{Pictures/06_LogTbSp_Healthy_QQPlot}
+		Healthy QQ plot
+		\vfill
+		Shapiro p value: $<0.01$
+		\column{.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]
+		{Pictures/06_LogTbSp_OI_QQPlot}
+		OI QQ plot
+		\vfill
+		Shapiro p value: $0.08$
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Morphological Parameters\\\small{Normality Assumption - Trabecular Thickness}}
+	\begin{columns}[c]
+		\column{.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]
+		{Pictures/07_TbTh_Healthy_QQPlot}
+		Healthy QQ plot
+		\vfill
+		Shapiro p value: $0.38$
+		\column{.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]
+		{Pictures/07_TbTh_OI_QQPlot}
+		OI QQ plot
+		\vfill
+		Shapiro p value: $0.86$
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Morphological Parameters\\\small{Normality Assumption - Coefficient of Variation}}
+	\begin{columns}[c]
+		\column{.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]
+		{Pictures/08_CV_Healthy_QQPlot}
+		Healthy QQ plot
+		\vfill
+		Shapiro p value: $<0.01$
+		\column{.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]
+		{Pictures/08_CV_OI_QQPlot}
+		OI QQ plot
+		\vfill
+		Shapiro p value: $<0.01$
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Morphological Parameters\\\small{Normality Assumption - Log Coefficient of Variation}}
+	\begin{columns}[c]
+		\column{.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]
+		{Pictures/09_LogCV_Healthy_QQPlot}
+		Healthy QQ plot
+		\vfill
+		Shapiro p value: $0.09$
+		\column{.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]
+		{Pictures/09_LogCV_OI_QQPlot}
+		OI QQ plot
+		\vfill
+		Shapiro p value: $0.24$
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Statistical Test Selection Results}
+	\begin{columns}[c]
+		\column{.45\textwidth}
+		\begin{table}[h!]
+			\centering
+			\resizebox{!}{0.4\linewidth}{
+				\begin{tabular}{lcccc}
+					\toprule
+					Variable & Group & Normality & Equal Variance & Statistical Test \\
+					\midrule
+					\multirow{2}{*}{BV/TV} & Healthy & \ding{51} & \multirow{2}{*}{\ding{51}} & \multirow{2}{*}{t-test} \\
+					& OI & \ding{51} &  & \\
+					
+					\multirow{2}{*}{SMI} & Healthy & \ding{51} &\multirow{2}{*}{\ding{51}} & \multirow{2}{*}{t-test} \\
+					& OI & \ding{51} &  & \\
+					
+					\multirow{2}{*}{Tb N} & Healthy & \ding{51} &\multirow{2}{*}{\ding{51}} & \multirow{2}{*}{t-test} \\
+					& OI & \ding{51} &  & \\
+					
+					\multirow{2}{*}{Tb Th} & Healthy & \ding{51} &\multirow{2}{*}{\ding{51}} & \multirow{2}{*}{t-test} \\
+					& OI & \ding{51} &  & \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		\vfill
+		\column{.45\textwidth}
+		\begin{table}[h!]
+			\resizebox{!}{0.4\linewidth}{
+				\begin{tabular}{lcccc}
+					\toprule
+					Variable & Group & Normality & Equal Variance & Statistical Test \\
+					\midrule
+					\multirow{2}{*}{Tb Sp} & Healthy & \ding{55} &\multirow{2}{*}{\ding{55}} & \multirow{2}{*}{Permutation test} \\
+					& OI & \ding{55} &  & \\
+					\multirow{2}{*}{Log Tb Sp} & Healthy & \ding{55} &\multirow{2}{*}{\ding{55}} & \multirow{2}{*}{Permutation test} \\
+					& OI & \ding{51} &  & \\
+					\multirow{2}{*}{CV} & Healthy & \ding{55} &\multirow{2}{*}{\ding{55}} & \multirow{2}{*}{Permutation test} \\
+					& OI & \ding{55} &  & \\
+					\multirow{2}{*}{Log CV} & Healthy & \ding{51} &\multirow{2}{*}{\ding{51}} & \multirow{2}{*}{t-test} \\
+					& OI & \ding{51} &  & \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}[noframenumbering]
+	\frametitle{Statistical Test Selection Results}
+	\begin{columns}[c]
+		\column{.45\textwidth}
+		\begin{table}[h!]
+			\centering
+			\resizebox{!}{0.4\linewidth}{
+				\begin{tabular}{lcccc}
+					\toprule
+					Variable & Group & Normality & Equal Variance & Statistical Test \\
+					\midrule
+					\multirow{2}{*}{\hl{BV/TV}} & Healthy & \ding{51} & \multirow{2}{*}{\ding{51}} & \multirow{2}{*}{\hl{t-test}} \\
+					& OI & \ding{51} &  & \\
+					\multirow{2}{*}{\hl{SMI}} & Healthy & \ding{51} &\multirow{2}{*}{\ding{55}} & \multirow{2}{*}{\hl{Permutation test}} \\
+					& OI & \ding{51} &  & \\
+					\multirow{2}{*}{\hl{Tb N}} & Healthy & \ding{51} &\multirow{2}{*}{\ding{55}} & \multirow{2}{*}{\hl{Permutation test}} \\
+					& OI & \ding{51} &  & \\
+					\multirow{2}{*}{\hl{Tb Th}} & Healthy & \ding{51} &\multirow{2}{*}{\ding{55}} & \multirow{2}{*}{\hl{Permutation test}} \\
+					& OI & \ding{51} &  & \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		\vfill
+		\column{.45\textwidth}
+		\begin{table}[h!]
+			\resizebox{!}{0.4\linewidth}{
+				\begin{tabular}{lcccc}
+					\toprule
+					Variable & Group & Normality & Equal Variance & Statistical Test \\
+					\midrule
+					\multirow{2}{*}{\hl{Tb Sp}} & Healthy & \ding{55} &\multirow{2}{*}{\ding{55}} & \multirow{2}{*}{\hl{Permutation test}} \\
+					& OI & \ding{55} &  & \\
+					\multirow{2}{*}{Log Tb Sp} & Healthy & \ding{55} &\multirow{2}{*}{\ding{55}} & \multirow{2}{*}{Permutation test} \\
+					& OI & \ding{51} &  & \\
+					\multirow{2}{*}{CV} & Healthy & \ding{55} &\multirow{2}{*}{\ding{55}} & \multirow{2}{*}{Permutation test} \\
+					& OI & \ding{55} &  & \\
+					\multirow{2}{*}{\hl{Log CV}} & Healthy & \ding{51} &\multirow{2}{*}{\ding{51}} & \multirow{2}{*}{\hl{t-test}} \\
+					& OI & \ding{51} &  & \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Tests Results\\\small{Permutation Test}}
+	\begin{columns}[c]
+		\column{.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]
+		{Pictures/10_PermutationTest_Distribution}
+		Distribution
+		\vfill
+		\column{.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]
+		{Pictures/10_PermutationTest_Results}
+		Results
+		\vfill
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Statistical Test Results}
+	\begin{table}[h!]
+		\centering
+		\resizebox{0.7\linewidth}{!}{
+			\begin{tabular}{lccccc}
+				\toprule
+				Variable & Group & Mean $\pm$ Std & Statistical Test & p Value & 95\% CI \\
+				\midrule
+				\multirow{2}{*}{BV/TV} & Healthy & 0.201 $\pm$ 0.065 & \multirow{2}{*}{t-test} & \multirow{2}{*}{1E-6} & \multirow{2}{*}{$[0.04,0.089]$} \\
+				& OI & 0.137 $\pm$ 0.058 &  &  & \\
+				
+				\multirow{2}{*}{SMI} & Healthy & 0.012 $\pm$ 0.037 & \multirow{2}{*}{t-test} & \multirow{2}{*}{5E-9} & \multirow{2}{*}{$[-0.057,-0.030]$} \\
+				& OI & 0.056 $\pm$ 0.030 &  &  & \\
+				
+				\multirow{2}{*}{Tb N} & Healthy & 0.795 $\pm$ 0.143 & \multirow{2}{*}{t-test} & \multirow{2}{*}{2E-8} & \multirow{2}{*}{$[0.142,0.276]$} \\
+				& OI & 0.586 $\pm$ 0.188 &  &  & \\
+				
+				\multirow{2}{*}{Tb Sp} & Healthy & 1.024 $\pm$ 0.362 & \multirow{2}{*}{permutation test} & \multirow{2}{*}{0.01} & \multirow{2}{*}{$(-\infty ,-0.415] \cup [0.394,\infty)$} \\
+				& OI & 1.639 $\pm$ 0.787 &  &  & \\
+				
+				\multirow{2}{*}{Tb Th} & Healthy & 0.294 $\pm$ 0.033 & \multirow{2}{*}{t-test} & \multirow{2}{*}{0.12} & \multirow{2}{*}{$[-0.024,0.003]$} \\
+				& OI & 0.305 $\pm$ 0.033 &  &  & \\
+				
+				\multirow{2}{*}{Log CV} & Healthy & -1.636 $\pm$ 0.393 & \multirow{2}{*}{t-test} & \multirow{2}{*}{5E-9} & \multirow{2}{*}{$[-0.695,-0.367]$} \\
+				& OI & -1.105 $\pm$ 0.426 &  &  & \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Comparison with Literature - Age}
+	\begin{table}[h!]
+		\centering
+		\resizebox{0.7\linewidth}{!}{
+			\begin{tabular}{ccccc}
+				\toprule
+				Reference & Group & Value & Test & p Value \\
+				\midrule
+				\multirow{2}{*}{\cite{p4}} & Healthy & 54 (21-77) & \multirow{2}{*}{Wilcoxon} & \multirow{2}{*}{0.07} \\
+				& OI Type I & 53 (21-77) &  &  \\
+				\midrule
+				\multirow{3}{*}{\cite{p5}} & Healthy & 44 (38-52) & \multirow{3}{*}{-} & \multirow{3}{*}{-} \\
+				& OI Type I & 42 (35-56) &  &  \\
+				& OI Type III and IV & 48 (35-58) &  &  \\
+				\midrule
+				\multirow{2}{*}{\cite{p6}} & Healthy & 49 $\pm$ 16 & \multirow{2}{*}{-} & \multirow{2}{*}{-} \\
+				& OI & 46 $\pm$ 16 &  &  \\
+				\midrule
+				\multirow{2}{*}{Present Work} & Healthy & 44 $\pm$ 16 & \multirow{2}{*}{-} & \multirow{2}{*}{-} \\
+				& OI & 45 $\pm$ 14 &  &  \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Comparison with Literature - BV/TV}
+	\begin{table}[h!]
+		\centering
+		\resizebox{0.7\linewidth}{!}{
+			\begin{tabular}{ccccc}
+				\toprule
+				Reference & Group & Value & Test & p Value \\
+				\midrule
+				\multirow{2}{*}{\cite{p4}} & Healthy & 0.14 $\pm$ 0.03 & \multirow{2}{*}{t-test} & \multirow{2}{*}{<0.001} \\
+				& OI Type I & 0.08 $\pm$ 0.03 &  &  \\
+				\midrule
+				\multirow{3}{*}{\cite{p5}} & Healthy & 0.141 (0.130-.0170) & \multirow{3}{*}{-} & - \\
+				& OI Type I & 0.098 (0.088-0.114) &  & <0.0001 \\
+				& OI Type III and IV & 0.081 (0.056-0.092) &  & <0.0001 \\
+				\midrule
+				\multirow{2}{*}{\cite{p6}} & Healthy & 0.162 $\pm$ 0.010 & \multirow{2}{*}{-} & \multirow{2}{*}{<0.0001} \\
+				& OI & 0.095 $\pm$ 0.008 &  &  \\
+				\midrule
+				\multirow{2}{*}{Present Work} & Healthy & 0.201 $\pm$ 0.065 & \multirow{2}{*}{t-test} & \multirow{2}{*}{1E-6} \\
+				& OI & 0.137 $\pm$ 0.058 &  &  \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Comparison with Literature - Tb N}
+	\begin{table}[h!]
+		\centering
+		\resizebox{0.7\linewidth}{!}{
+			\begin{tabular}{ccccc}
+				\toprule
+				Reference & Group & Value & Test & p Value \\
+				\midrule
+				\multirow{2}{*}{\cite{p4}} & Healthy & 1.94 (1.74-2.13) & \multirow{2}{*}{Wilcoxon} & \multirow{2}{*}{<0.001} \\
+				& OI Type I & 1.30 (0.75-1.53) &  &  \\
+				\midrule
+				\multirow{3}{*}{\cite{p5}} & Healthy & 1.76 (1.59-2.08) & \multirow{3}{*}{-} & - \\
+				& OI Type I & 1.33 (1.07-1.55) &  & <0.0001 \\
+				& OI Type III and IV & 0.89 (0.81-1.08) &  & <0.001 \\
+				\midrule
+				\multirow{2}{*}{\cite{p6}} & Healthy & 2.143 $\pm$ 0.089 & \multirow{2}{*}{-} & \multirow{2}{*}{<0.0001} \\
+				& OI & 1.428 $\pm$ 0.098 &  &  \\
+				\midrule
+				\multirow{2}{*}{Present Work} & Healthy & 0.795 $\pm$ 0.143 & \multirow{2}{*}{t-test} & \multirow{2}{*}{2E-8} \\
+				& OI & 0.586 $\pm$ 0.188 &  &  \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Comparison with Literature - Tb Sp}
+	\begin{table}[h!]
+		\centering
+		\resizebox{0.7\linewidth}{!}{
+			\begin{tabular}{ccccc}
+				\toprule
+				Reference & Group & Value & Test & p Value \\
+				\midrule
+				\multirow{2}{*}{\cite{p4}} & Healthy & 0.44 (0.39-0.51) & \multirow{2}{*}{Wilcoxon} & \multirow{2}{*}{<0.001} \\
+				& OI Type I & 0.68 (0.57-1.19) &  &  \\
+				\midrule
+				\multirow{3}{*}{\cite{p5}} & Healthy & - & \multirow{3}{*}{-} & - \\
+				& OI Type I & - &  & - \\
+				& OI Type III and IV & - &  & - \\
+				\midrule
+				\multirow{2}{*}{\cite{p6}} & Healthy & 0.409 $\pm$ 0.023 & \multirow{2}{*}{-} & \multirow{2}{*}{0.0003} \\
+				& OI & 0.727 $\pm$ 0.095 &  &  \\
+				\midrule
+				\multirow{2}{*}{Present Work} & Healthy & 1.024 $\pm$ 0.362 & \multirow{2}{*}{permutation test} & \multirow{2}{*}{0.006} \\
+				& OI & 1.639 $\pm$ 0.787 &  &  \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Comparison with Literature - Tb Th}
+	\begin{table}[h!]
+		\centering
+		\resizebox{0.7\linewidth}{!}{
+			\begin{tabular}{ccccc}
+				\toprule
+				Reference & Group & Value & Test & p Value \\
+				\midrule
+				\multirow{2}{*}{\cite{p4}} & Healthy & 0.07 (0.06-0.08) & \multirow{2}{*}{Wilcoxon} & \multirow{2}{*}{0.54} \\
+				& OI Type I & 0.07 (0.06-0.08) &  &  \\
+				\midrule
+				\multirow{3}{*}{\cite{p5}} & Healthy & 0.081 (0.074-0.087) & \multirow{3}{*}{-} & - \\
+				& OI Type I & 0.074 (0.064-0.090) &  & n.s. \\
+				& OI Type III and IV & 0.078 (0.068-0.092) &  & n.s. \\
+				\midrule
+				\multirow{2}{*}{\cite{p6}} & Healthy & 0.075 $\pm$ 0.003 & \multirow{2}{*}{-} & \multirow{2}{*}{0.046} \\
+				& OI & 0.066 $\pm$ 0.004 &  &  \\
+				\midrule
+				\multirow{2}{*}{Present Work} & Healthy & 0.294 $\pm$ 0.033 & \multirow{2}{*}{t-test} & \multirow{2}{*}{0.12} \\
+				& OI & 0.305 $\pm$ 0.033 &  &  \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\appendix
+
+\section{References}
+\begin{frame}
+	\frametitle{Statistics I}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			\bibitem[Stuart 2010]{p1} Stuart, Elisabth A. (2010).
+			\newblock Matching methods for causal inference: A review and a look forward
+			\newblock \textit{Statistical science : a review journal of the Institute of Mathematical Statistics, 25}(1), 1-21
+			\vspace{1mm}
+			\bibitem[Bishara et al. 2017]{p2} Bishara, Anthony J., Hittner, James B. (2017).
+			\newblock Confidence intervals for correlations when data are not normal
+			\newblock \textit{Behavior Research Methods, 49}(1), 294-309
+			\vspace{1mm}
+			\bibitem[Wandel 2019]{p3} Wandel, J. (2019).
+			\newblock Hypothesis tests for two samples: comparing the means
+			\newblock \textit{Introduction to medical statistics}
+		\end{thebibliography}
+	}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Statistics II}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			\bibitem[Mohd et al. 2011]{p7} Mohd et al. (2011).
+			\newblock Power comparisons of Shapiro-Wilk, Kolmogorov-Smirnov, Lilliefors and Anderson-Darling tests
+			\newblock \textit{Journal of Statistical Modeling and Analytics, 2}(1), 21-33
+			\vspace{1mm}
+			\bibitem[Fox 2016]{p8} Fox, John (2016).
+			\newblock Fox, Applied Regressions Analysis and Linear Models
+			\newblock \textit{Sage publications}(3), 817
+			\vspace{1mm}
+		\end{thebibliography}
+	}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Similar Publications}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			\bibitem[Folkestad et al., 2012]{p4} Folkestad et al. (2012).
+			\newblock Bone geometry, density, and microarchitecture in the distal radius and tibia in adults with osteogenesis imperfecta type i assessed by high-resolution pQCT
+			\newblock \textit{Journal of Bone and Mineral Research, 27}(1), 1405-1412
+			\vspace{1mm}
+			\bibitem[Kocijan et al., 2015]{p5} Kocijan et al. (2015).
+			\newblock Bone structure assessed by HR-pQCT, TBS and DXL in adult patients with different types of osteogenesis imperfecta
+			\newblock \textit{Osteoporosis International, 26}(10), 2431-2440
+			\vspace{1mm}
+			\bibitem[Rolvien et al., 2018]{p6} Rolvien et al. (2018).
+			\newblock Comparison of Bone Microarchitecture Between Adult Osteogenesis Imperfecta and Early-Onset Osteoporosis
+			\newblock \textit{Calcified Tissue International, 103}(5), 512-521
+		\end{thebibliography}
+	}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\end{document} 
