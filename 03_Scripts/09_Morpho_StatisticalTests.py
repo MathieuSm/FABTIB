@@ -370,18 +370,3 @@ for Variable in Variables:
 
 StatisticalResults.to_csv(ResultFolder + '02_StatisticalTests.csv',index=False)
 print(StatisticalResults)
-
-
-## Convert trabecular measurement
-Variable = 'Mean Tb Sp'
-Variable = 'Mean Tb Th'
-Variable = 'Mean Tb N'
-x = ControlData.groupby('Scan')[Variable].median().values
-y = OIData.groupby('Scan')[Variable].median().values
-Resolution = 0.0607
-
-x.mean()
-x.mean()*Resolution
-
-y.mean()
-y.mean()*Resolution

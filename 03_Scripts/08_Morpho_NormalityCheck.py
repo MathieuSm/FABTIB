@@ -77,15 +77,18 @@ ResultFolder = os.path.join(WorkingDirectory, '04_Results/04_Morphometry_Statist
 Folders = ['BVTV',
            'SMI',
            'Tb Number',
-           'Tb Spacing',
            'Tb Thickness',
-           'Coefficient of Variation']
+           'Tb Spacing',
+           'Tb Inhomogeneity',
+           'Coefficient of Variation',
+           'Degree of Anisotropy']
 Results = pd.DataFrame()
 
 
 # 02 Set variable
-Variables = ['BV/TV','SMI','Mean Tb N','Mean Tb Sp','Mean Tb Th','Coefficient of Variation']
-#Variable = Variables[5]
+Variables = ['BV/TV','SMI','Mean Tb N','Mean Tb Th','Mean Tb Sp','Std Tb Sp',
+             'Coefficient of Variation','Degree of Anisotropy']
+# Variable = Variables[5]
 for Variable in Variables:
 
     Folder = Folders[Variables.index(Variable)]
@@ -94,7 +97,6 @@ for Variable in Variables:
         os.mkdir(os.path.join(ResultFolder,Folder))
 
     Groups = ['Healthy', 'OI']
-    #Group = Groups[0]
     for Group in Groups:
 
         if Group == 'Healthy':

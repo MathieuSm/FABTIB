@@ -54,14 +54,57 @@ def ROIAnalysis(ROIFilePath):
                 RhoSub[i, j, k] = BV / TV
 
     return np.std(RhoSub) / np.mean(RhoSub)
+def GetFabricInfos(FabricFile):
+    FabricFile = open(FabricFile, 'r')
+    FabricText = FabricFile.read()
+    FabricLines = FabricText.split('\n')
+
+    for Index in range(len(FabricLines)):
+
+        if 'BV/TV' in FabricLines[Index]:
+            BVTV = np.float(FabricLines[Index].split()[-1])
+
+        if 'Eigen values' in FabricLines[Index]:
+            m1 = np.float(FabricLines[Index].split()[5])
+            m2 = np.float(FabricLines[Index].split()[6])
+            m3 = np.float(FabricLines[Index].split()[7])
+
+            DA = np.round(max(m1,m2,m3)/min(m1,m2,m3),3)
+
+        if 'Eigen vector 1' in FabricLines[Index]:
+            m1Vector = np.array([np.float(FabricLines[Index].split()[6]),
+                                 np.float(FabricLines[Index].split()[7]),
+                                 np.float(FabricLines[Index].split()[8])])
+
+        if 'Eigen vector 2' in FabricLines[Index]:
+            m2Vector = np.array([np.float(FabricLines[Index].split()[6]),
+                                 np.float(FabricLines[Index].split()[7]),
+                                 np.float(FabricLines[Index].split()[8])])
+
+        if 'Eigen vector 3' in FabricLines[Index]:
+            m3Vector = np.array([np.float(FabricLines[Index].split()[6]),
+                                 np.float(FabricLines[Index].split()[7]),
+                                 np.float(FabricLines[Index].split()[8])])
+
+    FabricInfosData = pd.DataFrame()
+
+    FabricInfos = {'BVTV':BVTV,'m1':m1,'m2':m2,'m3':m3,'DA':DA,
+                   'm11':m1Vector[0],'m21':m1Vector[1],'m31':m1Vector[2],
+                   'm12':m2Vector[0],'m22':m2Vector[1],'m32':m2Vector[2],
+                   'm13':m3Vector[0],'m23':m3Vector[1],'m33':m3Vector[2]}
+
+    FabricInfosData = FabricInfosData.append(FabricInfos,ignore_index=True)
+
+    return FabricInfosData
 
 
 # 01 Set variables
-Group = 'OI'   # Healthy or OI
+Group = 'Healthy'   # Healthy or OI
 WorkingDirectory = os.getcwd()
 DataPath = os.path.join(WorkingDirectory,'04_Results/02_ROI_Analysis')
 MorphoPath =  os.path.join(DataPath,'04_' + Group + '_Morphometry/')
 ROIsPath = os.path.join(DataPath,'01_' + Group + '_ROIs/00_Cleaned_ROIs/')
+FabricPath = os.path.join(DataPath,'02_' + Group + '_FabricElasticity/')
 ResultsPath = os.path.join(WorkingDirectory,'04_Results/04_Morphometry_Statistics/')
 
 
@@ -88,6 +131,8 @@ for File in Files:
 
     CV = ROIAnalysis(ROIsPath + File[:-4])
 
+    FabricData = GetFabricInfos(FabricPath + File[:-4] + '.fab')
+
     Parameters = {'ROI Number':File[0],
                   'Scan':File[2:-4],
                   'BV/TV':BVTV,
@@ -101,7 +146,8 @@ for File in Files:
                   'Std Tb Sp':Tb_Sp_Std,
                   'Min Tb Sp':Tb_Sp_Min,
                   'Max Tb Sp':Tb_Sp_Max,
-                  'Coefficient of Variation':CV}
+                  'Coefficient of Variation':CV,
+                  'Degree of Anisotropy':FabricData['DA'].values[0]}
 
     MorphoData = MorphoData.append(Parameters,ignore_index=True)
 
@@ -111,6 +157,6 @@ MorphoData = MorphoData.sort_values(by=['Scan','ROI Number'],ignore_index=True)
 SortedColumns = ['ROI Number','Scan','BV/TV', 'SMI', 'Mean Tb N',
                  'Mean Tb Sp', 'Std Tb Sp', 'Min Tb Sp', 'Max Tb Sp',
                  'Mean Tb Th', 'Std Tb Th', 'Min Tb Th', 'Max Tb Th',
-                 'Coefficient of Variation']
+                 'Coefficient of Variation','Degree of Anisotropy']
 MorphoData = MorphoData.reindex(SortedColumns, axis=1)
 MorphoData.to_csv(ResultsPath + '00_' + Group + '_Data.csv',index=False)

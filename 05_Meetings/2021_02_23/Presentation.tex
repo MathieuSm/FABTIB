@@ -1,0 +1,1019 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (01/07/19)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------
+%	PACKAGES AND THEMES		-----------------------------------
+%----------------------------------------------------------------
+
+\documentclass[xcolor=table]{beamer}
+
+\mode<presentation> {
+
+\usetheme{Frankfurt}
+\usecolortheme{dove}
+\usefonttheme[onlymath]{serif}
+
+}
+\usepackage{newtxtext,newtxmath}
+\usepackage{graphicx}
+\usepackage{booktabs} 
+\usepackage{subfig}
+\usepackage{pgf}
+\usepackage{multirow}
+\usepackage{appendixnumberbeamer}
+\usepackage{bookmark}
+\usepackage{siunitx}
+\usepackage{animate}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{soul}
+\usepackage{pifont}
+
+
+%----------------------------------------------------------------
+%	GENERAL OPTIONS 	-----------------------------------------
+%----------------------------------------------------------------
+
+% Set template options
+\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+\setbeamertemplate{frametitle}{\vspace*{1em}\insertframetitle}
+\setbeamertemplate{enumerate items}[default]
+\setbeamercolor{section in head/foot}{fg=white, bg=black}
+
+% Headline
+\makeatletter
+\setbeamertemplate{headline}
+{%
+  \pgfuseshading{beamer@barshade}%
+    \vskip-5ex%
+  \begin{beamercolorbox}[ignorebg,ht=2.25ex,dp=3.75ex]{section in head/foot}
+  \insertsectionnavigationhorizontal{\paperwidth}{\hskip0pt plus1fill}{\hskip0pt plus1fill}
+  \end{beamercolorbox}%
+  \ifbeamer@sb@subsection%
+    \begin{beamercolorbox}[ignorebg,ht=2.125ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+      \usebeamerfont{subsection in head/foot}\insertsubsectionhead
+    \end{beamercolorbox}%
+  \fi%
+}%
+\makeatother
+
+% Footline
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,left]{section in head/foot}%
+    \usebeamerfont{author in head/foot}\hspace{10pt}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{section in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{section in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{}\hspace*{2em}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+% Add logo
+\logo{\pgfputat{\pgfxy(0,7)}{\includegraphics[width=0.1\paperwidth]{Pictures/00_Unibe_Logo}}}
+
+% Table settings
+\renewcommand{\arraystretch}{2}
+\captionsetup{labelformat=empty,labelsep=none}
+\definecolor{Gray}{gray}{0.9}
+
+% Define highlitghing command
+\makeatletter
+\let\HL\hl
+\renewcommand\hl{%
+	\let\set@color\beamerorig@set@color
+	\let\reset@color\beamerorig@reset@color
+	\HL}
+\makeatother
+
+%----------------------------------------------------------------
+%	TITLE PAGE 	-------------------------------------------------
+%----------------------------------------------------------------
+
+\title[Regular Meeting]{
+\uppercase{Regular Meeting}
+} 
+
+\author{Mathieu Simon}
+\institute[University of Bern]
+{
+MSc - Biomedical Engineering \\
+University of Bern, Faculty of Medicine \\
+\medskip
+}
+\date{February 23, 2021}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Project Overview}
+		\centering		
+		\includegraphics[width=0.8\linewidth]
+		{Pictures/01_Plan_00}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}[noframenumbering]
+	\frametitle{Project Overview}
+	\centering		
+	\includegraphics[width=0.8\linewidth]
+	{Pictures/01_Plan_01}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Matching Results}
+	\vspace{-5mm}
+	\begin{columns}[c] 
+		\column{.1\textwidth}
+		\hspace{5mm}
+		\rotatebox{90}{\hspace{-2mm} Matched\hspace{17mm} Original}
+		\column{0.8\textwidth}
+		\begin{figure}
+			\hspace{-15mm}
+			\captionsetup[subfigure]{labelformat=empty}
+			\subfloat[]{
+				\includegraphics[width=0.4\linewidth,trim=35 0 35 0]
+				{Pictures/02_FullControl}}
+			\qquad
+			\subfloat[]{
+				\includegraphics[width=0.4\linewidth,trim=35 0 35 0]
+				{Pictures/02_FullOI}}
+			\qquad\\
+			\hspace{-15mm}
+			\subfloat[Heathy]{
+				\includegraphics[width=0.4\linewidth,trim=35 0 35 80]
+				{Pictures/02_MatchedControl}}
+			\qquad
+			\subfloat[OI]{
+				\includegraphics[width=0.4\linewidth,trim=35 0 35 80]
+				{Pictures/02_MatchedOI}}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Project Overview}
+	\centering		
+	\includegraphics[width=0.8\linewidth]
+	{Pictures/01_Plan_00}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}[noframenumbering]
+	\frametitle{Project Overview}
+	\centering		
+	\includegraphics[width=0.8\linewidth]
+	{Pictures/03_Plan_02}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Statistical Test Selection}
+	
+	Assumptions assessment
+	\begin{itemize}
+		\item Normality:
+		\begin{itemize}
+			\item Graphically: QQ Plot
+			\item Numerically: Shapiro normality test
+		\end{itemize}
+		\item Equal variance:
+		\begin{itemize}
+			\item Bartlett test if normal distribution
+			\item BrownForsythe test if not normal distribution
+		\end{itemize}
+	\end{itemize}
+
+	\vfill
+
+	Test selection:
+	\begin{itemize}
+		\item Normal distribution + equal variance $\rightarrow$ t-test
+		\item Not normal distribution + equal variance $\rightarrow$ Mann-Whitney test
+		\item Not equal variance $\rightarrow$ Permutation test
+	\end{itemize}
+
+	\vfill
+	Note: tests performed on median value of each individual
+
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Statistical Test Selection Results}
+	\begin{columns}[t]
+		\column{.45\textwidth}
+		\begin{table}[h!]
+			\centering
+			\resizebox{!}{0.4\linewidth}{
+				\begin{tabular}{lcccc}
+					\toprule
+					Variable & Group & Normality & Equal Variance & Statistical Test \\
+					\midrule
+					\multirow{2}{*}{\hl{BV/TV}} & Healthy & \ding{51} & \multirow{2}{*}{\ding{51}} & \multirow{2}{*}{\hl{t-test}} \\
+					& OI & \ding{51} &  & \\
+					
+					\multirow{2}{*}{\hl{SMI}} & Healthy & \ding{51} &\multirow{2}{*}{\ding{51}} & \multirow{2}{*}{\hl{t-test}} \\
+					& OI & \ding{51} &  & \\
+					
+					\multirow{2}{*}{\hl{Tb N}} & Healthy & \ding{51} &\multirow{2}{*}{\ding{51}} & \multirow{2}{*}{\hl{t-test}} \\
+					& OI & \ding{51} &  & \\
+					
+					\multirow{2}{*}{\hl{Tb Th}} & Healthy & \ding{51} &\multirow{2}{*}{\ding{51}} & \multirow{2}{*}{\hl{t-test}} \\
+					& OI & \ding{51} &  & \\
+					
+					\multirow{2}{*}{\hl{DA}} & Healthy & \ding{51} &\multirow{2}{*}{\ding{51}} & \multirow{2}{*}{\hl{t-test}} \\
+					& OI & \ding{51} &  & \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		\vfill
+		\column{.5\textwidth}
+		\begin{table}[h!]
+			\resizebox{!}{0.5\linewidth}{
+				\begin{tabular}{lcccc}
+					\toprule
+					Variable & Group & Normality & Equal Variance & Statistical Test \\
+					\midrule
+					\multirow{2}{*}{\hl{Tb Sp}} & Healthy & \ding{55} &\multirow{2}{*}{\ding{55}} & \multirow{2}{*}{\hl{Permutation test}} \\
+					& OI & \ding{55} &  & \\
+					
+					\multirow{2}{*}{Log Tb Sp} & Healthy & \ding{55} &\multirow{2}{*}{\ding{55}} & \multirow{2}{*}{Permutation test} \\
+					& OI & \ding{51} &  & \\
+					
+					\multirow{2}{*}{\hl{Tb Sp SD}} & Healthy & \ding{55} &\multirow{2}{*}{\ding{55}} & \multirow{2}{*}{\hl{Permutation test}} \\
+					& OI & \ding{55} &  & \\
+					
+					\multirow{2}{*}{Log Tb Sp SD} & Healthy & \ding{55} &\multirow{2}{*}{\ding{55}} & \multirow{2}{*}{Permutation test} \\
+					& OI & \ding{51} &  & \\
+					
+					\multirow{2}{*}{CV} & Healthy & \ding{55} &\multirow{2}{*}{\ding{55}} & \multirow{2}{*}{Permutation test} \\
+					& OI & \ding{55} &  & \\
+					
+					\multirow{2}{*}{\hl{Log CV}} & Healthy & \ding{51} &\multirow{2}{*}{\ding{51}} & \multirow{2}{*}{\hl{t-test}} \\
+					& OI & \ding{51} &  & \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Tests Results\\\small{Permutation Test}}
+	\begin{columns}[c]
+		\column{.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]
+		{Pictures/04_PermutationTest_Distribution}
+		Distribution
+		\vfill
+		\column{.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]
+		{Pictures/04_PermutationTest_Results}
+		Results
+		\vfill
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Statistical Test Results}
+	\begin{table}[h!]
+		\centering
+		\resizebox{!}{0.3\linewidth}{
+			\begin{tabular}{lccccc}
+				\toprule
+				Variable & Group & Mean $\pm$ Std & Statistical Test & p Value & 95\% CI \\
+				\midrule
+				\multirow{2}{*}{BV/TV} & Healthy & 0.201 $\pm$ 0.065 & \multirow{2}{*}{t-test} & \multirow{2}{*}{1E-6} & \multirow{2}{*}{$[0.04,0.089]$} \\
+				& OI & 0.137 $\pm$ 0.058 &  &  & \\
+				
+				\multirow{2}{*}{SMI} & Healthy & 0.012 $\pm$ 0.037 & \multirow{2}{*}{t-test} & \multirow{2}{*}{5E-9} & \multirow{2}{*}{$[-0.057,-0.030]$} \\
+				& OI & 0.056 $\pm$ 0.030 &  &  & \\
+				
+				\multirow{2}{*}{Tb N} & Healthy & 0.795 $\pm$ 0.143 & \multirow{2}{*}{t-test} & \multirow{2}{*}{2E-8} & \multirow{2}{*}{$[0.142,0.276]$} \\
+				& OI & 0.586 $\pm$ 0.188 &  &  & \\
+				
+				\multirow{2}{*}{Tb Th} & Healthy & 0.294 $\pm$ 0.033 & \multirow{2}{*}{t-test} & \multirow{2}{*}{0.12} & \multirow{2}{*}{$[-0.024,0.003]$} \\
+				& OI & 0.305 $\pm$ 0.033 &  &  & \\
+				
+				\multirow{2}{*}{Tb Sp} & Healthy & 1.024 $\pm$ 0.362 & \multirow{2}{*}{permutation test} & \multirow{2}{*}{0.01} & \multirow{2}{*}{$(-\infty ,-0.415] \cup [0.400,\infty)$} \\
+				& OI & 1.639 $\pm$ 0.787 &  &  & \\
+				
+				\multirow{2}{*}{Tb Sp SD} & Healthy & 0.393 $\pm$ 0.281 & \multirow{2}{*}{permutation test} & \multirow{2}{*}{0.02} & \multirow{2}{*}{$(-\infty ,-0.237] \cup [0.254,\infty)$} \\
+				& OI & 0.730 $\pm$ 0.439 &  &  & \\
+								
+				\multirow{2}{*}{Log CV} & Healthy & -1.636 $\pm$ 0.393 & \multirow{2}{*}{t-test} & \multirow{2}{*}{5E-9} & \multirow{2}{*}{$[-0.695,-0.367]$} \\
+				& OI & -1.105 $\pm$ 0.426 &  &  & \\
+				
+				\multirow{2}{*}{DA} & Healthy & 1.996 $\pm$ 0.147 & \multirow{2}{*}{t-test} & \multirow{2}{*}{0.04} & \multirow{2}{*}{$[-0.14,-0.004]$} \\
+				& OI & 2.068 $\pm$ 0.191 &  &  & \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Project Overview}
+	\centering		
+	\includegraphics[width=0.8\linewidth]
+	{Pictures/01_Plan_00}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}[noframenumbering]
+	\frametitle{Project Overview}
+	\centering		
+	\includegraphics[width=0.8\linewidth]
+	{Pictures/05_Plan_03}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Comparison with Literature}
+	\begin{itemize}
+		\item Age:\\
+		\textasciitilde Same range
+		\item BV/TV:\\
+		\textasciitilde + 50\% in present study
+		\item Tb N:\\
+		\textasciitilde factor +2.5 in other studies / present study\\
+		\textasciitilde factor +2 in reproducibility study / present study\\
+		\item Tb Th:\\
+		\textasciitilde factor +4 in present study / literature\\
+		\textasciitilde same range as reproducibility study\\
+		\item Tb Sp\\
+		\textasciitilde factor +2.5 in present study / literature\\
+		\textasciitilde factor +2.5 in present study / repro study\\
+		\item Tb Sp SD\\
+		\textasciitilde factor +2 in present study / literature\\
+	\end{itemize}
+
+	Why these differences ??
+	
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{ROI Selection}
+		\centering
+		\includegraphics[height=0.3\linewidth,trim=0 5 0 5]
+		{Pictures/06_Control_ROISelection}\\
+		Healthy example\\
+		\includegraphics[height=0.3\linewidth,trim=0 5 0 5]
+		{Pictures/06_OI_ROISelection}\\\vspace{-0.8cm}
+		OI example
+\end{frame}
+
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Project Overview}
+	\centering		
+	\includegraphics[width=0.8\linewidth]
+	{Pictures/01_Plan_00}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}[noframenumbering]
+	\frametitle{Project Overview}
+	\centering		
+	\includegraphics[width=0.8\linewidth]
+	{Pictures/07_Plan_04}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{BV/TV and Coefficient of Variation}
+	\begin{columns}[c]
+		\column{.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]
+		{Pictures/08_BVTV_CV}
+		Coefficient of variation in relation to BV/TV
+		\column{.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]
+		{Pictures/08_BVTV_LogCV}
+		Log of coefficient of variation in relation to BV/TV
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Variables Distribution - Filtering}
+	\centering
+	\begin{figure}
+		\captionsetup[subfigure]{labelformat=empty}
+		\subfloat[BV/TV]{
+			\includegraphics[width=0.275\linewidth, trim=50 0 50 0]
+			{Pictures/09_BVTV_Boxplot}}
+		\qquad
+		\subfloat[Degree of anisotropy]{
+			\includegraphics[width=0.275\linewidth, trim=50 0 50 0]
+			{Pictures/09_DegreeofAnisotropy_Boxplot}}
+		\qquad
+		\subfloat[Coefficient of variation]{
+			\includegraphics[width=0.275\linewidth, trim=50 0 50 0]
+			{Pictures/09_VariationCoefficient_Boxplot}}
+	\end{figure}
+	\vfill
+	Statistical test after filtering
+	\vfill
+	\begin{columns}
+		\column{0.3\linewidth}
+		\centering
+		Z test: 8.156\\p value: <1E-5
+		\column{0.3\linewidth}
+		\centering
+		Z test: -3.066\\p value: 0.002
+		\column{0.3\linewidth}
+		\centering
+		Z test: -8.366\\p value: <1E-5
+	\end{columns}
+	\vfill
+	Z 95\% range of rejection: $(-\infty ,-1.96] \cup [1.96,\infty)$
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Linear Models - Original Model}
+	
+	\begin{equation}\resizebox{!}{.3\textwidth}{$\ln
+			\begin{pmatrix}
+				\mathbb{S}_{i11} \\
+				\mathbb{S}_{i12} \\
+				\mathbb{S}_{i13} \\
+				\mathbb{S}_{i21} \\
+				\mathbb{S}_{i22} \\
+				\mathbb{S}_{i23} \\
+				\mathbb{S}_{i31} \\
+				\mathbb{S}_{32} \\
+				\mathbb{S}_{ii33} \\
+				\mathbb{S}_{i44} \\
+				\mathbb{S}_{i55} \\
+				\mathbb{S}_{i66} \\
+			\end{pmatrix}$}
+		=
+		\resizebox{!}{.3\textwidth}{$
+			\begin{pmatrix}
+				1 & 0 & 0 & \ln(\rho) & \ln(m_1^2) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_2) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_3) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_2 m_1) \\
+				1 & 0 & 0 & \ln(\rho) & \ln(m_2^2) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_2 m_3) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_3 m_1) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_3 m_2) \\
+				1 & 0 & 0 & \ln(\rho) & \ln(m_3^2) \\
+				0 & 0 & 1 & \ln(\rho) & \ln(m_2 m_3) \\
+				0 & 0 & 1 & \ln(\rho) & \ln(m_3 m_1) \\
+				0 & 0 & 1 & \ln(\rho) & \ln(m_1 m_2) \\
+			\end{pmatrix}$}
+		\resizebox{!}{.12\textwidth}{$
+			\begin{pmatrix}
+				\ln(\lambda_0 + 2\mu_0) \\
+				\ln(\lambda_0') \\
+				\ln(\mu_0) \\
+				k \\
+				l \\
+			\end{pmatrix}$}
+		+
+		\resizebox{!}{.3\textwidth}{$
+			\begin{pmatrix}
+				e_{i1} \\
+				e_{i2} \\
+				e_{i3} \\
+				e_{i4} \\
+				e_{i5} \\
+				e_{i6} \\
+				e_{i7} \\
+				e_{i8} \\
+				e_{i9} \\
+				e_{i10} \\
+				e_{i11} \\
+				e_{i12} \\
+			\end{pmatrix}$}
+	\end{equation}	
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Linear Models - CV Model}
+	
+	\begin{equation}\resizebox{!}{.3\textwidth}{$\ln
+			\begin{pmatrix}
+				\mathbb{S}_{i11} \\
+				\mathbb{S}_{i12} \\
+				\mathbb{S}_{i13} \\
+				\mathbb{S}_{i21} \\
+				\mathbb{S}_{i22} \\
+				\mathbb{S}_{i23} \\
+				\mathbb{S}_{i31} \\
+				\mathbb{S}_{32} \\
+				\mathbb{S}_{ii33} \\
+				\mathbb{S}_{i44} \\
+				\mathbb{S}_{i55} \\
+				\mathbb{S}_{i66} \\
+			\end{pmatrix}$}
+		=
+		\resizebox{!}{.3\textwidth}{$
+			\begin{pmatrix}
+				1 & 0 & 0 & \ln(\rho) & \ln(m_1^2)	& \ln(CV) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_2)& \ln(CV) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_3)& \ln(CV) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_2 m_1)& \ln(CV) \\
+				1 & 0 & 0 & \ln(\rho) & \ln(m_2^2)	& \ln(CV) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_2 m_3)& \ln(CV) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_3 m_1)& \ln(CV) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_3 m_2)& \ln(CV) \\
+				1 & 0 & 0 & \ln(\rho) & \ln(m_3^2) 	& \ln(CV) \\
+				0 & 0 & 1 & \ln(\rho) & \ln(m_2 m_3)& \ln(CV) \\
+				0 & 0 & 1 & \ln(\rho) & \ln(m_3 m_1)& \ln(CV) \\
+				0 & 0 & 1 & \ln(\rho) & \ln(m_1 m_2)& \ln(CV) \\
+			\end{pmatrix}$}
+		\resizebox{!}{.15\textwidth}{$
+			\begin{pmatrix}
+				\ln(\lambda_0 + 2\mu_0) \\
+				\ln(\lambda_0') \\
+				\ln(\mu_0) \\
+				k \\
+				l \\
+				\beta \\
+			\end{pmatrix}$}
+		+
+		\resizebox{!}{.3\textwidth}{$
+			\begin{pmatrix}
+				e_{i1} \\
+				e_{i2} \\
+				e_{i3} \\
+				e_{i4} \\
+				e_{i5} \\
+				e_{i6} \\
+				e_{i7} \\
+				e_{i8} \\
+				e_{i9} \\
+				e_{i10} \\
+				e_{i11} \\
+				e_{i12} \\
+			\end{pmatrix}$}
+	\end{equation}	
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Linear Models - Group Model}
+	
+	\begin{equation}\resizebox{!}{.3\textwidth}{$\ln
+			\begin{pmatrix}
+				\mathbb{S}_{i11} \\
+				\mathbb{S}_{i12} \\
+				\mathbb{S}_{i13} \\
+				\mathbb{S}_{i21} \\
+				\mathbb{S}_{i22} \\
+				\mathbb{S}_{i23} \\
+				\mathbb{S}_{i31} \\
+				\mathbb{S}_{32} \\
+				\mathbb{S}_{ii33} \\
+				\mathbb{S}_{i44} \\
+				\mathbb{S}_{i55} \\
+				\mathbb{S}_{i66} \\
+			\end{pmatrix}$}
+		=
+		\resizebox{!}{.3\textwidth}{$
+			\begin{pmatrix}
+				1 & 0 & 0 & \ln(\rho) & \ln(m_1^2)	& Sg & 0 & 0 \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_2)& 0 & Sg & 0 \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_3)& 0 & Sg & 0 \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_2 m_1)& 0 & Sg & 0 \\
+				1 & 0 & 0 & \ln(\rho) & \ln(m_2^2)	& Sg & 0 & 0 \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_2 m_3)& 0 & Sg & 0 \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_3 m_1)& 0 & Sg & 0 \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_3 m_2)& 0 & Sg & 0 \\
+				1 & 0 & 0 & \ln(\rho) & \ln(m_3^2) 	& Sg & 0 & 0 \\
+				0 & 0 & 1 & \ln(\rho) & \ln(m_2 m_3)& 0 & 0 & Sg \\
+				0 & 0 & 1 & \ln(\rho) & \ln(m_3 m_1)& 0 & 0 & Sg \\
+				0 & 0 & 1 & \ln(\rho) & \ln(m_1 m_2)& 0 & 0 & Sg \\
+			\end{pmatrix}$}
+		\resizebox{!}{.22\textwidth}{$
+			\begin{pmatrix}
+				\ln(\lambda_0 + 2\mu_0) \\
+				\ln(\lambda_0') \\
+				\ln(\mu_0) \\
+				k \\
+				l \\
+				\beta_1 \\
+				\beta_2 \\
+				\beta_3 \\
+			\end{pmatrix}$}
+		+
+		\resizebox{!}{.3\textwidth}{$
+			\begin{pmatrix}
+				e_{i1} \\
+				e_{i2} \\
+				e_{i3} \\
+				e_{i4} \\
+				e_{i5} \\
+				e_{i6} \\
+				e_{i7} \\
+				e_{i8} \\
+				e_{i9} \\
+				e_{i10} \\
+				e_{i11} \\
+				e_{i12} \\
+			\end{pmatrix}$}
+	\end{equation}	
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Regression Results}
+	\begin{table}[h!]\caption{Results for the linear models on filtered data}
+		\resizebox{!}{0.12\linewidth}{
+			\begin{tabular}{ccccc}
+				\toprule
+				Model & DOF & Regression SS & $R^2$ & SE \\
+				\midrule
+				Original & 5 & 6431.1 & 0.943 & 0.263 \\
+				CV & 6 & 6431.7 & 0.943 & 0.263 \\
+				Group & 8 & 6434.4 & 0.944 & 0.262 \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+
+	\begin{table}[h!]\caption{Results of the ANCOVA}
+		\resizebox{!}{0.09\linewidth}{
+			\begin{tabular}{ccccc}
+				\toprule
+				Models contrasted & $\Delta$ SS & $\Delta$ DOF & F statistic & p value \\
+				\midrule
+				CV - Original & 0.6 & 1 & 9.32 & 2E-3 \\
+				Group - Original & 3.3 & 3 & 16.03 & 2E-10 \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+	\vspace{0.2cm}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Model Results - Constants Comparison}
+	\begin{table}[h!]\caption{Results for the linear models on filtered data}
+		\resizebox{1\linewidth}{!}{
+			\begin{tabular}{cccccccccc}
+				\toprule
+				Model & $\lambda_0$ & $\lambda_0'$ & $\mu_0'$ & k & l & $\beta$ & $\beta_1$ & $\beta_2$ & $\beta_3$ \\
+				\midrule
+				Original & 5058 [4759-5375] & 2952 [2864-3044] & 3884 [3761-4010] & 1.93 [1.91-1.95] & 0.94 [0.92-0.95] & - & - & - & \\
+				
+				CV & 5472 [4863-6156] & 3194 [3011-3388] & 4201 [3958-4460] & 1.95 [1.93-1.97] & 0.94 [0.92-0.95] & 0.03 [0.01-0.05] & - & - & - \\
+				
+				Group & 5216 [4887-5567] & 3001 [2905-3100] & 3965 [3833-4103] & 1.94 [1.92-1.96] & 0.94 [0.92-0.96] & - & 1.05 [1.03-1.06] & 0.99 [0.98-1.00] & 1.02 [1.01-1.03]\\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Model Results - Equation Comparison}
+	Corresponding equations:\\
+	\resizebox{1\linewidth}{!}{
+		\begin{tabular}{lcl}
+			\multirow{2}{*}{Original model} & Model & $\mathbb{S}_{xy} = (\lambda_0 + 2\mu_0)^{0|1} * \lambda_0'^{0|1} * \mu_0^{0|1} * \rho^k * m_{xy}^l$ \\
+			 & Values & $\mathbb{S}_{xy} = 12826^{0|1} * 2952^{0|1} * 3884^{0|1} * \rho^{1.93} * m_{xy}^{0.94}$ \\	
+			\multirow{2}{*}{CV model} & Model & $\mathbb{S}_{xy} = (\lambda_0 + 2\mu_0)^{0|1} * \lambda_0'^{0|1} * \mu_0^{0|1} * \rho^k * m_{xy}^l * CV^\beta$ \\
+			 & Values & $\mathbb{S}_{xy} = 13874^{0|1} * 3194^{0|1} * 4201^{0|1} * \rho^{1.95} * m_{xy}^{0.94} * CV^{0.03}$ \\
+			 \multirow{2}{*}{Group model} & Model & $\mathbb{S}_{xy} = (\lambda_0 + 2\mu_0)^{0|1} * \lambda_0'^{0|1} * \mu_0^{0|1} * \rho^k * m_{xy}^l * \beta_1^{-1|0|1} * \beta_2^{-1|0|1} * \beta_3^{-1|0|1}$ \\
+			  & Values & $\mathbb{S}_{xy} = 13146^{0|1} * 3001^{0|1} * 3965^{0|1} * \rho^{1.94} * m_{xy}^{0.94} * 1.05^{-1|0|1} * 0.99^{-1|0|1} * 1.02^{-1|0|1}$ \\
+		\end{tabular}}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Model Results - Constants Graphical Comparison}
+	\begin{figure}
+		\captionsetup[subfigure]{labelformat=empty}
+		\subfloat[$\lambda_0$]{
+			\includegraphics[width=0.25\linewidth, trim=50 0 50 0]
+			{Pictures/10_L0_ModelsComparison}}
+		\qquad
+		\subfloat[$\lambda_0'$]{
+			\includegraphics[width=0.25\linewidth, trim=50 0 50 0]
+			{Pictures/10_L0p_ModelsComparison}}
+		\qquad
+		\subfloat[$\mu_0$]{
+			\includegraphics[width=0.25\linewidth, trim=50 0 50 0]
+			{Pictures/10_Mu0_ModelsComparison}}
+	\end{figure}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Mixed-Effect Linear Model}
+	
+	\begin{equation}\resizebox{!}{.3\textwidth}{$\ln
+			\begin{pmatrix}
+				\mathbb{S}_{i11} \\
+				\mathbb{S}_{i12} \\
+				\mathbb{S}_{i13} \\
+				\mathbb{S}_{i21} \\
+				\mathbb{S}_{i22} \\
+				\mathbb{S}_{i23} \\
+				\mathbb{S}_{i31} \\
+				\mathbb{S}_{32} \\
+				\mathbb{S}_{ii33} \\
+				\mathbb{S}_{i44} \\
+				\mathbb{S}_{i55} \\
+				\mathbb{S}_{i66} \\
+			\end{pmatrix}$}
+		=
+		\resizebox{!}{.3\textwidth}{$
+			\begin{pmatrix}
+				1 & 0 & 0 & \ln(\rho) & \ln(m_1^2) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_2) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_3) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_2 m_1) \\
+				1 & 0 & 0 & \ln(\rho) & \ln(m_2^2) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_2 m_3) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_3 m_1) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_3 m_2) \\
+				1 & 0 & 0 & \ln(\rho) & \ln(m_3^2) \\
+				0 & 0 & 1 & \ln(\rho) & \ln(m_2 m_3) \\
+				0 & 0 & 1 & \ln(\rho) & \ln(m_3 m_1) \\
+				0 & 0 & 1 & \ln(\rho) & \ln(m_1 m_2) \\
+			\end{pmatrix}$}
+		\resizebox{!}{.12\textwidth}{$
+			\begin{pmatrix}
+				\ln(\lambda_0 + 2\mu_0) \\
+				\ln(\lambda_0') \\
+				\ln(\mu_0) \\
+				k \\
+				l \\
+			\end{pmatrix}$}
+		+
+		\resizebox{!}{.3\textwidth}{$
+			\begin{pmatrix}
+				1 & 0 & 0 \\
+				0 & 1 & 0 \\
+				0 & 1 & 0 \\
+				0 & 1 & 0 \\
+				1 & 0 & 0 \\
+				0 & 1 & 0 \\
+				0 & 1 & 0 \\
+				0 & 1 & 0 \\
+				1 & 0 & 0 \\
+				0 & 0 & 1 \\
+				0 & 0 & 1 \\
+				0 & 0 & 1 \\
+			\end{pmatrix}$}
+		\resizebox{!}{.08\textwidth}{$
+			\begin{pmatrix}
+				\delta_{i1} \\
+				\delta_{i2} \\
+				\delta_{i3} \\
+			\end{pmatrix}$}
+		+
+		\resizebox{!}{.3\textwidth}{$
+			\begin{pmatrix}
+				e_{i1} \\
+				e_{i2} \\
+				e_{i3} \\
+				e_{i4} \\
+				e_{i5} \\
+				e_{i6} \\
+				e_{i7} \\
+				e_{i8} \\
+				e_{i9} \\
+				e_{i10} \\
+				e_{i11} \\
+				e_{i12} \\
+			\end{pmatrix}$}
+	\end{equation}	
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Regression Results}
+	\begin{table}[h!]\caption{Results for the mixed-effect linear models on filtered data}
+		\resizebox{!}{0.12\linewidth}{
+			\begin{tabular}{ccccc}
+				\toprule
+				Model & DOF & Regression SS & $R^2$ & SE \\
+				\midrule
+				Original & 8 & 6601.82 & 0.968 & 0.197 \\
+				CV & 9 & 6606.80 & 0.969 & 0.195 \\
+				Group & 11 & 6601.88 & 0.968 & 0.197 \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+	
+	\begin{table}[h!]\caption{Results of the ANCOVA}
+		\resizebox{!}{0.09\linewidth}{
+			\begin{tabular}{ccccc}
+				\toprule
+				Models contrasted & $\Delta$ SS & $\Delta$ DOF & F statistic & p value \\
+				\midrule
+				CV - Original & 4.98 & 1 & 131.32 & 5E-30 \\
+				Group - Original & 0.06 & 3 & 0.53 & 0.66 \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+	\vspace{0.2cm}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\appendix
+
+\section{References}
+\begin{frame}
+	\frametitle{Statistics I}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			\bibitem[Stuart 2010]{p1} Stuart, Elisabth A. (2010).
+			\newblock Matching methods for causal inference: A review and a look forward
+			\newblock \textit{Statistical science : a review journal of the Institute of Mathematical Statistics, 25}(1), 1-21
+			\vspace{1mm}
+			\bibitem[Bishara et al. 2017]{p2} Bishara, Anthony J., Hittner, James B. (2017).
+			\newblock Confidence intervals for correlations when data are not normal
+			\newblock \textit{Behavior Research Methods, 49}(1), 294-309
+			\vspace{1mm}
+			\bibitem[Wandel 2019]{p3} Wandel, J. (2019).
+			\newblock Hypothesis tests for two samples: comparing the means
+			\newblock \textit{Introduction to medical statistics}
+		\end{thebibliography}
+	}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Statistics II}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			\bibitem[Mohd et al. 2011]{p7} Mohd et al. (2011).
+			\newblock Power comparisons of Shapiro-Wilk, Kolmogorov-Smirnov, Lilliefors and Anderson-Darling tests
+			\newblock \textit{Journal of Statistical Modeling and Analytics, 2}(1), 21-33
+			\vspace{1mm}
+			\bibitem[Fox 2016]{p8} Fox, John (2016).
+			\newblock Fox, Applied Regressions Analysis and Linear Models
+			\newblock \textit{Sage publications}(3), 817
+			\vspace{1mm}
+		\end{thebibliography}
+	}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Similar Publications}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			\bibitem[Folkestad et al., 2012]{p4} Folkestad et al. (2012).
+			\newblock Bone geometry, density, and microarchitecture in the distal radius and tibia in adults with osteogenesis imperfecta type i assessed by high-resolution pQCT
+			\newblock \textit{Journal of Bone and Mineral Research, 27}(1), 1405-1412
+			\vspace{1mm}
+			\bibitem[Kocijan et al., 2015]{p5} Kocijan et al. (2015).
+			\newblock Bone structure assessed by HR-pQCT, TBS and DXL in adult patients with different types of osteogenesis imperfecta
+			\newblock \textit{Osteoporosis International, 26}(10), 2431-2440
+			\vspace{1mm}
+			\bibitem[Rolvien et al., 2018]{p6} Rolvien et al. (2018).
+			\newblock Comparison of Bone Microarchitecture Between Adult Osteogenesis Imperfecta and Early-Onset Osteoporosis
+			\newblock \textit{Calcified Tissue International, 103}(5), 512-521
+		\end{thebibliography}
+	}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Similar Publications}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			\bibitem[Schenk et al., 2020]{p9} Schenk et al. (2020).
+			\newblock In vivo repeatability of homogenized finite element analysis based on multiple HR-pQCT sections for assessment of distal radius and tibia strength
+			\newblock \textit{Bone, 141}, 115575
+		\end{thebibliography}
+	}
+\end{frame}
+
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\end{document} 

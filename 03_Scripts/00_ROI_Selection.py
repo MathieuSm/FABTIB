@@ -118,7 +118,7 @@ ScanLists = [File for File in os.listdir(DataFolder) if File.endswith('.csv')]
 ScanLists.sort()
 
 # 03 Load Data
-DataGroup = 0   # 0 = Healthy group, 1 = OI group
+DataGroup = 1   # 0 = Healthy group, 1 = OI group
 Plots = False   # Plot the different ROI location
 
 ScansPath = os.path.join(DataFolder,DataSubFolders[DataGroup])
@@ -130,6 +130,7 @@ ScanList = pd.read_csv(os.path.join(DataFolder,ScanLists[DataGroup]),sep=',')
 ParametersDataFrame = pd.DataFrame()
 
 # perform for all scans
+Scan = Scans[0]
 for Scan in Scans:
 
     ScanFile = os.path.join(ScansPath,Scan)
@@ -175,6 +176,7 @@ for Scan in Scans:
     # Plot
     if Plots:
         Ratio = Size[2] / Size[1]
+        Index = 0
         for Index in ParametersDataFrame.index:
 
             GS = gridspec.GridSpec(1,2, width_ratios=[1,Ratio])
@@ -197,7 +199,7 @@ for Scan in Scans:
             for Plane in range(2):
 
                 if Plane == 0:
-                    Axes[Plane].imshow(CT_Scan[:, :, X]-TrabBone, cmap='bone', clim=[0,1])
+                    Axes[Plane].imshow(CT_Scan[:, :, X]-TrabBone+1, cmap='bone', clim=[0,2])
                     Axes[Plane].plot([Y1, Y2], [Z1, Z1], color=(0, 0, 1))
                     Axes[Plane].plot([Y1, Y2], [Z2, Z2], color=(0, 0, 1))
                     Axes[Plane].plot([Y1, Y1], [Z1, Z2], color=(0, 0, 1))
@@ -206,7 +208,7 @@ for Scan in Scans:
                     Axes[Plane].set_ylabel('Direction 3 (voxel)')
 
                 else:
-                    Axes[Plane].imshow(CT_Scan[:, Y, :]-TrabBone, cmap='bone', clim=[0,1])
+                    Axes[Plane].imshow(CT_Scan[:, Y, :]-TrabBone+1, cmap='bone', clim=[0,2])
                     Axes[Plane].plot([X1, X2], [Z1, Z1], color=(0, 0, 1))
                     Axes[Plane].plot([X1, X2], [Z2, Z2], color=(0, 0, 1))
                     Axes[Plane].plot([X1, X1], [Z1, Z2], color=(0, 0, 1))
