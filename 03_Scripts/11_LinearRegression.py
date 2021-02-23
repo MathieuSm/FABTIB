@@ -134,6 +134,10 @@ def ANCOVA(Observations, Models, ModelNames, ModelsType):
                 Models1.append(i)
             del ListA[0]
 
+    else:
+        Models0 = [1]
+        Models1 = [0]
+
     ## Build Analysis-of-Covariance table
     ANCOVATable = pd.DataFrame()
     for i in range(len(Models0)):
@@ -237,12 +241,12 @@ def ComputeCVModelConstants(Model,Alpha=0.95,k=0,l=0):
     Beta = B['LogCV']
 
     ## Get CV values for constant range computation
-    CV_Values = Model.model.exog[:, -1]
+    LogCV_Values = Model.model.exog[:, -1]
 
     ## Compute stiffness constants
-    Mu0 = np.exp(B['Sjj'] + CV_Values * Beta) / 2
-    Lambda0p = np.exp(B['Sij'] + CV_Values * Beta)
-    Lambda0 = np.exp(B['Sii'] + CV_Values * Beta) - 2 * Mu0
+    Mu0 = np.exp(B['Sjj'] + LogCV_Values * Beta) / 2
+    Lambda0p = np.exp(B['Sij'] + LogCV_Values * Beta)
+    Lambda0 = np.exp(B['Sii'] + LogCV_Values * Beta) - 2 * Mu0
 
     ## Compute CI for lambda0 (source:https://stats.stackexchange.com/questions/485636/how-do-you-get-confidence-intervals-for-interactions-of-variables)
     Interactions = ['Sii','Sjj','LogCV']
@@ -285,7 +289,7 @@ def ComputeCVModelConstants(Model,Alpha=0.95,k=0,l=0):
           str(int(round(np.exp(Mu0_o.mean()), 0))) + ']')
 
     ## Build data frame
-    Table = pd.DataFrame({'CV Values':CV_Values,
+    Table = pd.DataFrame({'LogCV Values':LogCV_Values,
                           'Lambda0': Lambda0,
                           'Lambda0 u': np.exp(L0_u),
                           'Lambda0 o': np.exp(L0_o),
@@ -306,15 +310,20 @@ def ComputeCVModelConstants(Model,Alpha=0.95,k=0,l=0):
               str(round(B_CI.loc['LogBVTV', 1], 3)) + ']')
         print('l: ' + str(round(l, 3)) +
               ' [' + str(round(B_CI.loc['Logmxy', 0], 3)) + ' - ' +
-              str(round(B_CI.loc['Logmxy', 1], 3)) + ']' + '\n\n')
+              str(round(B_CI.loc['Logmxy', 1], 3)) + ']')
 
         Table[['k','k CI','l','l CI']] = k, B_CI.loc['Logmxy',:], l, B_CI.loc['Logmxy',:]
 
     else:
         print('k: ' + str(round(k, 3)))
-        print('l: ' + str(round(l, 3)) + '\n\n')
+        print('l: ' + str(round(l, 3)))
 
         Table[['k','l']] = k, l
+
+    print('Beta: ' + str(round(Beta,3)) + ' [' + str(round(B_CI.loc['LogCV',0],3)) +
+          ' - ' + str(round(B_CI.loc['LogCV',1],3)) + ']'  + '\n\n')
+
+    Table[['Beta', 'Beta CI']] = Beta, B_CI.loc['LogCV', :]
 
     return Table
 def ComputeGroupModelConstants(Model,Alpha=0.95,k=0,l=0):
@@ -337,9 +346,17 @@ def ComputeGroupModelConstants(Model,Alpha=0.95,k=0,l=0):
     Beta3 = B['Group:Sjj']
 
     ## Get Group values for constant range computation
-    B1_Values = np.unique(Model.model.exog[:, -3])
-    B2_Values = np.unique(Model.model.exog[:, -2])
-    B3_Values = np.unique(Model.model.exog[:, -1])
+    Categories = Model.model.exog[:, -3]
+    Distribution = np.concatenate([Categories[Categories == 1], Categories[Categories == -1]])
+    B1_Values = np.array([Distribution.mean(), -1, 1])
+
+    Categories = Model.model.exog[:, -2]
+    Distribution = np.concatenate([Categories[Categories == 1], Categories[Categories == -1]])
+    B2_Values = np.array([Distribution.mean(), -1, 1])
+
+    Categories = Model.model.exog[:, -1]
+    Distribution = np.concatenate([Categories[Categories == 1], Categories[Categories == -1]])
+    B3_Values = np.array([Distribution.mean(), -1, 1])
 
     ## Compute stiffness constants
     Mu0 = np.exp(B['Sjj'] + B3_Values * Beta3) / 2
@@ -353,38 +370,38 @@ def ComputeGroupModelConstants(Model,Alpha=0.95,k=0,l=0):
         C_add += np.abs(C.loc[I, I])
     SE_L0 = np.sqrt(C_add + 2*np.abs(C.loc['Sii', 'Sij'])
                           + 2*np.abs(C.loc['Sii', 'Group:Sii'])
-                          + 2*np.abs(C.loc['Sij', 'Group:Sii']))
+                          + 2*np.abs(C.loc['Sii', 'Group:Sii']))
     L0_u = np.log(Lambda0) + SE_L0 * np.array(t_Alpha[0])
     L0_o = np.log(Lambda0) + SE_L0 * np.array(t_Alpha[1])
 
     ## Compute CI for lambda0p
-    Interactions = ['Sij', 'Group:Sij']
+    Interactions = ['Sij','Group:Sij']
     C_add = 0
     for I in Interactions:
-        C_add += np.abs(C.loc[I, I])
-    SE_L0p = np.sqrt(C_add + 2*np.abs(C.loc['Sij', 'Group:Sij']))
+        C_add += np.abs(C.loc[I, I] + 2*np.abs(C.loc['Sij','Group:Sij']))
+    SE_L0p = np.sqrt(C_add)
     L0p_u = np.log(Lambda0p) + SE_L0p * np.array(t_Alpha[0])
     L0p_o = np.log(Lambda0p) + SE_L0p * np.array(t_Alpha[1])
 
     ## Compute CI for Mu0
-    Interactions = ['Sjj', 'Group:Sjj']
+    Interactions = ['Sjj','Group:Sjj']
     C_add = 0
     for I in Interactions:
-        C_add += np.abs(C.loc[I, I])
-    SE_Mu0 = np.sqrt(C_add + 2*np.abs(C.loc['Sjj', 'Group:Sjj']))
+        C_add += np.abs(C.loc[I, I] + 2*np.abs(C.loc['Sjj','Group:Sjj']))
+    SE_Mu0 = np.sqrt(C_add)
     Mu0_u = np.log(Mu0) + SE_Mu0 * np.array(t_Alpha[0])
     Mu0_o = np.log(Mu0) + SE_Mu0 * np.array(t_Alpha[1])
 
     print('\n\nFit constants with ' + str(Alpha * 100) + '% CI :')
-    print('Lambda0: ' + str(int(round(Lambda0.mean(), 0))) +
-          ' [' + str(int(round(np.exp(L0_u.mean()), 0))) + ' - ' +
-          str(int(round(np.exp(L0_o.mean()), 0))) + ']')
-    print('Lambda0p: ' + str(int(round(Lambda0p.mean(), 0))) +
-          ' [' + str(int(round(np.exp(L0p_u.mean()), 0))) + ' - ' +
-          str(int(round(np.exp(L0p_o.mean()), 0))) + ']')
-    print('Mu0: ' + str(int(round(Mu0.mean(), 0))) +
-          ' [' + str(int(round(np.exp(Mu0_u.mean()), 0))) + ' - ' +
-          str(int(round(np.exp(Mu0_o.mean()), 0))) + ']')
+    print('Lambda0: ' + str(int(round(Lambda0[0], 0))) +
+          ' [' + str(int(round(np.exp(L0_u[0]), 0))) + ' - ' +
+          str(int(round(np.exp(L0_o[0]), 0))) + ']')
+    print('Lambda0p: ' + str(int(round(Lambda0p[0], 0))) +
+          ' [' + str(int(round(np.exp(L0p_u[0]), 0))) + ' - ' +
+          str(int(round(np.exp(L0p_o[0]), 0))) + ']')
+    print('Mu0: ' + str(int(round(Mu0[0], 0))) +
+          ' [' + str(int(round(np.exp(Mu0_u[0]), 0))) + ' - ' +
+          str(int(round(np.exp(Mu0_o[0]), 0))) + ']')
 
     ## Build data frame
     Table = pd.DataFrame({'Group Value':B1_Values,
@@ -408,15 +425,26 @@ def ComputeGroupModelConstants(Model,Alpha=0.95,k=0,l=0):
               str(round(B_CI.loc['LogBVTV', 1], 3)) + ']')
         print('l: ' + str(round(l, 3)) +
               ' [' + str(round(B_CI.loc['Logmxy', 0], 3)) + ' - ' +
-              str(round(B_CI.loc['Logmxy', 1], 3)) + ']' + '\n\n')
+              str(round(B_CI.loc['Logmxy', 1], 3)) + ']')
 
         Table[['k','k CI','l','l CI']] = k, B_CI.loc['Logmxy',:], l, B_CI.loc['Logmxy',:]
 
     else:
         print('k: ' + str(round(k, 3)))
-        print('l: ' + str(round(l, 3)) + '\n\n')
+        print('l: ' + str(round(l, 3)))
 
         Table[['k','l']] = k, l
+
+    print('Beta 1: ' + str(round(np.exp(Beta1), 3)) + ' [' + str(round(np.exp(B_CI.loc['Group:Sii', 0]), 3)) +
+          ' - ' + str(round(np.exp(B_CI.loc['Group:Sii', 1]), 3)) + ']')
+    print('Beta 2: ' + str(round(np.exp(Beta2), 3)) + ' [' + str(round(np.exp(B_CI.loc['Group:Sij', 0]), 3)) +
+          ' - ' + str(round(np.exp(B_CI.loc['Group:Sij', 1]), 3)) + ']')
+    print('Beta 3: ' + str(round(np.exp(Beta3), 3)) + ' [' + str(round(np.exp(B_CI.loc['Group:Sjj', 0]), 3)) +
+          ' - ' + str(round(np.exp(B_CI.loc['Group:Sjj', 1]), 3)) + ']' + '\n\n')
+
+    Table[['Beta1', 'Beta1 CI']] = np.exp(Beta1), np.exp(B_CI.loc['Group:Sii', :])
+    Table[['Beta2', 'Beta2 CI']] = np.exp(Beta2), np.exp(B_CI.loc['Group:Sij', :])
+    Table[['Beta3', 'Beta3 CI']] = np.exp(Beta3), np.exp(B_CI.loc['Group:Sjj', :])
 
     return Table
 def QQPlot(DataValues, Alpha_CI=0.95, DataLabel='Data'):
@@ -758,17 +786,15 @@ ModelNames = ['Original', 'CV', 'Group']
 
 ModelsResults, ANCOVATable = ANCOVA(System2Fit['LogSxy'],Models,ModelNames,'Standard')
 
-
-
-# 05 Compute stiffness values using different models
+## Compute stiffness values using different models
 SimpleModelResults = ComputeOriginalModelConstants(SimpleModel)
 CVModelResults = ComputeCVModelConstants(CVModel)
 GroupModelResults = ComputeGroupModelConstants(GroupModel)
 
 ## Plot results
-CV_Min = np.exp(CVModelResults['CV Values'].min())
-CV_Max = np.exp(CVModelResults['CV Values'].max())
-CV_Values = np.exp(CVModelResults['CV Values'].sort_values())
+CV_Min = np.exp(CVModelResults['LogCV Values'].min())
+CV_Max = np.exp(CVModelResults['LogCV Values'].max())
+CV_Values = np.exp(CVModelResults['LogCV Values'].sort_values())
 
 Constants = ['Lambda0','Lambda0p','Mu0']
 ConstantNames = [r'$\lambda_0$', r'$\lambda_0$`', r'$\mu_0$']
@@ -804,6 +830,248 @@ for Constant in Constants:
 
 
 
+# 05 Fit the models with same k and l to compare values and to validate models
+k, l = SimpleModelResults[['k','l']].loc[0]
+System2Fit['LogSxy_kl'] = System2Fit['LogSxy'] - (System2Fit['LogBVTV'] * k + System2Fit['Logmxy'] * l)
+
+SimpleModel_kl = smf.ols("LogSxy_kl ~ Sii + Sij + Sjj - 1", data=System2Fit).fit()
+CVModel_kl = smf.ols("LogSxy_kl ~ Sii + Sij + Sjj + LogCV - 1", data=System2Fit).fit()
+GroupModel_kl = smf.ols("LogSxy_kl ~ Sii + Sij + Sjj + Group:(Sii+Sij+Sjj) - 1", data=System2Fit).fit()
+
+## Perform ANCOVA
+Models = [SimpleModel_kl,CVModel_kl,GroupModel_kl]
+ModelNames = ['Original', 'CV', 'Group']
+
+ModelsResults_kl, ANCOVATable_kl = ANCOVA(System2Fit['LogSxy_kl'],Models,ModelNames,'Standard')
+
+## Compute stiffness values using different models with same k and l
+SimpleModelResults_kl = ComputeOriginalModelConstants(SimpleModel_kl,k=k,l=l)
+CVModelResults_kl = ComputeCVModelConstants(CVModel_kl,k=k,l=l)
+GroupModelResults_kl = ComputeGroupModelConstants(GroupModel_kl,k=k,l=l)
+
+## Plot results
+CV_Min = np.exp(CVModelResults_kl['LogCV Values'].min())
+CV_Max = np.exp(CVModelResults_kl['LogCV Values'].max())
+CV_Values = np.exp(CVModelResults_kl['LogCV Values'].sort_values())
+
+Constants = ['Lambda0','Lambda0p','Mu0']
+ConstantNames = [r'$\lambda_0$', r'$\lambda_0$`', r'$\mu_0$']
+
+for Constant in Constants:
+
+    Figure, Axes = plt.subplots(1, 1, figsize=(5.5, 4.5), dpi=100)
+    Constant_u = SimpleModelResults_kl[Constant + ' CI'].loc[0]
+    Constant_o = SimpleModelResults_kl[Constant + ' CI'].loc[1]
+    Axes.fill_between([CV_Min,CV_Max], [Constant_u,Constant_u], [Constant_o,Constant_o],
+                          color=(0,1,0), alpha=0.5)
+    Constant_u = CVModelResults_kl[Constant + ' u'][CV_Values.index]
+    Constant_o = CVModelResults_kl[Constant + ' o'][CV_Values.index]
+    Axes.fill_between(CV_Values, Constant_u, Constant_o,
+                          color=(1,0,0), alpha=0.2)
+    Constant_u = GroupModelResults_kl[Constant + ' u'].values[0]
+    Constant_o = GroupModelResults_kl[Constant + ' o'].values[0]
+    Axes.fill_between([CV_Min,CV_Max], [Constant_u,Constant_u], [Constant_o,Constant_o],
+                          color=(0,0,1), alpha=0.2)
+    Constant_m = SimpleModelResults_kl[Constant]
+    Axes.plot([CV_Min,CV_Max], [Constant_m,Constant_m], color=(0,1,0))
+    Axes.plot([], color=(0,1,0), label='Original model')
+    Constant_m = CVModelResults_kl[Constant][CV_Values.index]
+    Axes.plot(CV_Values, Constant_m, color=(1,0,0), label='CV model')
+    Constant_m = GroupModelResults_kl[Constant].values[0]
+    Axes.plot([CV_Min,CV_Max], [Constant_m,Constant_m], color=(0,0,1), label='Group model')
+    Axes.set_xlabel('Coefficient of variation (-)')
+    Axes.set_ylabel(ConstantNames[Constants.index(Constant)] + ' (MPa)')
+    plt.legend(loc='upper center',ncol=3,bbox_to_anchor=(0.5,1.15))
+    plt.subplots_adjust(left=0.2,right=0.8)
+    plt.show()
+    plt.close(Figure)
+
+
+
+# 06 Fit the models with same k and l to compare values of groups
+HealthySystem = System2Fit[System2Fit['Group']==-1]
+OISystem = System2Fit[System2Fit['Group']==1]
+
+SimpleHealthy_kl = smf.ols("LogSxy_kl ~ Sii + Sij + Sjj - 1", data=HealthySystem).fit()
+SimpleOI_kl = smf.ols("LogSxy_kl ~ Sii + Sij + Sjj - 1", data=OISystem).fit()
+
+CVHealthy_kl = smf.ols("LogSxy_kl ~ Sii + Sij + Sjj + LogCV - 1", data=HealthySystem).fit()
+CVOI_kl = smf.ols("LogSxy_kl ~ Sii + Sij + Sjj + LogCV - 1", data=OISystem).fit()
+
+GroupHealthy_kl = smf.ols("LogSxy_kl ~ Sii + Sij + Sjj + Group:(Sii+Sij+Sjj) - 1", data=HealthySystem).fit()
+GroupOI_kl = smf.ols("LogSxy_kl ~ Sii + Sij + Sjj + Group:(Sii+Sij+Sjj) - 1", data=OISystem).fit()
+
+## Perform ANCOVA
+HealthyModels = [SimpleHealthy_kl,CVHealthy_kl]
+HealthyNames = ['Healthy Original', 'Healthy CV']
+OIModels = [SimpleOI_kl,CVOI_kl]
+OINames = ['OI Original', 'OI CV']
+
+HealthyResults_kl, ANCOVAHealthy_kl = ANCOVA(HealthySystem['LogSxy_kl'],HealthyModels,HealthyNames,'Standard')
+OIResults_kl, ANCOVAOI_kl = ANCOVA(OISystem['LogSxy_kl'],OIModels,OINames,'Standard')
+
+## Compute groups stiffness values using different models with same k and l
+SimpleHealthyResults_kl = ComputeOriginalModelConstants(SimpleHealthy_kl,k=k,l=l)
+CVHealthyResults_kl = ComputeCVModelConstants(CVHealthy_kl,k=k,l=l)
+
+SimpleOIResults_kl = ComputeOriginalModelConstants(SimpleOI_kl,k=k,l=l)
+CVOIResults_kl = ComputeCVModelConstants(CVOI_kl,k=k,l=l)
+
+## Plot results
+Constants = ['Lambda0','Lambda0p','Mu0']
+ConstantNames = [r'$\lambda_0$', r'$\lambda_0$`', r'$\mu_0$']
+
+for Constant in Constants:
+
+    Figure, Axes = plt.subplots(1, 2, figsize=(5.5*2, 4.5), dpi=100, sharey=True, sharex=True)
+
+    for i in range(2):
+
+        if i == 0:
+            CV_Min = np.exp(CVHealthyResults_kl['LogCV Values'].min())
+            CV_Max = np.exp(CVHealthyResults_kl['LogCV Values'].max())
+            CV_Values = np.exp(CVHealthyResults_kl['LogCV Values'].sort_values())
+
+            ConstantS_u = SimpleHealthyResults_kl[Constant + ' CI'].loc[0]
+            ConstantS_o = SimpleHealthyResults_kl[Constant + ' CI'].loc[1]
+            ConstantS_m = SimpleHealthyResults_kl[Constant]
+
+            ConstantC_u = CVHealthyResults_kl[Constant + ' u'][CV_Values.index]
+            ConstantC_o = CVHealthyResults_kl[Constant + ' o'][CV_Values.index]
+            ConstantC_m = CVHealthyResults_kl[Constant][CV_Values.index]
+
+            ConstantG_u = GroupModelResults_kl[Constant + ' u'].values[1]
+            ConstantG_o = GroupModelResults_kl[Constant + ' o'].values[1]
+            ConstantG_m = GroupModelResults_kl[Constant].values[1]
+
+            Axes[i].set_ylabel(ConstantNames[Constants.index(Constant)] + ' (MPa)')
+            Axes[i].set_title('Healthy group')
+
+        elif i == 1:
+            CV_Min = np.exp(CVOIResults_kl['LogCV Values'].min())
+            CV_Max = np.exp(CVOIResults_kl['LogCV Values'].max())
+            CV_Values = np.exp(CVOIResults_kl['LogCV Values'].sort_values())
+
+            ConstantS_u = SimpleOIResults_kl[Constant + ' CI'].loc[0]
+            ConstantS_o = SimpleOIResults_kl[Constant + ' CI'].loc[1]
+            ConstantS_m = SimpleOIResults_kl[Constant]
+
+            ConstantC_u = CVOIResults_kl[Constant + ' u'][CV_Values.index]
+            ConstantC_o = CVOIResults_kl[Constant + ' o'][CV_Values.index]
+            ConstantC_m = CVOIResults_kl[Constant][CV_Values.index]
+
+            ConstantG_u = GroupModelResults_kl[Constant + ' u'].values[2]
+            ConstantG_o = GroupModelResults_kl[Constant + ' o'].values[2]
+            ConstantG_m = GroupModelResults_kl[Constant].values[2]
+
+            Axes[i].set_title('OI group')
+
+
+        Axes[i].fill_between([CV_Min,CV_Max], [ConstantS_u,ConstantS_u], [ConstantS_o,ConstantS_o],
+                             color=(0,1,0), alpha=0.5)
+
+        Axes[i].fill_between(CV_Values, ConstantC_u, ConstantC_o,
+                             color=(1,0,0), alpha=0.2)
+
+        Axes[i].fill_between([CV_Min,CV_Max], [ConstantG_u,ConstantG_u], [ConstantG_o,ConstantG_o],
+                              color=(0,0,1), alpha=0.2)
+
+        Axes[i].plot([CV_Min,CV_Max], [ConstantS_m,ConstantS_m], color=(0,1,0))
+        Axes[i].plot([], color=(0,1,0))
+        Axes[i].plot(CV_Values, ConstantC_m, color=(1,0,0))
+        Axes[i].plot([CV_Min,CV_Max], [ConstantG_m,ConstantG_m], color=(0,0,1))
+        Axes[i].set_xlabel('Coefficient of variation (-)')
+
+        if i == 1:
+            L1 = plt.plot([], color=(0, 1, 0))[0]
+            L2 = plt.plot([], color=(1, 0, 0))[0]
+            L3 = plt.plot([], color=(0, 0, 1))[0]
+            Figure.legend([L1,L2,L3], ['Original model', 'CV model', 'Group model'], loc='upper center', ncol=3)
+            plt.subplots_adjust(left=0.1,right=0.95, top=0.8)
+            plt.show()
+            plt.close(Figure)
+
+## Plot normalized results
+
+for Constant in Constants:
+
+    Figure, Axes = plt.subplots(1, 2, figsize=(5.5*2, 4.5), dpi=100, sharey=True, sharex=True)
+
+    for i in range(2):
+
+        if i == 0:
+            CV_Min = np.exp(CVHealthyResults_kl['LogCV Values'].min())
+            CV_Max = np.exp(CVHealthyResults_kl['LogCV Values'].max())
+            CV_Values = np.exp(CVHealthyResults_kl['LogCV Values'].sort_values())
+
+            ConstantS_u = SimpleHealthyResults_kl[Constant + ' CI'].loc[0]
+            ConstantS_o = SimpleHealthyResults_kl[Constant + ' CI'].loc[1]
+            ConstantS_m = SimpleHealthyResults_kl[Constant].loc[0]
+
+            ConstantC_u = CVHealthyResults_kl[Constant + ' u'][CV_Values.index]
+            ConstantC_o = CVHealthyResults_kl[Constant + ' o'][CV_Values.index]
+            ConstantC_m = CVHealthyResults_kl[Constant][CV_Values.index]
+
+            ConstantG_u = GroupModelResults_kl[Constant + ' u'].values[1]
+            ConstantG_o = GroupModelResults_kl[Constant + ' o'].values[1]
+            ConstantG_m = GroupModelResults_kl[Constant].values[1]
+
+            Axes[i].set_ylabel(ConstantNames[Constants.index(Constant)] + ' (MPa)')
+            Axes[i].set_title('Healthy group')
+
+            NormConstant = ConstantS_m
+
+        elif i == 1:
+            CV_Min = np.exp(CVOIResults_kl['LogCV Values'].min())
+            CV_Max = np.exp(CVOIResults_kl['LogCV Values'].max())
+            CV_Values = np.exp(CVOIResults_kl['LogCV Values'].sort_values())
+
+            ConstantS_u = SimpleOIResults_kl[Constant + ' CI'].loc[0]
+            ConstantS_o = SimpleOIResults_kl[Constant + ' CI'].loc[1]
+            ConstantS_m = SimpleOIResults_kl[Constant].loc[0]
+
+            ConstantC_u = CVOIResults_kl[Constant + ' u'][CV_Values.index]
+            ConstantC_o = CVOIResults_kl[Constant + ' o'][CV_Values.index]
+            ConstantC_m = CVOIResults_kl[Constant][CV_Values.index]
+
+            ConstantG_u = GroupModelResults_kl[Constant + ' u'].values[2]
+            ConstantG_o = GroupModelResults_kl[Constant + ' o'].values[2]
+            ConstantG_m = GroupModelResults_kl[Constant].values[2]
+
+            Axes[i].set_title('OI group')
+
+
+        Axes[i].fill_between([CV_Min,CV_Max], [ConstantS_u,ConstantS_u]/NormConstant, [ConstantS_o,ConstantS_o]/NormConstant,
+                             color=(0,1,0), alpha=0.5)
+
+        Axes[i].fill_between(CV_Values, ConstantC_u/NormConstant, ConstantC_o/NormConstant,
+                             color=(1,0,0), alpha=0.2)
+
+        Axes[i].fill_between([CV_Min,CV_Max], [ConstantG_u,ConstantG_u]/NormConstant, [ConstantG_o,ConstantG_o]/NormConstant,
+                              color=(0,0,1), alpha=0.2)
+
+        Axes[i].plot([CV_Min,CV_Max], [ConstantS_m,ConstantS_m]/NormConstant, color=(0,1,0))
+        Axes[i].plot([], color=(0,1,0))
+        Axes[i].plot(CV_Values, ConstantC_m/NormConstant, color=(1,0,0))
+        Axes[i].plot([CV_Min,CV_Max], [ConstantG_m,ConstantG_m]/NormConstant, color=(0,0,1))
+        Axes[i].set_xlabel('Coefficient of variation (-)')
+        Axes[i].set_ylim([0.75,1.45])
+
+        if i == 1:
+            L1 = plt.plot([], color=(0, 1, 0))[0]
+            L2 = plt.plot([], color=(1, 0, 0))[0]
+            L3 = plt.plot([], color=(0, 0, 1))[0]
+            Figure.legend([L1,L2,L3], ['Original model', 'CV model', 'Group model'], loc='upper center', ncol=3)
+            plt.subplots_adjust(left=0.1,right=0.95, top=0.8)
+            plt.show()
+            plt.close(Figure)
+
+
+
+
+
+
+
 # 0& Build ANCOVA table for the different mixed-effects linear models
 System2Fit = FilteredSystem
 
@@ -819,15 +1087,15 @@ MixedGroupModel = smf.mixedlm("LogSxy ~ Sii + Sij + Sjj + LogBVTV + Logmxy + Gro
 
 ## Perform ANCOVA
 MixedModels = [MixedSimpleModel,MixedCVModel,MixedGroupModel]
-ModelNames = ['Original', 'CV', 'Group']
+MixedNames = ['Original', 'CV', 'Group']
 
-ModelsResults, ANCOVATable = ANCOVA(System2Fit['LogSxy'],MixedModels,ModelNames,'Mixed-Effect')
-
-
+MixedResults, ANCOVAMixed = ANCOVA(System2Fit['LogSxy'],MixedModels,ModelNames,'Mixed-Effect')
 
 
 
-
+MixedSimpleModel.params
+MixedSimpleModel.conf_int()
+MixedSimpleModel.pvalues
 
 
 
@@ -941,7 +1209,8 @@ elif 'Group' in Model:
 
 
 # Compute variance-covariance matrix
-C = Model2Fit.fit().cov_params().values
+C = SimpleHealthy_kl.cov_params().values
+X = np.matrix(SimpleHealthy_kl.model.exog)
 
 if 'Mixed' in Model:
     C_x = C[:-3,:-3]
@@ -949,9 +1218,64 @@ else:
     C_x = C
 
 # Plot regression result
-Y_Fit = np.exp(Model2Fit.fit().fittedvalues.values)
-Y_Obs = np.exp(System2Fit['LogSxy'])
-SE = FitResults['SE'].loc[0]
-R2 = FitResults['R2'].loc[0]
+Y_Fit = np.exp(SimpleHealthy_kl.fittedvalues)
+Y_Obs = np.exp(HealthySystem['LogSxy_kl'])
+SE = HealthyResults_kl['SE'].loc[0]
+R2 = HealthyResults_kl['R2'].loc[0]
 PlotRegressionResults(System2Fit,Y_Obs,Y_Fit,SE,R2,X,C_x)
+PlotRegressionResults2(HealthySystem,Y_Obs,Y_Fit,SE,R2,X,C_x)
 
+
+Indices = Y_Fit.index
+Figure, Axes = plt.subplots(1, 1, figsize=(5.5, 4.5), dpi=100)
+Axes.plot(Y_Obs[Indices],Y_Fit[Indices], linestyle='none', marker='o', fillstyle='none', color=(0, 0, 0))
+Axes.set_xlabel('Observed values')
+Axes.set_ylabel('Fitted values')
+Axes.set_xscale('log')
+Axes.set_yscale('log')
+plt.show()
+plt.close(Figure)
+
+
+
+def PlotRegressionResults2(Data,Y_Obs, Y_Fit, SE, R2, X, C_x, Alpha=0.95):
+
+    N = len(Y_Obs)
+
+    Line = np.linspace(min(Y_Obs.min(), Y_Fit.min()),
+                       max(Y_Obs.max(), Y_Fit.max()), N)
+
+    B_0 = np.sqrt(np.diag(np.abs(X * C_x * X.T)))
+    t_Alpha = t.interval(Alpha, N - X.shape[1] - 1)
+    CI_Line_u = Line + t_Alpha[0] * np.exp(SE) * np.exp(B_0)
+    CI_Line_o = Line + t_Alpha[1] * np.exp(SE) * np.exp(B_0)
+
+    Sii = Y_Fit * np.array(X[:, 0].T)[0]
+    Sij = Y_Fit * np.array(X[:, 1].T)[0]
+    Sjj = Y_Fit * np.array(X[:, 2].T)[0]
+
+    ## Plots
+    DPI = 100
+    Figure, Axes = plt.subplots(1, 1, figsize=(5.5, 4.5), dpi=DPI, sharey=True, sharex=True)
+    Axes.plot(Y_Obs, Sii,
+              color=(0, 0, 1), linestyle='none', marker='o', label=r'$\lambda_{ii}$')
+    Axes.plot(Y_Obs, Sij,
+              color=(0, 1, 0), linestyle='none', marker='o', label=r'$\lambda_{ij}$')
+    Axes.plot(Y_Obs, Sjj,
+              color=(1, 0, 0), linestyle='none', marker='o', label=r'$\mu_{ij}$')
+    Axes.plot(np.sort(Line), np.sort(CI_Line_u), color=(0.4, 0.4, 0.4), linestyle='--')
+    Axes.plot(np.sort(Line), np.sort(CI_Line_o), color=(0.4, 0.4, 0.4), linestyle='--')
+    Axes.plot(Line, Line, color=(0, 0, 0), linestyle='--')
+    # Axes.annotate(r'N: ' + str(len(Y_Obs)), (10 ** 3, 20 ** 1))
+    # Axes.annotate(r'$R^2$: ' + str(round(R2, 4)), (10 ** 3, 10 ** 1))
+    Axes.annotate(r'$N$  : ' + str(len(Y_Obs)), xy=(0.7, 0.175), xycoords='axes fraction')
+    Axes.annotate(r'$R^2$: ' + str(round(R2, 4)), xy=(0.7, 0.1), xycoords='axes fraction')
+    Axes.annotate(r'$SE$: ' + str(round(SE, 4)), xy=(0.7, 0.025), xycoords='axes fraction')
+    Axes.set_xlabel('Observed $\mathbb{S}_{xy}$')
+    Axes.set_ylabel(r'Fitted $\mathbb{S}_{xy}$')
+    plt.xscale('log')
+    plt.yscale('log')
+    plt.legend(loc='upper left')
+    plt.show()
+
+    return

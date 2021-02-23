@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.11.30)  19 FEB 2021 17:16
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.11.30)  23 FEB 2021 13:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1476,12 +1476,9 @@ File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
  [12
 
 ]
-Overfull \vbox (15.77946pt too high) detected at line 413
- []
-
 File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 <Pictures/00_Unibe_Logo.png>
-[13
+ [13
 
 ]
 File: Pictures/06_Control_ROISelection.png Graphic file (type bmp)
@@ -1507,13 +1504,18 @@ File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
  [16
 
 ]
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [17
+
+]
 File: Pictures/08_BVTV_CV.png Graphic file (type bmp)
 <Pictures/08_BVTV_CV.png>
 File: Pictures/08_BVTV_LogCV.png Graphic file (type bmp)
 <Pictures/08_BVTV_LogCV.png>
 File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 <Pictures/00_Unibe_Logo.png>
- [17
+ [18
 
 ]
 File: Pictures/09_BVTV_Boxplot.png Graphic file (type bmp)
@@ -1522,11 +1524,6 @@ File: Pictures/09_DegreeofAnisotropy_Boxplot.png Graphic file (type bmp)
 <Pictures/09_DegreeofAnisotropy_Boxplot.png>
 File: Pictures/09_VariationCoefficient_Boxplot.png Graphic file (type bmp)
 <Pictures/09_VariationCoefficient_Boxplot.png>
-File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
-<Pictures/00_Unibe_Logo.png>
- [18
-
-]
 File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 <Pictures/00_Unibe_Logo.png>
  [19
@@ -1539,11 +1536,10 @@ File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 ]
 File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 <Pictures/00_Unibe_Logo.png>
- [21
+
+[21
 
 ]
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 742.
 File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 <Pictures/00_Unibe_Logo.png>
  [22
@@ -1554,6 +1550,8 @@ File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
  [23
 
 ]
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 10.0pt on input line 804.
 File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 <Pictures/00_Unibe_Logo.png>
  [24
@@ -1562,31 +1560,31 @@ File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 File: Pictures/10_L0_ModelsComparison.png Graphic file (type bmp)
 <Pictures/10_L0_ModelsComparison.png>
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.0pt on input line 804.
+(Font)              scaled to size 9.0pt on input line 826.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 7.3pt on input line 804.
+(Font)              scaled to size 7.3pt on input line 826.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.5pt on input line 804.
+(Font)              scaled to size 5.5pt on input line 826.
 LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 6.56995pt on input line 804.
+(Font)              scaled to size 6.56995pt on input line 826.
 LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 4.94997pt on input line 804.
+(Font)              scaled to size 4.94997pt on input line 826.
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 9.0pt on input line 804.
+(Font)              scaled to size 9.0pt on input line 826.
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 7.3pt on input line 804.
+(Font)              scaled to size 7.3pt on input line 826.
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 5.5pt on input line 804.
+(Font)              scaled to size 5.5pt on input line 826.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 7.3pt on input line 804.
+(Font)              scaled to size 7.3pt on input line 826.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.5pt on input line 804.
+(Font)              scaled to size 5.5pt on input line 826.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 9.0pt on input line 804.
+(Font)              scaled to size 9.0pt on input line 826.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 7.3pt on input line 804.
+(Font)              scaled to size 7.3pt on input line 826.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 5.5pt on input line 804.
+(Font)              scaled to size 5.5pt on input line 826.
 File: Pictures/10_L0p_ModelsComparison.png Graphic file (type bmp)
 <Pictures/10_L0p_ModelsComparison.png>
 File: Pictures/10_Mu0_ModelsComparison.png Graphic file (type bmp)
@@ -1596,6 +1594,12 @@ File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
  [25
 
 ]
+File: Pictures/11_Original_FitResults.png Graphic file (type bmp)
+<Pictures/11_Original_FitResults.png>
+File: Pictures/11_CV_FitResults.png Graphic file (type bmp)
+<Pictures/11_CV_FitResults.png>
+File: Pictures/11_Group_FitResults.png Graphic file (type bmp)
+<Pictures/11_Group_FitResults.png>
 File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 <Pictures/00_Unibe_Logo.png>
  [26
@@ -1606,46 +1610,110 @@ File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
  [27
 
 ]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\translate ' on input line 930.
-
-File: beamericonarticle.pdf Graphic file (type pdf)
-<use beamericonarticle.pdf>
+File: Pictures/11_L0_ModelsComparison.png Graphic file (type bmp)
+<Pictures/11_L0_ModelsComparison.png>
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.2pt on input line 951.
-LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 5.57996pt on input line 951.
+(Font)              scaled to size 10.0pt on input line 934.
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 6.2pt on input line 951.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.2pt on input line 951.
+(Font)              scaled to size 10.0pt on input line 934.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 6.2pt on input line 951.
+(Font)              scaled to size 10.0pt on input line 934.
 File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 <Pictures/00_Unibe_Logo.png>
-[28
+ [28
 
 ]
-File: beamericonarticle.pdf Graphic file (type pdf)
-<use beamericonarticle.pdf>
+File: Pictures/11_L0p_ModelsComparison.png Graphic file (type bmp)
+<Pictures/11_L0p_ModelsComparison.png>
 File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 <Pictures/00_Unibe_Logo.png>
  [29
 
 ]
-File: beamericonarticle.pdf Graphic file (type pdf)
-<use beamericonarticle.pdf>
+File: Pictures/11_Mu0_ModelsComparison.png Graphic file (type bmp)
+<Pictures/11_Mu0_ModelsComparison.png>
 File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 <Pictures/00_Unibe_Logo.png>
  [30
+
+]
+File: Pictures/12_L0Norm_ModelsComparison.png Graphic file (type bmp)
+<Pictures/12_L0Norm_ModelsComparison.png>
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [31
+
+]
+File: Pictures/12_L0pNorm_ModelsComparison.png Graphic file (type bmp)
+<Pictures/12_L0pNorm_ModelsComparison.png>
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [32
+
+]
+File: Pictures/12_Mu0Norm_ModelsComparison.png Graphic file (type bmp)
+<Pictures/12_Mu0Norm_ModelsComparison.png>
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [33
+
+]
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [34
+
+]
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [35
+
+]
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+
+[36
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\translate ' on input line 1195.
+
+File: beamericonarticle.pdf Graphic file (type pdf)
+<use beamericonarticle.pdf>
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.2pt on input line 1216.
+LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
+(Font)              scaled to size 5.57996pt on input line 1216.
+LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
+(Font)              scaled to size 6.2pt on input line 1216.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.2pt on input line 1216.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
+(Font)              scaled to size 6.2pt on input line 1216.
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+[37
 
 ]
 File: beamericonarticle.pdf Graphic file (type pdf)
 <use beamericonarticle.pdf>
 File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 <Pictures/00_Unibe_Logo.png>
- [31
+ [38
+
+]
+File: beamericonarticle.pdf Graphic file (type pdf)
+<use beamericonarticle.pdf>
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [39
+
+]
+File: beamericonarticle.pdf Graphic file (type pdf)
+<use beamericonarticle.pdf>
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [40
 
 ]
 \tf@nav=\write5
@@ -1657,23 +1725,19 @@ File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 \tf@snm=\write7
 \openout7 = `Presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1019.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1019.
- (./Presentation.aux
-
-Package pdfbase Warning: Rerun to get internal references right!
-
-)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1019.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1019.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1284.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1284.
+ (./Presentation.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1284.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1284.
  ) 
 Here is how much of TeX's memory you used:
- 29993 strings out of 479819
- 568589 string characters out of 5895845
- 828811 words of memory out of 5000000
- 46449 multiletter control sequences out of 15000+600000
- 645392 words of font info for 135 fonts, out of 8000000 for 9000
+ 30114 strings out of 479819
+ 572368 string characters out of 5895845
+ 830003 words of memory out of 5000000
+ 46561 multiletter control sequences out of 15000+600000
+ 652775 words of font info for 147 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 67i,17n,117p,779b,969s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,18n,117p,779b,969s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Presentation.pdf (31 pages).
+Output written on Presentation.pdf (40 pages).

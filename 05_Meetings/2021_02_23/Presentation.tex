@@ -390,23 +390,24 @@ University of Bern, Faculty of Medicine \\
 
 \begin{frame}
 	\frametitle{Comparison with Literature}
-	\begin{itemize}
-		\item Age:\\
-		\textasciitilde Same range
-		\item BV/TV:\\
-		\textasciitilde + 50\% in present study
-		\item Tb N:\\
-		\textasciitilde factor +2.5 in other studies / present study\\
-		\textasciitilde factor +2 in reproducibility study / present study\\
-		\item Tb Th:\\
-		\textasciitilde factor +4 in present study / literature\\
-		\textasciitilde same range as reproducibility study\\
-		\item Tb Sp\\
-		\textasciitilde factor +2.5 in present study / literature\\
-		\textasciitilde factor +2.5 in present study / repro study\\
-		\item Tb Sp SD\\
-		\textasciitilde factor +2 in present study / literature\\
-	\end{itemize}
+	\footnotesize{
+		\begin{itemize}
+			\item Age:\\
+			\textasciitilde Same range
+			\item BV/TV:\\
+			\textasciitilde + 50\% in present study
+			\item Tb N:\\
+			\textasciitilde factor +2.5 in other studies / present study\\
+			\textasciitilde factor +2 in reproducibility study / present study\\
+			\item Tb Th:\\
+			\textasciitilde factor +4 in present study / literature\\
+			\textasciitilde same range as reproducibility study\\
+			\item Tb Sp\\
+			\textasciitilde factor +2.5 in present study / literature\\
+			\textasciitilde factor +2.5 in present study / repro study\\
+			\item Tb Sp SD\\
+			\textasciitilde factor +2 in present study / literature\\
+		\end{itemize}}
 
 	Why these differences ??
 	
@@ -448,6 +449,28 @@ University of Bern, Faculty of Medicine \\
 	\centering		
 	\includegraphics[width=0.8\linewidth]
 	{Pictures/07_Plan_04}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Steps}
+	\begin{itemize}
+		\item Filtering
+		\item Filtered variables distribution
+		\item Models definition
+		\item Models validation (use same $k$ and $l$ exponents)
+		\item Models analysis
+		\begin{itemize}
+			\item Fit with fixed exponent for constants comparison
+			\item Fit with individual group (healthy or OI) for group and models constants comparison
+			\item Fit with free exponents for fit quality comparisons
+			\item ANCOVA to quantify factor impact on the fits
+		\end{itemize}
+	\end{itemize}
+	
 \end{frame}
 
 %----------------------------------------------------------------
@@ -525,8 +548,8 @@ University of Bern, Faculty of Medicine \\
 				\mathbb{S}_{i22} \\
 				\mathbb{S}_{i23} \\
 				\mathbb{S}_{i31} \\
-				\mathbb{S}_{32} \\
-				\mathbb{S}_{ii33} \\
+				\mathbb{S}_{i32} \\
+				\mathbb{S}_{i33} \\
 				\mathbb{S}_{i44} \\
 				\mathbb{S}_{i55} \\
 				\mathbb{S}_{i66} \\
@@ -590,8 +613,8 @@ University of Bern, Faculty of Medicine \\
 				\mathbb{S}_{i22} \\
 				\mathbb{S}_{i23} \\
 				\mathbb{S}_{i31} \\
-				\mathbb{S}_{32} \\
-				\mathbb{S}_{ii33} \\
+				\mathbb{S}_{i32} \\
+				\mathbb{S}_{i33} \\
 				\mathbb{S}_{i44} \\
 				\mathbb{S}_{i55} \\
 				\mathbb{S}_{i66} \\
@@ -656,8 +679,8 @@ University of Bern, Faculty of Medicine \\
 				\mathbb{S}_{i22} \\
 				\mathbb{S}_{i23} \\
 				\mathbb{S}_{i31} \\
-				\mathbb{S}_{32} \\
-				\mathbb{S}_{ii33} \\
+				\mathbb{S}_{i32} \\
+				\mathbb{S}_{i33} \\
 				\mathbb{S}_{i44} \\
 				\mathbb{S}_{i55} \\
 				\mathbb{S}_{i66} \\
@@ -713,32 +736,31 @@ University of Bern, Faculty of Medicine \\
 %------------------------------------------------------------
 
 \begin{frame}
-	\frametitle{Regression Results}
-	\begin{table}[h!]\caption{Results for the linear models on filtered data}
-		\resizebox{!}{0.12\linewidth}{
-			\begin{tabular}{ccccc}
-				\toprule
-				Model & DOF & Regression SS & $R^2$ & SE \\
-				\midrule
-				Original & 5 & 6431.1 & 0.943 & 0.263 \\
-				CV & 6 & 6431.7 & 0.943 & 0.263 \\
-				Group & 8 & 6434.4 & 0.944 & 0.262 \\
-				\bottomrule
-		\end{tabular}}
-	\end{table}
-
-	\begin{table}[h!]\caption{Results of the ANCOVA}
-		\resizebox{!}{0.09\linewidth}{
-			\begin{tabular}{ccccc}
-				\toprule
-				Models contrasted & $\Delta$ SS & $\Delta$ DOF & F statistic & p value \\
-				\midrule
-				CV - Original & 0.6 & 1 & 9.32 & 2E-3 \\
-				Group - Original & 3.3 & 3 & 16.03 & 2E-10 \\
-				\bottomrule
-		\end{tabular}}
-	\end{table}
-	\vspace{0.2cm}
+	\frametitle{Models Validation - Equations}
+	\resizebox{1\linewidth}{!}{
+		\begin{tabular}{lcl}
+			\multirow{3}{*}{Models} & Original & $\mathbb{S}_{xy} = (\lambda_0 + 2\mu_0)^{0|1} * \lambda_0'^{0|1} * \mu_0^{0|1} * \rho^k * m_{xy}^l$ \\
+				
+			& CV & $\mathbb{S}_{xy} = (\lambda_0 + 2\mu_0)^{0|1} * \lambda_0'^{0|1} * \mu_0^{0|1} * \rho^k * m_{xy}^l * CV^\beta$ \\
+			
+			& Group & $\mathbb{S}_{xy} = (\lambda_0 + 2\mu_0)^{0|1} * \lambda_0'^{0|1} * \mu_0^{0|1} * \rho^k * m_{xy}^l * \beta_1^{-1|0|1} * \beta_2^{-1|0|1} * \beta_3^{-1|0|1}$ \\[2ex]
+			
+			\multirow{3}{*}{\begin{tabular}{l}
+					Values\\Free exponents
+				\end{tabular}} & Original & $\mathbb{S}_{xy} = 12826^{0|1} * 2952^{0|1} * 3884^{0|1} * \rho^{1.93} * m_{xy}^{0.94}$ \\
+			
+			& CV & $\mathbb{S}_{xy} = 13213^{0|1} * 3042^{0|1} * 4001^{0|1} * \rho^{1.95} * m_{xy}^{0.94} * CV^{0.03}$ \\
+			
+			& Group & $\mathbb{S}_{xy} = 13051^{0|1} * 3005^{0|1} * 3952^{0|1} * \rho^{1.94} * m_{xy}^{0.94} * 1.05^{-1|0|1} * 0.99^{-1|0|1} * 1.02^{-1|0|1}$ \\[2ex]
+			
+			\multirow{3}{*}{\begin{tabular}{l}
+					Values\\Fixed exponents
+			\end{tabular}} & Original & $\mathbb{S}_{xy} = 12826^{0|1} * 2952^{0|1} * 3884^{0|1} * \rho^{1.93} * m_{xy}^{0.94}$ \\
+			
+			& CV & $\mathbb{S}_{xy} = 12826^{0|1} * 2952^{0|1} * 3884^{0|1} * \rho^{1.93} * m_{xy}^{0.94} * CV^{0.02}$ \\
+			
+			& Group & $\mathbb{S}_{xy} = 12826^{0|1} * 2952^{0|1} * 3884^{0|1} * \rho^{1.93} * m_{xy}^{0.94} * 1.04^{-1|0|1} * 0.99^{-1|0|1} * 1.02^{-1|0|1}$ \\
+	\end{tabular}}
 \end{frame}
 
 %------------------------------------------------------------
@@ -747,46 +769,46 @@ University of Bern, Faculty of Medicine \\
 
 \begin{frame}
 	\frametitle{Model Results - Constants Comparison}
-	\begin{table}[h!]\caption{Results for the linear models on filtered data}
+	
+	\begin{table}[h!]\caption{Free exponents}
 		\resizebox{1\linewidth}{!}{
 			\begin{tabular}{cccccccccc}
 				\toprule
 				Model & $\lambda_0$ & $\lambda_0'$ & $\mu_0'$ & k & l & $\beta$ & $\beta_1$ & $\beta_2$ & $\beta_3$ \\
 				\midrule
-				Original & 5058 [4759-5375] & 2952 [2864-3044] & 3884 [3761-4010] & 1.93 [1.91-1.95] & 0.94 [0.92-0.95] & - & - & - & \\
+				Original & 5058 [4759-5375] & 2952 [2864-3044] & 3884 [3761-4010] & 1.929 [1.912-1.946] & 0.937 [0.919-0.954] & - & - & - & \\
 				
-				CV & 5472 [4863-6156] & 3194 [3011-3388] & 4201 [3958-4460] & 1.95 [1.93-1.97] & 0.94 [0.92-0.95] & 0.03 [0.01-0.05] & - & - & - \\
+				CV & 5211 [4552-5964] & 3042 [2818-3283] & 4001 [3704-4321] & 1.947 [1.926-1.967] & 0.937 [0.919-0.954] & 0.031 [0.011-0.050] & - & - & - \\
 				
-				Group & 5216 [4887-5567] & 3001 [2905-3100] & 3965 [3833-4103] & 1.94 [1.92-1.96] & 0.94 [0.92-0.96] & - & 1.05 [1.03-1.06] & 0.99 [0.98-1.00] & 1.02 [1.01-1.03]\\
+				Group & 5147 [4800-5520] & 3005 [2889-3125] & 3952 [3788-4124] & 1.939 [1.921-1.957] & 0.937 [0.920-0.955] & - & 1.046 [1.031-1.061] & 0.992 [0.982-1.002] & 1.020 [1.006-1.035]\\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+
+	\vspace{0cm}
+
+	\begin{table}[h!]\caption{Fixed exponents}
+		\resizebox{1\linewidth}{!}{
+			\begin{tabular}{cccccccccc}
+				\toprule
+				Model & $\lambda_0$ & $\lambda_0'$ & $\mu_0'$ & k & l & $\beta$ & $\beta_1$ & $\beta_2$ & $\beta_3$ \\
+				\midrule
+				Original & 5058 [4960-5158] & 2952 [2924-2981] & 3884 [3830-3938] & 1.929 & 0.937 & - & - & - & \\
+				
+				CV & 5058 [4709-5432] & 2952 [2826-3084] & 3884 [3714-4061] & 1.929 & 0.937 & 0.021 [0.005-0.038] & - & - & - \\
+				
+				Group & 5058 [4925-5194] & 2952 [2905-3000] & 3884 [3796-3973] & 1.929 & 0.937 & - & 1.044 [1.030-1.059] & 0.991 [0.981-1.001] & 1.019 [1.005-1.033]\\
 				\bottomrule
 		\end{tabular}}
 	\end{table}
 \end{frame}
 
-%------------------------------------------------------------
-%------------------------------------------------------------
-%------------------------------------------------------------
-
-\begin{frame}
-	\frametitle{Model Results - Equation Comparison}
-	Corresponding equations:\\
-	\resizebox{1\linewidth}{!}{
-		\begin{tabular}{lcl}
-			\multirow{2}{*}{Original model} & Model & $\mathbb{S}_{xy} = (\lambda_0 + 2\mu_0)^{0|1} * \lambda_0'^{0|1} * \mu_0^{0|1} * \rho^k * m_{xy}^l$ \\
-			 & Values & $\mathbb{S}_{xy} = 12826^{0|1} * 2952^{0|1} * 3884^{0|1} * \rho^{1.93} * m_{xy}^{0.94}$ \\	
-			\multirow{2}{*}{CV model} & Model & $\mathbb{S}_{xy} = (\lambda_0 + 2\mu_0)^{0|1} * \lambda_0'^{0|1} * \mu_0^{0|1} * \rho^k * m_{xy}^l * CV^\beta$ \\
-			 & Values & $\mathbb{S}_{xy} = 13874^{0|1} * 3194^{0|1} * 4201^{0|1} * \rho^{1.95} * m_{xy}^{0.94} * CV^{0.03}$ \\
-			 \multirow{2}{*}{Group model} & Model & $\mathbb{S}_{xy} = (\lambda_0 + 2\mu_0)^{0|1} * \lambda_0'^{0|1} * \mu_0^{0|1} * \rho^k * m_{xy}^l * \beta_1^{-1|0|1} * \beta_2^{-1|0|1} * \beta_3^{-1|0|1}$ \\
-			  & Values & $\mathbb{S}_{xy} = 13146^{0|1} * 3001^{0|1} * 3965^{0|1} * \rho^{1.94} * m_{xy}^{0.94} * 1.05^{-1|0|1} * 0.99^{-1|0|1} * 1.02^{-1|0|1}$ \\
-		\end{tabular}}
-\end{frame}
-
 %----------------------------------------------------------------
 %----------------------------------------------------------------
 %----------------------------------------------------------------
 
 \begin{frame}
-	\frametitle{Model Results - Constants Graphical Comparison}
+	\frametitle{Model constants Graphical Comparison}
 	\begin{figure}
 		\captionsetup[subfigure]{labelformat=empty}
 		\subfloat[$\lambda_0$]{
@@ -808,9 +830,252 @@ University of Bern, Faculty of Medicine \\
 %----------------------------------------------------------------
 
 \begin{frame}
+	\frametitle{Model Fit Analysis}
+	\begin{figure}
+		\captionsetup[subfigure]{labelformat=empty}
+		\subfloat[Original model]{
+			\includegraphics[width=0.25\linewidth, trim=75 0 75 0]
+			{Pictures/11_Original_FitResults}}
+		\qquad
+		\subfloat[CV model]{
+			\includegraphics[width=0.25\linewidth, trim=75 0 75 0]
+			{Pictures/11_CV_FitResults}}
+		\qquad
+		\subfloat[Group model]{
+			\includegraphics[width=0.25\linewidth, trim=75 0 75 0]
+			{Pictures/11_Group_FitResults}}
+	\end{figure}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+\renewcommand\arraystretch{1.2}
+
+\begin{frame}
+	\frametitle{Models Fit Analysis}
+	\begin{columns}[t]
+		\column{.5\textwidth}
+		\centering
+		Regression results
+		
+		\begin{table}[h!]\caption{Free exponents}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Model & DOF & Regression SS & $R^2$ & SE \\
+					\midrule
+					Original & 5 & 6431.1 & 0.943 & 0.263 \\
+					CV & 6 & 6431.7 & 0.943 & 0.263 \\
+					Group & 8 & 6434.4 & 0.944 & 0.262 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+		\begin{table}[h!]\caption{Fixed exponents}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Model & DOF & Regression SS & $R^2$ & SE \\
+					\midrule
+					Original & 3 & 2245.2 & 0.853 & 0.263 \\
+					CV & 4 & 2245.6 & 0.853 & 0.263 \\
+					Group & 6 & 2248.4 & 0.854 & 0.262 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+		\column{.5\textwidth}
+		\centering
+		Results of the ANCOVA
+		
+		
+		
+		\begin{table}[h!]\caption{Free exponents}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Models contrasted & $\Delta$ SS & $\Delta$ DOF & F statistic & p value \\
+					\midrule
+					CV - Original & 0.6 & 1 & 9.32 & 2E-3 \\
+					Group - Original & 3.3 & 3 & 16.03 & 2E-10 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+		\vspace{0.51cm}
+		
+		\begin{table}[h!]\caption{Fixed exponents}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Models contrasted & $\Delta$ SS & $\Delta$ DOF & F statistic & p value \\
+					\midrule
+					CV - Original & 0.4 & 1 & 6.47 & 1E-2 \\
+					Group - Original & 3.2 & 3 & 15.61 & 4E-10 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Group Constants Graphical Comparison}
+	\begin{figure}
+		\includegraphics[height=0.4\linewidth, trim=0 0 0 0]
+		{Pictures/11_L0_ModelsComparison}
+		\caption{Comparison of $\lambda_0$ value among groups}
+	\end{figure}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}[noframenumbering]
+	\frametitle{Group Graphical Comparison}
+	\begin{figure}
+		\includegraphics[height=0.4\linewidth, trim=0 0 0 0]
+		{Pictures/11_L0p_ModelsComparison}
+		\caption{Comparison of $\lambda_0'$ value among groups}
+	\end{figure}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}[noframenumbering]
+	\frametitle{Group Graphical Comparison}
+	\begin{figure}
+		\includegraphics[height=0.4\linewidth, trim=0 0 0 0]
+		{Pictures/11_Mu0_ModelsComparison}
+		\caption{Comparison of $\mu_0$ value among groups}
+	\end{figure}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Group Constants Graphical Comparison}
+	\begin{figure}
+		\includegraphics[height=0.4\linewidth, trim=0 0 0 0]
+		{Pictures/12_L0Norm_ModelsComparison}
+		\caption{Comparison of $\lambda_0$ value among groups.\\Normalized values}
+	\end{figure}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}[noframenumbering]
+	\frametitle{Group Graphical Comparison}
+	\begin{figure}
+		\includegraphics[height=0.4\linewidth, trim=0 0 0 0]
+		{Pictures/12_L0pNorm_ModelsComparison}
+		\caption{Comparison of $\lambda_0'$ value among groups.\\Normalized values}
+	\end{figure}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}[noframenumbering]
+	\frametitle{Group Graphical Comparison}
+	\begin{figure}
+		\includegraphics[height=0.4\linewidth, trim=0 0 0 0]
+		{Pictures/12_Mu0Norm_ModelsComparison}
+		\caption{Comparison of $\mu_0$ value among groups.\\Normalized values}
+	\end{figure}
+\end{frame}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%------------------------------------------------------------
+\renewcommand\arraystretch{1.2}
+
+\begin{frame}
+	\frametitle{Models Group Fit Analysis}
+	\begin{columns}[t]
+		\column{.5\textwidth}
+		\centering
+		Regression results
+		
+		\begin{table}[h!]\caption{Healthy group}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Model & DOF & Regression SS & $R^2$ & SE \\
+					\midrule
+					Original & 3 & 1230.08 & 0.858 & 0.251 \\
+					CV & 4 & 1231.40 & 0.859 & 0.250 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+		\begin{table}[h!]\caption{OI group}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Model & DOF & Regression SS & $R^2$ & SE \\
+					\midrule
+					Original & 3 & 1017.68 & 0.850 & 0.278 \\
+					CV & 4 & 1022.03 & 0.853 & 0.274 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+		\column{.5\textwidth}
+		\centering
+		\vspace{0.08cm}
+		Results of the ANCOVA
+		
+		
+		
+		\begin{table}[h!]\caption{Healthy group}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Models contrasted & $\Delta$ SS & $\Delta$ DOF & F statistic & p value \\
+					\midrule
+					CV - Original & 1.32 & 1 & 36.43 & 2E-9 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+		\vspace{0.48cm}
+		
+		\begin{table}[h!]\caption{OI group}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Models contrasted & $\Delta$ SS & $\Delta$ DOF & F statistic & p value \\
+					\midrule
+					CV - Original & 4.35 & 1 & 137.94 & 2E-31 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
 	\frametitle{Mixed-Effect Linear Model}
 	
-	\begin{equation}\resizebox{!}{.3\textwidth}{$\ln
+	\begin{equation}\resizebox{!}{.25\textwidth}{$\ln
 			\begin{pmatrix}
 				\mathbb{S}_{i11} \\
 				\mathbb{S}_{i12} \\
@@ -819,14 +1084,14 @@ University of Bern, Faculty of Medicine \\
 				\mathbb{S}_{i22} \\
 				\mathbb{S}_{i23} \\
 				\mathbb{S}_{i31} \\
-				\mathbb{S}_{32} \\
-				\mathbb{S}_{ii33} \\
+				\mathbb{S}_{i32} \\
+				\mathbb{S}_{i33} \\
 				\mathbb{S}_{i44} \\
 				\mathbb{S}_{i55} \\
 				\mathbb{S}_{i66} \\
 			\end{pmatrix}$}
 		=
-		\resizebox{!}{.3\textwidth}{$
+		\resizebox{!}{.25\textwidth}{$
 			\begin{pmatrix}
 				1 & 0 & 0 & \ln(\rho) & \ln(m_1^2) \\
 				0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_2) \\
@@ -841,7 +1106,7 @@ University of Bern, Faculty of Medicine \\
 				0 & 0 & 1 & \ln(\rho) & \ln(m_3 m_1) \\
 				0 & 0 & 1 & \ln(\rho) & \ln(m_1 m_2) \\
 			\end{pmatrix}$}
-		\resizebox{!}{.12\textwidth}{$
+		\resizebox{!}{.10\textwidth}{$
 			\begin{pmatrix}
 				\ln(\lambda_0 + 2\mu_0) \\
 				\ln(\lambda_0') \\
@@ -850,7 +1115,7 @@ University of Bern, Faculty of Medicine \\
 				l \\
 			\end{pmatrix}$}
 		+
-		\resizebox{!}{.3\textwidth}{$
+		\resizebox{!}{.25\textwidth}{$
 			\begin{pmatrix}
 				1 & 0 & 0 \\
 				0 & 1 & 0 \\
@@ -865,14 +1130,14 @@ University of Bern, Faculty of Medicine \\
 				0 & 0 & 1 \\
 				0 & 0 & 1 \\
 			\end{pmatrix}$}
-		\resizebox{!}{.08\textwidth}{$
+		\resizebox{!}{.06\textwidth}{$
 			\begin{pmatrix}
 				\delta_{i1} \\
 				\delta_{i2} \\
 				\delta_{i3} \\
 			\end{pmatrix}$}
 		+
-		\resizebox{!}{.3\textwidth}{$
+		\resizebox{!}{.25\textwidth}{$
 			\begin{pmatrix}
 				e_{i1} \\
 				e_{i2} \\
