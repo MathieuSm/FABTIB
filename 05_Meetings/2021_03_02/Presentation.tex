@@ -1,0 +1,995 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (01/07/19)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------
+%	PACKAGES AND THEMES		-----------------------------------
+%----------------------------------------------------------------
+
+\documentclass[xcolor=table]{beamer}
+
+\mode<presentation> {
+
+\usetheme{Frankfurt}
+\usecolortheme{dove}
+\usefonttheme{serif}
+
+}
+\usepackage{newtxtext,newtxmath}
+\usepackage{graphicx}
+\usepackage{booktabs} 
+\usepackage{subfig}
+\usepackage{pgf}
+\usepackage{multirow}
+\usepackage{appendixnumberbeamer}
+\usepackage{bookmark}
+\usepackage{siunitx}
+\usepackage{animate}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage{pifont}
+
+
+%----------------------------------------------------------------
+%	GENERAL OPTIONS 	-----------------------------------------
+%----------------------------------------------------------------
+
+% Set template options
+\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+\setbeamertemplate{frametitle}{\vspace*{1em}\insertframetitle}
+\setbeamertemplate{enumerate items}[default]
+\setbeamercolor{section in head/foot}{fg=white, bg=black}
+
+% Headline
+\makeatletter
+\setbeamertemplate{headline}
+{%
+  \pgfuseshading{beamer@barshade}%
+    \vskip-5ex%
+  \begin{beamercolorbox}[ignorebg,ht=2.25ex,dp=3.75ex]{section in head/foot}
+  \insertsectionnavigationhorizontal{\paperwidth}{\hskip0pt plus1fill}{\hskip0pt plus1fill}
+  \end{beamercolorbox}%
+  \ifbeamer@sb@subsection%
+    \begin{beamercolorbox}[ignorebg,ht=2.125ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+      \usebeamerfont{subsection in head/foot}\insertsubsectionhead
+    \end{beamercolorbox}%
+  \fi%
+}%
+\makeatother
+
+% Footline
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,left]{section in head/foot}%
+    \usebeamerfont{author in head/foot}\hspace{10pt}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{section in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{section in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{}\hspace*{2em}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+% Add logo
+\logo{\pgfputat{\pgfxy(0,7)}{\includegraphics[width=0.1\paperwidth]{Pictures/00_Unibe_Logo}}}
+
+% Table settings
+\renewcommand{\arraystretch}{2}
+\captionsetup{labelformat=empty,labelsep=none}
+\definecolor{Gray}{gray}{0.9}
+
+% Define highlitghing command
+\makeatletter
+\let\HL\hl
+\renewcommand\hl{%
+	\let\set@color\beamerorig@set@color
+	\let\reset@color\beamerorig@reset@color
+	\HL}
+\makeatother
+
+% Add overview at each begin of section
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{Overview}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
+%----------------------------------------------------------------
+%	TITLE PAGE 	-------------------------------------------------
+%----------------------------------------------------------------
+
+\title[Regular Meeting]{
+\uppercase{Regular Meeting}
+} 
+
+\author{Mathieu Simon}
+\institute[University of Bern]
+{
+MSc - Biomedical Engineering \\
+University of Bern, Faculty of Medicine \\
+\medskip
+}
+\date{March 2, 2021}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Overview}
+	\tableofcontents
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\section{General Linear Regression}
+
+\begin{frame}
+	\frametitle{Standard Linear Model}
+	
+	\begin{equation}\resizebox{!}{.3\textwidth}{$\ln
+			\begin{pmatrix}
+				\mathbb{S}_{i11} \\
+				\mathbb{S}_{i12} \\
+				\mathbb{S}_{i13} \\
+				\mathbb{S}_{i21} \\
+				\mathbb{S}_{i22} \\
+				\mathbb{S}_{i23} \\
+				\mathbb{S}_{i31} \\
+				\mathbb{S}_{i32} \\
+				\mathbb{S}_{i33} \\
+				\mathbb{S}_{i44} \\
+				\mathbb{S}_{i55} \\
+				\mathbb{S}_{i66} \\
+			\end{pmatrix}$}
+		=
+		\resizebox{!}{.3\textwidth}{$
+			\begin{pmatrix}
+				1 & 0 & 0 & \ln(\rho) & \ln(m_1^2) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_2) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_3) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_2 m_1) \\
+				1 & 0 & 0 & \ln(\rho) & \ln(m_2^2) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_2 m_3) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_3 m_1) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_3 m_2) \\
+				1 & 0 & 0 & \ln(\rho) & \ln(m_3^2) \\
+				0 & 0 & 1 & \ln(\rho) & \ln(m_2 m_3) \\
+				0 & 0 & 1 & \ln(\rho) & \ln(m_3 m_1) \\
+				0 & 0 & 1 & \ln(\rho) & \ln(m_1 m_2) \\
+			\end{pmatrix}$}
+		\resizebox{!}{.12\textwidth}{$
+			\begin{pmatrix}
+				\ln(\lambda_0 + 2\mu_0) \\
+				\ln(\lambda_0') \\
+				\ln(\mu_0) \\
+				k \\
+				l \\
+			\end{pmatrix}$}
+		+
+		\resizebox{!}{.3\textwidth}{$
+			\begin{pmatrix}
+				e_{i1} \\
+				e_{i2} \\
+				e_{i3} \\
+				e_{i4} \\
+				e_{i5} \\
+				e_{i6} \\
+				e_{i7} \\
+				e_{i8} \\
+				e_{i9} \\
+				e_{i10} \\
+				e_{i11} \\
+				e_{i12} \\
+			\end{pmatrix}$}
+	\end{equation}	
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Mixed-Effect Linear Model}
+	
+	\begin{equation}\resizebox{!}{.3\textwidth}{$\ln
+			\begin{pmatrix}
+				\mathbb{S}_{i11} \\
+				\mathbb{S}_{i12} \\
+				\mathbb{S}_{i13} \\
+				\mathbb{S}_{i21} \\
+				\mathbb{S}_{i22} \\
+				\mathbb{S}_{i23} \\
+				\mathbb{S}_{i31} \\
+				\mathbb{S}_{i32} \\
+				\mathbb{S}_{i33} \\
+				\mathbb{S}_{i44} \\
+				\mathbb{S}_{i55} \\
+				\mathbb{S}_{i66} \\
+			\end{pmatrix}$}
+		=
+		\resizebox{!}{.3\textwidth}{$
+			\begin{pmatrix}
+				1 & 0 & 0 & \ln(\rho) & \ln(m_1^2) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_2) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_3) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_2 m_1) \\
+				1 & 0 & 0 & \ln(\rho) & \ln(m_2^2) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_2 m_3) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_3 m_1) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_3 m_2) \\
+				1 & 0 & 0 & \ln(\rho) & \ln(m_3^2) \\
+				0 & 0 & 1 & \ln(\rho) & \ln(m_2 m_3) \\
+				0 & 0 & 1 & \ln(\rho) & \ln(m_3 m_1) \\
+				0 & 0 & 1 & \ln(\rho) & \ln(m_1 m_2) \\
+			\end{pmatrix}$}
+		\resizebox{!}{.12\textwidth}{$
+			\begin{pmatrix}
+				\ln(\lambda_0 + 2\mu_0) \\
+				\ln(\lambda_0') \\
+				\ln(\mu_0) \\
+				k \\
+				l \\
+			\end{pmatrix}$}
+		+
+		\resizebox{!}{.3\textwidth}{$
+			\begin{pmatrix}
+				1 & 0 & 0 \\
+				0 & 1 & 0 \\
+				0 & 1 & 0 \\
+				0 & 1 & 0 \\
+				1 & 0 & 0 \\
+				0 & 1 & 0 \\
+				0 & 1 & 0 \\
+				0 & 1 & 0 \\
+				1 & 0 & 0 \\
+				0 & 0 & 1 \\
+				0 & 0 & 1 \\
+				0 & 0 & 1 \\
+			\end{pmatrix}$}
+		\resizebox{!}{.075\textwidth}{$
+			\begin{pmatrix}
+				\delta_{i1} \\
+				\delta_{i2} \\
+				\delta_{i3} \\
+			\end{pmatrix}$}
+		+
+		\resizebox{!}{.3\textwidth}{$
+			\begin{pmatrix}
+				e_{i1} \\
+				e_{i2} \\
+				e_{i3} \\
+				e_{i4} \\
+				e_{i5} \\
+				e_{i6} \\
+				e_{i7} \\
+				e_{i8} \\
+				e_{i9} \\
+				e_{i10} \\
+				e_{i11} \\
+				e_{i12} \\
+			\end{pmatrix}$}
+	\end{equation}	
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Healthy Group - Models Results}
+	\begin{columns}
+		\column[c]{0.45\linewidth}
+		\begin{figure}
+			\includegraphics[width=1.\linewidth]
+			{Pictures/01_Healthy_GeneralRegression_StandardModel}
+			\caption{Standard model}
+		\end{figure}
+		\column[c]{0.45\linewidth}
+		\begin{figure}
+			\includegraphics[width=1.\linewidth]
+			{Pictures/01_Healthy_GeneralRegression_MixedModel}
+			\caption{Mixed-effect model}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{OI Group - Models Results}
+	\begin{columns}
+		\column[c]{0.45\linewidth}
+		\begin{figure}
+			\includegraphics[width=1.\linewidth]
+			{Pictures/01_OI_GeneralRegression_StandardModel}
+			\caption{Standard model}
+		\end{figure}
+		\column[c]{0.45\linewidth}
+		\begin{figure}
+			\includegraphics[width=1.\linewidth]
+			{Pictures/01_OI_GeneralRegression_MixedModel}
+			\caption{Mixed-effect model}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Mixed-Effect models Results}
+	
+	\begin{table}
+		\caption{Healthy group}
+		\resizebox{!}{0.1\linewidth}{
+		\begin{tabular}{lcccccccc}
+			\toprule
+			 & $\lambda_{0} + 2\mu_{0}$ & $\lambda_{0}$ & $2\mu_{0}$ & $k$ & $l$ & $\lambda_{0} + 2\mu_{0}$ Var & $\lambda_{0}$ Var & $2\mu_{0}$ Var\\
+			\midrule
+			Coefficient & 12670 & 3096 & 7919 & 2.00 & 0.84 & 1.02 & 1.03 & 1.01 \\
+			2.5\% CI & 12263 & 2984 & 7677 & 1.99 & 0.83 & 1.01 & 1.02 & 1.01 \\
+			97.5\% CI & 13086 & 3216 & 8173 & 2.02 & 0.85 & 1.02 & 1.04 & 1.02 \\
+			p value  & < 2E-16 & < 2E-16 & < 2E-16 & < 2E-16 & < 2E-16 & 4E-11 & 2E-13 & 9E-11 \\
+			\bottomrule
+		\end{tabular}}
+	\end{table}
+
+	\begin{table}
+		\caption{OI group}
+		\resizebox{!}{0.1\linewidth}{
+		\begin{tabular}{lcccccccc}
+			\toprule
+			& $\lambda_{0} + 2\mu_{0}$ & $\lambda_{0}$ & $2\mu_{0}$ & $k$ & $l$ & $\lambda_{0} + 2\mu_{0}$ Var & $\lambda_{0}$ Var & $2\mu_{0}$ Var\\
+			\midrule
+			Coefficient & 16933 & 3519 & 9987 & 2.03 & 1.05 &  1.14 &  1.21 &  1.14 \\
+			2.5\% CI & 14762 &  3023 & 8704 & 1.99 & 1.00 & 1.07 &  1.12 & 1.07 \\
+			97.5\% CI & 19427 & 4094 & 11461 & 2.07 & 1.10 & 1.20 & 1.31 & 1.21 \\
+			p value  & < 2E-16 & < 2E-16 & < 2E-16 & < 2E-16 & < 2E-16 & 2E-5 & 4E-6 & 2E-5 \\
+			\bottomrule
+		\end{tabular}}
+	\end{table}
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Model Improvement}
+	\begin{columns}
+		\column[c]{0.45\linewidth}
+		How improve the model?
+		\begin{enumerate}
+			\item Consider the non-conformity level of the ROI with orthotropy assumption
+			\item Compute a coefficient of variation (CV) to quantify the heterogeneity level
+			\item Add CV to the model
+		\end{enumerate}
+		\column[c]{0.45\linewidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=1.\linewidth]
+			{Pictures/01_Healthy_GeneralRegression_MixedModelCV}
+			\caption{\centering CV distribution on mixed-effect model regression}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+	\frametitle{Coefficient of Variation Mixed-Effect Model}
+	
+	\begin{equation}\resizebox{!}{.3\textwidth}{$\ln
+			\begin{pmatrix}
+				\mathbb{S}_{i11} \\
+				\mathbb{S}_{i12} \\
+				\mathbb{S}_{i13} \\
+				\mathbb{S}_{i21} \\
+				\mathbb{S}_{i22} \\
+				\mathbb{S}_{i23} \\
+				\mathbb{S}_{i31} \\
+				\mathbb{S}_{i32} \\
+				\mathbb{S}_{i33} \\
+				\mathbb{S}_{i44} \\
+				\mathbb{S}_{i55} \\
+				\mathbb{S}_{i66} \\
+			\end{pmatrix}$}
+		=
+		\resizebox{!}{.3\textwidth}{$
+			\begin{pmatrix}
+				1 & 0 & 0 & \ln(\rho) & \ln(m_1^2)	& \ln(CV) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_2)& \ln(CV) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_3)& \ln(CV) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_2 m_1)& \ln(CV) \\
+				1 & 0 & 0 & \ln(\rho) & \ln(m_2^2)	& \ln(CV) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_2 m_3)& \ln(CV) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_3 m_1)& \ln(CV) \\
+				0 & 1 & 0 & \ln(\rho) & \ln(m_3 m_2)& \ln(CV) \\
+				1 & 0 & 0 & \ln(\rho) & \ln(m_3^2) 	& \ln(CV) \\
+				0 & 0 & 1 & \ln(\rho) & \ln(m_2 m_3)& \ln(CV) \\
+				0 & 0 & 1 & \ln(\rho) & \ln(m_3 m_1)& \ln(CV) \\
+				0 & 0 & 1 & \ln(\rho) & \ln(m_1 m_2)& \ln(CV) \\
+			\end{pmatrix}$}
+		\resizebox{!}{.15\textwidth}{$
+			\begin{pmatrix}
+				\ln(\lambda_0 + 2\mu_0) \\
+				\ln(\lambda_0') \\
+				\ln(\mu_0) \\
+				k \\
+				l \\
+				\beta \\
+			\end{pmatrix}$}
+		+
+				\resizebox{!}{.3\textwidth}{$
+			\begin{pmatrix}
+				1 & 0 & 0 \\
+				0 & 1 & 0 \\
+				0 & 1 & 0 \\
+				0 & 1 & 0 \\
+				1 & 0 & 0 \\
+				0 & 1 & 0 \\
+				0 & 1 & 0 \\
+				0 & 1 & 0 \\
+				1 & 0 & 0 \\
+				0 & 0 & 1 \\
+				0 & 0 & 1 \\
+				0 & 0 & 1 \\
+			\end{pmatrix}$}
+		\resizebox{!}{.075\textwidth}{$
+			\begin{pmatrix}
+				\delta_{i1} \\
+				\delta_{i2} \\
+				\delta_{i3} \\
+			\end{pmatrix}$}
+		+
+		\resizebox{!}{.3\textwidth}{$
+			\begin{pmatrix}
+				e_{i1} \\
+				e_{i2} \\
+				e_{i3} \\
+				e_{i4} \\
+				e_{i5} \\
+				e_{i6} \\
+				e_{i7} \\
+				e_{i8} \\
+				e_{i9} \\
+				e_{i10} \\
+				e_{i11} \\
+				e_{i12} \\
+			\end{pmatrix}$}
+	\end{equation}	
+\end{frame}
+
+
+
+
+\renewcommand\arraystretch{1.2}
+
+\begin{frame}
+	\frametitle{Healthy Group - Analysis of Covariance}
+	\begin{columns}[t]
+		\column{.5\textwidth}
+		\centering
+		Regression results
+		
+		\begin{table}[h!]\caption{Standard model}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Model & DOF & Regression SS & $R^2$ & SE \\
+					\midrule
+					Original & 5 & 10917 & 0.954 & 0.248 \\
+					CV & 6 & 10923 & 0.954 & 0.246 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+		\begin{table}[h!]\caption{Mixed-effect model}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Model & DOF & Regression SS & $R^2$ & SE \\
+					\midrule
+					Original & 8 & 11107 & 0.970 & 0.198 \\
+					CV & 9 & 11111 & 0.971 & 0.197 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+		\column{.5\textwidth}
+		\centering
+		\vspace{0.08cm}
+		Results of the ANCOVA
+		
+		
+		
+		\begin{table}[h!]\caption{Standard model}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Models contrasted & $\Delta$ SS & $\Delta$ DOF & F statistic & p value \\
+					\midrule
+					CV - Original & 6 & 1 & 93.77 & \hl{5E-22} \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+		\vspace{0.48cm}
+		
+		\begin{table}[h!]\caption{Mixed-effect model}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Models contrasted & $\Delta$ SS & $\Delta$ DOF & F statistic & p value \\
+					\midrule
+					CV - Original & 4 & 1 & 100.07 & \hl{2E-23} \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+	\end{columns}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+	\frametitle{OI Group - Analysis of Covariance}
+	\begin{columns}[t]
+		\column{.5\textwidth}
+		\centering
+		Regression results
+		
+		\begin{table}[h!]\caption{Standard model}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Model & DOF & Regression SS & $R^2$ & SE \\
+					\midrule
+					Original & 5 & 9322 & 0.840 & 0.710 \\
+					CV & 6 & 9334 & 0.841 & 0.708 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+		\begin{table}[h!]\caption{Mixed-effect model}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Model & DOF & Regression SS & $R^2$ & SE \\
+					\midrule
+					Original & 8 & 9907.78 & 0.893 & 0.581 \\
+					CV & 9 & 9907.59 & 0.893 & 0.581 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+		\column{.5\textwidth}
+		\centering
+		\vspace{0.08cm}
+		Results of the ANCOVA
+		
+		
+		
+		\begin{table}[h!]\caption{Standard model}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Models contrasted & $\Delta$ SS & $\Delta$ DOF & F statistic & p value \\
+					\midrule
+					CV - Original & 12 & 1 & 23.90 & \hl{1E-6} \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+		\vspace{0.48cm}
+		
+		\begin{table}[h!]\caption{Mixed-effect model}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Models contrasted & $\Delta$ SS & $\Delta$ DOF & F statistic & p value \\
+					\midrule
+					CV - Original & 0.18 & 1 & 0.55 & \hl{0.46} \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+	\end{columns}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Coefficient of Variation Distribution}
+	Why CV not significant for OI ?
+	\begin{columns}
+		\column[c]{0.45\linewidth}
+		\begin{figure}
+			\includegraphics[width=1.\linewidth]
+			{Pictures/01_Healthy_GeneralRegression_MixedModelCV}
+			\caption{Healthy group}
+		\end{figure}
+		\column[c]{0.45\linewidth}
+		\begin{figure}
+			\includegraphics[width=1.\linewidth]
+			{Pictures/01_OI_GeneralRegression_MixedModelCV}
+			\caption{OI group}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{BV/TV Distribution}
+	If BV/TV too low, ROI too far from assumption
+	\begin{columns}
+		\column[c]{0.45\linewidth}
+		\begin{figure}
+			\includegraphics[width=1.\linewidth]
+			{Pictures/01_Healthy_GeneralRegression_MixedModelBVTV}
+			\caption{Healthy group}
+		\end{figure}
+		\column[c]{0.45\linewidth}
+		\begin{figure}
+			\includegraphics[width=1.\linewidth]
+			{Pictures/01_OI_GeneralRegression_MixedModelBVTV}
+			\caption{OI group}
+		\end{figure}
+	\end{columns}
+	Are BV/TV and CV related?
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{BV/TV and Coefficient of Variation}
+	Spearman $\rho$ for monotonic correlation\\
+	ln() Healthy outliers to filter data set\vspace{-0.25cm}
+	\begin{columns}
+		\column[c]{0.45\linewidth}
+		\begin{figure}
+			\includegraphics[width=1.\linewidth]
+			{Pictures/01_Healthy_CVBVTV}
+			\caption{Healthy group}
+		\end{figure}
+		\column[c]{0.45\linewidth}
+		\begin{figure}
+			\includegraphics[width=1.\linewidth]
+			{Pictures/01_OI_CVBVTV}
+			\caption{OI group}
+		\end{figure}
+	\end{columns}
+	ln(BV/TV) exclude almost all "bad" samples\\
+	$\rightarrow$ Use only BV/TV for filtering
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Filtered Original Mixed-Effect Models}
+	Decrease of standard error of the estimate
+	\begin{columns}
+		\column[c]{0.45\linewidth}
+		\begin{figure}
+			\includegraphics[width=1.\linewidth]
+			{Pictures/01_Healthy_FilteredRegression_MixedModelBVTV}
+			\caption{Healthy group}
+		\end{figure}
+		\column[c]{0.45\linewidth}
+		\begin{figure}
+			\includegraphics[width=1.\linewidth]
+			{Pictures/01_OI_FilteredRegression_MixedModelBVTV}
+			\caption{OI group}
+		\end{figure}
+	\end{columns}
+	What about the CV model?
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Healthy Group - Analysis of Covariance}
+	\begin{columns}[t]
+		\column{.5\textwidth}
+		\centering
+		Regression results
+		
+		\begin{table}[h!]\caption{Standard model}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Model & DOF & Regression SS & $R^2$ & SE \\
+					\midrule
+					Original & 5 & 7602 & 0.949 & 0.224 \\
+					CV & 6 & 7606 & 0.949 & 0.224 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+		\begin{table}[h!]\caption{Mixed-effect model}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Model & DOF & Regression SS & $R^2$ & SE \\
+					\midrule
+					Original & 8 & 7765.9 & 0.969 & 0.174 \\
+					CV & 9 & 7767.6 & 0.969 & 0.173 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+		\column{.5\textwidth}
+		\centering
+		\vspace{0.08cm}
+		Results of the ANCOVA
+		
+		
+		
+		\begin{table}[h!]\caption{Standard model}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Models contrasted & $\Delta$ SS & $\Delta$ DOF & F statistic & p value \\
+					\midrule
+					CV - Original & 4 & 1 & 78.48 & \hl{1E-18} \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+		\vspace{0.48cm}
+		
+		\begin{table}[h!]\caption{Mixed-effect model}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Models contrasted & $\Delta$ SS & $\Delta$ DOF & F statistic & p value \\
+					\midrule
+					CV - Original & 1.7 & 1 & 56.09 & \hl{8E-14} \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+	\end{columns}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+	\frametitle{OI Group - Analysis of Covariance}
+	\begin{columns}[t]
+		\column{.5\textwidth}
+		\centering
+		Regression results
+		
+		\begin{table}[h!]\caption{Standard model}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Model & DOF & Regression SS & $R^2$ & SE \\
+					\midrule
+					Original & 5 & 1800.8 & 0.926 & 0.257 \\
+					CV & 6 & 1804.9 & 0.929 & 0.253 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+		\begin{table}[h!]\caption{Mixed-effect model}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Model & DOF & Regression SS & $R^2$ & SE \\
+					\midrule
+					Original & 8 & 1857.8 & 0.956 & 0.199 \\
+					CV & 9 & 1862.5 & 0.958 & 0.194 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+		\column{.5\textwidth}
+		\centering
+		\vspace{0.08cm}
+		Results of the ANCOVA
+		
+		
+		
+		\begin{table}[h!]\caption{Standard model}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Models contrasted & $\Delta$ SS & $\Delta$ DOF & F statistic & p value \\
+					\midrule
+					CV - Original & 4.1 & 1 & 64.99 & \hl{1E-15} \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+		\vspace{0.48cm}
+		
+		\begin{table}[h!]\caption{Mixed-effect model}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Models contrasted & $\Delta$ SS & $\Delta$ DOF & F statistic & p value \\
+					\midrule
+					CV - Original & 4.7 & 1 & 126.23 & \hl{2E-28} \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+	\end{columns}
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{General Linear Regression - Summary}
+	Complete data set:
+	\begin{itemize}
+		\item Original model
+		\begin{itemize}
+			\item Excellent fit quality of healthy data
+			\item Good fit quality of OI data
+		\end{itemize} 
+		\item CV model
+		\begin{itemize}
+			\item Significant for healthy data set
+			\item Non-significant for OI data set
+		\end{itemize}
+	\end{itemize}
+	\vspace{0.25cm}
+	BV/TV filtered data set:
+	\begin{itemize}
+		\item Decrease standard error of the estimate
+		\item CV still significant for healthy group
+		\item CV becomes significant for OI group
+	\end{itemize} 
+
+\end{frame}
+
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\section{Individual Matching}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+\section{Morphometric Parameters}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+\section{Variables Matching}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+\section{Filtered Linear Regression}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+\appendix
+
+\section{References}
+\begin{frame}
+	\frametitle{Statistics I}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			\bibitem[Stuart 2010]{p1} Stuart, Elisabth A. (2010).
+			\newblock Matching methods for causal inference: A review and a look forward
+			\newblock \textit{Statistical science : a review journal of the Institute of Mathematical Statistics, 25}(1), 1-21
+			\vspace{1mm}
+			\bibitem[Bishara et al. 2017]{p2} Bishara, Anthony J., Hittner, James B. (2017).
+			\newblock Confidence intervals for correlations when data are not normal
+			\newblock \textit{Behavior Research Methods, 49}(1), 294-309
+			\vspace{1mm}
+			\bibitem[Wandel 2019]{p3} Wandel, J. (2019).
+			\newblock Hypothesis tests for two samples: comparing the means
+			\newblock \textit{Introduction to medical statistics}
+		\end{thebibliography}
+	}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Statistics II}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			\bibitem[Mohd et al. 2011]{p7} Mohd et al. (2011).
+			\newblock Power comparisons of Shapiro-Wilk, Kolmogorov-Smirnov, Lilliefors and Anderson-Darling tests
+			\newblock \textit{Journal of Statistical Modeling and Analytics, 2}(1), 21-33
+			\vspace{1mm}
+			\bibitem[Fox 2016]{p8} Fox, John (2016).
+			\newblock Fox, Applied Regressions Analysis and Linear Models
+			\newblock \textit{Sage publications}(3), 817
+			\vspace{1mm}
+		\end{thebibliography}
+	}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Similar Publications}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			\bibitem[Folkestad et al., 2012]{p4} Folkestad et al. (2012).
+			\newblock Bone geometry, density, and microarchitecture in the distal radius and tibia in adults with osteogenesis imperfecta type i assessed by high-resolution pQCT
+			\newblock \textit{Journal of Bone and Mineral Research, 27}(1), 1405-1412
+			\vspace{1mm}
+			\bibitem[Kocijan et al., 2015]{p5} Kocijan et al. (2015).
+			\newblock Bone structure assessed by HR-pQCT, TBS and DXL in adult patients with different types of osteogenesis imperfecta
+			\newblock \textit{Osteoporosis International, 26}(10), 2431-2440
+			\vspace{1mm}
+			\bibitem[Rolvien et al., 2018]{p6} Rolvien et al. (2018).
+			\newblock Comparison of Bone Microarchitecture Between Adult Osteogenesis Imperfecta and Early-Onset Osteoporosis
+			\newblock \textit{Calcified Tissue International, 103}(5), 512-521
+		\end{thebibliography}
+	}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Similar Publications}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			\bibitem[Schenk et al., 2020]{p9} Schenk et al. (2020).
+			\newblock In vivo repeatability of homogenized finite element analysis based on multiple HR-pQCT sections for assessment of distal radius and tibia strength
+			\newblock \textit{Bone, 141}, 115575
+		\end{thebibliography}
+	}
+\end{frame}
+
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\end{document} 

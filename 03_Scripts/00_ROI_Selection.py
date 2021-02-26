@@ -129,7 +129,7 @@ ScanList = pd.read_csv(os.path.join(DataFolder,ScanLists[DataGroup]),sep=',')
 
 ParametersDataFrame = pd.DataFrame()
 
-# perform for all scans
+# Perform for all scans
 Scan = Scans[0]
 for Scan in Scans:
 

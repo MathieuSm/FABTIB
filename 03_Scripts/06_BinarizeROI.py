@@ -39,7 +39,7 @@ def Load_Itk(Filename):
 # 02 Set variables
 Group = 'OI'   # Healthy or OI
 WorkingDirectory = os.getcwd()
-DataPath = os.path.join(WorkingDirectory,'04_Results/02_ROI_Analysis')
+DataPath = os.path.join(WorkingDirectory,'04_Results/01_ROI_Analysis')
 ROIsPath = os.path.join(DataPath,'01_' + Group + '_ROIs')
 ResizedROIsPath = os.path.join(ROIsPath,'01_Resized_ROIs/')
 BinarizedROIsPath = os.path.join(ROIsPath,'02_Binarized_ROIs/')
