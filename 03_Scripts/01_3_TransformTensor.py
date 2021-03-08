@@ -642,7 +642,7 @@ ScanFolder = os.path.join(WorkingDirectory,'02_Data')
 DataSubFolders = [File for File in os.listdir(ScanFolder) if os.path.isdir(os.path.join(ScanFolder,File))]
 DataSubFolders.sort()
 
-Group = 'OI'   # Healthy or OI
+Group = 'Healthy'   # Healthy or OI
 
 DataFolder = os.path.join(WorkingDirectory,'04_Results/01_ROI_Analysis/02_'+Group+'_FabricElasticity')
 ResultsFolder = os.path.join(WorkingDirectory,'04_Results/01_ROI_Analysis/03_'+Group+'_TransformedTensors')

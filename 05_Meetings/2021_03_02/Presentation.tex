@@ -883,22 +883,569 @@ University of Bern, Faculty of Medicine \\
 %----------------------------------------------------------------
 %----------------------------------------------------------------
 
+
 \section{Individual Matching}
+
+\begin{frame}
+	\frametitle{Matching Results I}
+	\vspace{-5mm}
+	\begin{columns}[c] 
+		\column{.1\textwidth}
+		\hspace{5mm}
+		\rotatebox{90}{\hspace{-2mm} Matched\hspace{17mm} Original}
+		\column{0.8\textwidth}
+		\begin{figure}
+			\hspace{-15mm}
+			\captionsetup[subfigure]{labelformat=empty}
+			\subfloat[]{
+				\includegraphics[width=0.4\linewidth,trim=35 0 35 0]
+				{Pictures/02_FullControl}}
+			\qquad
+			\subfloat[]{
+				\includegraphics[width=0.4\linewidth,trim=35 0 35 0]
+				{Pictures/02_FullOI}}
+			\qquad\\
+			\hspace{-15mm}
+			\subfloat[Heathy]{
+				\includegraphics[width=0.4\linewidth,trim=35 0 35 80]
+				{Pictures/02_MatchedControl}}
+			\qquad
+			\subfloat[OI]{
+				\includegraphics[width=0.4\linewidth,trim=35 0 35 80]
+				{Pictures/02_MatchedOI}}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Matching Results II}
+	\begin{columns}
+		\column[c]{0.45\linewidth}
+		\begin{figure}
+			\includegraphics[width=1.\linewidth]
+			{Pictures/02_StandardizedBias}
+			\caption{Standardized Bias}
+		\end{figure}
+		\column[c]{0.45\linewidth}
+		\begin{figure}
+			\includegraphics[width=1.\linewidth]
+			{Pictures/02_QQPlot}
+			\caption{QQ plot}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+
 
 %----------------------------------------------------------------
 %----------------------------------------------------------------
 %----------------------------------------------------------------
 \section{Morphometric Parameters}
 
+\begin{frame}
+	\frametitle{BV/TV}
+	\begin{columns}
+		\column[c]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]
+		{Pictures/03_BVTV_Healthy_QQPlot}
+		\centering Healthy group\\Shapiro p value: 0.617
+		\column[c]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]
+		{Pictures/03_BVTV_OI_QQPlot}
+		\centering OI group\\Shapiro p value: 0.047
+	\end{columns}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{SMI}
+	\begin{columns}
+		\column[c]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]
+		{Pictures/03_SMI_Healthy_QQPlot}
+		\centering Healthy group\\Shapiro p value: 0.391
+		\column[c]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]
+		{Pictures/03_SMI_OI_QQPlot}
+		\centering OI group\\Shapiro p value: 0.003
+	\end{columns}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Trabecular Number}
+	\begin{columns}
+		\column[c]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]
+		{Pictures/03_TbN_Healthy_QQPlot}
+		\centering Healthy group\\Shapiro p value: 0.906
+		\column[c]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]
+		{Pictures/03_TbN_OI_QQPlot}
+		\centering OI group\\Shapiro p value: 0.351
+	\end{columns}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Trabecular Thickness}
+	\begin{columns}
+		\column[c]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]
+		{Pictures/03_TbTh_Healthy_QQPlot}
+		\centering Healthy group\\Shapiro p value: 1E-4
+		\column[c]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]
+		{Pictures/03_TbTh_OI_QQPlot}
+		\centering OI group\\Shapiro p value: 0.547
+	\end{columns}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Trabecular Separation}
+	\begin{columns}
+		\column[c]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]
+		{Pictures/03_TbSp_Healthy_QQPlot}
+		\centering Healthy group\\Shapiro p value: 0.019
+		\column[c]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]
+		{Pictures/03_TbSp_OI_QQPlot}
+		\centering OI group\\Shapiro p value: 0.001
+	\end{columns}
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Trabecular Separation SD}
+	\begin{columns}
+		\column[c]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]
+		{Pictures/03_TbSpSD_Healthy_QQPlot}
+		\centering Healthy group\\Shapiro p value: 6E-5
+		\column[c]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]
+		{Pictures/03_TbSpSD_OI_QQPlot}
+		\centering OI group\\Shapiro p value: 0.001
+	\end{columns}
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Log Coefficient of Variation}
+	\begin{columns}
+		\column[c]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]
+		{Pictures/03_LogCV_Healthy_QQPlot}
+		\centering Healthy group\\Shapiro p value: 0.511
+		\column[c]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]
+		{Pictures/03_LogCV_OI_QQPlot}
+		\centering OI group\\Shapiro p value: 0.899
+	\end{columns}
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Degree of Anisotropy}
+	\begin{columns}
+		\column[c]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]
+		{Pictures/03_DA_Healthy_QQPlot}
+		\centering Healthy group\\Shapiro p value: 0.002
+		\column[c]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]
+		{Pictures/03_DA_OI_QQPlot}
+		\centering OI group\\Shapiro p value: 0.368
+	\end{columns}
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Statistical Test Selection Results}
+	\begin{columns}[t]
+		\column{.5\textwidth}
+		\begin{table}[h!]
+			\centering
+			\resizebox{1\linewidth}{!}{
+				\begin{tabular}{lcccc}
+					\toprule
+					
+					Variable & Group & Normality & Equal Variance & Statistical Test \\
+					
+					\midrule
+					
+					\multirow{2}{*}{BV/TV} & Healthy & \ding{51} & \multirow{2}{*}{\ding{51}} & \multirow{2}{*}{t-test} \\
+					& OI & \ding{51} &  & \\
+					
+					\multirow{2}{*}{SMI} & Healthy & \ding{51} &\multirow{2}{*}{\ding{51}} & \multirow{2}{*}{Mann-Whitney test} \\
+					& OI & \ding{55} &  & \\
+					
+					\multirow{2}{*}{Tb N} & Healthy & \ding{51} &\multirow{2}{*}{\ding{51}} & \multirow{2}{*}{t-test} \\
+					& OI & \ding{51} &  & \\
+					
+					\multirow{2}{*}{Tb Th} & Healthy & \ding{55} &\multirow{2}{*}{\ding{51}} & \multirow{2}{*}{Mann-Whitney test} \\
+					& OI & \ding{51} &  & \\
+					
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		\vfill
+		\column{.5\textwidth}
+		\begin{table}[h!]
+			\resizebox{1\linewidth}{!}{
+				\begin{tabular}{lcccc}
+					\toprule
+					
+					Variable & Group & Normality & Equal Variance & Statistical Test \\
+					
+					\midrule
+					
+					\multirow{2}{*}{Tb Sp} & Healthy & \ding{55} &\multirow{2}{*}{\ding{55}} & \multirow{2}{*}{Permutation test} \\
+					& OI & \ding{55} &  & \\
+					
+					\multirow{2}{*}{Tb Sp SD} & Healthy & \ding{55} &\multirow{2}{*}{\ding{55}} & \multirow{2}{*}{Permutation test} \\
+					& OI & \ding{55} &  & \\
+					
+					\multirow{2}{*}{Log CV} & Healthy & \ding{51} &\multirow{2}{*}{\ding{51}} & \multirow{2}{*}{t-test} \\
+					& OI & \ding{51} &  & \\
+					
+					\multirow{2}{*}{DA} & Healthy & \ding{55} &\multirow{2}{*}{\ding{51}} & \multirow{2}{*}{Mann-Whitney test} \\
+					& OI & \ding{51} &  & \\
+					
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+	\end{columns}
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Statistical Test Results}
+	\begin{table}[h!]
+		\centering
+		\resizebox{!}{0.3\linewidth}{
+			\begin{tabular}{lccccc}
+				\toprule
+				Variable & Group & Mean $\pm$ Std & Statistical Test & p Value & 95\% CI \\
+				\midrule
+				\multirow{2}{*}{BV/TV} & Healthy & 0.222 $\pm$ 0.081 & \multirow{2}{*}{t-test} & \multirow{2}{*}{8E-3} & \multirow{2}{*}{$[0.016,0.101]$} \\
+				& OI & 0.164 $\pm$ 0.079 &  &  & \\
+				
+				\multirow{2}{*}{SMI} & Healthy & 0.001 $[-0.021-0.033]$ & \multirow{2}{*}{Mann-Whitney test} & \multirow{2}{*}{2E-4} & \multirow{2}{*}{-} \\
+				& OI & 0.056 $[0.015-0.079]$ &  &  & \\
+				
+				\multirow{2}{*}{Tb N} & Healthy & 0.842 $\pm$ 0.144 & \multirow{2}{*}{t-test} & \multirow{2}{*}{1E-4} & \multirow{2}{*}{$[0.099,0.285]$} \\
+				& OI & 0.650 $\pm$ 0.198 &  &  & \\
+				
+				\multirow{2}{*}{Tb Th} & Healthy & 0.301 $[0.287-0.321]$ & \multirow{2}{*}{Mann-Whitney test} & \multirow{2}{*}{0.17} & \multirow{2}{*}{-} \\
+				& OI & 0.306 $[0.292-0.331]$ &  &  & \\
+				
+				\multirow{2}{*}{Tb Sp} & Healthy & 0.924 $\pm$ 0.257 & \multirow{2}{*}{Permutation test} & \multirow{2}{*}{0.01} & \multirow{2}{*}{$(-\infty ,-0.384] \cup [0.421,\infty)$} \\
+				& OI & 1.422 $\pm$ 0.694 &  &  & \\
+				
+				\multirow{2}{*}{Tb Sp SD} & Healthy & 0.317 $\pm$ 0.136 & \multirow{2}{*}{Permutation test} & \multirow{2}{*}{0.02} & \multirow{2}{*}{$(-\infty ,-0.232] \cup [0.251,\infty)$} \\
+				& OI & 0.631 $\pm$ 0.383 &  &  & \\
+				
+				\multirow{2}{*}{Log CV} & Healthy & -1.723 $\pm$ 0.344 & \multirow{2}{*}{t-test} & \multirow{2}{*}{4E-6} & \multirow{2}{*}{$[-0.757,-0.333]$} \\
+				& OI & -1.178 $\pm$ 0.441 &  &  & \\
+				
+				\multirow{2}{*}{DA} & Healthy & 1.992 $[1.826-2.02]$ & \multirow{2}{*}{Mann-Whitney-test} & \multirow{2}{*}{0.02} & \multirow{2}{*}{-} \\
+				& OI & 2.018 $[1.901-2.158]$ &  &  & \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+	\vspace{0.5cm}
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Literature}
+	Paper 1: \cite{p4}
+	\begin{itemize}
+		\item Xtreme CT
+		\item Manufacturer’s default protocol for in vivo patient scanning
+		\item Direct 3D measure of Tb. N and SD.1/Tb.N
+		\item Tb. Th and Tb. Sp derived from BV/TV and Tb. N
+	\end{itemize}
+	Paper 2: \cite{p5}\\
+	Paper 3: \cite{p6}
+\end{frame}
+
+\begin{frame}[noframenumbering]
+	\frametitle{Literature}
+	Paper 1: \cite{p4}\\
+	Paper 2: \cite{p5}
+	\begin{itemize}
+		\item Xtreme CT
+		\item Tb. N directly measured
+		\item BV/TV derived from trabecular density according
+		to manufacturer's assumptions
+		\item  $Tb.Th = (BV/TV)/Tb.N$ and $Tb.Sp = (1−BV/TV)/Tb.N$
+		\item Tb.Sp SD to assess the heterogeneity
+	\end{itemize}
+	Paper 3: \cite{p6}
+\end{frame}
+
+\begin{frame}[noframenumbering]
+	\frametitle{Literature}
+	Paper 1: \cite{p4}\\
+	Paper 2: \cite{p5}\\
+	Paper 3: \cite{p6}
+	\begin{itemize}
+		\item Xtreme CT
+		\item Manufacturer's standard protocol to analyze bone geometry
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{XCT1 vs XCT2}
+	\cite{p10}
+	\begin{columns}[c]
+		\column{.5\textwidth}
+		\begin{table}[h!]
+			\centering
+			\resizebox{0.8\linewidth}{!}{
+				\begin{tabular}{lcc}
+					\toprule
+					Variable & [slope, intercept] & $R^2$ \\
+					\midrule
+					BV/TV & [0.6, 0.0] & 0.99 \\
+					Tb. N. & [1.6, -0.1] & 0.79 \\
+					Tb. Th. & [0.34, -0.02] & 0.53 \\
+					Tb. Sp. & [0.6, 0.0] & 0.85 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		\column{.5\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]
+		{Pictures/03_Agarwal_TbN}\\
+		Trabecular number
+		\vspace{5mm}\\
+		\includegraphics[width=1\linewidth]
+		{Pictures/03_Agarwal_TbTh}\\
+		Trabecular thickness\\
+	\end{columns}
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{ROIs Median vs Full Scan Mean (OI)}
+	\begin{columns}[c]
+		\column{.5\textwidth}
+		\begin{table}[h!]
+			\centering
+			\resizebox{0.8\linewidth}{!}{
+				\begin{tabular}{lcc}
+					\toprule
+					Variable & [slope, intercept] & $R^2$ \\
+					\midrule
+					BV/TV & [0.9, 0.04] & 0.78 \\
+					Tb. N. & [1.37, 0.03] & 0.58 \\
+					Tb. Th. & [0.93, -0.02] & 0.74 \\
+					Tb. Sp. & [0.35, 0.65] & 0.21 \\
+					Tb. Sp. SD & [0.78, 0.32] & 0.19 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+	
+		\begin{table}[h!]
+			\centering
+			\resizebox{0.8\linewidth}{!}{
+				\begin{tabular}{lc}
+					\toprule
+					Variable & Rel. dif. mean [max, min] \\
+					\midrule
+					BV/TV & -0.10 [-0.60, 0.44] \\
+					Tb. N. & -0.25 [-0.53, 0.32] \\
+					Tb. Th. & 0.18 [-0.01, 0.28] \\
+					Tb. Sp. & 0.49 [-0.47, 8.37] \\
+					Tb. Sp. SD & -0.05 [-0.76, 1.08] \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		\column{.5\textwidth}
+		\centering
+		\includegraphics[width=0.75\linewidth]
+		{Pictures/03_BVTV_OI_LinReg}\\
+		Linear regression\\
+		\includegraphics[width=0.75\linewidth]
+		{Pictures/03_BVTV_OI_RelDiff}\\
+		Relative differences\\
+	\end{columns}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Comparison with Literature - BV/TV}
+	\begin{table}[h!]
+		\centering
+		\resizebox{!}{0.3\linewidth}{
+			\begin{tabular}{ccccc}
+				\toprule
+				Reference & Group & Value & Test & p Value \\
+				\midrule
+				\multirow{2}{*}{\cite{p4}} & Healthy & 0.14 $\pm$ 0.03 & \multirow{2}{*}{t-test} & \multirow{2}{*}{<0.001} \\
+				& OI Type I & 0.08 $\pm$ 0.03 &  &  \\
+				\midrule
+				\multirow{3}{*}{\cite{p5}} & Healthy & 0.141 (0.130-.0170) & \multirow{3}{*}{-} & - \\
+				& OI Type I & 0.098 (0.088-0.114) &  & <0.0001 \\
+				& OI Type III and IV & 0.081 (0.056-0.092) &  & <0.0001 \\
+				\midrule
+				\multirow{2}{*}{\cite{p6}} & Healthy & 0.162 $\pm$ 0.010 & \multirow{2}{*}{-} & \multirow{2}{*}{<0.0001} \\
+				& OI & 0.095 $\pm$ 0.008 &  &  \\
+				\midrule
+				\multirow{2}{*}{Present Work} & Healthy & 0.222 $\pm$ 0.081 & \multirow{2}{*}{t-test} & \multirow{2}{*}{8E-3} \\
+				& OI & 0.164 $\pm$ 0.079 &  &  \\
+				\midrule
+				\multirow{2}{*}{\cite{p9}} & Female & 0.27 $\pm$ 0.0 & \multirow{2}{*}{-} & \multirow{2}{*}{-} \\
+				& Male & 0.34 $\pm$ 0.1 &  &  \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+\end{frame}
+
+
+
 %----------------------------------------------------------------
 %----------------------------------------------------------------
 %----------------------------------------------------------------
 \section{Variables Matching}
 
+\begin{frame}
+	\frametitle{Matching Results I}
+	\centering
+	Standardized Bias: $Std Bias = \frac{\bar{x_t}-\bar{x_c}}{\sigma _t}$\\
+	\includegraphics[width=0.6\linewidth]
+	{Pictures/04_StandardizedBias}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Matching Results II - QQ plots}
+	\begin{columns}
+		
+	\column{.3\textwidth}
+	\centering
+	\includegraphics[width=1\linewidth]
+	{Pictures/04_QQPlot_BVTV}\\\vspace{2mm}
+	BV/TV
+	
+	\column{.3\textwidth}
+	\centering
+	\includegraphics[width=1\linewidth]
+	{Pictures/04_QQPlot_DA}\\\vspace{2mm}
+	Degree of anisotropy
+	
+	\column{.3\textwidth}
+	\centering\vspace{1.5mm}
+	\includegraphics[width=1\linewidth]
+	{Pictures/04_QQPlot_CV}\\
+	Coefficient of variation
+		
+	\end{columns}
+\end{frame}
+
 %----------------------------------------------------------------
 %----------------------------------------------------------------
 %----------------------------------------------------------------
 \section{Filtered Linear Regression}
+
+
+\renewcommand\arraystretch{1.2}
+
+\begin{frame}
+	\frametitle{Grouped Data - Analysis of Covariance}
+	\begin{columns}[t]
+		\column{.5\textwidth}
+		\centering
+		Regression results
+		
+		\begin{table}[h!]\caption{Standard model}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Model & DOF & Regression SS & $R^2$ & SE \\
+					\midrule
+					Original & 5 & 2580.9 & 0.943 & 0.290 \\
+					CV & 6 & 2581.4 & 0.943 & 0.289 \\
+					Group & 8 & 2581.6 & 0.943 & 0.289 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+		\begin{table}[h!]\caption{Mixed-effect model}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Model & DOF & Regression SS & $R^2$ & SE \\
+					\midrule
+					Original & 8 & 2647.85 & 0.967 & 0.219 \\
+					CV & 9 & 2650.16 & 0.968 & 0.217 \\
+					Group & 11 & 2647.92 & 0.967 & 0.220 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+		\column{.5\textwidth}
+		\centering
+		\vspace{0.08cm}
+		Results of the ANCOVA
+		
+		\begin{table}[h!]\caption{Standard model}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Models contrasted & $\Delta$ SS & $\Delta$ DOF & F statistic & p value \\
+					\midrule
+					CV - Original & 0.5 & 1 & 5.32 & 0.021 \\
+					Group - Original & 0.7 & 3 & 2.83 & 0.037 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+		\vspace{0.51cm}
+		
+		\begin{table}[h!]\caption{Mixed-effect model}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Models contrasted & $\Delta$ SS & $\Delta$ DOF & F statistic & p value \\
+					\midrule
+					CV - Original & 2.31 & 1 & 49.03 & \hl{4E-12} \\
+					Group - Original & 0.07 & 3 & 0.44 & 0.723 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+	\end{columns}
+\end{frame}
+
 
 %----------------------------------------------------------------
 %----------------------------------------------------------------
@@ -976,13 +1523,20 @@ University of Bern, Faculty of Medicine \\
 %----------------------------------------------------------------
 
 \begin{frame}
-	\frametitle{Similar Publications}
+	\frametitle{Others Publications}
 	\footnotesize{
 		\begin{thebibliography}{99}
 			\setbeamertemplate{bibliography item}[triangle]
 			\bibitem[Schenk et al., 2020]{p9} Schenk et al. (2020).
 			\newblock In vivo repeatability of homogenized finite element analysis based on multiple HR-pQCT sections for assessment of distal radius and tibia strength
 			\newblock \textit{Bone, 141}, 115575
+			
+			\vspace{1mm}
+			
+			\bibitem[Agarwal et al., 2016]{p10} Agarwal et al. (2016).
+			\newblock In vivo assessment of bone structure and estimated bone strength by first- and second-generation HR-pQCT
+			\newblock \textit{Osteoporosis International, 27 (10)}, 2955-2966
+			
 		\end{thebibliography}
 	}
 \end{frame}

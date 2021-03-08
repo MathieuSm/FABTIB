@@ -127,6 +127,9 @@ for ROI in ROIs:
     if ROI not in Results:
         MissingResults = MissingResults.append({'ROI':ROI},ignore_index=True)
 
+for i in range(1,7):
+    MissingResults = MissingResults.append({'ROI':str(i)+'_351102_C0000226_SEG_UNCOMP'},ignore_index=True)
+
 # 04 Select new ROI
 DataGroup = 1   # 0 = Healthy group, 1 = OI group
 Plots = True   # Plot the different ROI location
@@ -232,7 +235,7 @@ if Plots:
                 Axes[Plane].set_ylabel('Direction 3 (voxel)')
 
             else:
-                Axes[Plane].imshow(CT_Scan[:, Y, :]-TrabBone, cmap='bone', clim=[0,1])
+                Axes[Plane].imshow(CT_Scan[:, Y, :]-TrabBone+1, cmap='bone', clim=[0,2])
                 Axes[Plane].plot([X1, X2], [Z1, Z1], color=(0, 0, 1))
                 Axes[Plane].plot([X1, X2], [Z2, Z2], color=(0, 0, 1))
                 Axes[Plane].plot([X1, X1], [Z1, Z2], color=(0, 0, 1))
@@ -262,9 +265,11 @@ del MedtoolParametersData['Unnamed: 8']
 
 for NewIndex in NewROIPos.index:
     NewScan = NewROIPos['$Scan'].loc[NewIndex]
+    ROINumber = NewROIPos['$ROINumber'].loc[NewIndex]
 
-    for Index in MedtoolParametersData.index:
-        Scan = MedtoolParametersData['$Scan'].loc[Index]
+    Filter1 = MedtoolParametersData['$Scan'] == NewScan
+    Filter2 = MedtoolParametersData['$ROINumber'] == str(ROINumber)
 
-        if Scan == NewScan:
-            MedtoolParametersData.loc[Index] = NewROIPos['$Scan'].loc[NewIndex]
+    MedtoolParametersData[Filter1&Filter2] = NewROIPos.loc[NewIndex]
+
+MedtoolParametersData.to_csv(MedtoolParametersFile, sep=';', line_terminator=';\n',index=False)

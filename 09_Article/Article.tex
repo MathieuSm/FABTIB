@@ -24,8 +24,15 @@
 %\usepackage[authoryear]{natbib}
 \usepackage[numbers]{natbib}
 \usepackage{lipsum}
-\usepackage{acro}[version=3]
-\input{Abbrev}
+\usepackage{xcolor}
+\usepackage[justification=centering]{caption}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{rotating}
+
 
 \newcommand{\abbreviations}[1]{%
 	\nonumnote{\textit{Abbreviations:\enspace}#1}}
@@ -35,10 +42,10 @@
 \let\WriteBookmarks\relax
 \def\floatpagepagefraction{1}
 \def\textpagefraction{.001}
-\shorttitle{Fabric-Elasticity in OI}
+\shorttitle{Fabric-Elasticity in Osteogenesis Imperfecta}
 \shortauthors{Simon et~al.}
 
-\title[mode = title]{Fabric-Elasticity Relationships in \Ac{OI}}
+\title[mode = title]{Fabric-Elasticity Relationships in Osteogenesis Imperfecta (OI)}
 
 % Autors
 \author[1]{Mathieu Simon}
@@ -50,12 +57,22 @@
 \author[1]{Michael Indermaur}
 \ead{michael.indermaur@artorg.unibe.ch}
 
+\author[1]{Denis Schenk}
+\ead{denis.schenk@artorg.unibe.ch}
+
 % Adresses
 \address[1]{ARTORG Centre for Biomedical Engineering Research, University of Bern, Freiburgstrasse 3, CH-3010 Bern, Switzerland}
 
 % Abbreviations
 \abbreviations{OI, osteogenesis imperfecta;
-			   ROI, region of interest.}
+			   HR-pQCT, high resolution peripheral quantitative tomography;
+			   ROI, region of interest;
+			   BV/TV, bone volume over total volume;
+			   SMI, structure model index;
+			   MIL, mean intercept length;
+			   FEA, finite element analysis
+			   KUBC, kinematic uniform boundary condition;
+			   PMUBC, periodicity-compatible mixed uniform boundary condition.}
 
 % Footnotes
 
@@ -80,24 +97,477 @@ Osteogenesis Imperfecta
 
 \section{Methods}
 
-\lipsum[4]\cite{Zysset1995}
+\subsection{Subjects}
+The healthy group include a total of 120 patients from a previous reproducibility study \cite{Schenk2020}. The sample is composed of 64 female and 56 male subjects aged between 20 and 92 years old with a median age of 26 [22 - 35] years. These subjects did not took any medication known to affect bone metabolism nor presented any prior osteoporosis fracture.\\
 
-\subsection{Linear regression}
+The second group is composed of 35 female 15 male leading to 50 OI diagnosed subjects. The youngest and oldest patients are 19 and 69 year old, respectively. The median age is 43.5 [33 - 55] years. 35 subjects were diagnosed with type I OI, 2 with type III, and 13 with type IV.
 
-\lipsum[5]
+\subsection{HR-pQCT}
+HR-pQCT scans (XtremeCTII, SCANCO Medical, Brütisellen,
+Switzerland) were performed at the distal tibia on all patients from both groups. The OI subjects were scanned using the manufacturer's standard protocol. These scans were performed at the Shriners Hospital for Children and were shared to our group by the McGill University in Montreal. People of the healthy group were scanned using an in-house protocol as described in \cite{Schenk2020}. The main differences with the manufacturer's standard protocol are the following:
+\begin{enumerate}
+	\item The reference line is positioned at the proximal margin of the dense structure formed by the tibia plafond instead of  the subchondral endplate of the ankle joint (standard clinical section) \cite{Whittier2020}.
+	\item Three stacks were scanned proximal to the reference line instead of one stack at 22.5 mm proximal to the reference line for standard clinical section \cite{Whittier2020}.
+\end{enumerate}
+
+These differences are shown in Figure \ref{01_ClinicalSections}. For both group, each stack consist of 168 voxels and a resolution of 61 \si{\micro}m in the three principal directions which lead to a thickness about 10.2 mm for each stack. Scanning settings were a voltage of 60 kVp, 900 μA, 100 ms integration time for the healthy group as well as for the OI group.
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.225\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]
+		{Pictures/01_OIClinicalSection}
+		\caption{OI group}
+		\label{01_OI}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.225\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]
+		{Pictures/01_ControlClinicalSection}
+		\caption{Healthy group}
+		\label{01_Healthy}
+	\end{subfigure}
+	\caption{Clinical section scanned for both group}
+	\label{01_ClinicalSections}
+\end{figure}
+
+
+\subsection{Image analysis}
+The HR-pQCT scans were evaluated using the manufacturer's standard protocol. Then, the segmented images were used for further analysis.\\
+
+Six ROI were selected in each scan. For the OI subjects, the stack was divided into two half and the ROIs were selected to have the centers of three ROIs in the proximal half and three in the distal half. For the healthy people, the ROIs were selected in the more proximal stack uniquely, see Figure \ref{01_Healthy} stack n\textdegree 3. As for the OI subjects, the stack is halved and centers of three ROIs were selected in both half.\\
+
+The ROI is defined as a cube of about 5.3 mm side length. This size was chosen to correspond to the work of \cite{Panyasantisuk2015} and \cite{Gross2013}. It was determined by \cite{Daszkiewicz2017} to be the optimal size to obtain accurate FEA results with minimal computation efforts.\\
+
+The ROI analysis was performed using medtool (v4.5; Dr. Pahr Ingenieurs e.U., Pfaffstätten, Austria). The morphological parameters analyzed are: BV/TV, SMI, trabecular number (Tb. N.), trabecular thickness (Tb. Th.), trabecular spacing (Tb. Sp.), and the standard deviation of the trabecular spacing (Tb. Sp. SD). Moreover, ROI fabric was evaluated too. The fabric tensor $\mathbf{M}$ is a positive-definite second-order tensor. It is build as shown in Equation \ref{Eq201} below:
+
+\begin{equation}
+	\mathbf{M} = \sum_{i=1}^{3}{m_i \mathbf{M}_i}
+	\label{Eq201}
+\end{equation}
+
+where $m_i$ are the eigenvalues of $\mathbf{M}$ and $\mathbf{M}_i$ are the dyadic product of the corresponding eigenvectors $\mathbf{m}_i$ \cite{Cowin1985} \cite{Harrigan1985}. The fabric is then independent of BV/TV and normalized with $tr(\mathbf{M}) = 3$. To evaluate this tensor, the MIL method was used. The fabric eigenvalues allow to compute the degree of anisotropy (DA) of the ROI.\\
+
+A mechanical analysis was performed using ABAQUS 6.14. Each voxel of the segmented ROI was converted to mesh using fully integrated linear brick elements (C3D8) with a stiffness $E$ of 10 000 MPa and a Poisson's ratio $\nu$ of 0.3. The simulation consisted of 6 independent load cases, 3 uni-axial and 3 shear cases, using KUBCs. KUBCs were used according to the work of \cite{Panyasantisuk2015} were it was determined to be better than PMUBC to calibrate the parameters of the Zysset-Curnier fabric-elasticity model \cite{Zysset1995}. This model builds the fourth order stiffness tensor $\mathbb{S}$ using the BV/TV $\rho$, fabric information $\mathbf{M}$, three elasticity parameters $\lambda_0$, $\lambda_0$', and $\mu_0$, and two exponents, $k$ and $l$. The building of this tensor is shown in Equation \ref{Eq202}.
+
+\begin{equation}
+	\begin{split}
+		\mathbb{S}(\rho,\mathbf{M}) & = \sum_{i=1}^{3} (\lambda_0 + 2\mu_0)\rho^k m_i^{2l} \mathbf{M}_i \otimes \mathbf{M}_i \\ & + \sum_{\substack{i,j=1\\i \neq j}}^{3} \lambda_0' \rho^k m_i^{l} m_j^{l} \mathbf{M}_i \otimes \mathbf{M}_j \\ & + \sum_{\substack{i,j=1\\i \neq j}}^{3} \mu_0 \rho^k m_i^{l} m_j^{l} \mathbf{M}_i \overline{\underline{\otimes}} \mathbf{M}_j
+	\end{split}
+	\label{Eq202}
+\end{equation}
+
+Where $\otimes$ and $\overline{\underline{\otimes}}$ are the dyadic and symmetric product of second order tensors, respectively. The Zysset-Curnier model is built with the assumption of orthotropy. However, the trabecular structure is not perfectly orthotropic. In order to assess the ROI heterogeneity a so-called coefficient of variation (CV) is computed as presented in \cite{Panyasantisuk2015}: the ROI is divided into eight identical subcubes, BV/TV is computed for each subcube and the CV is defined as the ratio between the standard deviation of these BV/TV and the mean value, see Equation \ref{Eq203} below:
+
+\begin{equation}
+	CV = \frac{std(BV/TV_{subcubes})}{mean(BV/TV_{subcubes})}
+	\label{Eq203}
+\end{equation}
+
+\subsection{Statistics}
+The height morphological parameters analyzed (BV/TV, SMI, Tb. N., Tb. Th., Tb. Sp., Tb. Sp. SD, DA, and CV) were compared for both group. As the initial groups do not have similar distributions in quality of age and sex, a matching was performed leading to identical mean and median age as well as identical gender distribution. Then, the selection of statistical test to perform was executed as follow:
+\begin{enumerate}
+	\item For each parameter, the median value between the six ROI of the same individual was computed. The median was preferred over the mean because it is less influenced by outliers.
+	\item Normality of the distribution was assessed with QQ plot and Shapiro-Wilk test.
+	\item If normality assumption was met, Bartlett test for equal variances was performed. Otherwise, Brown-Forsythe test was applied to assess the equal variance assumption.
+	\item According to the previous results, t-test was performed if normal distribution and equal variance were met. If only the equal variances assumption was met, Mann-Whitney test was preferred. Finally, if none of these conditions could be assumed, a non-parametric permutation test was performed.
+\end{enumerate}
+
+\subsection{Fit to model}
+The stiffness tensors obtained from the mechanical simulations were transformed into the fabric coordinate system and projected onto orthotropy, leading to 12 values. The resulting orthotropic stiffness tensors were then used to perform a multiple linear regression on the Zysset-Curnier model. Standard linear models assume independent and identically distributed (iid) variables. As this assumption is violated by the fact that six ROI are analyzed by individual, a linear mixed-effect model was preferred. This last model, shown in Equation \ref{Eq204} in Laird-Ware form \cite{Laird1982}, takes into account the non-independence of ROIs from the same individual. 
+
+\begin{equation}
+	y = X \beta + Z \delta + \epsilon \quad \text{with} \quad y = \ln(\mathbb{S}_{rc})
+	\label{Eq204}
+\end{equation}
+
+Where $\mathbb{S}_{rc}$ is the $r$th row and $c$th column of the non-zero element of the orthotropic stiffness tensor $\mathbb{S}$ in Mandel notation \cite{MANDEL1965}, $X$ is a $12n$x$p$ design matrix containing the the BV/TV and fabric info of the $n$ ROIs and $\beta$ is a $p$x1 vector of fixed effects containing model parameters. $Z$ is a $12n$x$f$ design matrix which contains data with individual dependence and $\delta$ is a $f$x1 vector composed of random factors. Finally, $\epsilon$ is a $12n$x1 vector containing the regression residuals.\\
+
+The linear regression was performed on both group (healthy and OI) separately. To improve the fit quality, the data sets were filtered. The aim here is to filter out ROIs whose are too far from the assumption of orthotropy. Therefore, analogously to the work of \cite{Panyasantisuk2015}, a fixed threshold for the CV was used. To simplify comparison, the same value of 0.263 was fixed as exclusion criterion. Besides, the relation between BV/TV and CV was assessed using Spearman's correlation coefficient. Furthermore, to compare the stiffness constants ($\lambda_0$, $\lambda_0'$, and $\mu_0$) between the groups, regression must be performed on identical value ranges. To do this, a matching was performed for BV/TV and DA to find corresponding control ROI for each OI in the filtered groups. Best correspondences were kept and duplicates were dropped. Finally, as the regression is performed in the log space, it is necessary to use identical exponent ($k$ and $l$) for both group to compare stiffness constants. The exponents were determined by grouping healthy and OI for regression. Then a modified system is used to perform the fit on separated groups.\\
+
+A modification of the model is to add a regressor for the group variable (healthy or OI), i.e. add a column to the design matrix $X$ and a row to the parameter vector $\beta$. This modified model is compared to the original by analysis of covariance (ANCOVA) using the fixed-effects only to determine the statistical significance of the group. Implementation of this modification was performed according to \cite{Fox2016}. The detailed linear systems for each model discussed here are available in Appendix \ref{A1} and a summary of the data sets used for the different methods is shown in Table \ref{Table1}.\\
+
+The regression quality is assessed using the adjusted Pearson correlation coefficient squared ($R^2_{adj}$) and relative error between the orthotropic observed and the predicted tensor using norm of fourth-order tensors ($NE$), see Equation \ref{Eq205} and \ref{Eq206}. 
+
+\begin{equation}
+	R^2_{adj} = 1 - \frac{RSS}{TSS} \frac{(12n-1)}{(12n - p - 1)}
+	\label{Eq205}
+\end{equation}
+
+Where RSS is the sum of the square of the residuals and TSS is the sum of the square of the observations y.
+
+\begin{equation}
+	NE = \sqrt{\frac{(\mathbb{S}_o - \mathbb{S}_p) :: (\mathbb{S}_o - \mathbb{S}_p)}{\mathbb{S}_o :: \mathbb{S}_o}}
+	\label{Eq206}
+\end{equation}
+
+
+
+\begin{table*}[b]
+	\centering
+	\caption{Summary of the data set used for different methods}
+	\label{Table1}
+	\begin{tabular}{p{0.1\linewidth}*{2}{>{\centering\arraybackslash}p{0.075\linewidth}}*{2}{>{\centering\arraybackslash}p{0.075\linewidth}}*{2}{>{\centering\arraybackslash}p{0.075\linewidth}}*{2}{>{\centering\arraybackslash}p{0.075\linewidth}}}
+		\toprule
+		Data sets & \multicolumn{2}{c}{Original} & \multicolumn{2}{c}{Age \& gender matched} & \multicolumn{2}{c}{CV filtered} & \multicolumn{2}{c}{BV/TV \& DA matched} \\
+		\midrule
+		Group & Healthy & OI & Healthy & OI & Healthy & OI & Healthy & OI \\
+		Individuals & 120 & 50 & 28 & 28 & 119 & 38 & 58 & 33 \\
+		ROIs & 720 & 300 & 168 & 168 & 603 & 115 & 83 & 83 \\
+		\midrule
+		Methods & \multicolumn{2}{c}{Fit to model} & \multicolumn{2}{c}{Statistics} & \multicolumn{2}{c}{Fit to model} & \multicolumn{2}{c}{Fit to model} \\
+		\bottomrule
+	\end{tabular}
+\end{table*}
 
 \section{Results}
 
-\lipsum[6]
+\subsection{Morphological Analysis}
 
-\section{Conclusions}
+\begin{sidewaystable}
+	\centering
+	\caption{Summary of morphological analysis and comparison with literature. Values are presented as mean $\pm$ standard deviation when statistical test is performed on the means or median (inter-quartile range) when test is on medians.}
+	\begin{tabular}{cccccccccc}
+		\toprule
+		\multirow{2}{*}{Variable} & \multirow{2}{*}{Group} & \multicolumn{2}{c}{Present study} & \multicolumn{2}{c}{\citeauthor{Folkestad2012}\cite{Folkestad2012}} & \multicolumn{2}{c}{\citeauthor{Kocijan2015}\cite{Kocijan2015}} & \multicolumn{2}{c}{\citeauthor{Rolvien2018}\cite{Rolvien2018}} \\
+		&  & Values & p value & Values & p value & Values & p value & Values & p value \\
+		\midrule
+		
+		\multirow{3}{*}{BV/TV} & Healthy & 0.222 $\pm$ 0.081 & 8E-3 & 0.141 (0.130-.0170) & & 0.162 $\pm$ 0.010 & <0.0001 & 0.14 $\pm$ 0.03 & <0.001 \\
+		& OI Type I & \multirow{2}{*}{0.164 $\pm$ 0.079} &  & 0.098 (0.088-0.114) & <0.0001 & \multirow{2}{*}{0.095 $\pm$ 0.008} & & 0.08 $\pm$ 0.03 & \\
+		&  OI Type III \& IV & &  & 0.081 (0.056-0.092) & <0.0001 & & & & \\[3ex]
+		
+		\multirow{3}{*}{BV/TV} & Healthy & 0.222 $\pm$ 0.081 & 8E-3 & 0.141 (0.130-.0170) & & 0.162 $\pm$ 0.010 & <0.0001 & 0.14 $\pm$ 0.03 & <0.001 \\
+		& OI Type I & \multirow{2}{*}{0.164 $\pm$ 0.079} &  & 0.098 (0.088-0.114) & <0.0001 & \multirow{2}{*}{0.095 $\pm$ 0.008} & & 0.08 $\pm$ 0.03 & \\
+		&  OI Type III \& IV & &  & 0.081 (0.056-0.092) & <0.0001 & & & & \\
+		
+		\bottomrule
+	\end{tabular}
+\end{sidewaystable}
+
+\subsection{Linear Regression}
+
+
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]
+		{Pictures/02_GR_Healthy_LMM}
+		\caption{Healthy group}
+		\label{02_Healthy}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]
+		{Pictures/02_GR_OI_LMM}
+		\caption{OI group}
+		\label{02_OI}
+	\end{subfigure}
+	\caption{Linear mixed-effect regression results using the fixed effects of the model on original data sets}
+	\label{02_GeneralRegression}
+\end{figure}
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\linewidth]
+	{Pictures/03_CV_BVTV}
+	\caption{Coefficient of variation in relation to BV/TV. Spearman correlation coefficient $\rho$ assess monotonic relation between two variable}
+	\label{02_CV_BVTV}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]
+		{Pictures/04_FR_Healthy_LMM}
+		\caption{Healthy group}
+		\label{04_Healthy}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]
+		{Pictures/04_FR_OI_LMM}
+		\caption{OI group}
+		\label{04_OI}
+	\end{subfigure}
+	\caption{Linear mixed-effect regression results using the fixed effects of the model on filtered data sets}
+	\label{04_FilteredRegression}
+\end{figure}
+
+Effectively, if the quantity of material inside the ROI decreases, the distribution homogeneity of this mass is more sensitive and therefore can quickly becomes highly heterogeneous.
+
+\section{Discussion \& Conclusions}
 
 \lipsum[7]
 
 \appendix
-\section{Linear Model}
+\newpage
+\section{Linear Models}\label{A1}
 
-\lipsum[8]
+The standard linear model has the form:
+
+\begin{equation}
+	\ln(\mathbb{S}_{rc}) = X \beta + \epsilon
+\end{equation}
+
+Where $\epsilon$ is the vector of residuals. For one ROI, the system take the following form:
+
+\begin{equation}
+	\ln
+	\begin{pmatrix}
+		\mathbb{S}_{11} \\
+		\mathbb{S}_{12} \\
+		\mathbb{S}_{13} \\
+		\mathbb{S}_{21} \\
+		\mathbb{S}_{22} \\
+		\mathbb{S}_{23} \\
+		\mathbb{S}_{31} \\
+		\mathbb{S}_{32} \\
+		\mathbb{S}_{33} \\
+		\mathbb{S}_{44} \\
+		\mathbb{S}_{55} \\
+		\mathbb{S}_{66} \\
+	\end{pmatrix} = \begin{pmatrix}
+		1 & 0 & 0 & \ln(\rho) & \ln(m_1^2) \\
+		0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_2) \\
+		0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_3) \\
+		0 & 1 & 0 & \ln(\rho) & \ln(m_2 m_1) \\
+		1 & 0 & 0 & \ln(\rho) & \ln(m_2^2) \\
+		0 & 1 & 0 & \ln(\rho) & \ln(m_2 m_3) \\
+		0 & 1 & 0 & \ln(\rho) & \ln(m_3 m_1) \\
+		0 & 1 & 0 & \ln(\rho) & \ln(m_3 m_2) \\
+		1 & 0 & 0 & \ln(\rho) & \ln(m_3^2) \\
+		0 & 0 & 1 & \ln(\rho) & \ln(m_2 m_3) \\
+		0 & 0 & 1 & \ln(\rho) & \ln(m_3 m_1) \\
+		0 & 0 & 1 & \ln(\rho) & \ln(m_1 m_2) \\
+	\end{pmatrix} \begin{pmatrix}
+		\ln(\lambda^{*}) \\
+		\ln(\lambda_0') \\
+		\ln(\mu_0) \\
+		k \\
+		l \\
+	\end{pmatrix} + \begin{pmatrix}
+		\epsilon_{1} \\
+		\epsilon_{2} \\
+		\epsilon_{3} \\
+		\epsilon_{4} \\
+		\epsilon_{5} \\
+		\epsilon_{6} \\
+		\epsilon_{7} \\
+		\epsilon_{8} \\
+		\epsilon_{9} \\
+		\epsilon_{10} \\
+		\epsilon_{11} \\
+		\epsilon_{12} \\
+	\end{pmatrix}
+\end{equation}
+
+Where $\lambda^{*} = \lambda_0 + 2\mu_0$. Then, the mixed-effect model, which handles multiple measurement on the same individual, has the following general form:
+
+\begin{equation}
+	\ln(\mathbb{S}_{rc}) = X \beta + Z \delta + \epsilon
+\end{equation}
+
+Where $Z$ is a design matrix composed of the observations which are correlated on the same individual and, in general, is a subset of $X$. In the present case, the stiffness variables ($\lambda_0$, $\lambda_0'$, and $\mu_0$) can vary between individuals but the hypothesis is that they all vary by an identical factor. Therefore, the design matrix $Z$ is composed of the addition of the three first columns of $X$ and the system for one ROI takes the following form:
+
+\begin{equation}
+	\begin{split}
+	\ln
+	\begin{pmatrix}
+		\mathbb{S}_{11} \\
+		\mathbb{S}_{12} \\
+		\mathbb{S}_{13} \\
+		\mathbb{S}_{21} \\
+		\mathbb{S}_{22} \\
+		\mathbb{S}_{23} \\
+		\mathbb{S}_{31} \\
+		\mathbb{S}_{32} \\
+		\mathbb{S}_{33} \\
+		\mathbb{S}_{44} \\
+		\mathbb{S}_{55} \\
+		\mathbb{S}_{66} \\
+	\end{pmatrix} & = \begin{pmatrix}
+		1 & 0 & 0 & \ln(\rho) & \ln(m_1^2) \\
+		0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_2) \\
+		0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_3) \\
+		0 & 1 & 0 & \ln(\rho) & \ln(m_2 m_1) \\
+		1 & 0 & 0 & \ln(\rho) & \ln(m_2^2) \\
+		0 & 1 & 0 & \ln(\rho) & \ln(m_2 m_3) \\
+		0 & 1 & 0 & \ln(\rho) & \ln(m_3 m_1) \\
+		0 & 1 & 0 & \ln(\rho) & \ln(m_3 m_2) \\
+		1 & 0 & 0 & \ln(\rho) & \ln(m_3^2) \\
+		0 & 0 & 1 & \ln(\rho) & \ln(m_2 m_3) \\
+		0 & 0 & 1 & \ln(\rho) & \ln(m_3 m_1) \\
+		0 & 0 & 1 & \ln(\rho) & \ln(m_1 m_2) \\
+	\end{pmatrix} \begin{pmatrix}
+		\ln(\lambda^{*}) \\
+		\ln(\lambda_0') \\
+		\ln(\mu_0) \\
+		k \\
+		l \\
+	\end{pmatrix}\\ & + \begin{pmatrix}
+		1 \\
+		1 \\
+		1 \\
+		1 \\
+		1 \\
+		1 \\
+		1 \\
+		1 \\
+		1 \\
+		1 \\
+		1 \\
+		1 \\
+	\end{pmatrix}\begin{pmatrix}
+	\delta \\
+	\end{pmatrix} + \begin{pmatrix}
+		\epsilon_{1} \\
+		\epsilon_{2} \\
+		\epsilon_{3} \\
+		\epsilon_{4} \\
+		\epsilon_{5} \\
+		\epsilon_{6} \\
+		\epsilon_{7} \\
+		\epsilon_{8} \\
+		\epsilon_{9} \\
+		\epsilon_{10} \\
+		\epsilon_{11} \\
+		\epsilon_{12} \\
+	\end{pmatrix}
+	\end{split}
+\end{equation}
+
+As the linear regression is performed in the log space, it is necessary to impose the exponent $k$ and $l$ in order to compare the stiffness values between groups. The system is then modified as follow:
+
+\begin{equation}
+	\begin{split}
+		\ln
+		\begin{pmatrix}
+			\mathbb{S}_{11} \\
+			\mathbb{S}_{12} \\
+			\mathbb{S}_{13} \\
+			\mathbb{S}_{21} \\
+			\mathbb{S}_{22} \\
+			\mathbb{S}_{23} \\
+			\mathbb{S}_{31} \\
+			\mathbb{S}_{32} \\
+			\mathbb{S}_{33} \\
+			\mathbb{S}_{44} \\
+			\mathbb{S}_{55} \\
+			\mathbb{S}_{66} \\
+		\end{pmatrix} - & \begin{pmatrix}
+			\ln(\rho) & \ln(m_1^2) \\
+			\ln(\rho) & \ln(m_1 m_2) \\
+			\ln(\rho) & \ln(m_1 m_3) \\
+			\ln(\rho) & \ln(m_2 m_1) \\
+			\ln(\rho) & \ln(m_2^2) \\
+			\ln(\rho) & \ln(m_2 m_3) \\
+			\ln(\rho) & \ln(m_3 m_1) \\
+			\ln(\rho) & \ln(m_3 m_2) \\
+			\ln(\rho) & \ln(m_3^2) \\
+			\ln(\rho) & \ln(m_2 m_3) \\
+			\ln(\rho) & \ln(m_3 m_1) \\
+			\ln(\rho) & \ln(m_1 m_2) \\
+		\end{pmatrix} \begin{pmatrix}
+			k \\
+			l \\
+		\end{pmatrix} = \\ & \begin{pmatrix}
+			1 & 0 & 0 \\
+			0 & 1 & 0 \\
+			0 & 1 & 0 \\
+			0 & 1 & 0 \\
+			1 & 0 & 0 \\
+			0 & 1 & 0 \\
+			0 & 1 & 0 \\
+			0 & 1 & 0 \\
+			1 & 0 & 0 \\
+			0 & 0 & 1 \\
+			0 & 0 & 1 \\
+			0 & 0 & 1 \\
+		\end{pmatrix} \ln\begin{pmatrix}
+			\lambda^{*} \\
+			\lambda_0' \\
+			\mu_0 \\
+		\end{pmatrix} + \begin{pmatrix}
+			\epsilon_{1} \\
+			\epsilon_{2} \\
+			\epsilon_{3} \\
+			\epsilon_{4} \\
+			\epsilon_{5} \\
+			\epsilon_{6} \\
+			\epsilon_{7} \\
+			\epsilon_{8} \\
+			\epsilon_{9} \\
+			\epsilon_{10} \\
+			\epsilon_{11} \\
+			\epsilon_{12} \\
+		\end{pmatrix}
+	\end{split}
+\end{equation}
+
+Finally, a modification of the model is to add a regressor for the group variable. Using a grouped data set (healthy and OI), it allows to determine if the group is statistically significant using ANCOVA. In such case the system is written under the form:
+
+\begin{equation}
+	\begin{split}
+		\ln
+		\begin{pmatrix}
+			\mathbb{S}_{11} \\
+			\mathbb{S}_{12} \\
+			\mathbb{S}_{13} \\
+			\mathbb{S}_{21} \\
+			\mathbb{S}_{22} \\
+			\mathbb{S}_{23} \\
+			\mathbb{S}_{31} \\
+			\mathbb{S}_{32} \\
+			\mathbb{S}_{33} \\
+			\mathbb{S}_{44} \\
+			\mathbb{S}_{55} \\
+			\mathbb{S}_{66} \\
+		\end{pmatrix} = &\begin{pmatrix}
+			1 & 0 & 0 & \ln(\rho) & \ln(m_1^2) & S_g \\
+			0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_2) & S_g \\
+			0 & 1 & 0 & \ln(\rho) & \ln(m_1 m_3) & S_g \\
+			0 & 1 & 0 & \ln(\rho) & \ln(m_2 m_1) & S_g \\
+			1 & 0 & 0 & \ln(\rho) & \ln(m_2^2) & S_g \\
+			0 & 1 & 0 & \ln(\rho) & \ln(m_2 m_3) & S_g \\
+			0 & 1 & 0 & \ln(\rho) & \ln(m_3 m_1) & S_g \\
+			0 & 1 & 0 & \ln(\rho) & \ln(m_3 m_2) & S_g \\
+			1 & 0 & 0 & \ln(\rho) & \ln(m_3^2) & S_g \\
+			0 & 0 & 1 & \ln(\rho) & \ln(m_2 m_3) & S_g \\
+			0 & 0 & 1 & \ln(\rho) & \ln(m_3 m_1) & S_g \\
+			0 & 0 & 1 & \ln(\rho) & \ln(m_1 m_2) & S_g \\
+		\end{pmatrix} \\ & \begin{pmatrix}
+			\ln(\lambda^{*}) \\
+			\ln(\lambda_0') \\
+			\ln(\mu_0) \\
+			k \\
+			l \\
+			\ln(\beta_{S_g})\\
+		\end{pmatrix} + \begin{pmatrix}
+			\epsilon_{1} \\
+			\epsilon_{2} \\
+			\epsilon_{3} \\
+			\epsilon_{4} \\
+			\epsilon_{5} \\
+			\epsilon_{6} \\
+			\epsilon_{7} \\
+			\epsilon_{8} \\
+			\epsilon_{9} \\
+			\epsilon_{10} \\
+			\epsilon_{11} \\
+			\epsilon_{12} \\
+		\end{pmatrix}
+	\end{split}
+\end{equation}
+
+Where $S_g$ is coded using a summation constrain \cite{Fox2016}, meaning, $S_g = -1$ for the healthy group and $S_g = 1$ for the OI group. 
 
 % Loading bibliography database
 \bibliographystyle{BibStyle}

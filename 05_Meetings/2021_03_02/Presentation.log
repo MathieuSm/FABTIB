@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.11.30)  26 FEB 2021 00:10
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.11.30)  2 MAR 2021 14:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1513,12 +1513,26 @@ File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
  [20
 
 ]
-(./Presentation.toc)
+File: Pictures/02_FullControl.png Graphic file (type bmp)
+<Pictures/02_FullControl.png>
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 9.0pt on input line 918.
+File: Pictures/02_FullOI.png Graphic file (type bmp)
+<Pictures/02_FullOI.png>
+File: Pictures/02_MatchedControl.png Graphic file (type bmp)
+<Pictures/02_MatchedControl.png>
+File: Pictures/02_MatchedOI.png Graphic file (type bmp)
+<Pictures/02_MatchedOI.png>
 File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 <Pictures/00_Unibe_Logo.png>
- [21
 
-] (./Presentation.toc)
+[21
+
+]
+File: Pictures/02_StandardizedBias.png Graphic file (type bmp)
+<Pictures/02_StandardizedBias.png>
+File: Pictures/02_QQPlot.png Graphic file (type bmp)
+<Pictures/02_QQPlot.png>
 File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 <Pictures/00_Unibe_Logo.png>
  [22
@@ -1526,70 +1540,232 @@ File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 ] (./Presentation.toc)
 File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 <Pictures/00_Unibe_Logo.png>
-
-[23
+ [23
 
 ]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\translate ' on input line 906.
-
-(./Presentation.toc)
+File: Pictures/03_BVTV_Healthy_QQPlot.png Graphic file (type bmp)
+<Pictures/03_BVTV_Healthy_QQPlot.png>
+File: Pictures/03_BVTV_OI_QQPlot.png Graphic file (type bmp)
+<Pictures/03_BVTV_OI_QQPlot.png>
 File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 <Pictures/00_Unibe_Logo.png>
  [24
 
 ]
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.0pt on input line 927.
-File: beamericonarticle.pdf Graphic file (type pdf)
-<use beamericonarticle.pdf>
-LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.2pt on input line 927.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.5pt on input line 927.
-LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 5.57996pt on input line 927.
-LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 4.94997pt on input line 927.
-LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 6.2pt on input line 927.
-LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 5.5pt on input line 927.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.2pt on input line 927.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.5pt on input line 927.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 6.2pt on input line 927.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 5.5pt on input line 927.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 9.0pt on input line 927.
+File: Pictures/03_SMI_Healthy_QQPlot.png Graphic file (type bmp)
+<Pictures/03_SMI_Healthy_QQPlot.png>
+File: Pictures/03_SMI_OI_QQPlot.png Graphic file (type bmp)
+<Pictures/03_SMI_OI_QQPlot.png>
 File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 <Pictures/00_Unibe_Logo.png>
  [25
 
 ]
-File: beamericonarticle.pdf Graphic file (type pdf)
-<use beamericonarticle.pdf>
+File: Pictures/03_TbN_Healthy_QQPlot.png Graphic file (type bmp)
+<Pictures/03_TbN_Healthy_QQPlot.png>
+File: Pictures/03_TbN_OI_QQPlot.png Graphic file (type bmp)
+<Pictures/03_TbN_OI_QQPlot.png>
 File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 <Pictures/00_Unibe_Logo.png>
  [26
 
 ]
-File: beamericonarticle.pdf Graphic file (type pdf)
-<use beamericonarticle.pdf>
+File: Pictures/03_TbTh_Healthy_QQPlot.png Graphic file (type bmp)
+<Pictures/03_TbTh_Healthy_QQPlot.png>
+File: Pictures/03_TbTh_OI_QQPlot.png Graphic file (type bmp)
+<Pictures/03_TbTh_OI_QQPlot.png>
 File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 <Pictures/00_Unibe_Logo.png>
  [27
+
+]
+File: Pictures/03_TbSp_Healthy_QQPlot.png Graphic file (type bmp)
+<Pictures/03_TbSp_Healthy_QQPlot.png>
+File: Pictures/03_TbSp_OI_QQPlot.png Graphic file (type bmp)
+<Pictures/03_TbSp_OI_QQPlot.png>
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [28
+
+]
+File: Pictures/03_TbSpSD_Healthy_QQPlot.png Graphic file (type bmp)
+<Pictures/03_TbSpSD_Healthy_QQPlot.png>
+File: Pictures/03_TbSpSD_OI_QQPlot.png Graphic file (type bmp)
+<Pictures/03_TbSpSD_OI_QQPlot.png>
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [29
+
+]
+File: Pictures/03_LogCV_Healthy_QQPlot.png Graphic file (type bmp)
+<Pictures/03_LogCV_Healthy_QQPlot.png>
+File: Pictures/03_LogCV_OI_QQPlot.png Graphic file (type bmp)
+<Pictures/03_LogCV_OI_QQPlot.png>
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [30
+
+]
+File: Pictures/03_DA_Healthy_QQPlot.png Graphic file (type bmp)
+<Pictures/03_DA_Healthy_QQPlot.png>
+File: Pictures/03_DA_OI_QQPlot.png Graphic file (type bmp)
+<Pictures/03_DA_OI_QQPlot.png>
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [31
+
+]
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+
+[32
+
+]
+Overfull \hbox (2.49866pt too wide) in paragraph at lines 1176--1176
+ [] 
+ []
+
+
+Overfull \vbox (9.8421pt too high) detected at line 1176
+ []
+
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+[33
+
+]
+Missing character: There is no ’ in font ntx-Regular-tlf-t1!
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [34
+
+]
+Missing character: There is no − in font ntx-Regular-tlf-ot1!
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [35
+
+]
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [36
+
+]
+File: Pictures/03_Agarwal_TbN.png Graphic file (type bmp)
+<Pictures/03_Agarwal_TbN.png>
+File: Pictures/03_Agarwal_TbTh.png Graphic file (type bmp)
+<Pictures/03_Agarwal_TbTh.png>
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [37
+
+]
+File: Pictures/03_BVTV_OI_LinReg.png Graphic file (type bmp)
+<Pictures/03_BVTV_OI_LinReg.png>
+File: Pictures/03_BVTV_OI_RelDiff.png Graphic file (type bmp)
+<Pictures/03_BVTV_OI_RelDiff.png>
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [38
+
+]
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [39
+
+] (./Presentation.toc)
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [40
+
+]
+File: Pictures/04_StandardizedBias.png Graphic file (type bmp)
+<Pictures/04_StandardizedBias.png>
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [41
+
+]
+File: Pictures/04_QQPlot_BVTV.png Graphic file (type bmp)
+<Pictures/04_QQPlot_BVTV.png>
+File: Pictures/04_QQPlot_DA.png Graphic file (type bmp)
+<Pictures/04_QQPlot_DA.png>
+File: Pictures/04_QQPlot_CV.png Graphic file (type bmp)
+<Pictures/04_QQPlot_CV.png>
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [42
+
+]
+(./Presentation.toc)
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [43
+
+]
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [44
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\translate ' on input line 1453.
+
+(./Presentation.toc)
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [45
+
+]
+File: beamericonarticle.pdf Graphic file (type pdf)
+<use beamericonarticle.pdf>
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.2pt on input line 1474.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 5.5pt on input line 1474.
+LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
+(Font)              scaled to size 5.57996pt on input line 1474.
+LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
+(Font)              scaled to size 4.94997pt on input line 1474.
+LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
+(Font)              scaled to size 6.2pt on input line 1474.
+LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
+(Font)              scaled to size 5.5pt on input line 1474.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.2pt on input line 1474.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 5.5pt on input line 1474.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
+(Font)              scaled to size 6.2pt on input line 1474.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
+(Font)              scaled to size 5.5pt on input line 1474.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
+(Font)              scaled to size 9.0pt on input line 1474.
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [46
 
 ]
 File: beamericonarticle.pdf Graphic file (type pdf)
 <use beamericonarticle.pdf>
 File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 <Pictures/00_Unibe_Logo.png>
- [28
+ [47
+
+]
+File: beamericonarticle.pdf Graphic file (type pdf)
+<use beamericonarticle.pdf>
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [48
+
+]
+File: beamericonarticle.pdf Graphic file (type pdf)
+<use beamericonarticle.pdf>
+File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
+<Pictures/00_Unibe_Logo.png>
+ [49
 
 ]
 \tf@nav=\write5
@@ -1601,19 +1777,19 @@ File: Pictures/00_Unibe_Logo.png Graphic file (type bmp)
 \tf@snm=\write7
 \openout7 = `Presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 995.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 995.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1549.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1549.
  (./Presentation.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 995.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 995.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1549.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1549.
  ) 
 Here is how much of TeX's memory you used:
- 29666 strings out of 479819
- 565302 string characters out of 5895845
- 823273 words of memory out of 5000000
- 46121 multiletter control sequences out of 15000+600000
+ 30042 strings out of 479819
+ 575565 string characters out of 5895845
+ 826969 words of memory out of 5000000
+ 46467 multiletter control sequences out of 15000+600000
  615639 words of font info for 106 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 67i,15n,117p,779b,904s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,15n,117p,779b,928s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Presentation.pdf (28 pages).
+Output written on Presentation.pdf (49 pages).

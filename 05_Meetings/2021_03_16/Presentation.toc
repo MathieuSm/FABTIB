@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{General Linear Regression}{6}{0}{2}
+\beamer@sectionintoc {3}{Individual Matching}{24}{0}{3}
+\beamer@sectionintoc {4}{Morphometric Parameters}{26}{0}{4}
+\beamer@sectionintoc {5}{Variables Matching}{32}{0}{5}
+\beamer@sectionintoc {6}{Matched ROIs Linear Regression}{34}{0}{6}
+\beamer@sectionintoc {7}{References}{38}{1}{7}

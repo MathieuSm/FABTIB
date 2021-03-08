@@ -1,0 +1,164 @@
+\begin{thebibliography}{14}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Cowin(1985)}]{Cowin1985}
+\bibinfo{author}{Cowin, S.C.}, \bibinfo{year}{1985}.
+\newblock \bibinfo{title}{{The relationship between the elasticity tensor and
+  the fabric tensor}}.
+\newblock \bibinfo{journal}{Mechanics of Materials} \bibinfo{volume}{4},
+  \bibinfo{pages}{137--147}.
+\newblock \URLprefix
+  \url{http://www.sciencedirect.com/science/article/pii/0167663685900122},
+  \DOIprefix\doi{https://doi.org/10.1016/0167-6636(85)90012-2}.
+%Type = Article
+\bibitem[{Daszkiewicz et~al.(2017)Daszkiewicz, Maquer and
+  Zysset}]{Daszkiewicz2017}
+\bibinfo{author}{Daszkiewicz, K.}, \bibinfo{author}{Maquer, G.},
+  \bibinfo{author}{Zysset, P.K.}, \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{{The effective elastic properties of human trabecular
+  bone may be approximated using micro-finite element analyses of embedded
+  volume elements}}.
+\newblock \bibinfo{journal}{Biomechanics and Modeling in Mechanobiology}
+  \bibinfo{volume}{16}, \bibinfo{pages}{731--742}.
+\newblock \DOIprefix\doi{10.1007/s10237-016-0849-3}.
+%Type = Article
+\bibitem[{Folkestad et~al.(2012)Folkestad, Hald, Hansen, Gram, Langdahl,
+  Abrahamsen and Brixen}]{Folkestad2012}
+\bibinfo{author}{Folkestad, L.}, \bibinfo{author}{Hald, J.D.},
+  \bibinfo{author}{Hansen, S.}, \bibinfo{author}{Gram, J.},
+  \bibinfo{author}{Langdahl, B.}, \bibinfo{author}{Abrahamsen, B.},
+  \bibinfo{author}{Brixen, K.}, \bibinfo{year}{2012}.
+\newblock \bibinfo{title}{{Bone geometry, density, and microarchitecture in the
+  distal radius and tibia in adults with osteogenesis imperfecta type i
+  assessed by high-resolution pQCT}}.
+\newblock \bibinfo{journal}{Journal of Bone and Mineral Research}
+  \bibinfo{volume}{27}, \bibinfo{pages}{1405--1412}.
+\newblock \DOIprefix\doi{10.1002/jbmr.1592}.
+%Type = Book
+\bibitem[{Fox(2016)}]{Fox2016}
+\bibinfo{author}{Fox, J.}, \bibinfo{year}{2016}.
+\newblock \bibinfo{title}{{Fox, Applied Regressions Analysis and Linear
+  Models}}.
+\newblock \URLprefix
+  \url{https://us.sagepub.com/en-us/nam/applied-regression-analysis-and-generalized-linear-models/book237254}.
+%Type = Article
+\bibitem[{Gross et~al.(2013)Gross, Pahr and Zysset}]{Gross2013}
+\bibinfo{author}{Gross, T.}, \bibinfo{author}{Pahr, D.H.},
+  \bibinfo{author}{Zysset, P.K.}, \bibinfo{year}{2013}.
+\newblock \bibinfo{title}{{Morphology – elasticity relationships using
+  decreasing fabric information of human trabecular bone from three major
+  anatomical locations}} ,
+  \bibinfo{pages}{793--800}\DOIprefix\doi{10.1007/s10237-012-0443-2}.
+%Type = Article
+\bibitem[{Harrigan and Mann(1985)}]{Harrigan1985}
+\bibinfo{author}{Harrigan, T.P.}, \bibinfo{author}{Mann, R.W.},
+  \bibinfo{year}{1985}.
+\newblock \bibinfo{title}{{Characterization of microstructural anisotropy in
+  cancellous bone using a second rank tensor}}.
+\newblock \bibinfo{journal}{Journal of Materials Science} \bibinfo{volume}{19},
+  \bibinfo{pages}{761--767}.
+%Type = Article
+\bibitem[{Kocijan et~al.(2015)Kocijan, Muschitz, Haschka, Hans, Nia,
+  Geroldinger, Ardelt, Wakolbinger and Resch}]{Kocijan2015}
+\bibinfo{author}{Kocijan, R.}, \bibinfo{author}{Muschitz, C.},
+  \bibinfo{author}{Haschka, J.}, \bibinfo{author}{Hans, D.},
+  \bibinfo{author}{Nia, A.}, \bibinfo{author}{Geroldinger, A.},
+  \bibinfo{author}{Ardelt, M.}, \bibinfo{author}{Wakolbinger, R.},
+  \bibinfo{author}{Resch, H.}, \bibinfo{year}{2015}.
+\newblock \bibinfo{title}{{Bone structure assessed by HR-pQCT, TBS and DXL in
+  adult patients with different types of osteogenesis imperfecta}}.
+\newblock \bibinfo{journal}{Osteoporosis International} \bibinfo{volume}{26},
+  \bibinfo{pages}{2431--2440}.
+\newblock \DOIprefix\doi{10.1007/s00198-015-3156-4}.
+%Type = Article
+\bibitem[{Laird and Ware(1982)}]{Laird1982}
+\bibinfo{author}{Laird, N.M.}, \bibinfo{author}{Ware, J.H.},
+  \bibinfo{year}{1982}.
+\newblock \bibinfo{title}{{Random-Effects Models for Longitudinal Data}}.
+\newblock \bibinfo{journal}{Biometrics} \bibinfo{volume}{38},
+  \bibinfo{pages}{963--974}.
+%Type = Article
+\bibitem[{Mandel(1965)}]{MANDEL1965}
+\bibinfo{author}{Mandel, J.}, \bibinfo{year}{1965}.
+\newblock \bibinfo{title}{Generalisation de la theorie de plasticite de w. t.
+  koiter}.
+\newblock \bibinfo{journal}{International Journal of Solids and Structures}
+  \bibinfo{volume}{1}, \bibinfo{pages}{273--295}.
+\newblock \URLprefix
+  \url{https://www.sciencedirect.com/science/article/pii/002076836590034X},
+  \DOIprefix\doi{https://doi.org/10.1016/0020-7683(65)90034-X}.
+%Type = Article
+\bibitem[{Panyasantisuk et~al.(2015)Panyasantisuk, Pahr, Gross and
+  Zysset}]{Panyasantisuk2015}
+\bibinfo{author}{Panyasantisuk, J.}, \bibinfo{author}{Pahr, D.H.},
+  \bibinfo{author}{Gross, T.}, \bibinfo{author}{Zysset, P.K.},
+  \bibinfo{year}{2015}.
+\newblock \bibinfo{title}{{Comparison of Mixed and Kinematic Uniform Boundary
+  Conditions in Homogenized Elasticity of Femoral Trabecular Bone Using
+  Microfinite Element Analyses}}.
+\newblock \bibinfo{journal}{Journal of Biomechanical Engineering}
+  \bibinfo{volume}{137}, \bibinfo{pages}{1--7}.
+\newblock \DOIprefix\doi{10.1115/1.4028968}.
+%Type = Article
+\bibitem[{Rolvien et~al.(2018)Rolvien, St{\"{u}}rznickel, Schmidt, Butscheidt,
+  Schmidt, Busse, Mundlos, Schinke, Kornak, Amling and Oheim}]{Rolvien2018}
+\bibinfo{author}{Rolvien, T.}, \bibinfo{author}{St{\"{u}}rznickel, J.},
+  \bibinfo{author}{Schmidt, F.N.}, \bibinfo{author}{Butscheidt, S.},
+  \bibinfo{author}{Schmidt, T.}, \bibinfo{author}{Busse, B.},
+  \bibinfo{author}{Mundlos, S.}, \bibinfo{author}{Schinke, T.},
+  \bibinfo{author}{Kornak, U.}, \bibinfo{author}{Amling, M.},
+  \bibinfo{author}{Oheim, R.}, \bibinfo{year}{2018}.
+\newblock \bibinfo{title}{{Comparison of Bone Microarchitecture Between Adult
+  Osteogenesis Imperfecta and Early-Onset Osteoporosis}}.
+\newblock \bibinfo{journal}{Calcified Tissue International}
+  \bibinfo{volume}{103}, \bibinfo{pages}{512--521}.
+\newblock \URLprefix \url{http://dx.doi.org/10.1007/s00223-018-0447-8},
+  \DOIprefix\doi{10.1007/s00223-018-0447-8}.
+%Type = Article
+\bibitem[{Schenk et~al.(2020)Schenk, Mathis, Lippuner and Zysset}]{Schenk2020}
+\bibinfo{author}{Schenk, D.}, \bibinfo{author}{Mathis, A.},
+  \bibinfo{author}{Lippuner, K.}, \bibinfo{author}{Zysset, P.},
+  \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{{In vivo repeatability of homogenized finite element
+  analysis based on multiple HR-pQCT sections for assessment of distal radius
+  and tibia strength}}.
+\newblock \bibinfo{journal}{Bone} \bibinfo{volume}{141},
+  \bibinfo{pages}{115575}.
+\newblock \URLprefix \url{https://doi.org/10.1016/j.bone.2020.115575},
+  \DOIprefix\doi{10.1016/j.bone.2020.115575}.
+%Type = Article
+\bibitem[{Whittier et~al.(2020)Whittier, Boyd, Burghardt, Paccou, Ghasem-Zadeh,
+  Chapurlat, Engelke and Bouxsein}]{Whittier2020}
+\bibinfo{author}{Whittier, D.E.}, \bibinfo{author}{Boyd, S.K.},
+  \bibinfo{author}{Burghardt, A.J.}, \bibinfo{author}{Paccou, J.},
+  \bibinfo{author}{Ghasem-Zadeh, A.}, \bibinfo{author}{Chapurlat, R.},
+  \bibinfo{author}{Engelke, K.}, \bibinfo{author}{Bouxsein, M.L.},
+  \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{{Guidelines for the assessment of bone density and
+  microarchitecture in vivo using high-resolution peripheral quantitative
+  computed tomography}}.
+\newblock \bibinfo{journal}{Osteoporosis International} \bibinfo{volume}{31},
+  \bibinfo{pages}{1607--1627}.
+\newblock \DOIprefix\doi{10.1007/s00198-020-05438-5}.
+%Type = Article
+\bibitem[{Zysset and Curnier(1995)}]{Zysset1995}
+\bibinfo{author}{Zysset, P.K.}, \bibinfo{author}{Curnier, A.},
+  \bibinfo{year}{1995}.
+\newblock \bibinfo{title}{{An alternative model for anisotropic elasticity
+  based on fabric tensors}}.
+\newblock \bibinfo{journal}{Mechanics of Materials} \bibinfo{volume}{21},
+  \bibinfo{pages}{243--250}.
+\newblock \DOIprefix\doi{10.1016/0167-6636(95)00018-6}.
+
+\end{thebibliography}

@@ -1,0 +1,10 @@
+\begin{table}[h!]\caption{TABLECAPTION}
+    \resizebox{1\linewidth}{!}{
+        \begin{tabular}{cccccccc}
+            \toprule
+            Data set & $\lambda_0$ & $\lambda_0'$ & $\mu_0$ & $k$ & $l$ & $R^2_{adj}$ & NE (\%) \\
+            \midrule
+            DATASET & L0 [L0D-L0U] & L0p [L0pD-L0pU] & M0 [M0D-M0U] & eK [eKD-eKU] & eL [eLD-eLU] & R2adj & NEm $\pm$ NEstd\\
+            \bottomrule
+    \end{tabular}}
+\end{table}

@@ -1,0 +1,769 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (01/07/19)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------
+%	PACKAGES AND THEMES		-----------------------------------
+%----------------------------------------------------------------
+
+\documentclass[xcolor=table]{beamer}
+
+\mode<presentation> {
+
+\usetheme{Frankfurt}
+\usecolortheme{dove}
+\usefonttheme{serif}
+
+}
+\usepackage{newtxtext,newtxmath}
+\usepackage{graphicx}
+\usepackage{booktabs} 
+\usepackage{subfig}
+\usepackage{pgf}
+\usepackage{multirow}
+\usepackage{appendixnumberbeamer}
+\usepackage{bookmark}
+\usepackage{siunitx}
+\usepackage{animate}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage{pifont}
+
+
+%----------------------------------------------------------------
+%	GENERAL OPTIONS 	-----------------------------------------
+%----------------------------------------------------------------
+
+% Set template options
+\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+\setbeamertemplate{frametitle}{\vspace*{1em}\insertframetitle}
+\setbeamertemplate{enumerate items}[default]
+\setbeamercolor{section in head/foot}{fg=white, bg=black}
+
+% Headline
+\makeatletter
+\setbeamertemplate{headline}
+{%
+  \pgfuseshading{beamer@barshade}%
+    \vskip-5ex%
+  \begin{beamercolorbox}[ignorebg,ht=2.25ex,dp=3.75ex]{section in head/foot}
+  \insertsectionnavigationhorizontal{\paperwidth}{\hskip0pt plus1fill}{\hskip0pt plus1fill}
+  \end{beamercolorbox}%
+  \ifbeamer@sb@subsection%
+    \begin{beamercolorbox}[ignorebg,ht=2.125ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+      \usebeamerfont{subsection in head/foot}\insertsubsectionhead
+    \end{beamercolorbox}%
+  \fi%
+}%
+\makeatother
+
+% Footline
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,left]{section in head/foot}%
+    \usebeamerfont{author in head/foot}\hspace{10pt}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{section in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{section in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{}\hspace*{2em}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+% Add logo
+\logo{\pgfputat{\pgfxy(0,7)}{\includegraphics[width=0.1\paperwidth]{Pictures/00_Unibe_Logo}}}
+
+% Table settings
+\renewcommand{\arraystretch}{2}
+\captionsetup{labelformat=empty,labelsep=none}
+\definecolor{Gray}{gray}{0.9}
+
+% Define highlitghing command
+\makeatletter
+\let\HL\hl
+\renewcommand\hl{%
+	\let\set@color\beamerorig@set@color
+	\let\reset@color\beamerorig@reset@color
+	\HL}
+\makeatother
+
+% Add overview at each begin of section
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{Overview}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
+%----------------------------------------------------------------
+%	TITLE PAGE 	-------------------------------------------------
+%----------------------------------------------------------------
+
+\title[Regular Meeting]{
+\uppercase{Regular Meeting}
+} 
+
+\author{Mathieu Simon}
+\institute[University of Bern]
+{
+MSc - Biomedical Engineering \\
+University of Bern, Faculty of Medicine \\
+\medskip
+}
+\date{March 23, 2021}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Overview}
+	\tableofcontents
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\section{Morphometry Analysis}
+
+\begin{frame}
+	\frametitle{Morphometry Analysis - Methods}
+	\begin{enumerate}
+		\item Individuals matching (Age \& Gender)
+		\item Morphometry analysis with medtool
+		\item Assumption testing for statistical test selection
+		\item Statistical test results
+		\item Comparison with literature
+	\end{enumerate}
+\end{frame}
+
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\section{Fabric-Elasticity Relationships}
+
+\begin{frame}
+	\frametitle{Fabric-Elasticity Relationships - Methods}
+	\begin{enumerate}
+		\item Linear regression on full groups\\
+				$\rightarrow$ Healthy: normal + fix $k$ and $l$ to compare values with \cite{p11} (18\si{\micro}m $\rightarrow$ 36\si{\micro}m) and \cite{p12} (18\si{\micro}m)
+		\item CV filtering\\
+				$\rightarrow$ Compare CV filter with \cite{p11}
+		\item Linear regression on filtered groups\\
+				$\rightarrow$ Compare again with \cite{p11}
+		\item ROI matching (BV/TV \& DA) on complete groups
+		\item Linear regression on matched ROIs\\
+				$\rightarrow$ Group healthy \& OI to compute $k$ and $l$. Then compare values between separated groups
+	\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Linear Regression on Full Groups}
+	\begin{columns}
+		\column[c]{0.45\linewidth}
+		\centering
+		\begin{figure}
+			\animategraphics[controls,width=1\linewidth]{5}{Pictures/StandardVSMixedEffect/Healthy-}{0}{2}
+			\caption{Healthy group}
+		\end{figure}
+		\vspace{-0.5cm}
+		$\ln(\delta)$ variance: 0.010\\
+		LRT p value: 0.0
+		\column[c]{0.45\linewidth}
+		\centering
+		\begin{figure}
+			\animategraphics[controls,width=1\linewidth]{5}{Pictures/StandardVSMixedEffect/OI-}{0}{2}
+			\caption{OI group}
+		\end{figure}
+		\vspace{-0.5cm}
+		$\ln(\delta)$ variance: 0.165\\
+		LRT p value: 0.0
+	\end{columns}
+\end{frame}
+
+
+\renewcommand{\arraystretch}{1.5}
+
+
+\begin{frame}
+	\frametitle{Linear Regression - Results}
+	\begin{table}[h!]\caption{Healthy fits comparison}
+		\resizebox{1\linewidth}{!}{
+			\begin{tabular}{lccccccc}
+				\toprule
+				Model & $\lambda_0$ & $\lambda_0'$ & $\mu_0$ & $k$ & $l$ & $R^2_{adj}$ & NE (\%) \\
+				\midrule
+				Linear & 4750 [4581-4924] & 3100 [3044-3156] & 3963 [3887-4042] & 2.00 [1.99-2.02] & 0.83 [0.82-0.85] & 0.954 & 18 $\pm$ 10\\
+				
+				Linear mixed-effect fixed effects & 4814 [4488-5164] & 3142 [3034-3254] & 4017 [3877-4163] & 2.01 [2.00-2.03] & 0.84 [0.83-0.85] & 0.954 & 18 $\pm$ 10\\
+				
+		        Linear mixed-effect complete & 4814 [4488-5164] & 3142 [3034-3254] & 4017 [3877-4163] & 2.01 [2.00-2.03] & 0.84 [0.83-0.85] & 0.969 & 16 $\pm$ 9\\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+
+	\begin{table}[h!]\caption{OI fits comparison}
+		\resizebox{1\linewidth}{!}{
+			\begin{tabular}{lccccccc}
+				\toprule
+				Model & $\lambda_0$ & $\lambda_0'$ & $\mu_0$ & $k$ & $l$ & $R^2_{adj}$ & NE (\%) \\
+				\midrule
+				Linear & 7970 [6755-9403] & 4036 [3716-4384] & 5729 [5241-6263] & 2.09 [2.05-2.12] & 1.06 [1.00-1.12] & 0.840 & 62 $\pm$ 219\\
+				
+				Linear mixed-effect fixed effects & 6859 [5119-9190] & 3473 [3000-4020] & 4930 [4249-5721] & 2.02 [1.98-2.06] & 1.05 [1.00-1.10] & 0.839 & 63 $\pm$ 240\\
+				
+				Linear mixed-effect complete & 6859 [5119-9190] & 3473 [3000-4020] & 4930 [4249-5721] & 2.02 [1.98-2.06] & 1.05 [1.00-1.10] & 0.892 & 36 $\pm$ 59\\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+	\vspace{5mm}
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Linear Regression - Comparison with literature}
+	\begin{table}[h!]\caption{Comparison with \cite{p11}}
+		\resizebox{0.85\linewidth}{!}{
+			\begin{tabular}{lccccccc}
+				\toprule
+				Model & $\lambda_0$ & $\lambda_0'$ & $\mu_0$ & $k$ & $l$ & $R^2_{adj}$ & NE (\%) \\
+				
+				\midrule
+				\cite{p11} & 3382 & 2746 & 2855 & 1.55 & 0.84 & 0.984 & 8 $\pm$ 3\\
+
+				Linear & 2513 [2466-2562] & 1640 [1625-1656] & 2097 [2069-2126] & 1.55 & 0.84 & 0.784 & 24 $\pm$ 23\\
+				
+				Linear mixed-effect fixed effects & 2513 [2322-2720] & 1640 [1576-1706] & 2097 [2015-2183] & 1.55 & 0.84 & 0.784 & 24 $\pm$ 23\\
+				
+				Linear mixed-effect complete & 2513 [2322-2720] & 1640 [1576-1706] & 2097 [2015-2183] & 1.55 & 0.84 & 0.885 & 18 $\pm$ 10\\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+	
+	\begin{table}[h!]\caption{Comparison with \cite{p12}}
+		\resizebox{0.85\linewidth}{!}{
+			\begin{tabular}{lccccccc}
+				\toprule
+				Model & $\lambda_0$ & $\lambda_0'$ & $\mu_0$ & $k$ & $l$ & $R^2_{adj}$ & NE (\%) \\
+				
+				\midrule
+				\cite{p11} & 3841 & 3076 & 3115 & 1.60 & 0.99 & 0.983 & 14\\
+				\cite{p12} & 4609 & 3692 & 3738 & 1.60 & 0.99 & 0.981 & 14\\
+
+				Linear & 2726 [2675-2777] & 1779 [1762-1795] & 2274 [2245-2304] & 1.60 & 0.99 & 0.793 & 22 $\pm$ 22\\
+				
+				Linear mixed-effect fixed effects & 2726 [2530-2936] & 1779 [1714-1846] & 2274 [2190-2362] & 1.60 & 0.99 & 0.793 & 22 $\pm$ 22\\
+				
+				Linear mixed-effect complete & 2726 [2530-2936] & 1779 [1714-1846] & 2274 [2190-2362] & 1.60 & 0.99 & 0.883 & 17 $\pm$ 9\\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+	\vspace{5mm}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{CV Filtering}
+	\begin{columns}
+		\column[c]{0.55\linewidth}
+		\cite{p11} filtering
+		\begin{itemize}
+			\item Sort ROI in CV decreasing order
+			\item Exclude ROI with higher CV
+			\item Perform fit
+			\item Keep fit with max $R^2_{adj}$
+			\item CV limit: 0.263\\N=126 ROI
+		\end{itemize}
+		\column[c]{0.35\linewidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=1\linewidth,trim=75 0 50 0]{Pictures/02_CV_BVTV}
+			\caption{CV in relation to BV/TV}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Linear Regression on Filtered Groups}
+	\begin{columns}
+		\column[c]{0.45\linewidth}
+		\centering
+		\begin{figure}
+			\animategraphics[controls,width=1\linewidth]{5}{Pictures/FilteredRegression/Healthy-}{0}{2}
+			\caption{Healthy group}
+		\end{figure}
+		\vspace{-0.5cm}
+		$\ln(\delta)$ variance: 0.019\\
+		LRT p value: 0.0
+		\column[c]{0.45\linewidth}
+		\centering
+		\begin{figure}
+			\animategraphics[controls,width=1\linewidth]{5}{Pictures/FilteredRegression/OI-}{0}{2}
+			\caption{OI group}
+		\end{figure}
+		\vspace{-0.5cm}
+		$\ln(\delta)$ variance: 0.262\\
+		LRT p value: 0.0
+	\end{columns}
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{OI Badly Fitted ROI}
+	\begin{columns}
+		\column[c]{0.55\linewidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=1\linewidth]{Pictures/03_NE}
+			\caption{NE in relation to patient ID}
+		\end{figure}
+		\column[c]{0.45\linewidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=1\linewidth]{Pictures/03_NE_CV_BVTV}
+			\caption{CV in relation to BV/TV}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Filtered Regression - Comparison with literature}
+	
+		\begin{table}[h!]\caption{Complete data set}
+		\resizebox{0.85\linewidth}{!}{
+			\begin{tabular}{lccccccc}
+				\toprule
+				Model & $\lambda_0$ & $\lambda_0'$ & $\mu_0$ & $k$ & $l$ & $R^2_{adj}$ & NE (\%) \\
+				
+				\midrule
+				\cite{p11} & 3382 & 2746 & 2855 & 1.55 & 0.84 & 0.984 & 8 $\pm$ 3\\
+				
+				Linear & 2513 [2466-2562] & 1640 [1625-1656] & 2097 [2069-2126] & 1.55 & 0.84 & 0.784 & 24 $\pm$ 23\\
+				
+				Linear mixed-effect fixed effects & 2513 [2322-2720] & 1640 [1576-1706] & 2097 [2015-2183] & 1.55 & 0.84 & 0.784 & 24 $\pm$ 23\\
+				
+				Linear mixed-effect complete & 2513 [2322-2720] & 1640 [1576-1706] & 2097 [2015-2183] & 1.55 & 0.84 & 0.885 & 18 $\pm$ 10\\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+	
+	
+	\begin{table}[h!]\caption{Filtered data set}
+		\resizebox{0.85\linewidth}{!}{
+			\begin{tabular}{lccccccc}
+				\toprule
+				Model & $\lambda_0$ & $\lambda_0'$ & $\mu_0$ & $k$ & $l$ & $R^2_{adj}$ & NE (\%) \\
+				
+				\midrule
+				\cite{p11} & 3306 & 2736 & 2837 & 1.55 & 0.82 & 0.985 & 7 $\pm$ 2\\
+				
+				Linear & 2550 [2506-2595] & 1679 [1665-1694] & 2129 [2102-2155] & 1.55& 0.82 & 0.817 & 22 $\pm$ 15\\
+				
+				Linear mixed-effect fixed effects & 2528 [2352-2716] & 1665 [1606-1726] & 2110 [2034-2188] & 1.55 & 0.82 & 0.817 & 22 $\pm$ 14\\
+				
+				Linear mixed-effect complete & 2528 [2352-2716] & 1665 [1606-1726] & 2110 [2034-2188] & 1.55 & 0.82 & 0.899 & 17 $\pm$ 8\\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+	\vspace{5mm}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{ROI Matching Results - QQ plots}
+	N matching = 150
+	\begin{columns}
+		\column[c]{0.45\linewidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=1\linewidth]{Pictures/04_QQPlot_BVTV}
+			\caption{BV/TV}
+		\end{figure}
+		\column[c]{0.45\linewidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=1\linewidth]{Pictures/04_QQPlot_DA}
+			\caption{Degree of anisotropy}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Linear Regression on Matched ROI}
+	\begin{columns}
+		\column[c]{0.45\linewidth}
+		\centering
+		\begin{figure}
+			\animategraphics[controls,width=1\linewidth]{5}{Pictures/MatchedRegression/Healthy-}{0}{1}
+			\caption{Healthy group}
+		\end{figure}
+		\vspace{-0.5cm}
+		$\ln(\delta)$ variance: 0.038\\
+		LRT p value: 0.0
+		\column[c]{0.45\linewidth}
+		\centering
+		\begin{figure}
+			\animategraphics[controls,width=1\linewidth]{5}{Pictures/MatchedRegression/OI-}{0}{1}
+			\caption{OI group}
+		\end{figure}
+		\vspace{-0.5cm}
+		$\ln(\delta)$ variance: 0.364\\
+		LRT p value: 0.0
+	\end{columns}
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{OI Badly Fitted ROIs}
+	\begin{columns}
+		\column[c]{0.55\linewidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=1\linewidth]{Pictures/05_NE}
+			\caption{NE in relation to patient ID}
+		\end{figure}
+		\column[c]{0.45\linewidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=1\linewidth]{Pictures/05_NE_CV_BVTV}
+			\caption{CV in relation to BV/TV}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{OI Badly Fitted ROI Example}
+	\begin{columns}
+		\column[c]{0.45\linewidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=1\linewidth,trim=200 0 200 0]{Pictures/06_ROI_View1}
+			\caption{Front view of the ROI}
+		\end{figure}
+		\column[c]{0.45\linewidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=1\linewidth,trim=200 0 200 0]{Pictures/06_ROI_View2}
+			\caption{Isometric view of the ROI}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Matched ROIs - Comparison between Groups}
+	
+	\begin{table}[h!]\caption{Linear models}
+		\resizebox{0.85\linewidth}{!}{
+        \begin{tabular}{cccccccc}
+			\toprule
+			Data set & $\lambda_0$ & $\lambda_0'$ & $\mu_0$ & $k$ & $l$ & $R^2_{adj}$ & NE (\%) \\
+			\midrule
+			
+			Grouped & 4767 [4231-5372] & 2642 [2489-2805] & 3613 [3389-3851] & 1.90 [1.87-1.92] & 0.99 [0.95-1.03] & 0.873 & 36 $\pm$ 136\\
+			
+			Healthy & 4311 [4123-4508] & 2537 [2481-2594] & 3462 [3354-3573] & 1.90 & 0.99 & 0.782 & 25 $\pm$ 20\\
+			
+			OI & 5262 [4857-5700] & 2752 [2645-2865] & 3770 [3563-3989] & 1.90 & 0.99 & 0.541 & 52 $\pm$ 190\\
+			\bottomrule
+		\end{tabular}}
+	\end{table}
+	
+	
+	\begin{table}[h!]\caption{Linear mixed models}
+		\resizebox{0.85\linewidth}{!}{
+		\begin{tabular}{cccccccc}
+			\toprule
+			Data set & $\lambda_0$ & $\lambda_0'$ & $\mu_0$ & $k$ & $l$ & $R^2_{adj}$ & NE (\%) \\
+			\midrule
+			
+			Grouped & 3887 [3184-4745] & 2154 [1950-2380] & 2945 [2662-3259] & 1.79 [1.75-1.83] & 0.99 [0.96-1.03] & 0.933 & 21 $\pm$ 21\\
+			
+			Healthy & 3652 [3283-4062] & 2149 [2038-2266] & 2933 [2773-3102] & 1.79 & 0.99 & 0.867 & 19 $\pm$ 14\\
+			
+			OI & 4144 [2917-5887] & 2168 [1819-2583] & 2969 [2486-3547] & 1.79 & 0.99 & 0.765 & 26 $\pm$ 38\\
+			\bottomrule
+		\end{tabular}}
+	\end{table}
+	\vspace{5mm}
+\end{frame}
+
+
+
+\renewcommand\arraystretch{1.5}
+
+\begin{frame}
+	\frametitle{Group Significance - Analysis of Covariance}
+	\begin{columns}[t]
+		\column{.5\textwidth}
+		\centering
+		Regression results
+		
+		\begin{table}[h!]\caption{Standard model}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Model & DOF & Regression SS & $R^2$ & SE \\
+					\midrule
+					Original & 5 & 6138 & 0.873 & 0.497 \\
+					Group & 6 & 6147 & 0.875 & 0.495 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+		\begin{table}[h!]\caption{Linear mixed-effect model}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Model & DOF & Regression SS & $R^2$ & SE \\
+					\midrule
+					Original & 6 & 6554.426 & 0.933 & 0.363 \\
+					Group & 7 & 6554.433 & 0.933 & 0.363 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+		\column{.5\textwidth}
+		\centering
+		\vspace{0.08cm}
+		Results of the ANCOVA
+		
+		
+		
+		\begin{table}[h!]\caption{Standard model}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Models contrasted & $\Delta$ SS & $\Delta$ DOF & F statistic & p value \\
+					\midrule
+					Group - Original & 9 & 1 & 33 & \hl{8E-9} \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+		\vspace{0.48cm}
+		
+		\begin{table}[h!]\caption{Mixed-effect model}
+			\resizebox{0.9\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					\toprule
+					Models contrasted & $\Delta$ SS & $\Delta$ DOF & F statistic & p value \\
+					\midrule
+					Group - Original & 0.007 & 1 & 0.05 & 0.8 \\
+					\bottomrule
+			\end{tabular}}
+		\end{table}
+		
+	\end{columns}
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Matched ROIs - Comparison with literature}
+	
+	\begin{table}[h!]\caption{Comparison with \cite{p11}}
+		\resizebox{0.85\linewidth}{!}{
+		\begin{tabular}{cccccccc}
+			\toprule
+			Data set & $\lambda_0$ & $\lambda_0'$ & $\mu_0$ & $k$ & $l$ & $R^2_{adj}$ & NE (\%) \\
+			\midrule
+			\cite{p11} & 3382 & 2746 & 2855 & 1.55 & 0.84 & 0.984 & 8 $\pm$ 3\\
+			
+			Linear & 2239 [2120-2364] & 1317 [1282-1354] & 1798 [1730-1868] & 1.55 & 0.84 & 0.706 & 33 $\pm$ 33\\
+			
+			Linear mixed-effect fixed effects & 2409 [2105-2758] & 1418 [1325-1517] & 1935 [1803-2075] & 1.55 & 0.84 & 0.697 & 34 $\pm$ 38\\
+			
+			Linear mixed-effect complete & 2409 [2105-2758] & 1418 [1325-1517] & 1935 [1803-2075] & 1.55 & 0.84 & 0.862 & 23 $\pm$ 15\\
+			\bottomrule
+		\end{tabular}}
+	\end{table}
+
+	\begin{table}[h!]\caption{Comparison with \cite{p11}}
+		\resizebox{0.85\linewidth}{!}{
+		\begin{tabular}{cccccccc}
+			\toprule
+			Data set & $\lambda_0$ & $\lambda_0'$ & $\mu_0$ & $k$ & $l$ & $R^2_{adj}$ & NE (\%) \\
+			\midrule
+			\cite{p11} & 3841 & 3076 & 3115 & 1.60 & 0.99 & 0.983 & 14\\
+			\cite{p12} & 4609 & 3692 & 3738 & 1.60 & 0.99 & 0.981 & 14\\
+			
+			Linear & 2487 [2360-2620] & 1463 [1426-1502] & 1997 [1924-2072] & 1.60 & 0.99 & 0.723 & 30 $\pm$ 33\\
+			
+			Linear mixed-effect fixed effects & 2651 [2331-3016] & 1560 [1463-1664] & 2129 [1991-2276] & 1.60 & 0.99 & 0.716 & 31 $\pm$ 37\\
+			
+			Linear mixed-effect complete & 2651 [2331-3016] & 1560 [1463-1664] & 2129 [1991-2276] & 1.60 & 0.99 & 0.866 & 20 $\pm$ 15\\
+			\bottomrule
+		\end{tabular}}
+	\end{table}
+	\vspace{5mm}
+\end{frame}
+
+
+
+
+
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+\appendix
+
+\section{References}
+\begin{frame}
+	\frametitle{Statistics I}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			\bibitem[Stuart 2010]{p1} Stuart, Elisabth A. (2010).
+			\newblock Matching methods for causal inference: A review and a look forward
+			\newblock \textit{Statistical science : a review journal of the Institute of Mathematical Statistics, 25}(1), 1-21
+			\vspace{1mm}
+			\bibitem[Bishara et al. 2017]{p2} Bishara, Anthony J., Hittner, James B. (2017).
+			\newblock Confidence intervals for correlations when data are not normal
+			\newblock \textit{Behavior Research Methods, 49}(1), 294-309
+			\vspace{1mm}
+			\bibitem[Wandel 2019]{p3} Wandel, J. (2019).
+			\newblock Hypothesis tests for two samples: comparing the means
+			\newblock \textit{Introduction to medical statistics}
+		\end{thebibliography}
+	}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Statistics II}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			\bibitem[Mohd et al. 2011]{p7} Mohd et al. (2011).
+			\newblock Power comparisons of Shapiro-Wilk, Kolmogorov-Smirnov, Lilliefors and Anderson-Darling tests
+			\newblock \textit{Journal of Statistical Modeling and Analytics, 2}(1), 21-33
+			\vspace{1mm}
+			\bibitem[Fox 2016]{p8} Fox, John (2016).
+			\newblock Fox, Applied Regressions Analysis and Linear Models
+			\newblock \textit{Sage publications}(3), 817
+			\vspace{1mm}
+		\end{thebibliography}
+	}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Similar Publications}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			\bibitem[Folkestad et al., 2012]{p4} Folkestad et al. (2012).
+			\newblock Bone geometry, density, and microarchitecture in the distal radius and tibia in adults with osteogenesis imperfecta type i assessed by high-resolution pQCT
+			\newblock \textit{Journal of Bone and Mineral Research, 27}(1), 1405-1412
+			\vspace{1mm}
+			\bibitem[Kocijan et al., 2015]{p5} Kocijan et al. (2015).
+			\newblock Bone structure assessed by HR-pQCT, TBS and DXL in adult patients with different types of osteogenesis imperfecta
+			\newblock \textit{Osteoporosis International, 26}(10), 2431-2440
+			\vspace{1mm}
+			\bibitem[Rolvien et al., 2018]{p6} Rolvien et al. (2018).
+			\newblock Comparison of Bone Microarchitecture Between Adult Osteogenesis Imperfecta and Early-Onset Osteoporosis
+			\newblock \textit{Calcified Tissue International, 103}(5), 512-521
+		\end{thebibliography}
+	}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Others Publications}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			\bibitem[Schenk et al., 2020]{p9} Schenk et al. (2020).
+			\newblock In vivo repeatability of homogenized finite element analysis based on multiple HR-pQCT sections for assessment of distal radius and tibia strength
+			\newblock \textit{Bone, 141}, 115575
+			
+			\vspace{1mm}
+			
+			\bibitem[Agarwal et al., 2016]{p10} Agarwal et al. (2016).
+			\newblock In vivo assessment of bone structure and estimated bone strength by first- and second-generation HR-pQCT
+			\newblock \textit{Osteoporosis International, 27 (10)}, 2955-2966
+			
+			\vspace{1mm}
+			
+			\bibitem[Panyasantisuk et al., 2015]{p11} Panyasantisuk et al., 2015.
+			\newblock Comparison of Mixed and Kinematic Uniform Boundary Conditions in Homogenized Elasticity of Femoral Trabecular Bone Using Microfinite Element Analyses
+			\newblock \textit{Journal of Biomechanical Engineering, 137 (1)}, 1-7
+			
+		\end{thebibliography}
+	}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Others Publications}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			\bibitem[Gross et al., 2013]{p12} Gross et al. (2013).
+			\newblock Morphology – elasticity relationships using decreasing fabric information of human trabecular bone from three major anatomical locations
+			\newblock \textit{Bone, 141}, 793-800
+			
+		\end{thebibliography}
+	}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\end{document} 
