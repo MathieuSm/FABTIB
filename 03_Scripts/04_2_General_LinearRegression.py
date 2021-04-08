@@ -75,7 +75,7 @@ def PlotRegressionResults(Model, Data, PlotTypes=['BV/TV', 'DA', 'Constants'], A
     Sjj = Y_Fit * np.array(X[:, 2].T)[0]
 
     ## Plots
-    DPI = 100
+    DPI = 500
     SMax = max(HealthyData[Y_Elements].max()) * 5
     SMin = min(OIData[Y_Elements].min()) / 5
     if 'BV/TV' in PlotTypes:
@@ -91,8 +91,8 @@ def PlotRegressionResults(Model, Data, PlotTypes=['BV/TV', 'DA', 'Constants'], A
         Axes.annotate(r'$R^2_{ajd}$: ' + format(round(R2adj, 3), '.3f'), xy=(0.65, 0.1), xycoords='axes fraction')
         Axes.annotate(r'$NE$ : ' + format(round(NE.mean(), 2), '.2f') + '$\pm$' + format(round(NE.std(), 2), '.2f'),
                       xy=(0.65, 0.025), xycoords='axes fraction')
-        Axes.set_xlabel('Observed $\mathbb{S}_{xy}$ (MPa)')
-        Axes.set_ylabel('Fitted $\mathbb{S}_{xy}$ (MPa)')
+        Axes.set_xlabel('Observed $\mathrm{\mathbb{S}}$ (MPa)')
+        Axes.set_ylabel('Fitted $\mathrm{\mathbb{S}}$ (MPa)')
         Axes.set_xlim([SMin,SMax])
         Axes.set_ylim([SMin,SMax])
         plt.xscale('log')
@@ -113,8 +113,8 @@ def PlotRegressionResults(Model, Data, PlotTypes=['BV/TV', 'DA', 'Constants'], A
         Axes.annotate(r'$R^2_{ajd}$: ' + format(round(R2adj, 3), '.3f'), xy=(0.65, 0.1), xycoords='axes fraction')
         Axes.annotate(r'$NE$ : ' + format(round(NE.mean(), 2), '.2f') + '$\pm$' + format(round(NE.std(), 2), '.2f'),
                       xy=(0.65, 0.025), xycoords='axes fraction')
-        Axes.set_xlabel('Observed $\mathbb{S}_{xy}$ (MPa)')
-        Axes.set_ylabel('Fitted $\mathbb{S}_{xy}$ (MPa)')
+        Axes.set_xlabel('Observed $\mathrm{\mathbb{S}}$ (MPa)')
+        Axes.set_ylabel('Fitted $\mathrm{\mathbb{S}}$ (MPa)')
         Axes.set_xlim([SMin, SMax])
         Axes.set_ylim([SMin, SMax])
         plt.xscale('log')
@@ -138,8 +138,8 @@ def PlotRegressionResults(Model, Data, PlotTypes=['BV/TV', 'DA', 'Constants'], A
         Axes.annotate(r'$N$   : ' + str(len(Y_Obs)), xy=(0.65, 0.175), xycoords='axes fraction')
         Axes.annotate(r'$R^2_{ajd}$: ' + format(round(R2adj, 3),'.3f'), xy=(0.65, 0.1), xycoords='axes fraction')
         Axes.annotate(r'$NE$ : ' + format(round(NE.mean(), 2), '.2f') + '$\pm$' + format(round(NE.std(), 2), '.2f'), xy=(0.65, 0.025), xycoords='axes fraction')
-        Axes.set_xlabel('Observed $\mathbb{S}_{xy}$')
-        Axes.set_ylabel('Fitted $\mathbb{S}_{xy}$')
+        Axes.set_xlabel('Observed $\mathrm{\mathbb{S}}$ (MPa)')
+        Axes.set_ylabel('Fitted $\mathrm{\mathbb{S}}$ (MPa)')
         Axes.set_xlim([SMin, SMax])
         Axes.set_ylim([SMin, SMax])
         plt.xscale('log')
@@ -456,7 +456,7 @@ GroupedData = HealthyData.append(OIData)
 Rho, Rho_CI = SpearmanCorrelation(GroupedData['BV/TV'],GroupedData['Variation Coefficient'])
 Text = r'$\rho$ = ' + str(round(Rho,3)) + ' [' + str(round(Rho_CI[0],3)) + ' , ' + str(round(Rho_CI[1],3)) + ']'
 
-Figure, Axes = plt.subplots(1, 1, figsize=(5.5, 4.5),dpi=100)
+Figure, Axes = plt.subplots(1, 1, figsize=(5.5, 4.5),dpi=500)
 Axes.plot(HealthyData['BV/TV'],
           HealthyData['Variation Coefficient'],
           linestyle='none',marker='o',color=(0,0,1),fillstyle='none',label='Healthy Data')
@@ -466,7 +466,7 @@ Axes.plot(OIData['BV/TV'],
 Axes.plot([OIData['BV/TV'].min(),HealthyData['BV/TV'].max()],[CVLim,CVLim],color=(0,0,0),linestyle='--',label='CV Threshold')
 Axes.annotate(Text, xy=(0.25, 1.05), xycoords='axes fraction')
 Axes.set_xlabel('BV/TV (-)')
-Axes.set_ylabel('Coefficient of Variation (-)')
+Axes.set_ylabel('Coefficient of variation (-)')
 plt.legend(loc='upper right',framealpha=1)
 plt.subplots_adjust(left=0.175)
 plt.show()

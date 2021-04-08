@@ -90,8 +90,8 @@ def PlotRegressionResults(Model, Data, PlotTypes=['BV/TV', 'DA', 'Constants'], A
         Axes.annotate(r'$R^2_{ajd}$: ' + format(round(R2adj, 3), '.3f'), xy=(0.65, 0.1), xycoords='axes fraction')
         Axes.annotate(r'$NE$ : ' + format(round(NE.mean(), 2), '.2f') + '$\pm$' + format(round(NE.std(), 2), '.2f'),
                       xy=(0.65, 0.025), xycoords='axes fraction')
-        Axes.set_xlabel('Observed $\mathbb{S}_{xy}$ (MPa)')
-        Axes.set_ylabel('Fitted $\mathbb{S}_{xy}$ (MPa)')
+        Axes.set_xlabel('Observed $\mathrm{\mathbb{S}}$ (MPa)')
+        Axes.set_ylabel('Fitted $\mathrm{\mathbb{S}}$ (MPa)')
         Axes.set_xlim([SMin,SMax])
         Axes.set_ylim([SMin,SMax])
         plt.xscale('log')
@@ -112,8 +112,8 @@ def PlotRegressionResults(Model, Data, PlotTypes=['BV/TV', 'DA', 'Constants'], A
         Axes.annotate(r'$R^2_{ajd}$: ' + format(round(R2adj, 3), '.3f'), xy=(0.65, 0.1), xycoords='axes fraction')
         Axes.annotate(r'$NE$ : ' + format(round(NE.mean(), 2), '.2f') + '$\pm$' + format(round(NE.std(), 2), '.2f'),
                       xy=(0.65, 0.025), xycoords='axes fraction')
-        Axes.set_xlabel('Observed $\mathbb{S}_{xy}$ (MPa)')
-        Axes.set_ylabel('Fitted $\mathbb{S}_{xy}$ (MPa)')
+        Axes.set_xlabel('Observed $\mathrm{\mathbb{S}}$ (MPa)')
+        Axes.set_ylabel('Fitted $\mathrm{\mathbb{S}}$ (MPa)')
         Axes.set_xlim([SMin, SMax])
         Axes.set_ylim([SMin, SMax])
         plt.xscale('log')
@@ -137,8 +137,8 @@ def PlotRegressionResults(Model, Data, PlotTypes=['BV/TV', 'DA', 'Constants'], A
         Axes.annotate(r'$N$   : ' + str(len(Y_Obs)), xy=(0.65, 0.175), xycoords='axes fraction')
         Axes.annotate(r'$R^2_{ajd}$: ' + format(round(R2adj, 3),'.3f'), xy=(0.65, 0.1), xycoords='axes fraction')
         Axes.annotate(r'$NE$ : ' + format(round(NE.mean(), 2), '.2f') + '$\pm$' + format(round(NE.std(), 2), '.2f'), xy=(0.65, 0.025), xycoords='axes fraction')
-        Axes.set_xlabel('Observed $\mathbb{S}_{xy}$')
-        Axes.set_ylabel('Fitted $\mathbb{S}_{xy}$')
+        Axes.set_xlabel('Observed $\mathrm{\mathbb{S}}$ (MPa)')
+        Axes.set_ylabel('Fitted $\mathrm{\mathbb{S}}$ (MPa)')
         Axes.set_xlim([SMin, SMax])
         Axes.set_ylim([SMin, SMax])
         plt.xscale('log')
@@ -630,7 +630,7 @@ Results_Mixed, ANCOVA_Mixed = ANCOVA(Mixed_Models,ModelNames,'Mixed-Effect')
 k_Gross, l_Gross = 1.6, 0.99
 GroupedSystem['Gross_Sxy'] = GroupedSystem['LogSxy'] - (GroupedSystem['LogBVTV'] * k_Gross + GroupedSystem['Logmxy'] * l_Gross)
 
-k_Panya, l_Panya = 1.55, 0.84
+k_Panya, l_Panya = 1.55, 0.82
 GroupedSystem['Panya_Sxy'] = GroupedSystem['LogSxy'] - (GroupedSystem['LogBVTV'] * k_Panya + GroupedSystem['Logmxy'] * l_Panya)
 
 Gross_LMM = smf.mixedlm("Gross_Sxy ~ Sii + Sij + Sjj - 1",
