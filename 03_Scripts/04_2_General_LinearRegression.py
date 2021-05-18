@@ -35,6 +35,7 @@ def PlotRegressionResults(Model, Data, PlotTypes=['BV/TV', 'DA', 'Constants'], A
     N = int(Model.nobs)
     C = np.matrix(Model.cov_params())
     X = np.matrix(Model.model.exog)
+    NROIs = int(N/12)
 
     if not C.shape[0] == X.shape[1]:
         C = C[:-1,:-1]
@@ -87,7 +88,8 @@ def PlotRegressionResults(Model, Data, PlotTypes=['BV/TV', 'DA', 'Constants'], A
         # Axes.plot(np.sort(Line), np.sort(CI_Line_u), color=(0.4, 0.4, 0.4), linestyle='--')
         # Axes.plot(np.sort(Line), np.sort(CI_Line_o), color=(0.4, 0.4, 0.4), linestyle='--')
         Axes.plot(Line, Line, color=(0, 0, 0), linestyle='--')
-        Axes.annotate(r'$N$   : ' + str(len(Y_Obs)), xy=(0.65, 0.175), xycoords='axes fraction')
+        Axes.annotate(r'N ROIs   : ' + str(NROIs), xy=(0.3, 0.1), xycoords='axes fraction')
+        Axes.annotate(r'N Points : ' + str(len(Y_Obs)), xy=(0.3, 0.025), xycoords='axes fraction')
         Axes.annotate(r'$R^2_{ajd}$: ' + format(round(R2adj, 3), '.3f'), xy=(0.65, 0.1), xycoords='axes fraction')
         Axes.annotate(r'$NE$ : ' + format(round(NE.mean(), 2), '.2f') + '$\pm$' + format(round(NE.std(), 2), '.2f'),
                       xy=(0.65, 0.025), xycoords='axes fraction')
@@ -109,7 +111,8 @@ def PlotRegressionResults(Model, Data, PlotTypes=['BV/TV', 'DA', 'Constants'], A
         # Axes.plot(np.sort(Line), np.sort(CI_Line_u), color=(0.4, 0.4, 0.4), linestyle='--')
         # Axes.plot(np.sort(Line), np.sort(CI_Line_o), color=(0.4, 0.4, 0.4), linestyle='--')
         Axes.plot(Line, Line, color=(0, 0, 0), linestyle='--')
-        Axes.annotate(r'$N$   : ' + str(len(Y_Obs)), xy=(0.65, 0.175), xycoords='axes fraction')
+        Axes.annotate(r'N ROIs   : ' + str(NROIs), xy=(0.3, 0.1), xycoords='axes fraction')
+        Axes.annotate(r'N Points : ' + str(len(Y_Obs)), xy=(0.3, 0.025), xycoords='axes fraction')
         Axes.annotate(r'$R^2_{ajd}$: ' + format(round(R2adj, 3), '.3f'), xy=(0.65, 0.1), xycoords='axes fraction')
         Axes.annotate(r'$NE$ : ' + format(round(NE.mean(), 2), '.2f') + '$\pm$' + format(round(NE.std(), 2), '.2f'),
                       xy=(0.65, 0.025), xycoords='axes fraction')
@@ -135,7 +138,8 @@ def PlotRegressionResults(Model, Data, PlotTypes=['BV/TV', 'DA', 'Constants'], A
         # Axes.plot(np.sort(Line), np.sort(CI_Line_u), color=(0.4, 0.4, 0.4), linestyle='--')
         # Axes.plot(np.sort(Line), np.sort(CI_Line_o), color=(0.4, 0.4, 0.4), linestyle='--')
         Axes.plot(Line, Line, color=(0, 0, 0), linestyle='--')
-        Axes.annotate(r'$N$   : ' + str(len(Y_Obs)), xy=(0.65, 0.175), xycoords='axes fraction')
+        Axes.annotate(r'N ROIs   : ' + str(NROIs), xy=(0.3, 0.1), xycoords='axes fraction')
+        Axes.annotate(r'N Points : ' + str(len(Y_Obs)), xy=(0.3, 0.025), xycoords='axes fraction')
         Axes.annotate(r'$R^2_{ajd}$: ' + format(round(R2adj, 3),'.3f'), xy=(0.65, 0.1), xycoords='axes fraction')
         Axes.annotate(r'$NE$ : ' + format(round(NE.mean(), 2), '.2f') + '$\pm$' + format(round(NE.std(), 2), '.2f'), xy=(0.65, 0.025), xycoords='axes fraction')
         Axes.set_xlabel('Observed $\mathrm{\mathbb{S}}$ (MPa)')
@@ -451,6 +455,7 @@ OI_LMM_R2adj, OI_LMM_NE = PlotRegressionResults(OI_LMM,OISystem,['Constants'],Ra
 # 06 Set filter parameters
 CVLim = 0.263
 
+
 ## Plot filtering and compute correlation between variables
 GroupedData = HealthyData.append(OIData)
 Rho, Rho_CI = SpearmanCorrelation(GroupedData['BV/TV'],GroupedData['Variation Coefficient'])
@@ -507,6 +512,7 @@ F_Healthy_LMM_Table = ComputeLMConstants(F_Healthy_LMM)
 F_OI_LM_Table = ComputeLMConstants(F_OI_LM)
 F_OI_LMM_Table = ComputeLMConstants(F_OI_LMM)
 
+
 ## Write latex table
 TableName = 'LM_Comparison.tex'
 TableCaption = 'Linear models - constants comparison'
@@ -514,3 +520,57 @@ TableResults = [F_Healthy_LMM,F_OI_LMM]
 DataSets = ['Healthy','OI']
 
 WriteLatexTable(TableName,TableCaption,TableResults, DataSets, FixedEffectOnly=True)
+
+
+
+## Compute constants of grouped data sets (free k and l)
+GroupedSystem = HealthySystem.append(OISystem).reset_index(drop=True)
+F_GroupedSystem = F_HealthySystem.append(F_OISystem).reset_index(drop=True)
+Grouped_LMM = smf.mixedlm("LogSxy ~ Sii + Sij + Sjj + LogBVTV + Logmxy - 1",
+                         data=GroupedSystem, groups=GroupedSystem['Scan'],
+                         vc_formula={"IF": "IF-1"}).fit(reml=True)
+F_Grouped_LMM = smf.mixedlm("LogSxy ~ Sii + Sij + Sjj + LogBVTV + Logmxy - 1",
+                         data=F_GroupedSystem, groups=F_GroupedSystem['Scan'],
+                         vc_formula={"IF": "IF-1"}).fit(reml=True)
+
+G_LMM_R2adj, G_LMM_NE = PlotRegressionResults(Grouped_LMM,GroupedSystem,['Constants'],Random=False)
+
+Grouped_LMM_Table = ComputeLMConstants(Grouped_LMM)
+F_Grouped_LMM_Table = ComputeLMConstants(F_Grouped_LMM)
+
+
+## Compute constant with imposed k and l
+F_k, F_l = 1.55, 0.82
+F_GroupedSystem['Sxy_kl'] = F_GroupedSystem['LogSxy'] - (F_GroupedSystem['LogBVTV'] * F_k + F_GroupedSystem['Logmxy'] * F_l)
+k, l = 1.60, 0.99
+GroupedSystem['Sxy_kl'] = GroupedSystem['LogSxy'] - (GroupedSystem['LogBVTV'] * k + GroupedSystem['Logmxy'] * l)
+
+Grouped_LMM_kl = smf.mixedlm("Sxy_kl ~ Sii + Sij + Sjj - 1",
+                         data=GroupedSystem, groups=GroupedSystem['Scan'],
+                         vc_formula={"IF": "IF-1"}).fit(reml=True)
+F_Grouped_LMM_kl = smf.mixedlm("Sxy_kl ~ Sii + Sij + Sjj - 1",
+                         data=F_GroupedSystem, groups=F_GroupedSystem['Scan'],
+                         vc_formula={"IF": "IF-1"}).fit(reml=True)
+
+G_LMM_kl_R2adj, G_LMM_kl_NE = PlotRegressionResults(Grouped_LMM_kl,GroupedSystem,['Constants'],Random=False)
+
+Grouped_LMM_kl_Table = ComputeLMConstants(Grouped_LMM_kl, k=k, l=l)
+F_Grouped_LMM_kl_Table = ComputeLMConstants(F_Grouped_LMM_kl, k=F_k, l=F_l)
+
+
+## Compute mean morphological parameters for the table
+Data = HealthyData.append(OIData)
+Data['DA'] = Data['m3'] / Data['m1']
+F_Data = Data[Data['Variation Coefficient'] < CVLim]
+
+print('\nComplete data stats')
+print('Mean BV/TV: ' + str(Data['BV/TV'].mean().round(3)))
+print('BV/TV std : ' + str(Data['BV/TV'].std().round(3)))
+print('Mean DA: ' + str(Data['DA'].mean().round(3)))
+print('DA std : ' + str(Data['DA'].std().round(3)))
+
+print('\nFiltered data stats')
+print('Mean BV/TV: ' + str(F_Data['BV/TV'].mean().round(3)))
+print('BV/TV std : ' + str(F_Data['BV/TV'].std().round(3)))
+print('Mean DA: ' + str(F_Data['DA'].mean().round(3)))
+print('DA std : ' + str(F_Data['DA'].std().round(3)))
