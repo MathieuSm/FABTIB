@@ -32,9 +32,9 @@ PipelineFile  = open(os.path.join(WorkingDirectory, '03_Scripts', '01_ROIAnalysi
 PipelineText  = PipelineFile.read()
 
 if DataGroup == 0:
-    MatchingResults = pd.read_csv(os.path.join(MatchingFolder,'01_Matching','Matched_Control.csv'))
+    MatchingResults = pd.read_csv(os.path.join(MatchingFolder,'05_Variables_Matching','01_Matched_Control.csv'))
 elif DataGroup == 1:
-    MatchingResults = pd.read_csv(os.path.join(MatchingFolder,'01_Matching','Matched_OI.csv'))
+    MatchingResults = pd.read_csv(os.path.join(MatchingFolder,'05_Variables_Matching','01_Matched_OI.csv'))
 
 
 # 03 Filter matched individuals
@@ -63,7 +63,7 @@ for Index in MedtoolParametersData.index:
 if DataGroup == 0:
     BatchFile = open(os.path.join(ResultsFolder, '01_ControlBatch.bash'),'w')
 elif DataGroup == 1:
-    BatchFile = open(os.path.join(ResultsFolder, '01_OIBatch.bash'),'w')
+    BatchFile = open(os.path.join(ResultsFolder, '01_OIBatch2.bash'),'w')
 
 
 # 05 Set variables for files to remove

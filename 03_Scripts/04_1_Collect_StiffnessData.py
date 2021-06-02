@@ -260,7 +260,7 @@ def ComplianceTensor(EngineeringConstants, EigenValues=[1,1,1], Rho=0, EigenVect
 WorkingDirectory = os.getcwd()
 DataFolder = os.path.join(WorkingDirectory, '04_Results/01_ROI_Analysis/')
 
-Group = 'Healthy'   # Healthy or OI
+Group = 'OI'   # Healthy or OI
 
 StiffnessFolder = os.path.join(DataFolder, '03_' + Group + '_TransformedTensors/')
 ROIFolder = os.path.join(DataFolder,'01_' + Group + '_ROIs/00_Cleaned_ROIs/')

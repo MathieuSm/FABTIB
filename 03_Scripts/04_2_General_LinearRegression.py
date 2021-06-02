@@ -25,7 +25,7 @@ def LikelihoodRatioTest(Model1, Model2, Delta_DOF):
     p = 1 - chi2.cdf(LRT, Delta_DOF)
 
     return p
-def PlotRegressionResults(Model, Data, PlotTypes=['BV/TV', 'DA', 'Constants'], Alpha=0.95, Random=True):
+def PlotRegressionResults(Model, Data, PlotTypes=['BV/TV', 'DA', 'Constants'], Alpha=0.95, Random=True, Colors=[(0,0,1),(0,1,0),(1,0,0)]):
 
     ## Get data from the model
     Y_Obs = np.exp(Model.model.endog)
@@ -130,18 +130,18 @@ def PlotRegressionResults(Model, Data, PlotTypes=['BV/TV', 'DA', 'Constants'], A
     if 'Constants' in PlotTypes:
         Figure, Axes = plt.subplots(1, 1, figsize=(5.5, 4.5), dpi=DPI, sharey=True, sharex=True)
         Axes.plot(Y_Obs, Sii,
-                  color=(0, 0, 1), linestyle='none', marker='o', label=r'$\lambda_{ii}$')
+                  color=Colors[0], linestyle='none', marker='s', label=r'$\lambda_{ii}$')
         Axes.plot(Y_Obs, Sij,
-                  color=(0, 1, 0), linestyle='none', marker='o', label=r'$\lambda_{ij}$')
+                  color=Colors[1], linestyle='none', marker='o', label=r'$\lambda_{ij}$')
         Axes.plot(Y_Obs, Sjj,
-                  color=(1, 0, 0), linestyle='none', marker='o', label=r'$\mu_{ij}$')
+                  color=Colors[2], linestyle='none', marker='^', label=r'$\mu_{ij}$')
         # Axes.plot(np.sort(Line), np.sort(CI_Line_u), color=(0.4, 0.4, 0.4), linestyle='--')
         # Axes.plot(np.sort(Line), np.sort(CI_Line_o), color=(0.4, 0.4, 0.4), linestyle='--')
         Axes.plot(Line, Line, color=(0, 0, 0), linestyle='--')
         Axes.annotate(r'N ROIs   : ' + str(NROIs), xy=(0.3, 0.1), xycoords='axes fraction')
         Axes.annotate(r'N Points : ' + str(len(Y_Obs)), xy=(0.3, 0.025), xycoords='axes fraction')
         Axes.annotate(r'$R^2_{ajd}$: ' + format(round(R2adj, 3),'.3f'), xy=(0.65, 0.1), xycoords='axes fraction')
-        Axes.annotate(r'$NE$ : ' + format(round(NE.mean(), 2), '.2f') + '$\pm$' + format(round(NE.std(), 2), '.2f'), xy=(0.65, 0.025), xycoords='axes fraction')
+        Axes.annotate(r'NE : ' + format(round(NE.mean(), 2), '.2f') + '$\pm$' + format(round(NE.std(), 2), '.2f'), xy=(0.65, 0.025), xycoords='axes fraction')
         Axes.set_xlabel('Observed $\mathrm{\mathbb{S}}$ (MPa)')
         Axes.set_ylabel('Fitted $\mathrm{\mathbb{S}}$ (MPa)')
         Axes.set_xlim([SMin, SMax])
@@ -444,11 +444,11 @@ OI_p = LikelihoodRatioTest(OI_LM,OI_LMM,1)
 print('p value of LRT for OI group: ' + str(OI_p))
 
 
-
-
 # 05 Plot the results of the regression
-H_LMM_R2adj, H_LMM_NE = PlotRegressionResults(Healthy_LMM,HealthySystem,['Constants'],Random=False)
-OI_LMM_R2adj, OI_LMM_NE = PlotRegressionResults(OI_LMM,OISystem,['Constants'],Random=False)
+H_LMM_R2adj, H_LMM_NE = PlotRegressionResults(Healthy_LMM,HealthySystem,['Constants'],
+                                              Random=False,Colors=[(0,0,1),(0,1,1),(0,2/3,1)])
+OI_LMM_R2adj, OI_LMM_NE = PlotRegressionResults(OI_LMM,OISystem,['Constants'],
+                                                Random=False,Colors=[(1,0,0),(1,0,1),(2/3,0,1)])
 
 
 
@@ -461,13 +461,20 @@ GroupedData = HealthyData.append(OIData)
 Rho, Rho_CI = SpearmanCorrelation(GroupedData['BV/TV'],GroupedData['Variation Coefficient'])
 Text = r'$\rho$ = ' + str(round(Rho,3)) + ' [' + str(round(Rho_CI[0],3)) + ' , ' + str(round(Rho_CI[1],3)) + ']'
 
+## Add filter for OI type III patients
+Filter1 = OIData['Scan'] == '351311_C0000220_SEG_UNCOMP'
+Filter2 = OIData['Scan'] == '350101_C0000121_SEG_UNCOMP'
+
 Figure, Axes = plt.subplots(1, 1, figsize=(5.5, 4.5),dpi=500)
 Axes.plot(HealthyData['BV/TV'],
           HealthyData['Variation Coefficient'],
           linestyle='none',marker='o',color=(0,0,1),fillstyle='none',label='Healthy Data')
 Axes.plot(OIData['BV/TV'],
           OIData['Variation Coefficient'],
-          linestyle='none',marker='o',color=(1,0,0),fillstyle='none',label='OI Data')
+          linestyle='none',marker='^',color=(1,0,0),fillstyle='none',label='OI Data')
+# Axes.plot(OIData[Filter1|Filter2]['BV/TV'],
+#           OIData[Filter1|Filter2]['Variation Coefficient'],
+#           linestyle='none',marker='^',color=(0,1,0),label='OI Type III')
 Axes.plot([OIData['BV/TV'].min(),HealthyData['BV/TV'].max()],[CVLim,CVLim],color=(0,0,0),linestyle='--',label='CV Threshold')
 Axes.annotate(Text, xy=(0.25, 1.05), xycoords='axes fraction')
 Axes.set_xlabel('BV/TV (-)')
@@ -502,8 +509,10 @@ print('p value of LRT for OI group: ' + str(F_OI_p))
 
 
 # 05 Plot the results of the regression
-F_H_LMM_R2adj, F_H_LMM_NE = PlotRegressionResults(F_Healthy_LMM,F_HealthySystem,['Constants'],Random=False)
-F_OI_LMM_R2adj, F_OI_LMM_NE = PlotRegressionResults(F_OI_LMM,F_OISystem,['Constants'],Random=False)
+F_H_LMM_R2adj, F_H_LMM_NE = PlotRegressionResults(F_Healthy_LMM,F_HealthySystem,['Constants'],
+                                                  Random=False,Colors=[(0,0,1),(0,1,1),(0,2/3,1)])
+F_OI_LMM_R2adj, F_OI_LMM_NE = PlotRegressionResults(F_OI_LMM,F_OISystem,['Constants'],
+                                                    Random=False,Colors=[(1,0,0),(1,0,1),(2/3,0,1)])
 
 
 ## Compute filtered model parameters
@@ -533,7 +542,7 @@ F_Grouped_LMM = smf.mixedlm("LogSxy ~ Sii + Sij + Sjj + LogBVTV + Logmxy - 1",
                          data=F_GroupedSystem, groups=F_GroupedSystem['Scan'],
                          vc_formula={"IF": "IF-1"}).fit(reml=True)
 
-G_LMM_R2adj, G_LMM_NE = PlotRegressionResults(Grouped_LMM,GroupedSystem,['Constants'],Random=False)
+G_LMM_R2adj, G_LMM_NE = PlotRegressionResults(F_Grouped_LMM,F_GroupedSystem,['Constants'],Random=False)
 
 Grouped_LMM_Table = ComputeLMConstants(Grouped_LMM)
 F_Grouped_LMM_Table = ComputeLMConstants(F_Grouped_LMM)

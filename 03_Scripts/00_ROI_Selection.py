@@ -130,7 +130,7 @@ ScanList = pd.read_csv(os.path.join(DataFolder,ScanLists[DataGroup]),sep=',')
 ParametersDataFrame = pd.DataFrame()
 
 # Perform for all scans
-Scan = Scans[0]
+Scan = Scans[25]
 for Scan in Scans:
 
     ScanFile = os.path.join(ScansPath,Scan)
@@ -228,5 +228,5 @@ for Scan in Scans:
 # Save Parameters for Medtool
 ColsToInt = ['$XPos', '$YPos', '$ZPos', '$XRange', '$YRange', '$ZRange', '$ROINumber']
 ParametersDataFrame[ColsToInt] = ParametersDataFrame[ColsToInt].astype(int)
-ParametersDataFrame.to_csv(os.path.join(ResultsFolder, DataSubFolders[DataGroup][:-14] + 'ROI.csv'),
+ParametersDataFrame.to_csv(os.path.join(ResultsFolder, DataSubFolders[DataGroup][:-14] + 'ROI2.csv'),
                            sep=';', line_terminator=';\n', index=False)

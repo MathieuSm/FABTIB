@@ -2,6 +2,7 @@
 import os
 import numpy as np
 import pandas as pd
+import SimpleITK as sitk
 import matplotlib
 matplotlib.use('WebAgg')
 import matplotlib.pyplot as plt
@@ -477,6 +478,113 @@ def PlotFabricTensor(EigenValues, EigenVectors, NPoints):
 
 
     return
+def Load_Itk(Filename):
+
+    # Reads the image using SimpleITK
+    Itkimage = sitk.ReadImage(Filename)
+
+    # Convert the image to a  numpy array first and then shuffle the dimensions to get axis in the order z,y,x
+    CT_Scan = sitk.GetArrayFromImage(Itkimage)
+
+    # Read the origin of the ct_scan, will be used to convert the coordinates from world to voxel and vice versa.
+    Origin = np.array(list(reversed(Itkimage.GetOrigin())))
+
+    # Read the spacing along each dimension
+    Spacing = np.array(list(reversed(Itkimage.GetSpacing())))
+
+    # Read the dimension of the CT scan (in voxel)
+    Size = np.array(list(reversed(Itkimage.GetSize())))
+
+    return CT_Scan, Origin, Spacing, Size
+def WriteFabricVTK(EigenValues, EigenVectors, NPoints, Scale, Origin, Directory):
+
+    ## New coordinate system
+    Q = np.array(EigenVectors)
+
+    ## Build data for fabric plotting
+    u = np.arange(0, 2 * np.pi + 2 * np.pi / NPoints, 2 * np.pi / NPoints)
+    v = np.arange(0, np.pi + np.pi / NPoints, np.pi / NPoints)
+    X = EigenValues[0] * np.outer(np.cos(u), np.sin(v))
+    Y = EigenValues[1] * np.outer(np.sin(u), np.sin(v))
+    Z = EigenValues[2] * np.outer(np.ones_like(u), np.cos(v))
+    nNorm = np.zeros(X.shape)
+
+    for i in range(len(X)):
+        for j in range(len(X)):
+            [X[i, j], Y[i, j], Z[i, j]] = np.dot([X[i, j], Y[i, j], Z[i, j]], Q)
+            n = np.array([X[i, j], Y[i, j], Z[i, j]])
+            nNorm[i, j] = np.linalg.norm(n)
+
+    # Scale the arrays
+    X = Scale/2 * X
+    Y = Scale/2 * Y
+    Z = Scale/2 * Z
+
+    # Translate origin to the center of ROI
+    X = Origin[2] + X + Scale/2
+    Y = Origin[1] + Y + Scale/2
+    Z = Origin[0] + Z + Scale/2
+
+    # Write VTK file
+    VTKFile = open(Directory + 'Fabric.vtk', 'w')
+
+    # Write header
+    VTKFile.write('# vtk DataFile Version 4.2\n')
+    VTKFile.write('VTK from Python\n')
+    VTKFile.write('ASCII\n')
+    VTKFile.write('DATASET UNSTRUCTURED_GRID\n')
+
+    # Write points coordinates
+    Points = int(X.shape[0] * X.shape[1])
+    VTKFile.write('\nPOINTS ' + str(Points) + ' floats\n')
+    for i in range(Points):
+        VTKFile.write(str(X.reshape(Points)[i].round(3)))
+        VTKFile.write(' ')
+        VTKFile.write(str(Y.reshape(Points)[i].round(3)))
+        VTKFile.write(' ')
+        VTKFile.write(str(Z.reshape(Points)[i].round(3)))
+        VTKFile.write('\n')
+
+    # Write cells connectivity
+    Cells = int(NPoints**2)
+    ListSize = int(Cells*5)
+    VTKFile.write('\nCELLS ' + str(Cells) + ' ' + str(ListSize) + '\n')
+
+    ## Add connectivity of each cell
+    Connectivity = np.array([0, 1])
+    Connectivity = np.append(Connectivity,[NPoints+2,NPoints+1])
+
+    for i in range(Cells):
+        VTKFile.write('4')
+
+        if i > 0 and np.mod(i,NPoints) == 0:
+            Connectivity = Connectivity + 1
+
+        for j in Connectivity:
+            VTKFile.write(' ' + str(j))
+        VTKFile.write('\n')
+
+        ## Update connectivity
+        Connectivity = Connectivity+1
+
+    # Write cell types
+    VTKFile.write('\nCELL_TYPES ' + str(Cells) + '\n')
+    for i in range(Cells):
+        VTKFile.write('9\n')
+
+    # Write MIL values
+    VTKFile.write('\nPOINT_DATA ' + str(Points) + '\n')
+    VTKFile.write('SCALARS MIL float\n')
+    VTKFile.write('LOOKUP_TABLE default\n')
+
+    for i in range(NPoints+1):
+        for j in range(NPoints+1):
+            VTKFile.write(str(nNorm.reshape(Points)[j + i * (NPoints+1)].round(3)))
+            VTKFile.write(' ')
+        VTKFile.write('\n')
+    VTKFile.close()
+
+    return
 def Engineering2MandelNotation(A):
 
     if isinstance(A[0, 0], np.float):
@@ -501,6 +609,130 @@ def Engineering2MandelNotation(A):
                 B[i, j] = A[i, j]
 
     return B
+def Transform(A,B):
+
+    if A.size == 9 and B.size == 3:
+
+        if isinstance(A[0,0], np.float):
+            c = np.zeros(3)
+        else:
+            c = sp.Matrix([0,0,0])
+
+        for i in range(3):
+            for j in range(3):
+                c[i] += A[i,j] * B[j]
+
+        if not isinstance(A[0,0], np.float):
+            c = np.array(c)
+
+        return c
+
+    elif A.size == 27 and B.size == 9:
+
+        if isinstance(A[0,0,0], np.float):
+            c = np.zeros(3)
+        else:
+            c = sp.Matrix([0,0,0])
+
+        for i in range(3):
+            for j in range(3):
+                for k in range(3):
+                    c[i] += A[i,j,k] * B[j,k]
+
+        if not isinstance(A[0,0,0], np.float):
+            c = np.array(c)
+
+        return c
+
+    elif A.size == 81 and B.size == 9:
+
+        if isinstance(A[0,0,0,0], np.float):
+            C = np.zeros((3,3))
+        else:
+            C = sp.zeros(3)
+
+        for i in range(3):
+            for j in range(3):
+                for k in range(3):
+                    for l in range(3):
+                        C[i,j] += A[i,j,k,l] * B[k,l]
+
+        if not isinstance(A[0,0,0,0], np.float):
+            C = np.array(C)
+
+        return C
+
+    else:
+        print('Matrices sizes mismatch')
+def FrobeniusProduct(A,B):
+
+    s = 0
+
+    if A.size == 9 and B.size == 9:
+        for i in range(3):
+            for j in range(3):
+                s += A[i, j] * B[i, j]
+
+    elif A.size == 36 and B.size == 36:
+        for i in range(6):
+            for j in range(6):
+                s = s + A[i, j] * B[i, j]
+
+    elif A.shape == (9,9) and B.shape == (9,9):
+        for i in range(9):
+            for j in range(9):
+                s = s + A[i, j] * B[i, j]
+
+    elif A.shape == (3,3,3,3) and B.shape == (3,3,3,3):
+        for i in range(3):
+            for j in range(3):
+                for k in range(3):
+                    for l in range(3):
+                        s = s + A[i, j, k, l] * B[i, j, k, l]
+
+    else:
+        print('Matrices sizes mismatch')
+
+    return s
+def DyadicProduct(A,B):
+
+    if A.size == 3:
+
+        if isinstance(A[0], np.float):
+            C = np.zeros((3,3))
+        else:
+            C = sp.zeros(3)
+
+        for i in range(3):
+            for j in range(3):
+                C[i,j] = A[i]*B[j]
+
+        if not isinstance(A[0], np.float):
+            C = np.array(C)
+
+    elif A.size == 9:
+
+        if isinstance(A[0,0], np.float):
+            C = np.zeros((3,3,3,3))
+        else:
+            C = sp.zeros(9)
+
+        for i in range(3):
+            for j in range(3):
+                for k in range(3):
+                    for l in range(3):
+                        if isinstance(A[0, 0], np.float):
+                            C[i,j,k,l] = A[i,j] * B[k,l]
+                        else:
+                            C[3*i+j,3*k+l] = A[i,j] * B[k,l]
+
+        if not isinstance(A[0,0], np.float):
+            C = IsoMorphism99_3333(C)
+
+    else:
+        print('Matrices sizes mismatch')
+
+    return C
 def PlotStiffnessTensor(S4, NPoints):
 
     I = np.eye(3)
@@ -580,6 +812,92 @@ def PlotStiffnessTensor(S4, NPoints):
     plt.close(Figure)
 
     return
+def WriteStiffnessVTK(S4, NPoints, Directory):
+
+    I = np.eye(3)
+
+    ## Build data for plotting tensor
+    u = np.arange(0, 2 * np.pi + 2 * np.pi / NPoints, 2 * np.pi / NPoints)
+    v = np.arange(0, np.pi + np.pi / NPoints, np.pi / NPoints)
+    X = np.outer(np.cos(u), np.sin(v))
+    Y = np.outer(np.sin(u), np.sin(v))
+    Z = np.outer(np.ones_like(u), np.cos(v))
+    Color = np.zeros(X.shape)
+    for i in range(len(X)):
+        for j in range(len(X)):
+            n = np.array([X[i, j], Y[i, j], Z[i, j]])
+            N = DyadicProduct(n, n)
+
+            Elongation = FrobeniusProduct(N, Transform(S4, N))
+            X[i, j], Y[i, j], Z[i, j] = np.array([X[i, j], Y[i, j], Z[i, j]]) * Elongation
+
+            BulkModulus = FrobeniusProduct(I, Transform(S4, N))
+            Color[i, j] = BulkModulus
+
+    MinX, MaxX = int(X.min()), int(X.max())
+    MinY, MaxY = int(Y.min()), int(Y.max())
+    MinZ, MaxZ = int(Z.min()), int(Z.max())
+
+    # Write VTK file
+    VTKFile = open(Directory + 'Stiffness.vtk', 'w')
+
+    # Write header
+    VTKFile.write('# vtk DataFile Version 4.2\n')
+    VTKFile.write('VTK from Python\n')
+    VTKFile.write('ASCII\n')
+    VTKFile.write('DATASET UNSTRUCTURED_GRID\n')
+
+    # Write points coordinates
+    Points = int(X.shape[0] * X.shape[1])
+    VTKFile.write('\nPOINTS ' + str(Points) + ' floats\n')
+    for i in range(Points):
+        VTKFile.write(str(X.reshape(Points)[i].round(3)))
+        VTKFile.write(' ')
+        VTKFile.write(str(Y.reshape(Points)[i].round(3)))
+        VTKFile.write(' ')
+        VTKFile.write(str(Z.reshape(Points)[i].round(3)))
+        VTKFile.write('\n')
+
+    # Write cells connectivity
+    Cells = int(NPoints**2)
+    ListSize = int(Cells*5)
+    VTKFile.write('\nCELLS ' + str(Cells) + ' ' + str(ListSize) + '\n')
+
+    ## Add connectivity of each cell
+    Connectivity = np.array([0, 1])
+    Connectivity = np.append(Connectivity,[NPoints+2,NPoints+1])
+
+    for i in range(Cells):
+        VTKFile.write('4')
+
+        if i > 0 and np.mod(i,NPoints) == 0:
+            Connectivity = Connectivity + 1
+
+        for j in Connectivity:
+            VTKFile.write(' ' + str(j))
+        VTKFile.write('\n')
+
+        ## Update connectivity
+        Connectivity = Connectivity+1
+
+    # Write cell types
+    VTKFile.write('\nCELL_TYPES ' + str(Cells) + '\n')
+    for i in range(Cells):
+        VTKFile.write('9\n')
+
+    # Write MIL values
+    VTKFile.write('\nPOINT_DATA ' + str(Points) + '\n')
+    VTKFile.write('SCALARS Bulk_modulus float\n')
+    VTKFile.write('LOOKUP_TABLE default\n')
+
+    for i in range(NPoints+1):
+        for j in range(NPoints+1):
+            VTKFile.write(str(Color.reshape(Points)[j + i * (NPoints+1)].round(3)))
+            VTKFile.write(' ')
+        VTKFile.write('\n')
+    VTKFile.close()
+
+    return
 def TransformTensor(A,OriginalBasis,NewBasis):
 
     # Build change of coordinate matrix
@@ -645,8 +963,8 @@ DataSubFolders.sort()
 Group = 'Healthy'   # Healthy or OI
 
 DataFolder = os.path.join(WorkingDirectory,'04_Results/01_ROI_Analysis/02_'+Group+'_FabricElasticity')
-ResultsFolder = os.path.join(WorkingDirectory,'04_Results/01_ROI_Analysis/03_'+Group+'_TransformedTensors')
-
+ResultsFolder = os.path.join(WorkingDirectory,'04_Results/01_ROI_Analysis/03_'+Group+'_TransformedTensors/')
+ROIPath = os.path.join(WorkingDirectory,'04_Results/01_ROI_Analysis/01_'+Group+'_ROIs/00_Cleaned_ROIs/')
 
 
 # 01 Load Data
@@ -660,7 +978,7 @@ ConstantsFiles.sort()
 
 # 02 Transform tensor into fabric coordinate system and compute engineering constants
 TransformedConstants = pd.DataFrame()
-
+Sample = ConstantsFiles[0]
 for Sample in ConstantsFiles:
 
     ROINumber = Sample[0]
@@ -668,6 +986,9 @@ for Sample in ConstantsFiles:
 
     FabricData = GetFabricInfos(os.path.join(DataFolder,Sample[:-4] + '.fab'))
     EigenValues, EigenVectors = SortFabric(FabricData)
+    # PlotFabricTensor(EigenValues, EigenVectors, 32)
+    ROI_Scan, ROI_Origin, ROI_Spacing, ROI_Size = Load_Itk(ROIPath + Sample[:-4] + '_Cleaned.mhd')
+    WriteFabricVTK(EigenValues, EigenVectors, 32, ROI_Size[0]*ROI_Spacing[0], ROI_Origin, ResultsFolder)
     ComplianceMatrix = GetComplianceMatrix(os.path.join(DataFolder,Sample))
 
     ## Symmetrize the matrix
@@ -686,6 +1007,7 @@ for Sample in ConstantsFiles:
     I = np.eye(3)
     Q = np.array(EigenVectors)
     TS4 = TransformTensor(IsoMorphism66_3333(MandelStiffness), I, Q)
+    WriteStiffnessVTK(TS4, 32, ResultsFolder)
     TransformedStiffness = IsoMorphism3333_66(TS4)
 
 
@@ -732,3 +1054,6 @@ for Scan in Scans:
     Filter = TransformedConstants['Scan'] == Scan
     ScanConstants = TransformedConstants[Filter]
     ScanConstants.to_csv(os.path.join(ResultsFolder,Scan+'.csv'),index=False)
+
+
+

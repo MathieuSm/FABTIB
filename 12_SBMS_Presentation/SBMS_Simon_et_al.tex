@@ -1,0 +1,736 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (01/07/19)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------
+%	PACKAGES AND THEMES		-----------------------------------
+%----------------------------------------------------------------
+
+\documentclass[xcolor=table,11pt]{beamer}
+
+\mode<presentation> {
+
+\usetheme{Frankfurt}
+\usecolortheme{dove}
+\usefonttheme{serif}
+
+}
+\usepackage{newtxtext,newtxmath}
+\usepackage{graphicx}
+\usepackage{booktabs} 
+\usepackage{subfig}
+\usepackage{pgf}
+\usepackage{multirow}
+\usepackage{appendixnumberbeamer}
+\usepackage{bookmark}
+\usepackage{siunitx}
+\usepackage{animate}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage{pifont}
+\usepackage{caption}
+\captionsetup{skip=0pt,belowskip=0pt}
+
+
+%----------------------------------------------------------------
+%	GENERAL OPTIONS 	-----------------------------------------
+%----------------------------------------------------------------
+
+% Set template options
+\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+\setbeamertemplate{frametitle}{\vspace*{1em}\insertframetitle}
+\setbeamertemplate{enumerate items}[default]
+\setbeamercolor{section in head/foot}{fg=white, bg=black}
+
+% Headline
+\makeatletter
+\setbeamertemplate{headline}
+{%
+  \pgfuseshading{beamer@barshade}%
+    \vskip-5ex%
+  \begin{beamercolorbox}[ignorebg,ht=2.25ex,dp=3.75ex]{section in head/foot}
+  \insertsectionnavigationhorizontal{\paperwidth}{\hskip0pt plus1fill}{\hskip0pt plus1fill}
+  \end{beamercolorbox}%
+  \ifbeamer@sb@subsection%
+    \begin{beamercolorbox}[ignorebg,ht=2.125ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+      \usebeamerfont{subsection in head/foot}\insertsubsectionhead
+    \end{beamercolorbox}%
+  \fi%
+}%
+\makeatother
+
+% Footline
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,left]{section in head/foot}%
+    \usebeamerfont{author in head/foot}\hspace{10pt}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{section in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{section in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{}\hspace*{2em}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+% Add logo
+\logo{\pgfputat{\pgfxy(0,7)}{\includegraphics[width=0.1\paperwidth]{Pictures/00_Unibe_Logo}}}
+
+% Table settings
+\renewcommand{\arraystretch}{2}
+\captionsetup{labelformat=empty,labelsep=none}
+\definecolor{Gray}{gray}{0.9}
+
+% Define highlitghing command
+\makeatletter
+\let\HL\hl
+\renewcommand\hl{%
+	\let\set@color\beamerorig@set@color
+	\let\reset@color\beamerorig@reset@color
+	\HL}
+\makeatother
+
+% Add overview at each begin of section
+%\AtBeginSection[]
+%{
+%	\begin{frame}
+%		\frametitle{Overview}
+%		\tableofcontents[currentsection]
+%	\end{frame}
+%}
+
+
+\renewcommand{\arraystretch}{1.2}
+
+%----------------------------------------------------------------
+%	TITLE PAGE 	-------------------------------------------------
+%----------------------------------------------------------------
+
+\title[Fabric-Elasticity Relationships in OI]{
+\uppercase{Fabric-Elasticity Relationships of Tibial Trabecular Bone are Similar in Osteogenesis Imperfecta and Healthy Individuals}
+} 
+
+\author[Simon et al.]{Simon M.\inst{a} \and Indermaur M.\inst{a} \and Schenk D.\inst{a} \and Mahdi T.\inst{b,c} \and Willie B. M.\inst{b,c} \and Zysset P.\inst{a}}
+\institute{\inst{a}ARTORG Center of Biomedical Engineering Research\\University of Bern \and \inst{b}Departement of Pediatric Surgery\\McGill University, Montreal \and \inst{c}Research Centre\\Shriners Hospital for Children, Montreal
+\medskip
+}
+\date{June 8, 2021}
+
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Overview}
+	\tableofcontents
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\section{Introdution}
+\begin{frame}
+	\frametitle{Osteogenesis Imperfecta (OI)}
+	Metabolic bone disorder
+	\begin{itemize}
+		\item Prevalence \textasciitilde 1/13'500 birth
+		\item Mutations in genes encoding collagen type I
+		\item Different Types: I, II, III, and IV
+		\item Increased bone fragility $\rightarrow$ \textit{Brittle bone disease}
+		\item Blue sclera, hearing loss
+	\end{itemize}
+	\vfill
+	Treatment
+	\begin{itemize}
+		\item Gold standard: bisphosphonate
+		\item Nailing
+		\item Physiotherapy
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Study Objective}
+	\fontsize{10pt}{10pt}\selectfont
+	HR-pQCT scans...
+	\begin{itemize}
+		\item Distal skeleton \textit{in vivo} assessment
+		\item Microstructure analysis
+	\end{itemize}\vfill
+	Homogenized FE (hFE)...
+	\begin{itemize}
+		\item Bone strength estimation based on HR-pQCT scans
+		\item High correlations between hFE and experiment
+	\end{itemize}\vfill
+	But...
+	\begin{itemize}
+		\item HR-pQCT-based FEA relies on fabric-elasticity relationships
+	\end{itemize}\vfill
+	Therefore...
+	\begin{itemize}
+		\item Compare trabecular bone microstructure
+		\item Investigate fabric-elasticity relationships in OI
+	\end{itemize}
+\end{frame}
+
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+
+\section{Methods}
+\subsection{HR-pQCT Scans}
+\begin{frame}
+	\frametitle{HR-pQCT Scans}
+	\begin{columns}
+		\column{.35\textwidth}
+		Healthy group:
+		\begin{itemize}
+			\item 120 participants
+			\item In-house protocol
+		\end{itemize}\vspace{1em}
+		
+		OI group:
+		\begin{itemize}
+			\item 50 participants
+			\item Standard protocol
+		\end{itemize}
+		
+		\column{.2\textwidth}
+		\centering		
+		\includegraphics[width=1\linewidth,trim=200 22 200 0]
+		{Pictures/01_ControlClinicalSection2}\\
+		Healthy
+		
+		\column{.2\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth,trim=200 0 200 22]
+		{Pictures/01_OIClinicalSection2}\\
+		OI
+		
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+
+\subsection{Image Analysis}
+\begin{frame}
+	\frametitle{Image Analysis}
+	\begin{columns}
+		\column{.5\textwidth}
+		Region of Interest (ROI)
+		\begin{itemize}
+			\item 6 cubes of 5.3mm
+		\end{itemize}\vspace{1em}
+		Morphometric analysis
+		\begin{itemize}
+			\item Trabecular morphology\\
+				  Bone volume fraction (BV/TV)\\
+			\item Fabric tensor $\mathbf{M}$\\
+				  Degree of anisotropy (DA)
+			\item Coefficient of variation (CV)
+		\end{itemize}
+	
+		\column{.4\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth,trim=100 0 100 0]
+		{Pictures/01_FabricExample}\\
+		Fabric tensor
+	\end{columns}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Fit to Model}
+	\begin{columns}
+		\column{.5\textwidth}
+		Stiffness tensor $\mathbb{S}$
+		\begin{itemize}
+			\item \si{\micro}FE homogenization
+			\item Transformation and projection
+		\end{itemize}\vspace{1em}
+		Linear Regression
+		\begin{itemize}
+			\item Linear mixed-effects model\\
+			\item Fit to Zysset-Curnier model\\
+			$\mathbb{S}$ \textasciitilde \textcolor{blue}{$\lambda_{0}$}, \textcolor{blue}{$\lambda_{0}$'}, \textcolor{blue}{$\mu_{0}$}, $m_{i}m_{j}^{\textcolor{red}{k}}$, BV/TV$^{\textcolor{red}{l}}$
+			\item Log space for \textcolor{red}{$k$} and \textcolor{red}{$l$}
+			\item $R_{adj}^{2}$ and NE for fit quality
+		\end{itemize}
+		
+		\column{.4\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth,trim=100 0 100 0]
+		{Pictures/01_StiffnessExample}\\
+		Stiffness tensor
+	\end{columns}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Healthy vs OI Comparison}
+	\begin{columns}[t]
+		\column{.5\textwidth}
+		Morphometric analysis
+		\begin{itemize}
+			\item Age and gender matching
+		\end{itemize}
+	
+		\column{.5\textwidth}
+		Linear Regression
+		\begin{itemize}
+			\item Fit using original data sets
+			\item CV filtering
+			\item Fit using filtered data sets
+			\item BV/TV and DA matching
+		\end{itemize}
+	\end{columns}
+
+	\vfill
+
+	\begin{table}[b]
+		\centering
+		\caption{Summary of the data set used for different comparison\vspace{-1em}}
+		\label{Table1}\resizebox{1.\linewidth}{!}{\begin{tabular}{p{0.15\linewidth}*{2}{>{\centering\arraybackslash}p{0.1\linewidth}}*{2}{>{\centering\arraybackslash}p{0.15\linewidth}}*{2}{>{\centering\arraybackslash}p{0.1\linewidth}}*{2}{>{\centering\arraybackslash}p{0.15\linewidth}}}
+				\toprule
+				Data sets & \multicolumn{2}{c}{Original} & \multicolumn{2}{c}{Age \& gender matched} & \multicolumn{2}{c}{CV filtered} & \multicolumn{2}{c}{BV/TV \& DA matched} \\
+				\midrule
+				Group & Healthy & OI & Healthy & OI & Healthy & OI & Healthy & OI \\
+				Individuals & 120 & 49 & 28 & 28 & 119 & 38 & 57 & 32 \\
+				ROIs & 720 & 294 & 168 & 168 & 603 & 117 & 82 & 82 \\
+				\midrule
+				Methods & \multicolumn{2}{c}{Linear regression} & \multicolumn{2}{c}{Morphometric} & \multicolumn{2}{c}{Linear regression} & \multicolumn{2}{c}{Linear regression} \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\section{Results and Discussion}
+\subsection{Morphological Analysis}
+\begin{frame}
+	\frametitle{Morphometric Analysis}
+	\begin{table}[]
+		\centering
+		\caption{Summary of morphometric analysis\vspace{-1em}}
+		\label{Table2}\resizebox{1.\linewidth}{!}{
+		\begin{tabular}{lcccccccc}
+				\toprule
+				Variable & BV/TV & Tb.N. & Tb.Th. & Tb.Sp. & Tb.Sp.SD & SMI & DA & Ln(CV) \\
+				Healthy ? OI & > & > & = & < & < & < & < & < \\
+				p value & <0.01 & <0.001 & 0.2 & 0.01 & 0.02 & <0.001 & 0.02 & <0.0001 \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}\vfill
+	Results in agreement with:
+	\begin{itemize}
+		\item \cite{p9}
+		\item \cite{p10}
+		\item \cite{p11}
+	\end{itemize}
+\end{frame}
+
+%----------------------------------------------------------------
+
+\subsection{Linear Regression and Filtering}
+\begin{frame}
+	\frametitle{Linear Regression - Original Data Sets}
+	\begin{itemize}
+		\item Healthy results in the expected range
+		\item OI fit overestimation for low $\mathbb{S}$ components (low BV/TV)
+	\end{itemize}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\centering
+		\includegraphics[width=1.\linewidth]{Pictures/02_GR_Healthy_LMM}\\
+		Healthy group
+		\column{0.5\textwidth}
+		\centering
+		\includegraphics[width=1.\linewidth]{Pictures/02_GR_OI_LMM}\\
+		OI group
+	\end{columns}	
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Linear Regression - CV Filtering}
+	\fontsize{10pt}{10pt}\selectfont
+	\begin{columns}
+		\column{0.5\textwidth}
+		Homogeneity assumption
+		\begin{itemize}
+			\item High CV decreases fit quality
+		\end{itemize}
+	
+		\vspace{10pt}
+		
+		CV is related to BV/TV
+		\begin{itemize}
+			\item Remove high CV ROIs
+		\end{itemize}
+	
+		\vspace{10pt}
+		
+		Remove high CV ROIs
+		\begin{itemize}
+			\item Improve fit quality
+			\item Increase results accuracy
+		\end{itemize}
+		
+		
+		\column{0.5\textwidth}
+		\centering
+		\includegraphics[width=1.\linewidth]{Pictures/03_CV_BVTV_ROI}\\
+		CV in relation to BV/TV
+	\end{columns}	
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Linear Regression - Filtered Data Sets}
+	\begin{itemize}
+		\item \textasciitilde 1/6 healthy ROIs removed $\rightarrow$ Results in the same range
+		\item \textasciitilde 6/10 OI ROIs removed \hspace{0.52cm}$\rightarrow$ Results similar to healthy group
+	\end{itemize}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\centering
+		\includegraphics[width=1.\linewidth]{Pictures/04_FR_Healthy_LMM}\\
+		Healthy group
+		\column{0.5\textwidth}
+		\centering
+		\includegraphics[width=1.\linewidth]{Pictures/04_FR_OI_LMM}\\
+		OI group
+	\end{columns}	
+\end{frame}
+
+%----------------------------------------------------------------
+
+\subsection{BV/TV and DA Matching}
+
+\begin{frame}
+	\frametitle{Linear Regression - BV/TV and DA Matching}
+	
+	Regression conditions:
+	\begin{itemize}
+		\item Matching allow to fit over same range
+		\item Identical $k$ and $l$ for healthy and OI comparison
+	\end{itemize}
+
+	\vfill
+
+	\begin{table}[]
+		\centering
+		\caption{Summary of BV/TV and DA matched data set linear regression\vspace{-1em}}
+		\label{Table3}\resizebox{1.\linewidth}{!}{
+		\begin{tabular}{cccccccc}
+				\toprule
+				Data set & $\lambda_0$ & $\lambda_0'$ & $\mu_0$ & $k$ & $l$ & $R^2_{adj}$ & NE (\%) \\
+				\midrule
+				Grouped & 4626 [3892-5494] & 2695 [2472-2937] & 3541 [3246-3862] & 1.91 [1.86-1.95] & 0.95 [0.93-0.97] & 0.936 & 19 $\pm$ 9\\
+				
+				Healthy & 4318 [3844-4851] & 2685 [2533-2845] & 3512 [3306-3731] & \textcolor{gray}{1.91} & \textcolor{gray}{0.95} & 0.835 & 21 $\pm$ 10\\
+				
+				OI & 4983 [4345-5716] & 2727 [2547-2921] & 3600 [3355-3863] & \textcolor{gray}{1.91} & \textcolor{gray}{0.95} & 0.860 & 20 $\pm$ 10\\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+
+	\vfill
+	
+	$\rightarrow$ Overlapping stiffness values: Similar fabric-elasticity relationships
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{BV/TV and DA Matching - Tissue BMD (tBMD)}
+	\fontsize{10pt}{10pt}\selectfont
+	\begin{columns}
+		\column{0.5\textwidth}
+				
+		Results
+		\begin{itemize}
+			\item tBMD OI > Healthy
+			\item tBMD related to BV/TV\\
+			$\rightarrow$ Partial volume effect
+		\end{itemize}
+	
+		\vspace{10pt}
+
+		\cite{p12} tBMD
+		\begin{itemize}
+			\item Modulus
+			\item Ultimate stress
+			\item Post-yield behavior
+		\end{itemize}
+		
+		\vspace{10pt}
+		
+		$\rightarrow$ Use tBMD in hFE
+		
+		\column{0.5\textwidth}
+		\centering
+		\includegraphics[width=1.\linewidth]{Pictures/05_tBMDvsBVTV}\\
+		tBMD in relation to BV/TV
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+
+\subsection{Comparison with Other Resolutions}
+
+\begin{frame}
+	\frametitle{Comparison with Other Resolutions}
+	\fontsize{10pt}{10pt}\selectfont
+	
+	\begin{table}[]
+		\centering
+		\caption{Summary of studies compared\vspace{-1em}}
+		\label{Table4}\resizebox{1.\linewidth}{!}{
+			\begin{tabular}{lccc}
+				\toprule
+				Study & Scanned site & Scan & Resolution \\
+				\midrule
+				
+				\cite{p13} & Multiple sites & \si{\micro}CT & 18\si{\micro}m $\rightarrow$ 36\si{\micro}m \\
+				
+				\cite{p7} & Proximal femur & \si{\micro}CT & 18\si{\micro}m $\rightarrow$ 36\si{\micro}m \\
+				
+				Present study & Distal tibia & HR-pQCT & 61\si{\micro}m \\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+
+	\vfill
+
+	\begin{columns}[t]
+		\column{0.5\textwidth}
+		Higher DA
+		\begin{itemize}
+			\item Distal tibia vs proximal femur
+		\end{itemize}
+	
+		\vspace{7pt}
+		
+		Lower stiffness constants ($\lambda_0$, $\lambda_0'$, $\mu_0$)
+		\begin{itemize}
+			\item 61\si{\micro}m vs 36\si{\micro}m
+		\end{itemize}
+	
+		\vspace{7pt}
+		
+		Lower fit quality ($R^2_{adj}$ and NE)
+		\begin{itemize}
+			\item 61\si{\micro}m vs 36\si{\micro}m
+		\end{itemize}
+	
+		\column{0.5\textwidth}
+		Higher $k$
+		\begin{itemize}
+			\item Higher weight of BV/TV
+		\end{itemize}
+	
+		\vspace{7pt}
+		
+		Similar $l$
+		\begin{itemize}
+			\item Similar weight of DA
+		\end{itemize}
+	
+	\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\section{Conclusions}
+\begin{frame}
+	\frametitle{Conclusions}
+	
+	Bone samples...
+	\begin{itemize}
+		\item Similar as reported in literature
+	\end{itemize}
+	
+	\vfill
+	
+	Fabric-elasticity relationships...
+	\begin{itemize}
+		\item Similar in OI and healthy tibial trabecular bone
+	\end{itemize}
+	
+	\vfill
+	
+	But tBMD higher in OI...
+	\begin{itemize}
+		\item \cite{p12} $\rightarrow$ use tBMD in hFE
+	\end{itemize}
+	
+	\vfill
+	
+	Moreover high CV in OI...
+	\begin{itemize}
+		\item Homogenization process should be adapted
+	\end{itemize}
+	
+\end{frame}
+
+
+\begin{frame}
+	Thank you for your attention !	
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+\appendix
+
+\section{References}
+\begin{frame}
+	\frametitle{Osteogenesis Imperfecta}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			
+			\bibitem[Mortier et al. 2019]{p1} Mortier et al. (2019)
+			\newblock Nosology and classification of genetic skeletal disorders: 2019 revision
+			\newblock \textit{American Journal of Medical Genetics, Part A} (179), 2393-2419
+			
+			\bibitem[Tournis 2018]{p2} Tournis, S., Dede, A.D. (2018)
+			\newblock Osteogenesis imperfecta A clinical update
+			\newblock \textit{Metabolism: Clinical and Experimental} (80), 27-37
+			
+			\bibitem[Lim et al. 2017]{p3}  Lim, J., Grafe, I., Alexander, S., Lee, B. (2017)
+			\newblock Genetic causes and mechanisms of osteogenesis imperfecta
+			\newblock \textit{Bone} (102), 40-49
+			
+		\end{thebibliography}
+	}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{HR-pQCT Scans Protocols}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			
+			\bibitem[Schenk et al. 2020]{p4}  Schenk, D., Mathis, A., Lippuner, K., Zysset, P. (2020)
+			\newblock In vivo repeatability of homogenized finite element analysis based on multiple HR-pQCT sections for assessment of distal radius and tibia	strength
+			\newblock \textit{Bone} (141)
+			
+			\bibitem[Whittier et al. 2020]{p5} Whittier et al. (2020)
+			\newblock Guidelines for the assessment of bone density and microarchitecture in vivo using high-resolution peripheral quantitative computed tomography
+			\newblock \textit{Osteoporosis International} (31), 1607-1627
+			
+		\end{thebibliography}
+	}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Region of Interest Analysis}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			
+			\bibitem[Daszkiewicz et al. 2017]{p6} Daszkiewicz, K., Maquer, G., Zysset, P.K. (2017)
+			\newblock The effective elastic properties of human trabecular bone may be approximated using micro-finite element analyses of embedded volume elements
+			\newblock \textit{Biomechanics and Modeling in Mechanobiology} (16), 731-742
+			
+			\bibitem[Panyasantisuk et al. 2015]{p7} Panyasantisuk, J., Pahr, D.H., Gross, T., Zysset, P.K. (2015)
+			\newblock Comparison of Mixed and Kinematic Uniform Boundary Conditions in Homogenized Elasticity of Femoral Trabecular Bone Using Microfinite Element Analyses
+			\newblock \textit{Journal of Biomechanical Engineering} (137), 1-7
+			
+			\bibitem[Zysset 1995]{p8}  Zysset, P.K., Curnier, A. (1995)
+			\newblock An alternative model for anisotropic
+			elasticity based on fabric tensors
+			\newblock \textit{Mechanics of Materials} (21), 243-250
+			
+		\end{thebibliography}
+	}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Morphometric Analysis}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			
+			\bibitem[Folkestad et al. 2012]{p9} Folkestad, L., Hald, J.D., Hansen, S., Gram, J., Langdahl, B., Abra-
+			hamsen, B., Brixen, K. (2012)
+			\newblock Bone geometry, density, and microarchitecture in the distal radius and tibia in adults with osteogenesis imperfecta type i assessed by high-resolution pQCT
+			\newblock \textit{Journal of Bone and Mineral Research} (27), 1405-1412
+			
+			\bibitem[Kocijan et al. 2015]{p10} Kocijan, R., Muschitz, C., Haschka, J., Hans, D., Nia, A., Geroldinger, A., Ardelt, M., Wakolbinger, R., Resch, H. (2015)
+			\newblock Bone structure assessed by HR-pQCT, TBS and DXL in adult patients with different types of osteogenesis imperfecta
+			\newblock \textit{Osteoporosis International
+			} (26), 2431-2440
+			
+			\bibitem[Rolvien et al. 2018]{p11} Rolvien, T., Stürznickel, J., Schmidt, F.N., Butscheidt, S., Schmidt, T., Busse, B., Mundlos, S., Schinke, T., Kornak, U., Amling, M., Oheim, R. (2018)
+			\newblock Comparison of Bone Microarchitecture Between
+			Adult Osteogenesis Imperfecta and Early-Onset Osteoporosis
+			\newblock \textit{Calcified Tissue International} (103), 512-521
+			
+		\end{thebibliography}
+	}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Other References}
+	\footnotesize{
+		\begin{thebibliography}{99}
+			\setbeamertemplate{bibliography item}[triangle]
+			
+			\bibitem[Indermaur et al. 2021]{p12}  Indermaur, M. et al. (2021)
+			\newblock Compressive Strength of Iliac Bone ECM Is Not Reduced in Osteogenesis Imperfecta and Increases With Mineralization
+			\newblock \textit{Journal of Bone and Mineral Research}
+			
+			\bibitem[Gross et al. 2013]{p13}  Gross, T., Pahr, D.H., Zysset, P.K. (2013)
+			\newblock Morphology elasticity relationships using decreasing fabric information of human trabecular bone from three major anatomical locations
+			\newblock \textit{ Biomechanics and Modeling in Mechanobiology}, 793–800
+			
+		\end{thebibliography}
+	}
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\end{document} 

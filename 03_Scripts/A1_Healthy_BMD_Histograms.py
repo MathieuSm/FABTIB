@@ -196,6 +196,7 @@ Matched_Healthy = pd.read_csv(os.path.join(MatchingPath,'01_Matched_Healthy.csv'
 
 
 # 02 Load files
+ROI_Data = pd.read_csv(ResultsDirectory+'00_Shifts.csv')
 for Index in Matched_Healthy.index:
 
     Scan = Matched_Healthy.loc[Index,'Scan']
@@ -204,19 +205,44 @@ for Index in Matched_Healthy.index:
     ## Load scan
     CT_Scan, Origin, Spacing, Size = Load_Itk(ScanPath+Scan[:8]+'.mhd')
 
+    ## Scale scan to BMD values using AIM header
+    AIMFile = open(ScanPath+Scan[:8]+'.AIM', 'rb')
+
+    BinInts = AIMFile.read(32 * 4)
+    AIM_ints = struct.unpack('=32i', BinInts)
+    if int(AIM_ints[5]) == 16:
+        Header = AIMFile.read(AIM_ints[2])
+    else:
+        Header = AIMFile.read(AIM_ints[8])
+
+    ## Read AIM header
+    Header = re.sub(b'(?i) +', b' ', Header)
+    Header = Header.split(b'\n')
+    Header.pop(0); Header.pop(0); Header.pop(0); Header.pop(0)
+    Scaling = None; Slope = None; Intercept = None
+    for Line in Header:
+        if Line.find(b'Scaled by factor') > -1:
+            Scaling = float(Line.split(b' ')[-1])
+        if Line.find(b'Density: intercept') > -1:
+            Intercept = float(Line.split(b' ')[-1])
+        if Line.find(b'Density: slope') > -1:
+            Slope = float(Line.split(b' ')[-1])
+
+    BMD_Scan = CT_Scan / Scaling * Slope + Intercept
+
     ## Load segmented ROI
     ROI_File = str(ROINumber) + '_' + Scan + '_Cleaned.mhd'
     ROI_Scan, ROI_Origin, ROI_Spacing, ROI_Size = Load_Itk(ROIPath+ROI_File)
 
 
-
     # 03 Extract BMD ROI
     ROI_Offset = np.array(ROI_Origin / ROI_Spacing).astype('int')
-    X1, X2 = ROI_Offset[2]+4, ROI_Offset[2] + ROI_Size[2]+4
-    Y1, Y2 = ROI_Offset[1]+4, ROI_Offset[1] + ROI_Size[1]+4
-    Z1, Z2 = ROI_Offset[0], ROI_Offset[0] + ROI_Size[0]
-    ROI = CT_Scan[Z1:Z2, Y1:Y2, X1:X2]
-    PlotROIInScan(CT_Scan, ROI_Origin, ROI_Spacing, ROI_Size, XY=True, XZ=True, YZ=True)
+    Z_Shift, Y_Shift, X_Shift = ROI_Data.loc[Index,['Z Shift','Y Shift','X Shift']].astype('int')
+    X1, X2 = ROI_Offset[2] + X_Shift, ROI_Offset[2] + ROI_Size[2] + X_Shift
+    Y1, Y2 = ROI_Offset[1] + Y_Shift, ROI_Offset[1] + ROI_Size[1] + Y_Shift
+    Z1, Z2 = ROI_Offset[0] + Z_Shift, ROI_Offset[0] + ROI_Size[0] + Z_Shift
+    ROI = BMD_Scan[Z1:Z2, Y1:Y2, X1:X2]
+    PlotROIInScan(BMD_Scan, ROI_Origin, ROI_Spacing, ROI_Size, XY=False, XZ=False, YZ=False)
     PlotCorrespondence(ROI_Scan, ROI, XY=True, XZ=False, YZ=False)
     WriteMHD(ROI, Spacing, ROI_Origin, ResultsDirectory, str(ROINumber) + '_' + Scan[:8], PixelType='float')
 
@@ -224,29 +250,44 @@ for Index in Matched_Healthy.index:
 
     # 04 Get ROI tissue BMD
     tBMD = ROI * ROI_Scan
-
-    ## Prepare histogram and store data
-    Counts, Bins = np.histogram(tBMD[tBMD>0],BinsValues)
-    RelativeWeights = Counts/Counts.sum()
-    i = 0
-    for Column in Histograms.columns:
-        Histograms.loc[Index,Column] = RelativeWeights[i]
-        i += 1
-Histograms.to_csv(ResultsDirectory+'Histograms.csv',index=False)
+    Mean_tBMD = tBMD[tBMD > 0].mean()
+    ROI_Data.loc[Index, 'Mean tBMD'] = Mean_tBMD
+ROI_Data.to_csv(ResultsDirectory+'01_tBMD.csv',index=False)
 
 
 ## plot histogram
 Figure, Axes = plt.subplots(1, 1, figsize=(5.5, 4.5),dpi=100)
 for i in Histograms.index[:-1]:
-    Axes.hist(BinsValues[:-1], BinsValues, weights=Histograms.loc[i],color=(1,0,0,0.2))
-Axes.hist(BinsValues[:-1], BinsValues, weights=Histograms.loc[i+1],color=(1,0,0,0.2),label='ROI histograms')
-Axes.hist(BinsValues[:-1], BinsValues, weights=Histograms.mean(),color=(1,0,0), edgecolor=(0,0,0))
+    Axes.hist(BinsValues[:-1], BinsValues, weights=Histograms.loc[i],color=(0,0,1,0.2))
+Axes.hist(BinsValues[:-1], BinsValues, weights=Histograms.loc[i+1],color=(0,0,1,0.2),label='Healthy ROIs')
+Axes.hist(BinsValues[:-1], BinsValues, weights=Histograms.mean(),color=(0,0,1), edgecolor=(0,0,0))
+# for i in Histograms2.index[:-1]:
+#     Axes.hist(BinsValues[:-1], BinsValues, weights=Histograms2.loc[i],color=(1,0,0,0.2))
+# Axes.hist(BinsValues[:-1], BinsValues, weights=Histograms2.loc[i+1],color=(1,0,0,0.2),label='OI ROIs')
+# Axes.hist(BinsValues[:-1], BinsValues, weights=Histograms2.mean(),color=(1,0,0), edgecolor=(0,0,0))
 Axes.hist([],color=(1,1,1,0), edgecolor=(0,0,0),label='Mean histogram')
-Axes.set_xlim([0,1.5e4])
+Axes.set_xlim([0,1e4])
 Axes.set_xlabel('Tissue BMD (mgHA/cm$^3$)')
 Axes.set_ylabel('Relative density (-)')
 plt.subplots_adjust(bottom=0.15,left=0.175)
 plt.legend(loc='upper right')
+plt.show()
+plt.close(Figure)
+
+
+## Prepare histogram and store data
+BinsValues2 = np.linspace(ROI_Data2['Mean tBMD'].min(),ROI_Data2['Mean tBMD'].max(),20)
+Counts, Bins = np.histogram(ROI_Data['Mean tBMD'],BinsValues)
+RelativeWeights = Counts/Counts.sum()
+Figure, Axes = plt.subplots(1, 1, figsize=(5.5, 4.5),dpi=100)
+Axes.hist(BinsValues[:-1], BinsValues, weights=RelativeWeights,color=(0,0,1), edgecolor=(0,0,1),label='Healthy')
+Axes.set_xlim([4500,5500])
+Axes.set_ylim([0,0.15])
+Axes.set_xlabel('Tissue BMD (mgHA/cm$^3$)')
+Axes.set_ylabel('Relative density (-)')
+plt.subplots_adjust(bottom=0.15,left=0.175)
+plt.legend(loc='upper center',bbox_to_anchor=(0.5,1.25))
+plt.subplots_adjust(top=0.8)
 plt.show()
 plt.close(Figure)
 

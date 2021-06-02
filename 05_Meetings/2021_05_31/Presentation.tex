@@ -1,0 +1,258 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (01/07/19)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------
+%	PACKAGES AND THEMES		-----------------------------------
+%----------------------------------------------------------------
+
+\documentclass[xcolor=table]{beamer}
+
+\mode<presentation> {
+
+\usetheme{Frankfurt}
+\usecolortheme{dove}
+\usefonttheme{serif}
+
+}
+\usepackage{newtxtext,newtxmath}
+\usepackage{graphicx}
+\usepackage{booktabs} 
+\usepackage{subfig}
+\usepackage{pgf}
+\usepackage{multirow}
+\usepackage{appendixnumberbeamer}
+\usepackage{bookmark}
+\usepackage{siunitx}
+\usepackage{animate}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage{pifont}
+\usepackage{caption}
+\captionsetup{skip=0pt,belowskip=0pt}
+
+
+%----------------------------------------------------------------
+%	GENERAL OPTIONS 	-----------------------------------------
+%----------------------------------------------------------------
+
+% Set template options
+\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+\setbeamertemplate{frametitle}{\vspace*{1em}\insertframetitle}
+\setbeamertemplate{enumerate items}[default]
+\setbeamercolor{section in head/foot}{fg=white, bg=black}
+
+% Headline
+\makeatletter
+\setbeamertemplate{headline}
+{%
+  \pgfuseshading{beamer@barshade}%
+    \vskip-5ex%
+  \begin{beamercolorbox}[ignorebg,ht=2.25ex,dp=3.75ex]{section in head/foot}
+  \insertsectionnavigationhorizontal{\paperwidth}{\hskip0pt plus1fill}{\hskip0pt plus1fill}
+  \end{beamercolorbox}%
+  \ifbeamer@sb@subsection%
+    \begin{beamercolorbox}[ignorebg,ht=2.125ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+      \usebeamerfont{subsection in head/foot}\insertsubsectionhead
+    \end{beamercolorbox}%
+  \fi%
+}%
+\makeatother
+
+% Footline
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,left]{section in head/foot}%
+    \usebeamerfont{author in head/foot}\hspace{10pt}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{section in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{section in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{}\hspace*{2em}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+% Add logo
+\logo{\pgfputat{\pgfxy(0,7)}{\includegraphics[width=0.1\paperwidth]{Pictures/00_Unibe_Logo}}}
+
+% Table settings
+\renewcommand{\arraystretch}{2}
+\captionsetup{labelformat=empty,labelsep=none}
+\definecolor{Gray}{gray}{0.9}
+
+% Define highlitghing command
+\makeatletter
+\let\HL\hl
+\renewcommand\hl{%
+	\let\set@color\beamerorig@set@color
+	\let\reset@color\beamerorig@reset@color
+	\HL}
+\makeatother
+
+% Add overview at each begin of section
+%\AtBeginSection[]
+%{
+%	\begin{frame}
+%		\frametitle{Overview}
+%		\tableofcontents[currentsection]
+%	\end{frame}
+%}
+
+
+\renewcommand{\arraystretch}{1.2}
+
+%----------------------------------------------------------------
+%	TITLE PAGE 	-------------------------------------------------
+%----------------------------------------------------------------
+
+\title[Regular Meeting]{
+\uppercase{Regular Meeting}
+} 
+
+\author{Mathieu Simon}
+\institute[University of Bern]
+{
+MSc - Biomedical Engineering \\
+University of Bern, Faculty of Medicine \\
+\medskip
+}
+\date{June 1, 2021}
+
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Overview}
+	\tableofcontents
+\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\section{ROIs tBMD}
+
+\begin{frame}
+	\frametitle{Histograms}
+	\begin{figure}
+		\includegraphics[width=0.8\linewidth]{Pictures/01_tBMD_Histograms}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Normality Check}
+	\begin{columns}
+		\column[c]{0.45\linewidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=1\linewidth]{Pictures/02_Healthy_QQPlot}\\
+			Shapriro-Wilk p value: 0.74
+		\end{figure}
+		\column[c]{0.45\linewidth}
+		\centering
+		\begin{figure}
+			\includegraphics[width=1\linewidth]{Pictures/02_OI_QQPlot}\\
+			Shapriro-Wilk p value: 0.15
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Test Statistics}
+	Normal distribution and equal variances:\\
+	$\rightarrow$ t-test
+	\begin{figure}
+		\includegraphics[width=0.6\linewidth]{Pictures/03_tBMD_BoxPlots}\\
+		p-value: 0.00002\\
+		95\% CI: [-35.385,-13.473]
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{BV/TV and tBMD}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\resizebox{1.\linewidth}{!}{
+			\begin{tabular}{l}Mixed-effects model:\\
+				tBMD \textasciitilde BV/TV \textcolor{gray}{+ Group + BV/TV*Group}\\
+				Group: Healthy (-1) or OI (1)\\
+				Individual slope and intercept\\
+			\end{tabular}}\vfill
+		\begin{figure}
+			\includegraphics[width=1.\linewidth]{Pictures/04_tBMDvsBVTV}\\
+		\end{figure}
+	
+		\column{.5\textwidth}
+		Individual group fits: \vspace{-1em}
+		\begin{table}[!h]
+			\centering
+			\resizebox{1.\linewidth}{!}{
+				\begin{tabular}{ccccc}
+					& Slope & Intercept & R$^2$ & SE \\
+					Healthy & 218 [124,312] & 522 [500,543] & 0.20 & 31 \\
+					OI      & 235 [133,337] & 545 [522,586] & 0.07 & 35 \\
+					\multicolumn{5}{l}{With individual variation:} \\
+					Healthy & 218 [124,312] & 522 [500,543] & 0.81 & 15 \\
+					OI      & 235 [133,337] & 545 [522,586] & 0.80 & 16 \\ \vspace{1em}
+			\end{tabular}}
+		\end{table}
+		Grouped data: \vspace{-1em}
+		\begin{table}[!h]
+			\centering
+			\resizebox{1.\linewidth}{!}{
+				\begin{tabular}{cccccc}
+					Slope & Intercept & Group & BV/TV:Group & R$^2$ & SE \\
+					223 [153,292] & 534 [518,550] & 13 [-3,29] & 3 [-66,72] & 0.23 & 33 \\
+					\multicolumn{6}{l}{With individual variation:} \\
+					223 [153,292] & 534 [518,550] & 13 [-3,29] & 3 [-66,72] & 0.83 & 16 \\ \vspace{1em}
+			\end{tabular}}
+		\end{table}
+	\end{columns}
+	
+\end{frame}
+
+
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+\appendix
+
+%\section{References}
+%\begin{frame}
+%	\frametitle{Statistics}
+%	\footnotesize{
+%		\begin{thebibliography}{99}
+%			\setbeamertemplate{bibliography item}[triangle]
+%			\bibitem[Fox 2016]{p8} Fox, John (2016).
+%			\newblock Fox, Applied Regressions Analysis and Linear Models
+%			\newblock \textit{Sage publications}(3), 817
+%		\end{thebibliography}
+%	}
+%\end{frame}
+
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+
+\end{document} 

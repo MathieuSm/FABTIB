@@ -99,7 +99,7 @@ def GetFabricInfos(FabricFile):
 
 
 # 01 Set variables
-Group = 'Healthy'   # Healthy or OI
+Group = 'OI'   # Healthy or OI
 WorkingDirectory = os.getcwd()
 DataPath = os.path.join(WorkingDirectory,'04_Results/01_ROI_Analysis')
 MorphoPath =  os.path.join(DataPath,'04_' + Group + '_Morphometry/')

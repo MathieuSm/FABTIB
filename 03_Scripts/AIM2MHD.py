@@ -3,6 +3,8 @@ from time import *
 from string import *
 import struct, os
 import pandas as pd
+import struct
+import re
 
 def AIM2mhd(fileInName):
     fileOutName = fileInName.replace('.AIM', '')
@@ -19,10 +21,57 @@ def AIM2mhd(fileInName):
     start = 56
     stop = start + 4
     aimVer_30 = struct.unpack('i', data[start:stop])[0]
+
+    ## Find header int
+    binints = open(fileInName, 'rb').read(32 * 4)
+    header_int = struct.unpack('=32i', binints)
     if string.count(b'AIMDATA_V030') != 1 and aimVer_20 == 16:
         version = 20
+        header = open(fileInName, 'rb').read(header_int[2])
     elif string.count(b'AIMDATA_V030') == 1 and aimVer_30 == 24:
         version = 30
+        header = open(fileInName, 'rb').read(header_int[8])
+
+    ## Read AIM header
+    header = re.sub(b'(?i) +', b' ', header)
+    header = header.split(b'\n')
+    header.pop(0); header.pop(0); header.pop(0); header.pop(0)
+    Scaling = None; Slope = None; Intercept = None
+    for line in header:
+        if line.find(b'Orig-ISQ-Dim-p') > -1:
+            OrigDimp = (float(line.split(b' ')[1]),
+                        float(line.split(b' ')[2]),
+                        float(line.split(b' ')[3]))
+        if line.find(b'Orig-ISQ-Dim-um') > -1:
+            OrigDimum = (float(line.split(b' ')[1]),
+                         float(line.split(b' ')[2]),
+                         float(line.split(b' ')[3]))
+        if line.find(b'Orig-GOBJ-Dim-p') > -1:
+            OrigDimp = (float(line.split(b' ')[1]),
+                        float(line.split(b' ')[2]),
+                        float(line.split(b' ')[3]))
+        if line.find(b'Orig-GOBJ-Dim-um') > -1:
+            OrigDimum = (float(line.split(b' ')[1]),
+                         float(line.split(b' ')[2]),
+                         float(line.split(b' ')[3]))
+        if line.find(b'Scaled by factor') > -1:
+            Scaling = float(line.split(b' ')[-1])
+        if line.find(b'Density: intercept') > -1:
+            Intercept = float(line.split(b' ')[-1])
+        if line.find(b'Density: slope') > -1:
+            Slope = float(line.split(b' ')[-1])
+        if line.find(b'scale (el_size factor)') > -1:
+            Factor = (float(line.split(b' ')[-3]),
+                      float(line.split(b' ')[-2]),
+                      float(line.split(b' ')[-1]))
+    try:
+        Spacing = np.around(np.asarray(OrigDimum) / np.asarray(OrigDimp) / 1000, 5)
+    except:
+        pass
+    try:
+        Factor = np.around(Factor, 5)
+    except:
+        Factor = [0, 0, 0]
 
 
     if version == 20:
@@ -150,6 +199,9 @@ def AIM2mhd(fileInName):
         stop = start + struct.calcsize('4i')
         (a, b, c, d) = struct.unpack('4i', data[start:stop])
 
+        header = f.read(AIM_ints[8])
+        header_len = len(header) + 280
+
 
     time1 = clock()
     stdout.write('Writing the .mhd and the .raw files...\n')
@@ -199,7 +251,17 @@ def AIM2mhd(fileInName):
     outs.write('ElementType = %s\n' % format)
     (path, rawFile) = os.path.split(fileOutName)
     outs.write('ElementDataFile = %s\n' % (rawFile + '.raw'))
+
+    ## Add BMD scaling parameters (if found)
+    if Scaling:
+        outs.write('\n# Scaling = %f\n' % Scaling)
+    if Slope:
+        outs.write('\n# Slope = %f\n' % Slope)
+    if Intercept:
+        outs.write('\n# Intercept = %f\n' % Intercept)
+
     outs.close()
+
     return
 
 DataPath = '/home/mathieu/Documents/Post-Msc/10_Additionnal/01_Healthy_BMD/01_Scans/'
@@ -209,6 +271,8 @@ Samples = Samples.sort_values(by=0,ignore_index=True)
 
 for Sample in Samples[0].values:
 
-    File = os.path.join(DataPath, Sample)
+    Files = [File for File in os.listdir(DataPath+Sample[:-4]) if File.endswith('.AIM')]
 
-    AIM2mhd(File)
+    for File in Files:
+        AIMFile = os.path.join(DataPath, Sample, File)
+        AIM2mhd(AIMFile)
