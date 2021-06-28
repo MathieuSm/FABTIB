@@ -269,11 +269,10 @@
 			\item \si{\micro}FE homogenization
 			\item Transformation and projection
 		\end{itemize}\vspace{1em}
-		Linear Regression
+		Multiple Linear Regression
 		\begin{itemize}
-			\item Linear mixed-effects model\\
 			\item Fit to Zysset-Curnier model\\
-			$\mathbb{S}$ \textasciitilde \textcolor{blue}{$\lambda_{0}$}, \textcolor{blue}{$\lambda_{0}$'}, \textcolor{blue}{$\mu_{0}$}, $m_{i}m_{j}^{\textcolor{red}{k}}$, BV/TV$^{\textcolor{red}{l}}$
+			$\mathbb{S}$ \textasciitilde \textcolor{blue}{$\lambda_{0}$}, \textcolor{blue}{$\lambda_{0}$'}, \textcolor{blue}{$\mu_{0}$}, $m_{i}^{\textcolor{red}{k}}m_{j}^{\textcolor{red}{k}}$, BV/TV$^{\textcolor{red}{l}}$
 			\item Log space for \textcolor{red}{$k$} and \textcolor{red}{$l$}
 			\item $R_{adj}^{2}$ and NE for fit quality
 		\end{itemize}
@@ -295,6 +294,13 @@
 		Morphometric analysis
 		\begin{itemize}
 			\item Age and gender matching
+		\end{itemize}
+	
+		\vspace{17.5pt}
+	
+		Tissue BMD (tBMD)
+		\begin{itemize}
+			\item BV/TV and DA matching
 		\end{itemize}
 	
 		\column{.5\textwidth}
@@ -441,7 +447,7 @@
 	Regression conditions:
 	\begin{itemize}
 		\item Matching allow to fit over same range
-		\item Identical $k$ and $l$ for healthy and OI comparison
+		\item Identical $k$ and $l$ for stiffness comparison
 	\end{itemize}
 
 	\vfill
@@ -469,9 +475,43 @@
 \end{frame}
 
 
+\begin{frame}[noframenumbering]
+	\frametitle{Linear Regression - BV/TV and DA Matching}
+	
+	Regression conditions:
+	\begin{itemize}
+		\item Matching allow to fit over same range
+		\item Identical $k$ and $l$ for stiffness comparison
+	\end{itemize}
+	
+	\vfill
+	
+	\begin{table}[]
+		\centering
+		\caption{Summary of BV/TV and DA matched data set linear regression\vspace{-1em}}
+		\label{Table4}\resizebox{1.\linewidth}{!}{
+			\begin{tabular}{cccccccc}
+				\toprule
+				Data set & $\lambda_0$ & $\lambda_0'$ & $\mu_0$ & $k$ & $l$ & $R^2_{adj}$ & NE (\%) \\
+				\midrule
+				Grouped & 4626 [3892-5494] & 2695 [2472-2937] & 3541 [3246-3862] & 1.91 [1.86-1.95] & 0.95 [0.93-0.97] & 0.936 & 19 $\pm$ 9\\
+				
+				Healthy & 4318 [\hl{3844-4851}] & 2685 [\hl{2533-2845}] & 3512 [\hl{3306-3731}] & \textcolor{gray}{1.91} & \textcolor{gray}{0.95} & 0.835 & 21 $\pm$ 10\\
+				
+				OI & 4983 [\hl{4345-5716}] & 2727 [\hl{2547-2921}] & 3600 [\hl{3355-3863}] & \textcolor{gray}{1.91} & \textcolor{gray}{0.95} & 0.860 & 20 $\pm$ 10\\
+				\bottomrule
+		\end{tabular}}
+	\end{table}
+	
+	\vfill
+	
+	$\rightarrow$ Overlapping stiffness values: Similar fabric-elasticity relationships
+\end{frame}
+
+
 
 \begin{frame}
-	\frametitle{BV/TV and DA Matching - Tissue BMD (tBMD)}
+	\frametitle{BV/TV and DA Matching - tBMD}
 	\fontsize{10pt}{10pt}\selectfont
 	\begin{columns}
 		\column{0.5\textwidth}
@@ -505,68 +545,68 @@
 
 %----------------------------------------------------------------
 
-\subsection{Comparison with Other Resolutions}
-
-\begin{frame}
-	\frametitle{Comparison with Other Resolutions}
-	\fontsize{10pt}{10pt}\selectfont
-	
-	\begin{table}[]
-		\centering
-		\caption{Summary of studies compared\vspace{-1em}}
-		\label{Table4}\resizebox{1.\linewidth}{!}{
-			\begin{tabular}{lccc}
-				\toprule
-				Study & Scanned site & Scan & Resolution \\
-				\midrule
-				
-				\cite{p13} & Multiple sites & \si{\micro}CT & 18\si{\micro}m $\rightarrow$ 36\si{\micro}m \\
-				
-				\cite{p7} & Proximal femur & \si{\micro}CT & 18\si{\micro}m $\rightarrow$ 36\si{\micro}m \\
-				
-				Present study & Distal tibia & HR-pQCT & 61\si{\micro}m \\
-				\bottomrule
-		\end{tabular}}
-	\end{table}
-
-	\vfill
-
-	\begin{columns}[t]
-		\column{0.5\textwidth}
-		Higher DA
-		\begin{itemize}
-			\item Distal tibia vs proximal femur
-		\end{itemize}
-	
-		\vspace{7pt}
-		
-		Lower stiffness constants ($\lambda_0$, $\lambda_0'$, $\mu_0$)
-		\begin{itemize}
-			\item 61\si{\micro}m vs 36\si{\micro}m
-		\end{itemize}
-	
-		\vspace{7pt}
-		
-		Lower fit quality ($R^2_{adj}$ and NE)
-		\begin{itemize}
-			\item 61\si{\micro}m vs 36\si{\micro}m
-		\end{itemize}
-	
-		\column{0.5\textwidth}
-		Higher $k$
-		\begin{itemize}
-			\item Higher weight of BV/TV
-		\end{itemize}
-	
-		\vspace{7pt}
-		
-		Similar $l$
-		\begin{itemize}
-			\item Similar weight of DA
-		\end{itemize}
-	
-	\end{columns}
-\end{frame}
+%\subsection{Comparison with Other Resolutions}
+%
+%\begin{frame}
+%	\frametitle{Comparison with Other Resolutions}
+%	\fontsize{10pt}{10pt}\selectfont
+%	
+%	\begin{table}[]
+%		\centering
+%		\caption{Summary of studies compared\vspace{-1em}}
+%		\label{Table4}\resizebox{1.\linewidth}{!}{
+%			\begin{tabular}{lccc}
+%				\toprule
+%				Study & Scanned site & Scan & Resolution \\
+%				\midrule
+%				
+%				\cite{p13} & Multiple sites & \si{\micro}CT & 18\si{\micro}m $\rightarrow$ 36\si{\micro}m \\
+%				
+%				\cite{p7} & Proximal femur & \si{\micro}CT & 18\si{\micro}m $\rightarrow$ 36\si{\micro}m \\
+%				
+%				Present study & Distal tibia & HR-pQCT & 61\si{\micro}m \\
+%				\bottomrule
+%		\end{tabular}}
+%	\end{table}
+%
+%	\vfill
+%
+%	\begin{columns}[t]
+%		\column{0.5\textwidth}
+%		Higher DA
+%		\begin{itemize}
+%			\item Distal tibia vs proximal femur
+%		\end{itemize}
+%	
+%		\vspace{7pt}
+%		
+%		Lower stiffness constants ($\lambda_0$, $\lambda_0'$, $\mu_0$)
+%		\begin{itemize}
+%			\item 61\si{\micro}m vs 36\si{\micro}m
+%		\end{itemize}
+%	
+%		\vspace{7pt}
+%		
+%		Lower fit quality ($R^2_{adj}$ and NE)
+%		\begin{itemize}
+%			\item 61\si{\micro}m vs 36\si{\micro}m
+%		\end{itemize}
+%	
+%		\column{0.5\textwidth}
+%		Higher $k$
+%		\begin{itemize}
+%			\item Higher weight of BV/TV
+%		\end{itemize}
+%	
+%		\vspace{7pt}
+%		
+%		Similar $l$
+%		\begin{itemize}
+%			\item Similar weight of DA
+%		\end{itemize}
+%	
+%	\end{columns}
+%\end{frame}
 
 %----------------------------------------------------------------
 %----------------------------------------------------------------

@@ -6,6 +6,5 @@
 \beamer@subsectionintoc {3}{1}{Morphological Analysis}{9}{0}{3}
 \beamer@subsectionintoc {3}{2}{Linear Regression and Filtering}{10}{0}{3}
 \beamer@subsectionintoc {3}{3}{BV/TV and DA Matching}{13}{0}{3}
-\beamer@subsectionintoc {3}{4}{Comparison with Other Resolutions}{15}{0}{3}
 \beamer@sectionintoc {4}{Conclusions}{16}{0}{4}
 \beamer@sectionintoc {5}{References}{18}{1}{5}
