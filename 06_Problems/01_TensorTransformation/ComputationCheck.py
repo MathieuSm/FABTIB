@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0,'/home/mathieu/Documents/Post-Msc/06_Problems/01_TensorTransformation/')
+sys.path.insert(0, '//06_Problems/01_TensorTransformation/')
 import os
 import numpy as np
 import pandas as pd
@@ -306,7 +306,7 @@ def PlotStiffnessTensor(S4, NPoints):
     return
 
 ## Set variables
-DataPath = '/home/mathieu/Documents/Post-Msc/06_Problems/01_TensorTransformation/Data/'
+DataPath = '/home/mathieu/Documents/FABTIB/06_Problems/01_TensorTransformation/Data/'
 Samples = ['Control1','Control2','OI1','OI2']
 SampleNumber = 2
 Sample = Samples[SampleNumber]
