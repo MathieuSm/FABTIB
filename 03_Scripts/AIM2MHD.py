@@ -264,7 +264,7 @@ def AIM2mhd(fileInName):
 
     return
 
-DataPath = '/home/mathieu/Documents/Post-Msc/10_Additionnal/01_Healthy_BMD/01_Scans/'
+DataPath = '/home/mathieu/Documents/FABTIB/10_Additionnal/01_Healthy_BMD/01_Scans/'
 
 Samples = pd.DataFrame(os.listdir(DataPath))
 Samples = Samples.sort_values(by=0,ignore_index=True)
