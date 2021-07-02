@@ -580,7 +580,7 @@ Axes.plot(np.sort(OI_Data['BVTV']),
           np.sort(OI_Data['BVTV']) * OI_LMM.params['BVTV'] + OI_LMM.params['Intercept'],
           linestyle='--',color=(1,0,0),label='OI Fit')
 Axes.set_xlabel('BV/TV (-)')
-Axes.set_ylabel('Tissue BMD (mgHA/cm$^3$)')
+Axes.set_ylabel('TMD (mgHA/cm$^3$)')
 plt.legend(loc='upper center',ncol=2,bbox_to_anchor=(0.5,1.25))
 plt.subplots_adjust(left=0.175,top=0.8)
 plt.show()
@@ -621,7 +621,7 @@ Axes.plot(np.sort(Healthy_Data['BVTV']), HealthyFitLine,
 Axes.plot(np.sort(OI_Data['BVTV']), OIFitLine,
           linestyle='--',color=(1,0,0),label='OI Fit')
 Axes.set_xlabel('BV/TV (-)')
-Axes.set_ylabel('Tissue BMD (mgHA/cm$^3$)')
+Axes.set_ylabel('TMD (mgHA/cm$^3$)')
 plt.legend(loc='upper center',ncol=2,bbox_to_anchor=(0.5,1.25))
 plt.subplots_adjust(left=0.175,top=0.8)
 plt.show()

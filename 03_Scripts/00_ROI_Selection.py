@@ -1,4 +1,5 @@
 # 00 Initialization
+
 import os
 import numpy as np
 import pandas as pd
@@ -118,8 +119,8 @@ ScanLists = [File for File in os.listdir(DataFolder) if File.endswith('.csv')]
 ScanLists.sort()
 
 # 03 Load Data
-DataGroup = 1   # 0 = Healthy group, 1 = OI group
-Plots = False   # Plot the different ROI location
+DataGroup = 0   # 0 = Healthy group, 1 = OI group
+Plots = True   # Plot the different ROI location
 
 ScansPath = os.path.join(DataFolder,DataSubFolders[DataGroup])
 Scans = [File for File in os.listdir(ScansPath) if File.endswith('.mhd')]
@@ -230,3 +231,97 @@ ColsToInt = ['$XPos', '$YPos', '$ZPos', '$XRange', '$YRange', '$ZRange', '$ROINu
 ParametersDataFrame[ColsToInt] = ParametersDataFrame[ColsToInt].astype(int)
 ParametersDataFrame.to_csv(os.path.join(ResultsFolder, DataSubFolders[DataGroup][:-14] + 'ROI2.csv'),
                            sep=';', line_terminator=';\n', index=False)
+
+
+
+
+Scan = Scans[12]
+ScanFile = os.path.join(ScansPath,Scan)
+CT_Scan, Origin, Spacing, Size = Load_Itk(ScanFile)
+
+CubeSide = 5.3    # Side length of cubic ROI (mm)
+VoxelsRange = np.round(CubeSide / Spacing).astype('int')
+
+# 04 Select stack
+if DataGroup == 0:
+    StackHeight = int(Size[0] / 3)
+    SelectedStack = CT_Scan[2*StackHeight:,:,:]
+    SoftTissue, TrabBone, CortBone = np.unique(SelectedStack)
+elif DataGroup == 1:
+    StackHeight = int(Size[0])
+    SelectedStack = CT_Scan
+    SoftTissue, TrabBone, CortBone = np.unique(SelectedStack)
+
+
+# 05 Select 6 ROIs
+VoxelMargin = 5
+ParametersDataFrame = pd.DataFrame()
+for ROINumber in range(6):
+
+    Z1, Y1, X1 = ROISelection(SelectedStack, VoxelsRange, VoxelMargin, ROINumber, TrabBone, CortBone)
+
+    if DataGroup == 0:
+        ZPos = Z1+2*StackHeight
+    elif DataGroup == 1:
+        ZPos = Z1
+
+    Parameters = {'$Scan': Scan[:-4],
+                  '$ROINumber': ROINumber+1,
+                  '$XPos': X1,
+                  '$YPos': Y1,
+                  '$ZPos': ZPos,
+                  '$XRange': VoxelsRange[2],
+                  '$YRange': VoxelsRange[1],
+                  '$ZRange': VoxelsRange[0]}
+
+    ParametersDataFrame = ParametersDataFrame.append(Parameters, ignore_index=True)
+
+
+Ratio = Size[2] / Size[1]
+
+GS = gridspec.GridSpec(1,2, width_ratios=[1,Ratio])
+Figure = plt.figure(figsize=(11,4.5), dpi=100)
+Axes1 = plt.subplot(GS[0])
+Axes2 = plt.subplot(GS[1])
+Axes = [Axes1, Axes2]
+
+for Index in ParametersDataFrame.index:
+
+    X1 = ParametersDataFrame['$XPos'].loc[Index].astype('int')
+    X = X1 + np.round(ParametersDataFrame['$XRange'].loc[Index] / 2).astype('int')
+    X2 = X1 + ParametersDataFrame['$XRange'].loc[Index].astype('int')
+
+    Y1 = ParametersDataFrame['$YPos'].loc[Index].astype('int')
+    Y = Y1 + np.round(ParametersDataFrame['$YRange'].loc[Index] / 2).astype('int')
+    Y2 = Y1 + ParametersDataFrame['$YRange'].loc[Index].astype('int')
+
+    Z1 = ParametersDataFrame['$ZPos'].loc[Index].astype('int')
+    Z2 = Z1 + ParametersDataFrame['$ZRange'].loc[Index].astype('int')
+
+    for Plane in range(2):
+
+        if Plane == 0:
+            Axes[Plane].imshow(CT_Scan[:, :, X]-TrabBone+1, cmap='bone', clim=[0,2])
+            Axes[Plane].plot([Y1, Y2], [Z1, Z1], color=(0, 0, 1))
+            Axes[Plane].plot([Y1, Y2], [Z2, Z2], color=(0, 0, 1))
+            Axes[Plane].plot([Y1, Y1], [Z1, Z2], color=(0, 0, 1))
+            Axes[Plane].plot([Y2, Y2], [Z1, Z2], color=(0, 0, 1))
+            Axes[Plane].set_xlabel('Direction 2 (voxel)')
+            Axes[Plane].set_ylabel('Direction 3 (voxel)')
+
+        else:
+            Axes[Plane].imshow(CT_Scan[:, Y, :]-TrabBone+1, cmap='bone', clim=[0,2])
+            Axes[Plane].plot([X1, X2], [Z1, Z1], color=(0, 0, 1))
+            Axes[Plane].plot([X1, X2], [Z2, Z2], color=(0, 0, 1))
+            Axes[Plane].plot([X1, X1], [Z1, Z2], color=(0, 0, 1))
+            Axes[Plane].plot([X2, X2], [Z1, Z2], color=(0, 0, 1))
+            Axes[Plane].set_yticks([])
+            Axes[Plane].set_xlabel('Direction 1 (voxel)')
+
+        Axes[Plane].plot([0, Size[Plane + 1]], [StackHeight, StackHeight], color=(1, 0, 0))
+        Axes[Plane].plot([0, Size[Plane + 1]], [2 * StackHeight, 2 * StackHeight], color=(1, 0, 0))
+        Axes[Plane].set_xlim([0, Size[Plane + 1]])
+        Axes[Plane].set_ylim([0, Size[0]])
+
+plt.show()
+plt.close(Figure)
