@@ -505,23 +505,6 @@ if pValue > 5/100:
               + str(np.quantile(y, 0.75).round(3)) + ']')
         print('\nMann-Whitney test statistic results')
         print('p value: ' + str(np.round(p, 9)))
-else:
-
-    d, RejectionRange, p = PermutationTest(x,y,Variable=Variable)
-
-    print('Variances are not equal')
-    print('\nHealthy group')
-    print('Mean: ' + str(np.round(x.mean(), 3)))
-    print('Std: ' + str(np.round(x.std(ddof=1), 3)))
-    print('OI group')
-    print('Mean: ' + str(np.round(y.mean(), 3)))
-    print('Std: ' + str(np.round(y.std(ddof=1), 3)))
-    print('\nPermutation test statistic results')
-    print('p value: ' + str(np.round(p, 9)))
-    print('95% CI rejection range : ('
-          + str(RejectionRange[0].round(3))
-          + '] U ['
-          + str(RejectionRange[1].round(3)) + ')')
 
 
 BoxData = pd.concat([Healthy_Data['Mean tBMD'],OI_Data['Mean tBMD']],axis=1)
@@ -635,13 +618,6 @@ R2, SE = PlotRegressionResults(Data_LMM, Data, Alpha=0.95, Random=False)
 
 
 ## ANCOVA
-Data_LM_1 = smf.ols("tBMD ~ BVTV + Group + BVTV*Group", data=Data).fit()
-Data_LM_2 = smf.ols("tBMD ~ BVTV + Group", data=Data).fit()
-Data_LM_3 = smf.ols("tBMD ~ BVTV", data=Data).fit()
-
-Models = [Data_LM_1,Data_LM_2,Data_LM_3]
-ModelsResults, ANCOVATable = ANCOVA(Data,Models,Random=False)
-
 def ANCOVA(Data,Models,Random):
 
     ModelsResults = pd.DataFrame()
@@ -696,6 +672,13 @@ def ANCOVA(Data,Models,Random):
     print(ANCOVA[['Source','Models contrasted','Sum of Squares','df','F','p']])
 
     return ModelsResults, ANCOVA
+
+Data_LM_1 = smf.ols("tBMD ~ BVTV + Group + BVTV*Group", data=Data).fit()
+Data_LM_2 = smf.ols("tBMD ~ BVTV + Group", data=Data).fit()
+Data_LM_3 = smf.ols("tBMD ~ BVTV", data=Data).fit()
+
+Models = [Data_LM_1,Data_LM_2,Data_LM_3]
+ModelsResults, ANCOVATable = ANCOVA(Data,Models,Random=False)
 
 Data_LMM_2 = smf.mixedlm("tBMD ~ BVTV + Group + BVTV*Group", data=Data, groups=Data['Scan']).fit(reml=True)
 Data_LMM_2.params
