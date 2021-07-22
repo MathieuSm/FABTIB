@@ -2,10 +2,7 @@
 import os
 import numpy as np
 import pandas as pd
-import SimpleITK as sitk
 import matplotlib.pyplot as plt
-import struct
-import re
 import statsmodels.formula.api as smf
 from scipy.stats.distributions import norm, chi2, t, f
 from scipy.stats import shapiro
