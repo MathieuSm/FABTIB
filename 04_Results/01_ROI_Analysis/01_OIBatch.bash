@@ -9936,35 +9936,35 @@ rm C_FEA/03_JobResults/*.sim
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "B_Edit"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350703_C0000117_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/1_350703_C0000117_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "260; 286; 7; 87; 87; 87"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/1_350703_C0000117_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/1_350703_C0000117_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/1_350703_C0000117_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/1_350703_C0000117_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/1_350703_C0000117_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/1_350703_C0000117_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350703_C0000118_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/1_350703_C0000118_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "123; 215; 19; 87; 87; 87"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/1_350703_C0000118_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/1_350703_C0000118_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/1_350703_C0000118_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/1_350703_C0000118_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/1_350703_C0000118_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/1_350703_C0000118_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
 
 
 # Print the current script operation (C_FEA), and perform the Abaqus simulations
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "C_FEA"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/1_350703_C0000117_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/1_350703_C0000118_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
 "/root/medtool45_SL77/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "1_350703_C0000117_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "1_350703_C0000118_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
 
 
 # Print the current script operation (D_PostProcess) and extract the necessary data for analysis
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "D_PostProcess"
-abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/1_350703_C0000117_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/1_350703_C0000117_SEG_UNCOMP.dat"  -exe "abaqus;python"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350703_C0000117_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350703_C0000117_SEG_UNCOMP.dat"  -type "spatial"
+abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/1_350703_C0000118_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/1_350703_C0000118_SEG_UNCOMP.dat"  -exe "abaqus;python"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/1_350703_C0000118_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/1_350703_C0000118_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.com
-rm C_FEA/03_JobResults/*.pes
-rm C_FEA/03_JobResults/*.prt
 rm C_FEA/03_JobResults/*.dat
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.pmg
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
+rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -9972,35 +9972,35 @@ rm C_FEA/03_JobResults/*.odb
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "B_Edit"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350703_C0000117_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/2_350703_C0000117_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "228; 243; 30; 87; 87; 87"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/2_350703_C0000117_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/2_350703_C0000117_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/2_350703_C0000117_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/2_350703_C0000117_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/2_350703_C0000117_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/2_350703_C0000117_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350703_C0000118_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/2_350703_C0000118_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "101; 96; 24; 87; 87; 87"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/2_350703_C0000118_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/2_350703_C0000118_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/2_350703_C0000118_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/2_350703_C0000118_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/2_350703_C0000118_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/2_350703_C0000118_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
 
 
 # Print the current script operation (C_FEA), and perform the Abaqus simulations
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "C_FEA"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/2_350703_C0000117_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/2_350703_C0000118_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
 "/root/medtool45_SL77/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "2_350703_C0000117_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "2_350703_C0000118_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
 
 
 # Print the current script operation (D_PostProcess) and extract the necessary data for analysis
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "D_PostProcess"
-abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/2_350703_C0000117_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/2_350703_C0000117_SEG_UNCOMP.dat"  -exe "abaqus;python"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350703_C0000117_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350703_C0000117_SEG_UNCOMP.dat"  -type "spatial"
+abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/2_350703_C0000118_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/2_350703_C0000118_SEG_UNCOMP.dat"  -exe "abaqus;python"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/2_350703_C0000118_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/2_350703_C0000118_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.com
-rm C_FEA/03_JobResults/*.pes
-rm C_FEA/03_JobResults/*.prt
 rm C_FEA/03_JobResults/*.dat
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.pmg
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
+rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -10008,35 +10008,35 @@ rm C_FEA/03_JobResults/*.odb
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "B_Edit"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350703_C0000117_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/3_350703_C0000117_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "109; 156; 20; 87; 87; 87"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/3_350703_C0000117_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/3_350703_C0000117_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/3_350703_C0000117_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/3_350703_C0000117_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/3_350703_C0000117_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/3_350703_C0000117_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350703_C0000118_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/3_350703_C0000118_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "194; 62; 34; 87; 87; 87"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/3_350703_C0000118_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/3_350703_C0000118_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/3_350703_C0000118_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/3_350703_C0000118_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/3_350703_C0000118_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/3_350703_C0000118_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
 
 
 # Print the current script operation (C_FEA), and perform the Abaqus simulations
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "C_FEA"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/3_350703_C0000117_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/3_350703_C0000118_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
 "/root/medtool45_SL77/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "3_350703_C0000117_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "3_350703_C0000118_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
 
 
 # Print the current script operation (D_PostProcess) and extract the necessary data for analysis
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "D_PostProcess"
-abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/3_350703_C0000117_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/3_350703_C0000117_SEG_UNCOMP.dat"  -exe "abaqus;python"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350703_C0000117_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350703_C0000117_SEG_UNCOMP.dat"  -type "spatial"
+abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/3_350703_C0000118_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/3_350703_C0000118_SEG_UNCOMP.dat"  -exe "abaqus;python"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/3_350703_C0000118_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/3_350703_C0000118_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.com
-rm C_FEA/03_JobResults/*.pes
-rm C_FEA/03_JobResults/*.prt
 rm C_FEA/03_JobResults/*.dat
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.pmg
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
+rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -10044,35 +10044,35 @@ rm C_FEA/03_JobResults/*.odb
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "B_Edit"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350703_C0000117_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/4_350703_C0000117_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "233; 313; 55; 87; 87; 87"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/4_350703_C0000117_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/4_350703_C0000117_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/4_350703_C0000117_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/4_350703_C0000117_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/4_350703_C0000117_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/4_350703_C0000117_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350703_C0000118_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/4_350703_C0000118_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "194; 122; 60; 87; 87; 87"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/4_350703_C0000118_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/4_350703_C0000118_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/4_350703_C0000118_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/4_350703_C0000118_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/4_350703_C0000118_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/4_350703_C0000118_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
 
 
 # Print the current script operation (C_FEA), and perform the Abaqus simulations
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "C_FEA"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/4_350703_C0000117_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/4_350703_C0000118_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
 "/root/medtool45_SL77/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "4_350703_C0000117_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "4_350703_C0000118_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
 
 
 # Print the current script operation (D_PostProcess) and extract the necessary data for analysis
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "D_PostProcess"
-abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/4_350703_C0000117_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/4_350703_C0000117_SEG_UNCOMP.dat"  -exe "abaqus;python"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350703_C0000117_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350703_C0000117_SEG_UNCOMP.dat"  -type "spatial"
+abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/4_350703_C0000118_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/4_350703_C0000118_SEG_UNCOMP.dat"  -exe "abaqus;python"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/4_350703_C0000118_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/4_350703_C0000118_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.com
-rm C_FEA/03_JobResults/*.pes
-rm C_FEA/03_JobResults/*.prt
 rm C_FEA/03_JobResults/*.dat
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.pmg
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
+rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -10080,35 +10080,35 @@ rm C_FEA/03_JobResults/*.odb
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "B_Edit"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350703_C0000117_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/5_350703_C0000117_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "179; 252; 72; 87; 87; 87"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/5_350703_C0000117_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/5_350703_C0000117_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/5_350703_C0000117_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/5_350703_C0000117_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/5_350703_C0000117_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/5_350703_C0000117_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350703_C0000118_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/5_350703_C0000118_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "120; 291; 42; 87; 87; 87"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/5_350703_C0000118_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/5_350703_C0000118_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/5_350703_C0000118_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/5_350703_C0000118_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/5_350703_C0000118_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/5_350703_C0000118_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
 
 
 # Print the current script operation (C_FEA), and perform the Abaqus simulations
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "C_FEA"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/5_350703_C0000117_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/5_350703_C0000118_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
 "/root/medtool45_SL77/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "5_350703_C0000117_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "5_350703_C0000118_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
 
 
 # Print the current script operation (D_PostProcess) and extract the necessary data for analysis
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "D_PostProcess"
-abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/5_350703_C0000117_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/5_350703_C0000117_SEG_UNCOMP.dat"  -exe "abaqus;python"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350703_C0000117_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350703_C0000117_SEG_UNCOMP.dat"  -type "spatial"
+abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/5_350703_C0000118_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/5_350703_C0000118_SEG_UNCOMP.dat"  -exe "abaqus;python"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/5_350703_C0000118_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/5_350703_C0000118_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.com
-rm C_FEA/03_JobResults/*.pes
-rm C_FEA/03_JobResults/*.prt
 rm C_FEA/03_JobResults/*.dat
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.pmg
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
+rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.odb
+rm C_FEA/03_JobResults/*.sim
 
 
 
@@ -10116,36 +10116,35 @@ rm C_FEA/03_JobResults/*.odb
 
 # Print the current script operation (B_Edit) and perform ROI extraction
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "B_Edit"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350703_C0000117_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/6_350703_C0000117_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "368; 265; 47; 87; 87; 87"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/6_350703_C0000117_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/6_350703_C0000117_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/6_350703_C0000117_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/6_350703_C0000117_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/6_350703_C0000117_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/6_350703_C0000117_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/01_MHDFile/350703_C0000118_SEG_UNCOMP.mhd"  -out "B_Edit/02_RawROI/6_350703_C0000118_SEG_UNCOMP_ROI.mhd"  -form "B"  -cut "156; 250; 56; 87; 87; 87"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/02_RawROI/6_350703_C0000118_SEG_UNCOMP_ROI.mhd"  -out "B_Edit/03_CleanROI/6_350703_C0000118_SEG_UNCOMP_Cleaned.mhd"  -form "B"  -arith "?<1=0;?>1=1"  -clean "FAST"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/6_350703_C0000118_SEG_UNCOMP_Cleaned.mhd"  -out "B_Edit/04_ResizedROI/6_350703_C0000118_SEG_UNCOMP_Resized.mhd"  -form "B"  -arith "*100"  -res4 "0.0607;0.0607;0.0607"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mia.pyc" -in "B_Edit/04_ResizedROI/6_350703_C0000118_SEG_UNCOMP_Resized.mhd"  -out "D_PostProcess/03_Fabric/6_350703_C0000118_SEG_UNCOMP.fab"  -dtype "MIL"  -ftype "1"  -thres "50"
 
 
 # Print the current script operation (C_FEA), and perform the Abaqus simulations
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "C_FEA"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/6_350703_C0000117_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/mic.pyc" -in "B_Edit/03_CleanROI/6_350703_C0000118_SEG_UNCOMP_Cleaned.mhd"  -out "C_FEA/01_Mesh/Mesh.inp"  -temp "Z_MedTool/MeshTemplate.inp"
 "/root/medtool45_SL77/bin/cbc" -in "C_FEA/01_Mesh/Mesh.inp"  -out "C_FEA/02_BoundaryConditions/BCs.inp"  -bcid "CK3"  -code "abaqus"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "6_350703_C0000117_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/abqRun.pyc" -inp "MainFEA.inp"  -exe "/bin/abaqus"  -job "6_350703_C0000118_SEG_UNCOMP"  -dir "C_FEA/03_JobResults/"  -par "interactive;cpus=4"
 
 
 # Print the current script operation (D_PostProcess) and extract the necessary data for analysis
 "/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/info.py" -txt "D_PostProcess"
-abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/6_350703_C0000117_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/6_350703_C0000117_SEG_UNCOMP.dat"  -exe "abaqus;python"
-"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350703_C0000117_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350703_C0000117_SEG_UNCOMP.dat"  -type "spatial"
+abaqus python "/root/medtool45_SL77/bin/abqFuReader2.py" -odb "C_FEA/03_JobResults/6_350703_C0000118_SEG_UNCOMP.odb"  -rpt "D_PostProcess/01_FURead/6_350703_C0000118_SEG_UNCOMP.dat"  -exe "abaqus;python"
+"/root/medtool45_SL77/Python27/bin/python" "/root/medtool45_SL77/bin/FuAnalyzer.pyc" -rpt "D_PostProcess/01_FURead/6_350703_C0000118_SEG_UNCOMP.dat"  -out "D_PostProcess/02_FUAnalyzed/6_350703_C0000118_SEG_UNCOMP.dat"  -type "spatial"
 
 
-rm C_FEA/03_JobResults/*.com
-rm C_FEA/03_JobResults/*.pes
-rm C_FEA/03_JobResults/*.prt
 rm C_FEA/03_JobResults/*.dat
-rm C_FEA/03_JobResults/*.sim
-rm C_FEA/03_JobResults/*.sta
-rm C_FEA/03_JobResults/*.par
 rm C_FEA/03_JobResults/*.pmg
 rm C_FEA/03_JobResults/*.msg
+rm C_FEA/03_JobResults/*.par
+rm C_FEA/03_JobResults/*.prt
+rm C_FEA/03_JobResults/*.sta
+rm C_FEA/03_JobResults/*.com
+rm C_FEA/03_JobResults/*.pes
 rm C_FEA/03_JobResults/*.odb
-
+rm C_FEA/03_JobResults/*.sim
 
 
 
