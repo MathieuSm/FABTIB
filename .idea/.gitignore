@@ -18,3 +18,13 @@
 # Ignore pictures because high definition is too large
 *.png
 *.svg
+
+# Ignore auxiliary tex files
+*.aux
+*.toc
+*.bbl
+*.out
+*.abs
+*.blg
+*.gz
+*.log
