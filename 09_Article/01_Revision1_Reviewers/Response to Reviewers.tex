@@ -20,6 +20,10 @@
 \documentclass{AR2RC}
 
 \usepackage{siunitx}
+\usepackage{subcaption}
+\usepackage{hyperref}
+
+\hypersetup{hidelinks}
 
 \title{Fabric-Elasticity Relationships of Tibial Trabecular Bone are Similar in Osteogenesis Imperfecta and Healthy Individuals}
 \author{Mathieu Simon, Michael Indermaur, Denis Schenk, Seyedmahdi Hosseinitabatabaei, Bettina	M. Willie and Philippe Zysset}
@@ -89,13 +93,35 @@ Discussion, Page 11, Lines 39-43, Right column
 
 \RC Key progress and contribution are in the conclusion that fabric-elasticity relationships in OI trabecular bone are similar compared to healthy bone, based on which one could use HR-pQCT based hFE outcomes for fracture risk assessment. This conclusion was made based on filtered data (Figure 7), and therefore is valid only when trabecular bone is homogeneous enough. When all data including those with low BV/TV are included, the correlation between the fitted stiffness tensor and the observed one is different between the OI group and the healthy group. In other words, the conclusion is no longer valid for trabecular bone with low BV/TV. In terms of fracture risk, trabecular bone with lower density (low BV/TV) in OI patients would pose higher fracture risk, but could not be accurately predicted with the proposed method. Therefore, progress related to OI bone seems to be limited.
 
-\AR Explain filtering of low stiffness means filtering of low BV/TV...
+\AR Effectively, the key contribution, the fact that fabric-elasticity relationships in OI trabecular bone are similar to healthy bone, is based on filtered data. Nevertheless, the filtering was performed according to a coefficient of variation (CV) threshold, i.e. a homogeneity threshold. Figure 6, see Figure \ref{CV_BVTV}, shows CV in relation to BV/TV and it can be seen from this Figure that ROIs presenting a high heterogeneity have a lower BV/TV. Moreover, this tendency is confirmed by the Pearson's correlation coefficient being strictly different from zero, meaning there is a monotonic relation between CV and BV/TV. The fact that we want to highlight here is that a high CV means a low BV/TV and therefore, a low stiffness since it is mainly driven by BV/TV. This is confirmed by comparing Figure 5 and 7, see Figure \ref{CV_Filtering}. Both Figures have the same logarithmic scales and the filtering removes mainly the ROIs with a stiffness orders of magnitudes lower than the stiffness of homogeneous ROIs. Thus, when hFE is performed for bone strength assessment, ROIs that are mostly empty (low BV/TV) do not participate significantly (orders of magnitude lower) to the whole structure strength meaning that the error performed on such ROI stiffness can be neglected.
+
+
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]
+		{Pictures/03_CV_BVTV}
+		\caption{CV in relation to BV/TV.}
+		\label{CV_BVTV}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth, trim= 250 140 250 0]
+		{Pictures/R1_CVFiltering}
+		\caption{Linear regression of the complete data set, healthy and OI pooled together. Shape differs according to CV value of the ROI and color according to the BV/TV.}
+		\label{CV_Filtering}
+	\end{subfigure}
+	\caption{Relations between coefficient of variation (CV) and BV/TV}
+	\label{01_Contribution}
+\end{figure}
 
 \subsection{OI brittelness}
 
 \RC OI affects the production of collagen Type I, and therefore the brittleness of the bone matrix (a composite of bone mineral and collagen protein). Current methodology seemed to be limited to elasticity theory. Its application to predicting bone fragility (toughness) in the case of OI needs has yet to be proved.
 
-\AR Michi articles
+\AR Yes, OI is mainly characterized by impaired synthesis of type I collagen which compose the bone ECM and could therefore affects its toughness. To investigate this phenomenon, a first study was performed by Indermaur and al. (ref 15). They shown that the compressive strength of bone at the ECM level is related to degree of mineralization and that it is not reduced in OI compared to healthy individuals. A second study (not published yet) was performed to compare OI and healthy bone at the ECM level in tension. Their results shown no significant differences between the two phenotypes (i.e. healthy and OI). This, together with results of the present article, allow to conclude that fabric-strength relationships are similar between healthy and OI bone. This means that the main cause of bone fragility in OI is linked to the low bone mass.
 
 
 
@@ -107,7 +133,9 @@ Discussion, Page 11, Lines 39-43, Right column
 
 \RC Methodologically, the paper is interesting and technically sound. It is clear and easy to follow. I do appreciate the direct comparison with the literature, and the sample size collected by the authors. On the other hand, as a Bone reader, I have found unusual reading this kind of engineering/mathematical paper here, and I suppose it is far from the typical audience of the journal. I understand there is a final clinical message, but the way it is reached could be misleading. I would have expected to read this kind of paper in a more engineering journal. I suggest to increase and clarify the possible clinical output of the study in order to increase the impact.
 
-\AR Clarifications in text
+\AR Thank you for this remark. The main reason for the technical details was the clarity of the methods used to compare OI with healthy trabecular bone. On the other hand, Bone include articles with technical components as well. To clarify the clinical significance of this study, the manuscript is modified as follow:
+
+ 
 
 \subsection{OI type differentiation}
 
