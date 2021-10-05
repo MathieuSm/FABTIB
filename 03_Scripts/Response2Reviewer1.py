@@ -151,5 +151,3 @@ Full_LMM = smf.mixedlm("LogSxy ~ Sii + Sij + Sjj + LogBVTV + Logmxy - 1",
 # 05 Plot the results of the regression
 R2adj, NE = PlotRegressionResults(Full_LMM,FullSystem, Random=False)
 
-# 06 Set filter parameters
-CVLim = 0.263
