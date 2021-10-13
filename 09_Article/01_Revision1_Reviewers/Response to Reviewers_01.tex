@@ -1,0 +1,376 @@
+% An example for the ar2rc document class.
+% Copyright (C) 2017 Martin Schroen
+% Modifications Copyright (C) 2020 Kaishuo Zhang
+%
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+% Use quote enviromnent for manuscript text
+
+\documentclass{AR2RC}
+
+\usepackage{siunitx}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage[justification=centering]{caption}
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+\renewcommand{\arraystretch}{1.2}
+
+
+\hypersetup{hidelinks}
+
+\title{Fabric-Elasticity Relationships of Tibial Trabecular Bone are Similar in Osteogenesis Imperfecta and Healthy Individuals}
+\author{Mathieu Simon, Michael Indermaur, Denis Schenk, Seyedmahdi Hosseinitabatabaei, Bettina	M. Willie and Philippe Zysset}
+\journal{Bone}
+\doi{BONE-D-21-00758}
+
+\begin{document}
+
+\maketitle
+
+\vspace{1em}The authors would like to thank the reviewers for their time spent for this article. The comments helped us to improve the manuscript and to express the relevance and outcome of this work with more clarity. Answers are provided point by point in this document. In the manuscript, the added elements are written in blue and the canceled text is in red.
+
+\section{Reviewer \#1}
+
+\RC This report analyzed three dimensional morphology and stiffness of trabecular bone in patients with Osteogenesis Imperfecta (OI), and compared them with those from healthy control group. 3D morphologies were extracted from HR-pQCT data; while stiffness information was obtained by numerical simulation techniques. This is an important research topic with potential applications in assessing bone fragility as a result of OI. However, this reviewer felt the manuscript did not provide sufficient information to clearly explain new progress and novelty.
+
+\AR The main novelty resides in the application of our microFE homogenisation methodology to trabecular bone from OI patients. We hypothesised that the architectural quality of trabecular bone degrades in OI compared to healthy controls, i.e. lower apparent mechanical properties emerge for the same bone volume fraction and fabric. This was never investigated before and is relevant for the application of homogenised finite element analysis (hFEA) to bones from OI patients. In most standard FEA, the apparent mechanical properties of bone are derived from healthy tissue and would therefore overestimate bone stiffness or strength if these properties would be inferior in OI patients. Accordingly, the results of our study fill an important gap in current knowledge and provides a first important validation step towards the use of homogenised FEA in clinical studies involving OI patients. To explain this, the manuscript abstract was modified as follows:\par
+
+Abstract, Lines 23-24
+\begin{quote}
+	\Add{However, it is unclear if these relationships quantified previously for healthy controls are valid for trabecular bone from OI patients.}
+	Thus, the aim of this study is to investigate fabric-elasticity relationships in OI trabecular bone compared to healthy controls.
+\end{quote}
+
+Abstract, Lines 48-49
+\begin{quote}
+	 Despite the reduced linear regression parameters found for HR-pQCT images, the fabric-elasticity relationships between OI and healthy individuals are similar when the trabecular bone ROIs are sufficiently homogeneous to perform the computational stiffness analysis. \Del{Since highly heterogenous ROIs coincide with low BV/TV and can be handled smoothly by the fabric-elasticity relationships we expect them to play a minor role in hFE analysis of distal bone sections.} \Add{Accordingly, the elastic properties used for FEA of healthy bones are also valid for OI bones.}
+\end{quote}
+
+Then, the manuscript is modified at different places to explain the new progress and put more emphasis on the clinical outcome, see following responses.
+
+\subsection{Article contribution}
+
+\RC The general methodology used in this paper followed closely a previously published paper by the same senior author (Zysset, ref 12) on human trabecular bone. Briefly, CT imaging of trabecular bone was followed by micro-FE modeling for stiffness (FE stiffness), and a fabric-elasticity model (Predicted stiffness) reported also by the same senior author (Zysset) in 1995 (ref 32 ). Other than applications of the protocols to OI patients, contributions to either imaging or the modeling techniques seem to be moderate.
+
+\AR This article does not propose a novel methodology, but applies the developed technique to coarser HR-pQCT reconstructions of the distal tibia in order to clarify whether the fabric-elasticity relationships derived for healthy bone are also valid for OI bone. The following contributions can be listed:
+1) application to the distal tibia with comparison of densitometric and micro-architectural parameters, 2) use of HR-pQCT scans i.e. lower resolution scans than the two cited references, 3) an important control cohort of 120 healthy individuals, 4) lack of degradation in trabecular architecture in OI samples compared to controls and 5) validation of homogenised linear FEA to OI diagnosed individuals. The following modifications were undertaken: \par
+
+Introduction, Page 2, Lines 44-45
+\begin{quote}
+	Therefore, the present study aims to compare trabecular bone microstructure of healthy and OI bone samples and to test the hypothesis of similar fabric-elasticity relationships.\Add{ Similar fabric-elasticity relationships will allow to extend the application of HR-pQCT-based hFE of healthy bone to OI bone at least in the linear elastic regime.}
+\end{quote}
+
+Methods - HR-pQCT, Lines 28-29
+\begin{quote}
+	HR-pQCT imaging (XtremeCTII, SCANCO Medical, Brütisellen, Switzerland) was performed at the distal tibia on all patients from both groups. \Add{The distal tibia was chosen because numerous studies were performed on the distal radius [2, 5, 12, 14, 16, 31], some study performed analysis on both distal radius and tibia with XtremeCTI (XtremeCT) [4, 9] but only one study was performed on the distal tibia with XtremeCTII [27].}
+\end{quote}
+
+Results - Comparison with literature, Lines 61-62
+\begin{quote}
+	Table 4 shows results obtained \Add{using HR-pQCT tibiae scans with a resolution of 61 \si{\micro}m} compared to \Del{literature} \Add{previous femora studies using \si{\micro}CT with a resolution of 18\si{\micro}m coarsened to 36\si{\micro}m [12, 24]}.
+\end{quote}
+
+Discussion, Page 10, Lines 55-56, Left column
+\begin{quote}
+	To do this, the study included two groups of participants composed of 120 healthy control and 50 OI diagnosed patients respectively. \Add{These numbers of participants are higher than in other studies comparing OI with healthy controls [9,16,26].}
+\end{quote}
+
+Discussion, Page 10, Lines 38-40, Right column
+\begin{quote}
+	With this statistical non-significance of the groups and their low relative differences in the computed stiffness constants, it can be stated that: if trabecular bone is homogeneous enough, there is no reason to assume differences in fabric-elasticity relationships between healthy and OI trabecular bone. \Add{Thus, the same hFE analysis can be applied for bone stiffness assessment of OI diagnosed individuals as for healthy ones. Although} in hFE analysis \Del{of bones,} it is not possible to exclude part of the mesh because of high heterogeneity \Del{. Nevertheless}, \Add{the influence of such ROIs seems negligible on full bone models as the fabric-elasticity relationships can extrapolate their stiffness smoothly and as this concerns only ROIs with low BV/TV and stiffness.}
+\end{quote}
+
+Discussion, Page 11, Lines 39-43, Right column
+\begin{quote}
+	We could not find statistically significant differences in fabric-elasticity relationships between healthy and OI trabecular bone, when the ROIs were homogeneous enough \Add{to trust the computational homogenisation methodology} (i.e. CV lower than 0.263), and were matched for BV/TV and DA. \Add{Therefore, HR-pQCT-based hFE analyses used for bone stiffness estimation of healthy individuals can be used for OI diagnosed patients as well.}
+\end{quote}
+
+\subsection{Study conclusions}
+
+\RC Key progress and contribution are in the conclusion that fabric-elasticity relationships in OI trabecular bone are similar compared to healthy bone, based on which one could use HR-pQCT based hFE outcomes for fracture risk assessment. This conclusion was made based on filtered data (Figure 7), and therefore is valid only when trabecular bone is homogeneous enough. When all data including those with low BV/TV are included, the correlation between the fitted stiffness tensor and the observed one is different between the OI group and the healthy group. In other words, the conclusion is no longer valid for trabecular bone with low BV/TV. In terms of fracture risk, trabecular bone with lower density (low BV/TV) in OI patients would pose higher fracture risk, but could not be accurately predicted with the proposed method. Therefore, progress related to OI bone seems to be limited.
+
+\AR Indeed, the demonstration that fabric-elasticity relationships in OI trabecular bone are similar to healthy bone, is based on filtered data. Nevertheless, the filtering was performed according to an objective coefficient of variation (CV) threshold, i.e. a homogeneity threshold. The concept of fabric-elasticity requires minimal homogeneity of the ROI to have a biomechanical meaning and typically breaks down when only part of the ROI contains bone. In fact, the excluded data concern both healthy and OI ROIs and are not valid to make any comparisons.
+On the other hand, the empirical fabric-elasticity relationships are smooth with respect to volume fraction and fabric and were not found to induce deviations with respect to experimental results in our previous validation studies on the radius (ref 16) and the tibia (in preparation). This is likely due to the fact that heterogeneous ROIs have low (to extremely low) volume fractions. Theses ROIs not contribute significantly to the mechanical integrity of these bone sections.
+
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]
+		{Pictures/03_CV_BVTV}
+		\caption{CV in relation to BV/TV.}
+		\label{CV_BVTV}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth, trim= 250 140 250 0]
+		{Pictures/R1_CVFiltering}
+		\caption{Linear regression of the complete data set, healthy and OI pooled together. Shape differs according to CV value of the ROI and color according to the BV/TV.}
+		\label{CV_Filtering}
+	\end{subfigure}
+	\caption{Relations between coefficient of variation (CV) and BV/TV}
+	\label{01_Contribution}
+\end{figure}
+
+\newpage
+\subsection{OI brittleness}
+
+\RC OI affects the production of collagen Type I, and therefore the brittleness of the bone matrix (a composite of bone mineral and collagen protein). Current methodology seemed to be limited to elasticity theory. Its application to predicting bone fragility (toughness) in the case of OI needs has yet to be proved.
+
+\AR In fact, our group just challenged this belief as OI bone matrix was found to be stiffer, stronger and no less brittle than healthy bone in biopsies from the iliac crest in both uniaxial compression (Indermaur et al., JBMR 2021) and tension (Indermaur et al., ASBMR 2021). Nevertheless, we agree with the reviewer that the present study does not formally prove that fabric-strength relationships are identical in OI and healthy trabecular bone. We did not run non-linear homogenisation analyses, but our previous experience allows to speculate that if the bone matrix properties are not degraded and the fabric-elasticity relationships are preserved, then the fabric-strength relationships are very likely to be preserved as well.
+
+%
+%
+%
+%
+%
+%
+\newpage
+\section{Reviewer \#2}
+
+\RC The manuscript showed a mathematical investigation of the fabric-elasticity relationships in case of osteogenesis imperfecta and healthy trabecular bones, obtained from distal tibiae. The evidence suggested that the fabric-elasticity relationships of sufficiently homogeneous trabecular tissue with osteogenesis imperfecta and healthy trabecular tissue are similar.
+
+\subsection{Clinical output}
+
+\RC Methodologically, the paper is interesting and technically sound. It is clear and easy to follow. I do appreciate the direct comparison with the literature, and the sample size collected by the authors. On the other hand, as a Bone reader, I have found unusual reading this kind of engineering/mathematical paper here, and I suppose it is far from the typical audience of the journal. I understand there is a final clinical message, but the way it is reached could be misleading. I would have expected to read this kind of paper in a more engineering journal. I suggest to increase and clarify the possible clinical output of the study in order to increase the impact.
+
+\AR Thank you for this remark. The main reason for the technical details was the clarity of the approach used to compare OI with healthy trabecular bone. On the other hand, Bone includes articles with advanced technical components as well. To clarify the clinical significance of this study, the manuscript is modified as follow:
+
+Abstract, Lines 23-24
+\begin{quote}
+	\Add{However, it is unclear if these relationships quantified previously for healthy controls are valid for trabecular bone from OI patients.}
+	Thus, the aim of this study is to investigate fabric-elasticity relationships in OI trabecular bone compared to healthy controls.
+\end{quote}
+
+Abstract, Lines 48-49
+\begin{quote}
+	 Despite the reduced linear regression parameters found for HR-pQCT images, the fabric-elasticity relationships between OI and healthy individuals are similar when the trabecular bone ROIs are sufficiently homogeneous to perform the computational stiffness analysis. \Del{Since highly heterogenous ROIs coincide with low BV/TV and can be handled smoothly by the fabric-elasticity relationships we expect them to play a minor role in hFE analysis of distal bone sections.} \Add{Accordingly, the elastic properties used for FEA of healthy bones are also valid for OI bones.}
+\end{quote}
+
+Introduction, Page 2, Lines 28-31
+\begin{quote}
+	Moreover, HR-pQCT reconstructions can be used for finite element analysis (FEA) to predict mechanical properties, such as bone stiffness and strength [5] \Add{used for fracture risk estimation}. \Add{Micro-finite element (\si{\micro}FE) analysis converts each voxel into an element and thus requires high performance computer for a bone section analysis}. Homogenized finite element (hFE) is based on \Add{local} BV/TV and anisotropy information (fabric) from HR-pQCT reconstructions and can be used to assess bone strength within reasonable computation effort [23]. High correlations were found between patient-specific hFE and mechanical compression experiments of freshly frozen human samples at the distal radius [31, 14, 2]. \Add{Homogenised QCT-based FEA has become more widely used in clinical studies [ref] and is currently approved by the American Food and Drug Administration (FDA).}
+\end{quote}
+
+Reference:\\
+Bergh, J.P.V.D., Szulc, P., Cheung, .A.M., Bouxsein, .M., Engelke, .K., Chapurlat, .R., Den, J.P.V., Nl, B.J., 2021. The clinical application of high-resolution peripheral computed tomography (HR-pQCT) in adults: state of the art and future directions. Osteoporosis Int 32, 1465–1485. URL:https://doi.org/10.1007/s00198-021-05999-z, doi:10.1007/s00198-021-05999-z/Published.\par
+
+As for Reviewer \#1, Comment 1.1\par
+
+Introduction, Page2, Lines 44-45
+\begin{quote}
+	Therefore, the present study aims to compare trabecular bone microstructure of healthy and OI bone samples and to test the hypothesis of similar fabric-elasticity relationships.\Add{ Similar fabric-elasticity relationships will allow to extend the application of HR-pQCT-based hFE of healthy bone to OI bone at least in the linear elastic regime.}
+\end{quote}
+
+Discussion, Page 10, Lines 38-40, Right column
+\begin{quote}
+	With this statistical non-significance of the groups and their low relative differences in the computed stiffness constants, it can be stated that: if trabecular bone is homogeneous enough, there is no reason to assume differences in fabric-elasticity relationships between healthy and OI trabecular bone. \Add{Thus, the same hFE analysis can be applied for bone stiffness assessment of OI diagnosed individuals as for healthy ones. Although} in hFE analysis \Del{of bones,} it is not possible to exclude part of the mesh because of high heterogeneity \Del{. Nevertheless}, \Add{the influence of such ROIs seems negligible on full bone models as the fabric-elasticity relationships can extrapolate their stiffness smoothly and as this concerns only ROIs with low BV/TV and stiffness.}
+\end{quote}
+
+Discussion, Page 11, Lines 39-43, Right column
+\begin{quote}
+	We could not find statistically significant differences in fabric-elasticity relationships between healthy and OI trabecular bone, when the ROIs were homogeneous enough \Add{to trust the computational homogenisation methodology} (i.e. CV lower than 0.263), and were matched for BV/TV and DA. \Add{Therefore, HR-pQCT-based hFE analyses used for bone stiffness estimation of healthy individuals can be used for OI diagnosed patients as well.}
+\end{quote}
+
+\newpage
+\subsection{OI type differentiation}
+
+\RC Another concern consists in the grouping of the bones with OI. Indeed, while the OI group was composed of patients with a diagnosis of OI Type I, III, and IV, the tibiae were merged in a single group (OI group), without any differentiation during the following steps of the study. In the literature and in the studies cited by the authors, the differences among bones with different types of OI resulted remarkable. Thus, I would like to find more details about the OI types in the linear regressions (differentiating the regressions for each type of OI type). Moreover, it would be interesting to see which is the OI type more influenced by the filtering. My idea is that bones with OI type I are "similar" to healthy group, they can easily respect the homogeneity condition, therefore they were not excluded by the filtering strategies. By contrast, the type IV may have a microstructure different from the healthy bones, and they can explain the lack of regression in the OI group. If this is the case, the final message should be mitigated.
+
+\AR Effectively, in the different studies compared to the present one for trabecular morphometry, some of them presented remarkable differences among the OI types. However, the objective here is to compare the effect of OI phenotype to healthy trabecular fabric-elasticity relationships. Nevertheless, Figure \ref{02_OITypes} shows the positions of the different types of OI in the 2 most explanatory plots i.e. the coefficient of variation (CV) in relation to BV/TV (Figure \ref{CV_BVTV2}) and the linear regression with the complete OI data set (Figure \ref{LinearRegression}). In both plots, ROIs of OI type III are in the average values of the OI group. After filtering, the relative number of OI type III removed is slightly higher than for the other types (about 80\% of OI type III compared to 60\% of OI type I and IV). As there are only 6 ROIs taken from the same OI type III individual, it is difficult to draw conclusion about it. However, the relations observed for healthy individuals are similar than the ones observed with the OI type I and IV. Thus, as for Reviewer \#1 comment 1.2, when the ROI BV/TV increases, stiffness increases as well and CV tends to decrease. Finally, ROIs with a sufficiently low CV have enough bone mass and fabric-elasticity relationships holds, both in healthy and OI, whatever the type, trabecular bone.
+
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]
+		{Pictures/R2_CV_BVTV}
+		\caption{CV in relation to BV/TV.}
+		\label{CV_BVTV2}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.475\textwidth}
+		\centering
+		\includegraphics[width=\textwidth, trim= 0 210 0 0]
+		{Pictures/R2_LinearRegression}
+		\caption{Linear regression of the complete OI data set.}
+		\label{LinearRegression}
+	\end{subfigure}
+	\caption{Relative positions of the different OI types for different analyses.}
+	\label{02_OITypes}
+\end{figure}
+
+\newpage
+\subsection{Introduction}
+\RC Introduction: please, add statistics also about the epidemiology of OI in men and women. Moreover, add the lacks in the literature about the OI that this study could solve.
+
+\AR For completeness the following sentences were added in the manuscript:\par
+
+Introduction, Page 2, Lines 6-11
+\begin{quote}
+	OI can be categorized according to disease severity [23], where most familiar forms are:
+	\begin{itemize}
+		\item Type I: mild
+		\item Type II: perinatally lethal
+		\item Type III: most severe surviving form
+		\item Type IV: intermediate severity
+	\end{itemize}
+	
+	\Add{OI occurs worldwide and without sex preference. OI type I is estimated to occur in 45\% of the total OI cases, type II about 10\%, type III 25\% and type IV 20\% [ref1]}. Bone fragility in OI is complex and not totally understood, despite the investigations at different hierarchical levels. Multiple studies show that DXA areal bone mineral density (aBMD) tends to be lower in OI compared to healthy individuals [9, 19, 28] \Add{but aBMD is limited for bone strength estimation [ref2]}.
+\end{quote}
+
+
+References\vspace{-1em}
+\begin{enumerate}
+	\item Martin, E., Shapiro, J.R., 2007. Osteogenesis imperfecta: Epidemiology and pathophysiology. Curr Osteoporos Rep 5, 91–97. URL: http://www.le.ac.uk/genetics/collagen/.
+	\item E, P., J, S.M., N, H.E., C, M.G., A, N.M., A, K.J., 2006. The population burden of fractures originates in women with osteopenia, not osteoporosis. Osteoporos Int 17, 1404–1409. doi:10.1007/s00198-006-0135-9.
+\end{enumerate}
+
+As for Reviewer \#1, Comment 1.1 and Comment 2.1\par
+
+Introduction, Page2, Lines 44-45
+\begin{quote}
+	Therefore, the present study aims to compare trabecular bone microstructure of healthy and OI bone samples and to test the hypothesis of similar fabric-elasticity relationships.\Add{ Similar fabric-elasticity relationships will allow to extend the application of HR-pQCT-based hFE of healthy bone to OI bone at least in the linear elastic regime.}
+\end{quote}
+
+\newpage
+\subsection{Methods - Participants}
+\RC Could you add statistics about body anthropometry? I was wondering, why the groups were matched considering age and not height and weight? Could you explain your choice?
+
+\AR We did not add other the anthropometric data because we thought they were not relevant for the present study and were not available for the control group. The idea of age and sex matching was to analyze similar healthy and OI population, as Folkestad et al. (ref 9), Kocijan et al. (ref 16) and Rolvien et al. (ref 26) did. Matching the data sets according to these two covariables lead to reduce the bias between the two groups (healthy and OI). The aim of this initial analysis was to confirm that our groups are as different from each other as what can be found in the literature and results obtained confirmed this hypothesis.
+
+\subsection{Methods - HR-pQCT}
+\RC The authors used two different protocols to identify the region of interest in the tibiae. Considering that the same protocol could be applied on both groups (control and OI) I do not understand why two different protocols were used. There is a difficult in defining the dense structure in OI specimens? To clarify the manuscript, I suggest to label the most proximal stack in the control tibia as Stack n. 1
+
+\AR The reason for the use of different protocols relies in the fact that the data are obtained from two different studies. Data of the healthy group provide from a study of reproducibility where an in-house protocol was applied for the stacks location. This protocol was designed such as it includes the standard clinical region. OI data provide from another study investigating treatment effect. For this study, it was decided to apply the standard scanning protocol. The possibility to analyze a similar anatomical region for the first time using tibiae HR-pQCT II scans was exploited as the data were available. As suggested, label of the most proximal stack in the control group is changed to n.1 to improve clarity.
+
+\subsection{Methods - Image analysis}
+\RC Page 3, lines 34-35, left column. The stack was divided into two halves WITH A TRANSVERSE PLANE. Pag 3, lines 4-7, right column. Did you use any filter to reduce the noise? If yes, please specify the procedure. Pag 4, line 4. Does your concern about the rotation consist in the errors associated with interpolation?
+
+\AR The transverse plane precision is added to the manuscript. Yes a filtering is used in the standard image processing. The filtering procedure is added to the manuscript as shown below.\par
+
+Methods - Image analysis, Page 2, Line 62, Right column
+\begin{quote}
+	Briefly, an automatic contouring algorithm was applied to define the periosteal contour of the tibia (masking)\Add{. Then, a Gauss filtering (sigma = 0.8, support = 1 voxel) was performed} and a threshold was applied for segmentation of cortical bone (450 mgHA/cm\textsuperscript{3}) and trabecular bone (320 mgHA/cm\textsuperscript{3}).
+\end{quote}
+
+Yes again, by keeping the ROI in its original configuration, errors due to interpolation are avoided. This is now precised in the manuscript.\par
+
+Methods - Image analysis, Page 4, Line 5-6, Left column
+\begin{quote}
+	Such rotation would potentially decrease image quality \Add{due to interpolation}.
+\end{quote}
+
+\subsection{Methods - Linear Regression}
+\RC I would specify here that you are considering the entire sample.
+
+\AR The manuscript is modified in consequence:\par
+
+Methods - Linear Regression, Page 4, Lines 47-48, Right column
+\begin{quote}
+	The orthotropic stiffness tensors obtained after transformation onto fabric coordinate system were then used to perform a multiple linear regression with the Zysset-Curnier model \Add{using the entire sample of both groups}.
+\end{quote}
+
+\subsection{Methods - Data filtering}
+\RC You removed the regions that violated the assumption of homogeneity. Could this affect the final findings of the study? I mean, could this filtering remove the specimens with OI type IV?
+
+\AR The first part of this question is closely related to Comment 1.2 of Reviewer \# 1. We would suggest to refer to our answer to this comment. For the second part, we would suggest to look at the plots used to answer to your comment 2.2. The filtering does not remove completely a specific OI type.
+
+\subsection{Results - Morphological analysis}
+\RC Please, report here the distribution of OI types in the cases matched with controls.
+
+\AR To answer to your request, the manuscript is modified as follow:
+\begin{quote}
+	The mean age was 41y $\pm$ 14y and 41y $\pm$ 15y for the matched healthy and OI individuals, respectively. \Add{The OI group matched with control was composed of nineteen type I and nine type IV.}
+\end{quote}
+
+
+\subsection{Table 2}
+\RC Make easier and more effective the comparison with the literature, indicating below the table the OI types analyzed in the other studies. The positioning on different lines, in the same cell, could not be caught.
+
+\AR To increase the readability of the table, it was changed in the manuscript, see Table \ref{Table2}.
+
+
+\begin{sidewaystable*}
+	\centering
+	\caption{Summary of the tibia ROIs morphological analysis and comparison with literature. Values are presented as mean $\pm$ standard deviation when statistical test is performed on the means or median (inter-quartile range) when test is on medians. The study of Kocijan et al. [16] presents n.s. for non-significant p value test result.}
+	\label{Table2}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{cccccccccc}
+		\toprule
+		\multirow{2}{*}{Variable} & \multirow{2}{*}{Group} & \multicolumn{2}{c}{Present study} & \multicolumn{2}{c}{Folkestad et al. [9]} & \multicolumn{2}{c}{Kocijan et al. [16]} & \multicolumn{2}{c}{Rolvien et al. [26]} \\
+		& & Values & p value & Values & p value & Values & p value & Values & p value \\
+		\midrule
+		
+		\multirow{3}{*}{Age} & Healthy & 41 $\pm$ 14 &  & 54 (21-77) & & 44 (38-52) &  & 49 $\pm$ 16 &  \\
+		& \multirow{2}{*}{OI} & \multirow{2}{*}{41 $\pm$ 15} &  & \multirow{2}{*}{53 (21-77)} &  & 42 (35-56)\textsuperscript{1} & & \multirow{2}{*}{46 $\pm$ 16} & \\
+		& & &  &  &  & 48 (35-58)\textsuperscript{2} & & & \\[3ex]
+		
+		\multirow{3}{*}{BV/TV} & Healthy & 0.222 $\pm$ 0.081 & & 0.14 $\pm$ 0.03 & & 0.141 (0.130-.0170) & & 0.162 $\pm$ 0.010 & \\
+		& \multirow{2}{*}{OI} & \multirow{2}{*}{0.164 $\pm$ 0.079} & \multirow{2}{*}{<0.01} & \multirow{2}{*}{0.08 $\pm$ 0.03} & \multirow{2}{*}{<0.001} & 0.098 (0.088-0.114)\textsuperscript{1} & <0.0001\textsuperscript{1} & \multirow{2}{*}{0.095 $\pm$ 0.008} & \multirow{2}{*}{<0.0001} \\
+		& & & & & & 0.081 (0.056-0.092)\textsuperscript{2} & <0.0001\textsuperscript{2} & & \\[3ex]
+		
+		\multirow{3}{*}{Tb.N.} & Healthy & 0.842 $\pm$ 0.144 & & 1.94 (1.74-2.13) & & 1.76 (1.59-2.08) & & 2.143 $\pm$ 0.089 & \\
+		& \multirow{2}{*}{OI} & \multirow{2}{*}{0.650 $\pm$ 0.198} & \multirow{2}{*}{<0.001} & \multirow{2}{*}{1.30 (0.75-1.53)} & \multirow{2}{*}{<0.001} & 1.33 (1.07-1.55)\textsuperscript{1} & <0.0001\textsuperscript{1} & \multirow{2}{*}{1.428 $\pm$ 0.098} & \multirow{2}{*}{<0.0001} \\
+		& & & & & & 0.89 (0.81-1.08)\textsuperscript{2} & <0.001\textsuperscript{2} & & \\[3ex]
+		
+		\multirow{3}{*}{Tb.Th.} & Healthy & 0.301 (0.287-0.321) & & 0.07 (0.06-0.08) & & 0.081 (0.074-0.087) & & 0.075 $\pm$ 0.003 & \\
+		& \multirow{2}{*}{OI} & \multirow{2}{*}{0.306 (0.292-0.331)} & \multirow{2}{*}{0.2} & \multirow{2}{*}{0.07 (0.06-0.08)} & \multirow{2}{*}{0.5} & 0.074 (0.064-0.090)\textsuperscript{1} & n.s.\textsuperscript{1} & \multirow{2}{*}{0.066 $\pm$ 0.004} & \multirow{2}{*}{0.046}\\
+		& & & & & & 0.078 (0.068-0.092)\textsuperscript{2} & n.s.\textsuperscript{2} & & \\[3ex]
+		
+		\multirow{3}{*}{Tb.Sp.} & Healthy & 0.924 $\pm$ 0.257 & & 0.44 (0.39-0.51) & & \multirow{3}{*}{-} & & 0.409 $\pm$ 0.023 & \\
+		& \multirow{2}{*}{OI} & \multirow{2}{*}{1.422 $\pm$ 0.694} & \multirow{2}{*}{0.01} & \multirow{2}{*}{0.68 (0.57-1.19)} & \multirow{2}{*}{<0.001} & &  & \multirow{2}{*}{0.727 $\pm$ 0.095} & \multirow{2}{*}{0.0003}\\
+		& & & & & & & & & \\[3ex]
+		
+		\multirow{3}{*}{Tb.Sp.SD} & Healthy & 0.317 $\pm$ 0.136 & & 0.20 (0.16-0.25) & & 0.221 (0.170-0.242) & & - &  \\
+		& \multirow{2}{*}{OI} & \multirow{2}{*}{0.631 $\pm$ 0.383} & \multirow{2}{*}{0.02} & \multirow{2}{*}{0.40 (0.31-1.11)} & \multirow{2}{*}{<0.001} & 0.382 (0.311-0.504)\textsuperscript{1} & <0.0001\textsuperscript{1} & - & \\
+		& & & & & & 0.698 (0.511-0.890\textsuperscript{2} & <0.001\textsuperscript{2} & & \\[3ex]
+		
+		\multirow{3}{*}{SMI} & Healthy & 0.001 (-0.021-0.033) & & \multirow{3}{*}{-} &  & \multirow{3}{*}{-} & & \multirow{3}{*}{-} &  \\
+		& \multirow{2}{*}{OI} & \multirow{2}{*}{0.056 (0.015-0.079)} & \multirow{2}{*}{<0.001} & & & &  & & \\
+		& & & & & & & & & \\[3ex]
+		
+		\multirow{3}{*}{DA} & Healthy & 1.992 (1.826-2.020) & & \multirow{3}{*}{-} & & \multirow{3}{*}{-} & & \multirow{3}{*}{-} &  \\
+		& \multirow{2}{*}{OI} & \multirow{2}{*}{2.018 (1.901-2.158)} & \multirow{2}{*}{0.02} & & & & & & \\
+		& & & & & & & & & \\[3ex]
+		
+		\multirow{3}{*}{ln(CV)} & Healthy & -1.723 $\pm$ 0.344 & & \multirow{3}{*}{-} & & \multirow{3}{*}{-} & & \multirow{3}{*}{-} &  \\
+		& \multirow{2}{*}{OI} & \multirow{2}{*}{-1.178 $\pm$ 0.441} & \multirow{2}{*}{<0.0001} & & & & & & \\
+		& & & & & & & & & \\
+		
+		\bottomrule
+	\end{tabular}}
+	OI types included in the study: Present study, types I and IV; Folkestad et al. [9], type I; Kocijan et al. [16], 1) type I 2) type III and IV; Rolvien et al. [26], type I and IV.
+\end{sidewaystable*}
+
+\newpage
+\subsection{Results - Comparison with literature}
+\RC Could you perform a test to evaluate if differences exist among the different regressions?
+
+\AR As the full data sets of the other studies are not available, it is not possible to perform a statistical test to see if the stiffness constants i.e. the slopes are different. Nevertheless, it is possible to perform statistical tests on BV/TV, DA and NE (for filtered data sets), assuming they were normally distributed. These tests will only provide insights about differences in the explanatory variables and the fit quality but not about differences in the slopes (stiffness constants). As said in the discussion, these differences derive from the different scan resolutions between the two studies.
+
+\subsection{Discussion}
+\RC The discussion is interesting and full of details and rigorous considerations. However, it is based only on the engineering/mathematical approach used in the study, and far from the clinical audience. I would like to read more about the effects of the different OI types in the provided findings.
+
+\AR Thank you for your remark. The main idea of this study was to determine if standard hFE analyses could be performed on OI individuals. As shown in Figure \ref{02_OITypes}, there is no strict differences between OI type I and IV. Moreover, as filtering leaved only one ROI of OI type III, it is not possible to perform statistics about it. However, this one ROI is not different to the other ROIs kept after filtering. So the main conclusion of the present article is that when the ROI has enough mass (BV/TV) for homogenization to make sense, the distribution of this mass (fabric-elasticity relationship) is similarly optimized either in OI (type I, III, IV) or healthy trabecular bone. This means that standard hFE analyses can be performed by clinicians even if the patient is OI diagnosed, whatever the type, because it will not have a significant difference on the bone stiffness assessment.
+
+\end{document}
