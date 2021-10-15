@@ -608,6 +608,26 @@ plt.show()
 plt.close(Figure)
 
 
+## For review 01
+Range = [min(OI_Data['BVTV'].min(),Healthy_Data['BVTV'].min()),
+         max(OI_Data['BVTV'].max(),Healthy_Data['BVTV'].max())]
+MidRange = np.mean(Range)
+
+Healthy_MidTMD = MidRange * Data_LMM_2.params['BVTV'] \
+                 + Data_LMM_2.params['Intercept'] \
+                 + (-1) * Data_LMM_2.params['Group'] \
+                 + MidRange * (-1) * Data_LMM_2.params['BVTV:Group']
+
+OI_MidTMD = MidRange * Data_LMM_2.params['BVTV'] \
+                 + Data_LMM_2.params['Intercept'] \
+                 + 1 * Data_LMM_2.params['Group'] \
+                 + MidRange * 1 * Data_LMM_2.params['BVTV:Group']
+# Michi work
+y1 = (-0.4 + (0.0011*Healthy_MidTMD))*1000
+y2 = (-0.4 + (0.0011*OI_MidTMD))*1000
+(y2-y1)/y1*100
+
+
 Data_LMM.params
 Data_LMM.conf_int(0.05)
 
