@@ -205,14 +205,9 @@
 	
 	The ROI was defined as a cube of 5.3 mm side length. This size agreed with the work of \citeauthor{Panyasantisuk2015}\cite{Panyasantisuk2015} and \citeauthor{Gross2013}\cite{Gross2013}, who performed similar analysis with femur \si{\micro}CT scans. It was determined by \citeauthor{Zysset1998}\cite{Zysset1998} and \citeauthor{Daszkiewicz2017}\cite{Daszkiewicz2017} to allow a relative homogeneity of trabecular tissue within the ROI leading to accurate \si{\micro}FE results and a minimal computational cost.\\
 	
-	After ROI cleaning, i.e. deletion of bone material regions unconnected to the main structure, the morphological analysis of ROIs was performed using medtool (v4.5; Dr. Pahr Ingenieurs e.U., Pfaffst\"{a}tten, Austria). The morphological parameters analyzed were: BV/TV, structural model index (SMI), trabecular number (Tb.N.), trabecular thickness (Tb.Th.), trabecular separation (Tb.Sp.), and the standard deviation of the trabecular separation (Tb.Sp.SD). Moreover, ROI tissue mineral density (TMD) and fabric was evaluated. The fabric tensor $\mathbf{M}$ was computed using mean intercept length (MIL) method \cite{Moreno2014}. It is a positive-definite second-order tensor computed as shown below.
+	After ROI cleaning, i.e. deletion of bone material regions unconnected to the main structure, the morphological analysis of ROIs was performed using medtool (v4.5; Dr. Pahr Ingenieurs e.U., Pfaffst\"{a}tten, Austria). The morphological parameters analyzed were: BV/TV, structural model index (SMI), trabecular number (Tb.N.), trabecular thickness (Tb.Th.), trabecular separation (Tb.Sp.), and the standard deviation of the trabecular separation (Tb.Sp.SD). Moreover, ROI tissue mineral density (TMD) and fabric was evaluated. The fabric tensor $\mathbf{M}$ was computed using mean intercept length (MIL) method \cite{Moreno2014}. \Del{It is a positive-definite second-order tensor computed as shown below.}\\
 	
-	\begin{equation}
-	\mathbf{M} = \sum_{i=1}^{3}{m_i \mathbf{M}_i} = \sum_{i=1}^{3}{m_i (\mathbf{m}_i \otimes \mathbf{m}_i})
-	\label{Eq201}
-	\end{equation}
-	
-	where $m_i$ are the eigenvalues of $\mathbf{M}$ and $\mathbf{M}_i$ are the dyadic product of the corresponding eigenvectors $\mathbf{m}_i$ \cite{Cowin1985,Harrigan1985}. The fabric tensor is independent of BV/TV and normalised with $tr(\mathbf{M}) = 3$. The fabric eigenvalues allow to compute the degree of anisotropy (DA) of the ROI by dividing the highest eigenvalue by the lowest one. Figure \ref{01_FabricExample} shows an example of a typical ROI with the visualisation of its fabric tensor.\\
+	\Del{where $m_i$ are the eigenvalues of $\mathbf{M}$ and $\mathbf{M}_i$ are the dyadic product of the corresponding eigenvectors $\mathbf{m}_i$ }\cite{Cowin1985,Harrigan1985}\Del{. The fabric tensor is independent of BV/TV and normalised with $tr(\mathbf{M}) = 3$.} The fabric eigenvalues allow to compute the degree of anisotropy (DA) of the ROI by dividing the highest eigenvalue by the lowest one. Figure \ref{01_FabricExample} shows an example of a typical ROI with the visualisation of its fabric tensor.\\
 	
 	\begin{figure}[h!]
 		\centering
@@ -262,21 +257,7 @@
 	\subsubsection{Model Modifications}
 	Another modification of the model was to add a regressor for the group variable (healthy or OI), i.e. add a column to the design matrix $X$ and a row to the parameter vector $\beta$. This modified model is compared to the original by analysis of covariance (ANCOVA) using the fixed-effects only to determine the statistical significance of the group. Implementation of this modification was performed according to \cite{Fox2016}. A similar mixed-effect model was used to analyze the relation between TMD and BV/TV and the significance of the group, see Appendix \ref{A1} Equation \ref{EqA14}. The model used the BV/TV and the group (healthy or OI) as fixed variables and the individual as random variable. Moreover, to test the hypothesis of no interaction between the BV/TV and the group, i.e. the group has no significant influence on the TMD versus BV/TV slope, the model was modified to add the interaction regressor (BV/TV x Group). The detailed linear systems for each model discussed here are available in Appendix \ref{A1} and a summary of the data sets used for the different methods is shown in Table \ref{Table1}.\\
 	
-	The linear regression was performed using the \textsc{statsmodels} package from \textsc{Python 3.6}. Linear regression quality for the TMD analysis was assessed using the Pearson correlation coefficient squared ($R^2$) and the standard error of the estimate (SE). Linear regression on Zysset-Curnier model was assessed using the adjusted Pearson correlation coefficient squared ($R^2_{adj}$) and relative error between the orthotropic observed and the predicted tensor using norm of fourth-order tensors (NE), see Equation \ref{Eq205} and \ref{Eq206}\Add{, respectively}. 
-	
-	\begin{equation}
-	R^2_{adj} = 1 - \frac{\mathrm{RSS}}{\mathrm{TSS}} \frac{(12n-1)}{(12n - p - 1)}
-	\label{Eq205}
-	\end{equation}
-	
-	Where RSS is the residual sum of squares and TSS is the total sum of squares i.e. sum of the square of the observations y. $n$ is the number of ROIs and $p$ the number of parameters.
-	
-	\begin{equation}
-	\text{NE} = \sqrt{\frac{(\mathbb{S}_o - \mathbb{S}_p) :: (\mathbb{S}_o - \mathbb{S}_p)}{\mathbb{S}_o :: \mathbb{S}_o}}
-	\label{Eq206}
-	\end{equation}
-	
-	\Add{Where $\mathbb{S}_o$ and $\mathbb{S}_p$ are the observed and predicted stiffness tensors, respectively. This relative norm error allows to quantify the accuracy of the prediction.}
+	The linear regression was performed using the \textsc{statsmodels} package from \textsc{Python 3.6}. Linear regression quality for the TMD analysis was assessed using the Pearson correlation coefficient squared ($R^2$) and the standard error of the estimate (SE). Linear regression on Zysset-Curnier model was assessed using the adjusted Pearson correlation coefficient squared ($R^2_{adj}$) and relative error between the orthotropic observed and the predicted tensor using norm of fourth-order tensors (NE)\Del{, see Equation \ref{Eq205} and \ref{Eq206}}. \Add{This relative norm error allows to quantify the accuracy of the prediction. Details of the computation of these numbers are available in Appendix \ref{A0}.}
 	
 	\begin{table*}[b]
 		\centering
@@ -528,7 +509,14 @@
 	\appendix
 	\section{Technical Computations}\label{A0}
 	
-	The Zysset-Curnier model \cite{Zysset1995} computes the fourth order stiffness tensor $\mathbb{S}$ using the BV/TV or $\rho$, fabric tensor $\mathbf{M}$, three elasticity parameters $\lambda_0$, $\lambda_0$', and $\mu_0$, and two exponents, $k$ and $l$, as shown in Equation \ref{Eq202}.
+	The Zysset-Curnier model \cite{Zysset1995} computes the fourth order stiffness tensor $\mathbb{S}$ using the BV/TV or $\rho$, fabric tensor $\mathbf{M}$, three elasticity parameters $\lambda_0$, $\lambda_0$', and $\mu_0$, and two exponents, $k$ and $l$, as shown in Equation \ref{Eq202}. The fabric tensor $\mathbf{M}$ is a positive-definite second-order tensor computed as shown below.
+	
+	\begin{equation}
+	\mathbf{M} = \sum_{i=1}^{3}{m_i \mathbf{M}_i} = \sum_{i=1}^{3}{m_i (\mathbf{m}_i \otimes \mathbf{m}_i})
+	\label{Eq201}
+	\end{equation}
+	
+	Where $m_i$ are the eigenvalues of $\mathbf{M}$ and $\mathbf{M}_i$ are the dyadic product of the corresponding eigenvectors $\mathbf{m}_i$ \cite{Cowin1985,Harrigan1985}. The fabric tensor is independent of BV/TV and normalised with $tr(\mathbf{M}) = 3$. Then, it is used to compute the stiffness tensor.
 	
 	\begin{equation}
 	\begin{split}
@@ -562,6 +550,22 @@
 	\end{pmatrix}
 	\label{Eq203x}
 	\end{equation}
+	
+	Finally, after performing the linear regression, quality of the results is evaluated using the relative error of the norm of fourth-order tensors (NE) and the adjusted Pearson's correlation coefficient ($R^2_{adj}$). These coefficients are computed as follow:
+	
+	\begin{equation}
+	\text{NE} = \sqrt{\frac{(\mathbb{S}_o - \mathbb{S}_p) :: (\mathbb{S}_o - \mathbb{S}_p)}{\mathbb{S}_o :: \mathbb{S}_o}}
+	\label{Eq206}
+	\end{equation}
+	
+	Where $\mathbb{S}_o$ and $\mathbb{S}_p$ are the observed and predicted stiffness tensors, respectively.
+		
+	\begin{equation}
+	R^2_{adj} = 1 - \frac{\mathrm{RSS}}{\mathrm{TSS}} \frac{(12n-1)}{(12n - p - 1)}
+	\label{Eq205}
+	\end{equation}
+	
+	Where RSS is the residual sum of squares and TSS is the total sum of squares i.e. sum of the square of the observations y. $n$ is the number of ROIs and $p$ the number of parameters.
 	
 	
 	\section{Linear Models}\label{A1}
