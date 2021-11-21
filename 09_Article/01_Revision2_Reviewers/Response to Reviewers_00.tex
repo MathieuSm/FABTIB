@@ -1,0 +1,176 @@
+% An example for the ar2rc document class.
+% Copyright (C) 2017 Martin Schroen
+% Modifications Copyright (C) 2020 Kaishuo Zhang
+%
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+% Use quote enviromnent for manuscript text
+
+\documentclass{AR2RC}
+
+\usepackage{siunitx}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage[justification=centering]{caption}
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+\renewcommand{\arraystretch}{1.2}
+
+
+\hypersetup{hidelinks}
+
+\title{Fabric-Elasticity Relationships of Tibial Trabecular Bone are Similar in Osteogenesis Imperfecta and Healthy Individuals}
+\author{Mathieu Simon, Michael Indermaur, Denis Schenk, Seyedmahdi Hosseinitabatabaei, Bettina	M. Willie and Philippe Zysset}
+\journal{Bone}
+\doi{BONE-D-21-00758-R1}
+
+\begin{document}
+
+\maketitle
+
+\vspace{1em}Once again, the authors would like to thank the reviewers for helping us to improve our article. We do believe that their time spent working on this document will definitively improve its message to the scientific community. As for the first revision, answers to comments are provided point by point in this document. In the revised manuscript, the added elements are written in blue and the canceled text is in red.
+
+\section{Density}
+\RC The first highlight states that OI trabecular bone is more mineralized compared to healthy bone, but the first sentence in the last paragraph of the Abstract says that OI bone is significantly less dense than healthy controls. This is going to be confusing for many. You need to clarify, which is presumably because you’re referring to tissue density in one case and apparent density in the other.
+
+\AR Yes, you are right. To improve clarity the highlight and the abstract were modified as follow:
+
+Highlight 1
+\begin{quote}
+	Osteogenesis Imperfecta (OI) \Del{trabecular} bone \Add{tissue} is more mineralized compared to healthy
+\end{quote} 
+
+Abstract, last paragraph, first sentence
+\begin{quote}
+	In conclusion, OI trabecular bone of the distal tibia was shown to be significantly more heterogeneous and \Del{less dense} \Add{have a lower BV/TV} than healthy controls
+\end{quote} 
+
+\section{Groups age ranges}
+\RC Your response to the reviewer (2.9) incorrectly states the mean and plus/minus age of both groups (at least comparing to the comments in Methods 2.1). Which are the correct numbers?
+
+\AR The numbers are indeed different but both are correct. On one hand, in Methods 2.1 the mean and plus/minus age of both groups refers to the entire cohort. On the other hand, the response to reviewer 2.9 refers to Results 3.1 after the sex and age matching of groups. We forgot to precise it in the first response to reviewers.
+
+\section{Typo}
+\RC Page 3, second column, 4th line: Please fix typo “no enough” for “not enough”.
+
+\AR This was corrected.
+
+\section{Exponential notation}
+\RC Page 9, second column, 11th line from bottom: Why express the modulus as an exponent as such? Is this a typo? Currently it is written “10\textsuperscript{0}”. Why not write 1 MPa?
+
+\AR This format was chosen because the text refers to Figure 5b (see below) where the exponential scale is written in power of 10. To improve clarity, the text was changed as shown here:
+
+Page 9, second column, Discussion, lines 50-52
+\begin{quote}
+	The linear regression plot (Figure 5b) shows that when the stiffness term decreases to \Add{1 MPa (}10\textsuperscript{0}\Add{)} \Del{MPa} and lower, the linear regression tends to overestimate the stiffness.
+\end{quote}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\textwidth]
+	{Pictures/02_GR_OI_LMM}
+	\caption{Linear regression results for original OI group using the fixed effects of the linear mixed-effect model.}
+	\label{CV_BVTV2}
+\end{figure}
+
+\newpage
+\section{Clinical refocusing}
+\RC Both reviewers were concerned about the fit of the manuscript content with the audience of Bone. While I agree that the Bone audience is accustomed to technical papers, please consider further refocusing to the clinical aspect. I would question where it is necessary to explicitly include equations 2 and 3 (page 4) since those are presumably outlined in the cited reference. If needed at all, considering moving to Appendix. Furthermore, equation 7 is not explained and therefore its relevance (and frequent reference later in the Discussion) is not clear.
+
+\AR We understand your concern and agree to further refocusing to the clinical aspect. Regarding equations 2 and 3, even if they are outlined in cited references, we think that they are necessary for technical completeness. On the other hand, as they are more related to technical aspect we moved equation 2 and 3 but also equations 1,6 and 7 in the Appendix, as proposed. The text citing equation 7 was modified to describe the term contained and the signification of this NE, see below. We hope that these steps will help to decrease the technical difficulty and increase the clarity of the paper from a clinical point of view.
+
+Page 5, second column, Methods 2.5.3, last paragraph
+\begin{quote}
+	Linear regression on Zysset-Curnier model was assessed using the adjusted Pearson correlation coefficient squared ($R^2_{adj}$) and relative error between the orthotropic observed and the predicted tensor using norm of fourth-order tensors (NE)\Del{, see Equation 6 and 7}. \Add{This relative norm error allows to quantify the accuracy of the prediction. Details of the computation of these numbers are available in Appendix A.}
+\end{quote}
+
+\section{Results validity}
+\RC Most importantly, both reviewers had concerns about the validity of the results across the entire range of trabecular bone microarchitecture encountered in OI, and in particular the case where filtering was required to exclude highly heterogeneous bone microarchitecture. While it is understood that the focus of the paper is to explore whether fabric-elasticity relationships in OI and healthy bone are similar (thus justifying why filtering was performed), it is concluded that this is “encouraging the use of HR-pQCT based hFE outcomes for fracture risk assessment.” The comment about future fracture prediction by hFE is of course very important clinically, but the messaging about how to use these results are still not clear. Both the Abstract and the Discussion should comment on the implications of the fabric-elastic relationship not being defined for highly heterogeneous bone. 
+
+\AR We believe we can resolve these concerns. The filtering is made due to the sampling of cubic ROIs for computational homogenisation and does not filter bone microstructure from another. In our study, high heterogeneity is found at the edge of void spaces or medullary cavities that are much larger in OI and correlates with low, sometimes extremely low BV/TV and stiffness. That is why many more OI than healthy ROIs are filtered out.
+The mentioned limitation resides in the sampling of homogenous cubes and the application of computational homogenisation, not in the fabric-elasticity relationship which application to heterogeneous ROIs is well-defined, smooth in BV/TV, smooth in fabric and independent of heterogeneity. Finally, the use of the fabric-elasticity relationship was validated experimentally also in osteoporotic bones where medullary cavities are also important.
+
+\newpage
+\RC Firstly, given there is only one OI type III where ROIs could be extracted, does this mean hFE should be restricted to OI type I? What evidence is there that it can be employed for OI type III or IV? This needs to be clearly justified. 
+
+\AR Although no further statistical analysis is meaningful due to the small numbers, ROIs from all OI types fit nicely on a unique fabric-elasticity relationship. The lack of homogeneous type III ROIs is simply due to the lack of bone in which case no relationship is needed. No outlier and no evidence of a different relationship was seen in our results for any OI type including the sample with OI type III.
+
+\RC Second, in the future, when significant heterogeneity is encountered in a bone, do you still recommend to use hFE? In other words, please comment whether the findings of skewness for high heterogeneity affects if/when hFE is appropriate, and if there are alternatives to hFE in that case.
+
+\AR The fabric-elasticity relationships between healthy and OI ROIs were found to be equivalent from a few MPa up to several GPa. Any ROI stiffness below a few MPa is meaningless in a mechanical analysis because of being several orders of magnitude smaller than the other ROIs and the cortex. Accordingly, hFE can be applied to bone with large voids or cavities as the BV/TV at the edges are smeared over the neighboring elements.
+
+
+%Highly heterogeneous bone is rare in healthy conditions leading to the observed good correlations between simulations and experiments in the work of Varga et al. 2011, Hosseini et al. 2017, and Arias-Moreno et al. 2019. This fact is determinant. As low BV/TV will lead to low stiffness, the influence of such ROIs is negligible as it does not have a significant contribution to the stiffness of the full tibial section. %For example, the observed stiffness component $\lambda_{ii}$ of one highly heterogeneous ROI (worst case) is around 1 MPa and the predicted value is around 100 MPa. This apparently large error remains relatively small in comparison with homogeneous ROIs presenting a value approaching 10 GPa. 
+%We believe that the heterogeneous ROIs are meaningless in the hFE analysis of a whole tibial section. In other words, a potential difference between healthy and OI for these 
+
+%Thus, only homogeneous ROIs (i.e. ROIs with higher BV/TV and connected to the surrounding bone) contribute significantly to the overall bone stiffness. %Moreover, despite the contribution of trabecular bone, the cortical bone will contribute even more significantly to tibial stiffness. Cortical bone having a higher BV/TV than trabecular bone, the relative error becomes even lower. 
+%Another point is that ROIs here have 5.3mm side length. Since the element size is inferior to the ROI size, the heterogeneity is better resolved and the uncertainty affects a lower tissue volume. Finally, it is important to realise that the scatter associated with heterogeneous ROIs (as shown in Appendix) reflects a limitation of the homogenisation methodology to identify the fabric-elasticity relationship and is not a true error of the fabric-elasticity paradigm. The extrapolation of the fabric-elasticity relationship to heterogeneous ROIs that is made in hFE may be quite reasonable, but the actual uncertainty cannot be quantified with the available tools.
+
+
+
+
+
+
+
+To improve the clarity of the message regarding validity of hFE among the OI types or heterogeneous bone, the manuscript was modified as follow:
+
+Abstract, paragraph 4, last sentence
+\begin{quote}
+	The stiffnesses of highly heterogeneous ROIs were randomly lower with respect to the fabric-elasticity relationships, which reflects the limit of validity of the computational homogenisation methodology. \Add{However, this limitation does not challenge the fabric-elasticity relationship, which extrapolation to heterogeneous ROIs may be reasonable but can simply not be evaluated with the employed homogenisation methodology. Moreover, due to their low BV/TV, the potential (unknown) errors on these heterogeneous ROIs would have little influence on whole bone stiffness in comparison to homogeneous ROIs which are orders of magnitude stiffer.}
+\end{quote}
+
+Discussion, page 9, first column, line 56-59
+\begin{quote}
+	The CV shows that heterogeneity of OI trabecular bone is higher compared to healthy control and is consequently the more discriminant parameter. \Add{This comes from the fact that high heterogeneity is found at the edge of void spaces or medullary cavities that are much larger in OI.}
+\end{quote}
+
+Discussion, page 9, second column, line 55-60
+\begin{quote}
+	Some ROIs with low BV/TV do not have every side of the cube connected by bone, leading to extremely low terms in the stiffness tensor (see Appendix C). Trying to homogenise such ROIs can lead to errors of multiple order of magnitude, as observed on the plot (Figure 5b). \Add{This represents a limitation of the homogenization methodology and t}\Del{T}herefore, a filtering \Add{according to the heterogeneity level} is indispensable to assess and compare fabric-elasticity relationships, as done by Panyasantisuk et al. [28].
+\end{quote}
+
+\newpage
+Discussion, page 10, second column, line 30
+\begin{quote}
+	\Add{Nevertheless, it should be noted that this relation between BV/TV and CV as well as the fabric-elasticity relationships are independent of the OI type. Distribution of OI types for CV in relation to BV/TV as well as the linear regression of the original data set are available in Appendix D.}
+\end{quote}
+
+Discussion, page 10, second column, line 47-50
+\begin{quote}
+	These results give confidence to the filtering procedure and represent a first step in accepting the hypothesis of healthy and OI trabecular bone having the same fabric-elasticity relationships. \Add{Indeed, this confirms that filtering according to heterogeneity level allows to compare fabric-elasticity relationships of homogeneous ROIs where homogenization procedure is valid.}
+\end{quote}
+
+Discussion, page 10, second column, last paragraph, last sentence
+\begin{quote}
+	Thus, the same hFE methodology can be applied for bone stiffness assessment of OI diagnosed individuals as for healthy ones\Add{, regardless the OI type}. Although in hFE analysis it is not possible to exclude part of the mesh because of high heterogeneity, the influence of such ROIs seems negligible on full bone models as the fabric-elasticity relationships can extrapolate their stiffness smoothly and as this concerns only ROIs with low BV/TV and stiffness\Del{.}\Add{ order of magnitude lower than homogeneous ones and the cortex (< 1MPa compared to 10 GPa). Moreover, studies validated the use of fabric-elasticity relationships in osteoporotic bone [35,17] where medullary cavities are important and therefore lead to locally high heterogeneity.}
+\end{quote}
+
+Discussion, page 11, second column, line 40-24
+\begin{quote}
+	Moreover, having only one patient with OI type III where we could extract ROIs does not allow to perform statistics on OI types. \Add{Nevertheless, the lack of homogeneous type III ROIs is simply due to the lack of bone in which case no relationship is needed. No outlier and no evidence of a different relationship was seen in our results for any OI type including the sample with OI type III.}
+\end{quote}
+
+\section{Supplementary material}
+\RC It is suggested that Figure 2 in the response to reviewers be included in the manuscript (appendix or supplementary material).
+
+\AR As required, the Figure was added in Appendix D
+
+
+\end{document}
